@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов» [![Build status][travis-image]][travis-url]
 
 * Студент: [Влад Вавилихин](https://up.htmlacademy.ru/react/4/user/904135).
-* Наставник: `Неизвестно`.
+* Наставник: [Олег Липский](https://htmlacademy.ru/profile/id43358).
 
 ---
 
