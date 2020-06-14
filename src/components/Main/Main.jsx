@@ -89,7 +89,7 @@ const Main = ({numberOfAvaliablePlaces, placesInfo}) => {
                     <div className="cities__places-list places__list tabs__content">
 											{placesInfo.map(value => {
 												return (
-													<article className="cities__place-card place-card">
+													<article key={value.replace(/\s/g, "")} className="cities__place-card place-card">
 														<div className="place-card__mark">
 															<span>Premium</span>
 														</div>
