@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 
 import Main from './Main.jsx';
 
-const App =  ({numberOfAvaliablePlaces}) =>{
+const App =  ({numberOfAvaliablePlaces, placesInfo}) =>{
   return <Main 
     numberOfAvaliablePlaces = {numberOfAvaliablePlaces}
+    placesInfo = {placesInfo}
   />
 }
 
