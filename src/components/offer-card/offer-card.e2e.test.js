@@ -26,7 +26,7 @@ describe(`OfferCard component test`, () => {
       <OfferCard handleHover={onHover} cardData={cardData} />,
     );
 
-    offerCard.simulate('mouseEnter', { target: offerCard.html() });
+    offerCard.simulate('mouseEnter', { currentTarget: offerCard.html() });
     offerCard.simulate('mouseLeave');
 
     expect(onHover.mock.results[0].value).toBe(offerCard.html());

@@ -9,9 +9,7 @@ const OfferCard = ({ handleHover, cardData }) => {
     <article
       className="cities__place-card place-card"
       onMouseEnter={(evt) => {
-        handleHover(evt.target);
-        // console.log(evt.target);
-        // console.log(evt.relatedTarget);
+        handleHover(evt.currentTarget);
       }}
       onMouseLeave={(evt) => {
         handleHover('');
