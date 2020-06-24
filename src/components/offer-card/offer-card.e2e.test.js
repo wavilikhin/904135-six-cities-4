@@ -26,10 +26,10 @@ describe(`OfferCard component test`, () => {
       <OfferCard handleHover={onHover} cardData={cardData} />,
     );
 
-    offerCard.simulate('mouseEnter', { currentTarget: offerCard.html() });
+    offerCard.simulate('mouseEnter');
     offerCard.simulate('mouseLeave');
 
-    expect(onHover.mock.results[0].value).toBe(offerCard.html());
+    expect(onHover.mock.results[0].value).toBe(cardData);
     expect(onHover.mock.results[1].value).toBe('');
 
     expect(onHover).toHaveBeenCalledTimes(2);
