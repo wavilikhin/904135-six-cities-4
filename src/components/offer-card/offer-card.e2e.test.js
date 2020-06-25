@@ -30,7 +30,7 @@ describe(`OfferCard component test`, () => {
     offerCard.simulate('mouseLeave');
 
     expect(onHover.mock.results[0].value).toBe(cardData);
-    expect(onHover.mock.results[1].value).toBe('');
+    expect(onHover.mock.results[1].value).toBe(null);
 
     expect(onHover).toHaveBeenCalledTimes(2);
   });

@@ -15,12 +15,11 @@ class OfferCard extends PureComponent {
   }
 
   _handleMouseLeave() {
-    this.props.handleHover('');
+    this.props.handleHover(null);
   }
 
   render() {
     const {
-      handleHover,
       cardData: { quality, image, priceValue, priceText, name, type },
     } = this.props;
 
