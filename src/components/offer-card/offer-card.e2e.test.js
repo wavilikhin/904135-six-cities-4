@@ -10,6 +10,7 @@ const cardData = {
   priceText: `&#47;&nbsp;night`,
   name: `Nice, cozy, warm big bed apartment`,
   type: `Apartment`,
+  coords: [52.3809553943508, 49.39309666406198],
 };
 
 configure({

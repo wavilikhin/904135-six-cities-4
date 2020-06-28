@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Main component snapshot test Main component should render main page
-      with number of awaliable places = 1488,
-      and places infos: [firstInfo, secondInfo, thirdInfo, fourthInfo] 1`] = `
+      with number of awaliable places = 5,
+      and places infos 1`] = `
 <div
   className="page page--gray page--main"
 >
@@ -719,7 +719,16 @@ exports[`Main component snapshot test Main component should render main page
         >
           <section
             className="cities__map map"
-          />
+          >
+            <div
+              id="map"
+              style={
+                Object {
+                  "height": "100vh",
+                }
+              }
+            />
+          </section>
         </div>
       </div>
     </div>

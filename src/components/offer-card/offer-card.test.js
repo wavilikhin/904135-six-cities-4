@@ -9,9 +9,10 @@ const cardData = {
   priceText: `&#47;&nbsp;night`,
   name: `Beautiful apartment near the city center`,
   type: `Apartment`,
+  coords: [52.3809553943508, 49.39309666406198],
 };
 
-describe(`ContentCard component test`, () => {
+describe(`ContentCard component snapshot test`, () => {
   it(`Should render content card with quality=Premium,
         price=&euro;160/night, name=Beautiful apartment near the city center
         and type=Apartment`, () => {

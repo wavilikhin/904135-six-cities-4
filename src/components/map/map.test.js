@@ -1,9 +1,10 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import Main from './main.jsx';
+import renderer from 'react-test-renderer';
+import Map from './map.jsx';
 
-const offersDataArray = [
+const city = { name: 'Amsterdam', coords: [52.38333, 4.9] };
+const zoom = 12;
+const offers = [
   {
     quality: `Premium`,
     image: `img/apartment-01.jpg`,
@@ -51,24 +52,12 @@ const offersDataArray = [
   },
 ];
 
-Enzyme.configure({
-  adapter: new Adapter(),
-});
+describe('Map component snapshot test', () => {
+  it(`Should render map with city coords, zoom and map icons`, () => {
+    const tree = renderer
+      .create(<Map city={city} zoom={zoom} offers={offers} />)
+      .toJSON();
 
-describe(`Main component's end-to-end test`, () => {
-  it(`Should all headers be pressed`, () => {
-    const onHeaderClick = jest.fn();
-
-    const mainComponent = shallow(
-      <Main onHeaderClick={onHeaderClick} offersDataArray={offersDataArray} />,
-    );
-
-    const headers = mainComponent.find(`a.locations__item-link`);
-
-    headers.forEach((header) => {
-      header.simulate(`click`, { preventDefault() {} });
-    });
-
-    expect(onHeaderClick).toHaveBeenCalledTimes(6);
+    expect(tree).toMatchSnapshot();
   });
 });
