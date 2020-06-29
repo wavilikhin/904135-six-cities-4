@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContentCard component test Should render content card with quality=Premium,
+exports[`ContentCard component snapshot test Should render content card with quality=Premium,
         price=&euro;160/night, name=Beautiful apartment near the city center
         and type=Apartment 1`] = `
 <article

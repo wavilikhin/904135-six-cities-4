@@ -84,6 +84,7 @@ OfferCard.propTypes = {
     priceValue: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
+    coords: PropTypes.arrayOf(PropTypes.number).isRequired,
   }).isRequired,
 };
 

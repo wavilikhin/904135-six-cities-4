@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import offersDataArray from './mocks/offers.js';
+import offersDataArray from './__mocks__/offers.js';
 
 import App from './components/app/app.jsx';
 

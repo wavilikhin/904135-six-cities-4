@@ -10,6 +10,7 @@ const offersDataArray = [
     priceText: ` \u2215\u0020night`,
     name: `Beautiful & luxurious apartment at great location`,
     type: `Apartment`,
+    coords: [52.3909553943508, 4.85309666406198],
   },
   {
     quality: `Premium`,
@@ -18,6 +19,7 @@ const offersDataArray = [
     priceText: ` \u2215\u0020night`,
     name: `Just a nice place`,
     type: `Room`,
+    coords: [52.369553943508, 4.85309666406198],
   },
   {
     quality: `Premium`,
@@ -26,6 +28,7 @@ const offersDataArray = [
     priceText: ` \u2215\u0020night`,
     name: `Wood and stone place`,
     type: `Apartment`,
+    coords: [52.3909553943508, 4.929309666406198],
   },
   {
     quality: `Premium`,
@@ -34,6 +37,7 @@ const offersDataArray = [
     priceText: ` \u2215\u0020night`,
     name: `Canal View Prinsengracht`,
     type: `Apartment`,
+    coords: [52.3809553943508, 4.939309666406198],
   },
   {
     quality: `Premium`,
@@ -42,6 +46,7 @@ const offersDataArray = [
     priceText: ` \u2215\u0020night`,
     name: `Nice, cozy, warm big bed apartment`,
     type: `Room`,
+    coords: [52.3709553943508, 4.89309666406198],
   },
 ];
 
