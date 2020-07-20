@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Main } from './main.jsx';
+import CitiesList from './cities-list.jsx';
 
 const offersDataArray = [
   {
@@ -378,22 +378,19 @@ const offersDataArray = [
     coords: [51.233397, 6.802376],
   },
 ];
-const city = null;
 
-describe(`Main component snapshot test`, () => {
-  it(`Main component should render main page
-      with number of awaliable places = 5,
-      and places infos`, () => {
-    const tree = renderer
-      .create(
-        <Main
-          onHeaderClick={() => {}}
-          offersDataArray={offersDataArray}
-          city={city}
-        />,
-      )
-      .toJSON();
+const city = 'Amsterdam';
 
-    expect(tree).toMatchSnapshot();
-  });
+it(`Should render cities list with 6 cities`, () => {
+  const tree = renderer
+    .create(
+      <CitiesList
+        offers={offersDataArray}
+        currentCity={city}
+        onHeaderClick={() => {}}
+      />,
+    )
+    .toJSON();
+
+  expect(tree).toMatchSnapshot();
 });

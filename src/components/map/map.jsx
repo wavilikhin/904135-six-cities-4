@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import * as COORDS from '../../__mocks__/coords.js';
 
 import leaflet from 'leaflet';
 
@@ -8,6 +9,7 @@ class Map extends PureComponent {
   constructor(props) {
     super(props);
   }
+
   componentDidMount() {
     const { city, zoom, offers } = this.props;
 
@@ -16,7 +18,13 @@ class Map extends PureComponent {
       iconSize: [30, 30],
     });
 
-    const cityCoords = city.coords;
+    this.icon = icon;
+
+    let cityCoords;
+
+    city === null
+      ? (cityCoords = [0, 0])
+      : (cityCoords = COORDS[city.toUpperCase()]);
 
     const map = leaflet.map(`map`, {
       center: cityCoords,
@@ -37,9 +45,35 @@ class Map extends PureComponent {
       )
       .addTo(map);
 
-    for (const offer of offers) {
-      leaflet.marker(offer.coords, { icon }).addTo(map);
+    let markersLayer = [];
+    for (const offer in offers) {
+      markersLayer.push(offer);
     }
+    let offersLayer = leaflet.layerGroup(markersLayer);
+    offersLayer.addTo(map);
+
+    this.offersLayer = offersLayer;
+    this.map = map;
+  }
+
+  componentDidUpdate() {
+    const { city, zoom, offers } = this.props;
+
+    let updatedCoords = COORDS[city.toUpperCase()];
+    let updatedZoom = zoom;
+
+    this.map.setView(updatedCoords, updatedZoom);
+
+    let markersLayer = [];
+    offers.forEach((offer) => {
+      markersLayer.push(leaflet.marker(offer.coords, this.icon));
+    });
+
+    this.offersLayer.remove();
+
+    let offersLayer = leaflet.layerGroup(markersLayer);
+    this.offersLayer = offersLayer;
+    offersLayer.addTo(this.map);
   }
 
   render() {
@@ -54,10 +88,7 @@ class Map extends PureComponent {
 export default Map;
 
 Map.propTypes = {
-  city: PropTypes.shape({
-    name: PropTypes.string,
-    coords: PropTypes.arrayOf(PropTypes.number),
-  }),
+  city: PropTypes.string,
   zoom: PropTypes.number.isRequired,
   offers: PropTypes.arrayOf(
     PropTypes.shape({

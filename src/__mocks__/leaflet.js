@@ -1,5 +1,3 @@
-
-
 const leaflet = jest.genMockFromModule(`leaflet`);
 
 leaflet.icon = () => {};
@@ -18,6 +16,12 @@ leaflet.marker = () => {
 };
 
 leaflet.tileLayer = () => {
+  return {
+    addTo: () => {},
+  };
+};
+
+leaflet.layerGroup = () => {
   return {
     addTo: () => {},
   };
