@@ -1,4 +1,12 @@
-export default [
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { Offers } from './offers.jsx';
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
+
+const mockStore = configureStore([]);
+
+const offersDataArray = [
   {
     city: 'Amsterdam',
     cityCoords: [52.38333, 4.9],
@@ -374,3 +382,20 @@ export default [
     coords: [51.233397, 6.802376],
   },
 ];
+
+const city = 'Amsterdam';
+
+it(`Should render offers component with offers cards and map`, () => {
+  const store = mockStore({
+    city: city,
+    offers: offersDataArray,
+  });
+  const tree = renderer
+    .create(
+      <Provider store={store}>
+        <Offers offersDataArray={offersDataArray} city={city} />
+      </Provider>,
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});

@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import CitiesList from './cities-list.jsx';
+import { CitiesList } from './cities-list.jsx';
 
 const offersDataArray = [
   {
@@ -387,7 +387,7 @@ it(`Should render cities list with 6 cities`, () => {
       <CitiesList
         offers={offersDataArray}
         currentCity={city}
-        onHeaderClick={() => {}}
+        handleCityChange={() => {}}
       />,
     )
     .toJSON();

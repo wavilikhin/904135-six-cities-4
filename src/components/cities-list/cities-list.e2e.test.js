@@ -1,7 +1,7 @@
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import CitiesList from './cities-list.jsx';
+import { CitiesList } from './cities-list.jsx';
 
 const offers = [
   {
@@ -390,7 +390,7 @@ it(`Should all headers be pressed`, () => {
 
   const citiesListComponent = shallow(
     <CitiesList
-      onHeaderClick={onHeaderClick}
+      handleCityChange={onHeaderClick}
       offers={offers}
       currentCity={currentCity}
     />,

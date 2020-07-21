@@ -77,7 +77,7 @@ exports[`App component test App component should render main page 1`] = `
             className="locations__item"
           >
             <a
-              className="locations__item-link tabs__item"
+              className="locations__item-link tabs__item "
               href="#"
               onClick={[Function]}
             >
@@ -90,7 +90,7 @@ exports[`App component test App component should render main page 1`] = `
             className="locations__item"
           >
             <a
-              className="locations__item-link tabs__item"
+              className="locations__item-link tabs__item "
               href="#"
               onClick={[Function]}
             >
@@ -103,7 +103,7 @@ exports[`App component test App component should render main page 1`] = `
             className="locations__item"
           >
             <a
-              className="locations__item-link tabs__item"
+              className="locations__item-link tabs__item "
               href="#"
               onClick={[Function]}
             >
@@ -116,7 +116,7 @@ exports[`App component test App component should render main page 1`] = `
             className="locations__item"
           >
             <a
-              className="locations__item-link tabs__item"
+              className="locations__item-link tabs__item "
               href="#"
               onClick={[Function]}
             >
@@ -129,7 +129,7 @@ exports[`App component test App component should render main page 1`] = `
             className="locations__item"
           >
             <a
-              className="locations__item-link tabs__item"
+              className="locations__item-link tabs__item "
               href="#"
               onClick={[Function]}
             >
@@ -142,7 +142,7 @@ exports[`App component test App component should render main page 1`] = `
             className="locations__item"
           >
             <a
-              className="locations__item-link tabs__item"
+              className="locations__item-link tabs__item "
               href="#"
               onClick={[Function]}
             >

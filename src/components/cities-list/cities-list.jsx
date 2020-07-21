@@ -1,16 +1,18 @@
 import React, { PureComponent } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { ActionCreator } from '../../reducer';
 
 class CitiesList extends PureComponent {
   constructor(props) {
     super(props);
 
-    this._onHeaderClick = this._onHeaderClick.bind(this);
+    this._handleCityChange = this._handleCityChange.bind(this);
   }
 
-  _onHeaderClick(city) {
-    this.props.onHeaderClick(city);
+  _handleCityChange(city) {
+    this.props.handleCityChange(city);
   }
 
   render() {
@@ -27,25 +29,6 @@ class CitiesList extends PureComponent {
       <section className="locations container">
         <ul className="locations__list tabs__list">
           {uniqueCities.map((city, i) => {
-            if (city === currentCity) {
-              return (
-                <li
-                  key={`${i}-` + city.replace(/\s/g, '')}
-                  className="locations__item"
-                >
-                  <a
-                    onClick={(e) => {
-                      e.preventDefault();
-                      this._onHeaderClick(city);
-                    }}
-                    className="locations__item-link tabs__item tabs__item--active"
-                    href="#"
-                  >
-                    <span>{city}</span>
-                  </a>
-                </li>
-              );
-            }
             return (
               <li
                 key={`${i}-` + city.replace(/\s/g, '')}
@@ -54,9 +37,11 @@ class CitiesList extends PureComponent {
                 <a
                   onClick={(e) => {
                     e.preventDefault();
-                    this._onHeaderClick(city);
+                    this._handleCityChange(city);
                   }}
-                  className="locations__item-link tabs__item"
+                  className={`locations__item-link tabs__item ${
+                    city === currentCity ? 'tabs__item--active' : ''
+                  }`}
                   href="#"
                 >
                   <span>{city}</span>
@@ -71,7 +56,7 @@ class CitiesList extends PureComponent {
 }
 
 CitiesList.propTypes = {
-  onHeaderClick: PropTypes.func.isRequired,
+  handleCityChange: PropTypes.func.isRequired,
   offers: PropTypes.arrayOf(
     PropTypes.shape({
       city: PropTypes.string.isRequired,
@@ -87,4 +72,16 @@ CitiesList.propTypes = {
   currentCity: PropTypes.string,
 };
 
-export default CitiesList;
+const mapStateToProps = (state) => ({
+  offers: state.offers,
+  currentCity: state.city,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  handleCityChange(city) {
+    dispatch(ActionCreator.changeCiy(city));
+  },
+});
+
+export { CitiesList };
+export default connect(mapStateToProps, mapDispatchToProps)(CitiesList);

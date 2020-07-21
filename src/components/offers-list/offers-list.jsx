@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 import OfferCard from '../offer-card/offer-card.jsx';
+import { connect } from 'react-redux';
 
 class OffersList extends PureComponent {
   constructor(props) {
@@ -20,11 +21,15 @@ class OffersList extends PureComponent {
   }
 
   render() {
-    const { offersDataArray } = this.props;
+    const { offersArray, city } = this.props;
+
+    const filtredOffers = offersArray.filter((offer) => {
+      return offer.city === city;
+    });
 
     return (
       <div className="cities__places-list places__list tabs__content">
-        {offersDataArray.map((offerData, i) => {
+        {filtredOffers.map((offerData, i) => {
           return (
             <OfferCard
               key={`${i}-` + offerData.name.replace(/\s/g, '')}
@@ -51,6 +56,13 @@ OffersList.propTypes = {
       coords: PropTypes.arrayOf(PropTypes.number).isRequired,
     }),
   ),
+  city: PropTypes.string,
 };
 
-export default OffersList;
+const mapStateToProps = (state) => ({
+  offersArray: state.offers,
+  city: state.city,
+});
+
+export { OffersList };
+export default connect(mapStateToProps, null)(OffersList);
