@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 
 import Main from '../main/main.jsx';
 
-const App = ({ offersDataArray }) => {
-  return <Main offersDataArray={offersDataArray} />;
+const App = () => {
+  return <Main />;
 };
 
 export default App;

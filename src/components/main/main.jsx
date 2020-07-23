@@ -1,20 +1,18 @@
 import React, { PureComponent } from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import OffersList from '../offers-list/offers-list.jsx';
-
-import Map from '../map/map.jsx';
+import PropTypes, { object } from 'prop-types';
+import CitiesList from '../cities-list/cities-list.jsx';
+import Offers from '../offers/offers.jsx';
+import { connect } from 'react-redux';
+import { ActionCreator } from '../../reducer.js';
 
 class Main extends PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentCity: { name: 'Amsterdam', coords: [52.38333, 4.9] },
-    };
+  componentDidMount() {
+    const { handleCityChange, offersDataArray } = this.props;
+    handleCityChange(offersDataArray[0].city);
   }
+
   render() {
-    const { onHeaderClick, offersDataArray } = this.props;
     return (
       <div className="page page--gray page--main">
         <header className="header">
@@ -53,110 +51,9 @@ class Main extends PureComponent {
         <main className="page__main page__main--index">
           <h1 className="visually-hidden">Cities</h1>
           <div className="tabs">
-            <section className="locations container">
-              <ul className="locations__list tabs__list">
-                <li className="locations__item">
-                  <a
-                    className="locations__item-link tabs__item"
-                    href="#"
-                    onClick={onHeaderClick}
-                  >
-                    <span>Paris</span>
-                  </a>
-                </li>
-                <li className="locations__item">
-                  <a
-                    className="locations__item-link tabs__item"
-                    href="#"
-                    onClick={onHeaderClick}
-                  >
-                    <span>Cologne</span>
-                  </a>
-                </li>
-                <li className="locations__item">
-                  <a
-                    className="locations__item-link tabs__item"
-                    href="#"
-                    onClick={onHeaderClick}
-                  >
-                    <span>Brussels</span>
-                  </a>
-                </li>
-                <li className="locations__item">
-                  <a
-                    className="locations__item-link tabs__item tabs__item--active"
-                    onClick={onHeaderClick}
-                  >
-                    <span>Amsterdam</span>
-                  </a>
-                </li>
-                <li className="locations__item">
-                  <a
-                    className="locations__item-link tabs__item"
-                    href="#"
-                    onClick={onHeaderClick}
-                  >
-                    <span>Hamburg</span>
-                  </a>
-                </li>
-                <li className="locations__item">
-                  <a
-                    className="locations__item-link tabs__item"
-                    href="#"
-                    onClick={onHeaderClick}
-                  >
-                    <span>Dusseldorf</span>
-                  </a>
-                </li>
-              </ul>
-            </section>
+            <CitiesList />
           </div>
-          <div className="cities">
-            <div className="cities__places-container container">
-              <section className="cities__places places">
-                <h2 className="visually-hidden">Places</h2>
-                <b className="places__found">
-                  {offersDataArray.length} places to stay in Amsterdam
-                </b>
-                <form className="places__sorting" action="#" method="get">
-                  <span className="places__sorting-caption">Sort by</span>
-                  <span className="places__sorting-type" tabIndex="0">
-                    Popular
-                    <svg className="places__sorting-arrow" width="7" height="4">
-                      <use xlinkHref="#icon-arrow-select"></use>
-                    </svg>
-                  </span>
-                  <ul className="places__options places__options--custom places__options--opened">
-                    <li
-                      className="places__option places__option--active"
-                      tabIndex="0"
-                    >
-                      Popular
-                    </li>
-                    <li className="places__option" tabIndex="0">
-                      Price: low to high
-                    </li>
-                    <li className="places__option" tabIndex="0">
-                      Price: high to low
-                    </li>
-                    <li className="places__option" tabIndex="0">
-                      Top rated first
-                    </li>
-                  </ul>
-                </form>
-                <OffersList offersDataArray={offersDataArray} />
-              </section>
-              <div className="cities__right-section">
-                <section className="cities__map map">
-                  <Map
-                    city={this.state.currentCity}
-                    zoom={12}
-                    offers={offersDataArray}
-                  />
-                </section>
-              </div>
-            </div>
-          </div>
+          <Offers />
         </main>
       </div>
     );
@@ -166,16 +63,29 @@ class Main extends PureComponent {
 Main.propTypes = {
   offersDataArray: PropTypes.arrayOf(
     PropTypes.shape({
+      city: PropTypes.string.isRequired,
+      cityCoords: PropTypes.arrayOf(PropTypes.number, PropTypes.number),
       quality: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
       priceValue: PropTypes.string.isRequired,
       priceText: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
-      coords: PropTypes.arrayOf(PropTypes.number).isRequired,
+      coords: PropTypes.arrayOf(PropTypes.number, PropTypes.number).isRequired,
     }),
   ).isRequired,
-  onHeaderClick: PropTypes.func,
+  handleCityChange: PropTypes.func,
 };
 
-export default Main;
+const mapStateToProps = (state) => ({
+  offersDataArray: state.offers,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  handleCityChange(city) {
+    dispatch(ActionCreator.changeCiy(city));
+  },
+});
+
+export { Main };
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

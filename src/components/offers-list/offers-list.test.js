@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import OffersList from './offers-list.jsx';
+import { OffersList } from './offers-list.jsx';
 
 const offersDataArray = [
   {
@@ -49,12 +49,17 @@ const offersDataArray = [
     coords: [52.3709553943508, 4.89309666406198],
   },
 ];
+const city = 'Amsterdam';
 
 describe('OffersList component snapshot test', () => {
   it(`Should render a list of 5 offers with data and images`, () => {
     const tree = renderer
       .create(
-        <OffersList handleHover={() => {}} offersDataArray={offersDataArray} />,
+        <OffersList
+          handleHover={() => {}}
+          offersArray={offersDataArray}
+          city={city}
+        />,
       )
       .toJSON();
 

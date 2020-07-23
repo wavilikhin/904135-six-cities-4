@@ -1,4 +1,8 @@
-export default [
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { CitiesList } from './cities-list.jsx';
+
+const offersDataArray = [
   {
     city: 'Amsterdam',
     cityCoords: [52.38333, 4.9],
@@ -374,3 +378,19 @@ export default [
     coords: [51.233397, 6.802376],
   },
 ];
+
+const city = 'Amsterdam';
+
+it(`Should render cities list with 6 cities`, () => {
+  const tree = renderer
+    .create(
+      <CitiesList
+        offers={offersDataArray}
+        currentCity={city}
+        handleCityChange={() => {}}
+      />,
+    )
+    .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});

@@ -1,4 +1,9 @@
-export default [
+import React from 'react';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import { CitiesList } from './cities-list.jsx';
+
+const offers = [
   {
     city: 'Amsterdam',
     cityCoords: [52.38333, 4.9],
@@ -374,3 +379,28 @@ export default [
     coords: [51.233397, 6.802376],
   },
 ];
+const currentCity = 'Amsterdam';
+
+Enzyme.configure({
+  adapter: new Adapter(),
+});
+
+it(`Should all headers be pressed`, () => {
+  const onHeaderClick = jest.fn();
+
+  const citiesListComponent = shallow(
+    <CitiesList
+      handleCityChange={onHeaderClick}
+      offers={offers}
+      currentCity={currentCity}
+    />,
+  );
+
+  const headers = citiesListComponent.find(`a.locations__item-link`);
+
+  headers.forEach((header) => {
+    header.simulate(`click`, { preventDefault() {} });
+  });
+
+  expect(onHeaderClick).toHaveBeenCalledTimes(6);
+});
