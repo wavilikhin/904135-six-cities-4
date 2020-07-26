@@ -1,87 +1,45 @@
-import React, { PureComponent } from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { ActionCreator } from '../../reducer';
+import React, { memo } from 'react';
+import withActiveItem from '../../hocs/with-active-item/with-active-item.jsx';
 
-class CitiesList extends PureComponent {
-  constructor(props) {
-    super(props);
+let CitiesList = memo((props) => {
+  const { offersArray, currentCity, onActiveItemChange } = props;
 
-    this._handleCityChange = this._handleCityChange.bind(this);
-  }
+  const uniqueCities = [];
+  offersArray.map((offer) => {
+    if (uniqueCities.indexOf(offer.city) === -1) {
+      uniqueCities.push(offer.city);
+    }
+  });
 
-  _handleCityChange(city) {
-    this.props.handleCityChange(city);
-  }
-
-  render() {
-    const { offers, currentCity } = this.props;
-
-    const uniqueCities = [];
-    offers.map((offer) => {
-      if (uniqueCities.indexOf(offer.city) === -1) {
-        uniqueCities.push(offer.city);
-      }
-    });
-
-    return (
-      <section className="locations container">
-        <ul className="locations__list tabs__list">
-          {uniqueCities.map((city, i) => {
-            return (
-              <li
-                key={`${i}-` + city.replace(/\s/g, '')}
-                className="locations__item"
+  return (
+    <section className="locations container">
+      <ul className="locations__list tabs__list">
+        {uniqueCities.map((city, i) => {
+          return (
+            <li
+              key={`${i}-` + city.replace(/\s/g, '')}
+              className="locations__item"
+            >
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  onActiveItemChange(city);
+                }}
+                className={`locations__item-link tabs__item ${
+                  city === currentCity ? 'tabs__item--active' : ''
+                }`}
+                href="#"
               >
-                <a
-                  onClick={(e) => {
-                    e.preventDefault();
-                    this._handleCityChange(city);
-                  }}
-                  className={`locations__item-link tabs__item ${
-                    city === currentCity ? 'tabs__item--active' : ''
-                  }`}
-                  href="#"
-                >
-                  <span>{city}</span>
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-    );
-  }
-}
-
-CitiesList.propTypes = {
-  handleCityChange: PropTypes.func.isRequired,
-  offers: PropTypes.arrayOf(
-    PropTypes.shape({
-      city: PropTypes.string.isRequired,
-      quality: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-      priceValue: PropTypes.string.isRequired,
-      priceText: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
-      coords: PropTypes.arrayOf(PropTypes.number).isRequired,
-    }),
-  ),
-  currentCity: PropTypes.string,
-};
-
-const mapStateToProps = (state) => ({
-  offers: state.offers,
-  currentCity: state.city,
+                <span>{city}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  handleCityChange(city) {
-    dispatch(ActionCreator.changeCiy(city));
-  },
-});
+export default withActiveItem(CitiesList, { stateUpdateRequired: true });
 
 export { CitiesList };
-export default connect(mapStateToProps, mapDispatchToProps)(CitiesList);

@@ -385,9 +385,9 @@ it(`Should render cities list with 6 cities`, () => {
   const tree = renderer
     .create(
       <CitiesList
-        offers={offersDataArray}
+        offersArray={offersDataArray}
         currentCity={city}
-        handleCityChange={() => {}}
+        onActiveItemChange={() => {}}
       />,
     )
     .toJSON();

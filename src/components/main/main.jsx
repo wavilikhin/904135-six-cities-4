@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import ReactDOM from 'react-dom';
+
 import PropTypes, { object } from 'prop-types';
 import CitiesList from '../cities-list/cities-list.jsx';
 import Offers from '../offers/offers.jsx';
