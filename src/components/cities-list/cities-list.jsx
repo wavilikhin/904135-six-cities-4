@@ -3,13 +3,7 @@ import withActiveItem from '../../hocs/with-active-item/with-active-item.jsx';
 
 let CitiesList = memo((props) => {
   const { offersArray, currentCity, onActiveItemChange } = props;
-
-  const uniqueCities = [];
-  offersArray.map((offer) => {
-    if (uniqueCities.indexOf(offer.city) === -1) {
-      uniqueCities.push(offer.city);
-    }
-  });
+  const uniqueCities = [...new Set(offersArray.map((offer) => offer.city))];
 
   return (
     <section className="locations container">
