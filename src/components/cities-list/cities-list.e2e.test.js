@@ -390,9 +390,9 @@ it(`Should all headers be pressed`, () => {
 
   const citiesListComponent = shallow(
     <CitiesList
-      handleCityChange={onHeaderClick}
-      offers={offers}
+      offersArray={offers}
       currentCity={currentCity}
+      onActiveItemChange={onHeaderClick}
     />,
   );
 

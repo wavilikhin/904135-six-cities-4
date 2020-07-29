@@ -49,16 +49,17 @@ const offersDataArray = [
     coords: [52.3709553943508, 4.89309666406198],
   },
 ];
-const city = 'Amsterdam';
+const currentCity = 'Amsterdam';
 
 describe('OffersList component snapshot test', () => {
+  const onActiveItemChange = jest.fn();
   it(`Should render a list of 5 offers with data and images`, () => {
     const tree = renderer
       .create(
         <OffersList
           handleHover={() => {}}
           offersArray={offersDataArray}
-          city={city}
+          currentCity={currentCity}
         />,
       )
       .toJSON();
