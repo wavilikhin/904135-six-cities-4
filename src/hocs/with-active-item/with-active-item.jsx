@@ -46,8 +46,7 @@ const withActiveItem = (Component, config) => {
       PropTypes.shape({
         isPremium: PropTypes.bool.isRequired,
         image: PropTypes.string.isRequired,
-        priceValue: PropTypes.string.isRequired,
-        priceText: PropTypes.string.isRequired,
+        priceValue: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
         type: PropTypes.string.isRequired,
         coords: PropTypes.arrayOf(PropTypes.number).isRequired,

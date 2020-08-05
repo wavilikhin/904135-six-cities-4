@@ -48,8 +48,12 @@ class OfferCard extends PureComponent {
         <div className="place-card__info">
           <div className="place-card__price-wrapper">
             <div className="place-card__price">
-              <b className="place-card__price-value">{priceValue}</b>
-              <span className="place-card__price-text">{priceText}</span>
+              <b className="place-card__price-value">&#8364;{priceValue}</b>
+              <span className="place-card__price-text">
+                {' '}
+                &#x2215;&#32;night
+              </span>
+              {/* <span className="place-card__price-text">\u2215\u0020night</span> */}
             </div>
             <button
               className="place-card__bookmark-button button"
@@ -82,8 +86,7 @@ OfferCard.propTypes = {
   cardData: PropTypes.shape({
     isPremium: PropTypes.bool.isRequired,
     image: PropTypes.string.isRequired,
-    priceValue: PropTypes.string.isRequired,
-    priceValue: PropTypes.string.isRequired,
+    priceValue: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     coords: PropTypes.arrayOf(PropTypes.number).isRequired,

@@ -3,6 +3,7 @@ import axios from 'axios';
 const Error = {
   UNAUTHORIZED: 401,
   BAD_REQUEST: 400,
+  SERVER_ERROR: 500,
 };
 
 export const createApi = (onUnauthorized) => {
@@ -29,8 +30,8 @@ export const createApi = (onUnauthorized) => {
       throw new Error(`Bad request`, response.data.error);
     }
 
-    if (response.status > 500) {
-      throw new Error(`Server currently unavalibale`, response.data.error);
+    if (response.status === Error.SERVER_ERROR) {
+      throw new Error(`Server unavaliable`, response.data.error);
     }
 
     throw err;

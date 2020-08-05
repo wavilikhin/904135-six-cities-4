@@ -42,12 +42,14 @@ exports[`ContentCard component snapshot test Should render content card with qua
         <b
           className="place-card__price-value"
         >
-          &euro;160
+          €
+          160
         </b>
         <span
           className="place-card__price-text"
         >
-          &#47;&nbsp;night
+           
+          ∕ night
         </span>
       </div>
       <button
