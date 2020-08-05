@@ -273,12 +273,14 @@ exports[`Main component snapshot test Main component should render main page
                     <b
                       className="place-card__price-value"
                     >
-                      €120
+                      €
+                      120
                     </b>
                     <span
                       className="place-card__price-text"
                     >
-                       ∕ night
+                       
+                      ∕ night
                     </span>
                   </div>
                   <button
@@ -370,12 +372,14 @@ exports[`Main component snapshot test Main component should render main page
                     <b
                       className="place-card__price-value"
                     >
-                      €110
+                      €
+                      110
                     </b>
                     <span
                       className="place-card__price-text"
                     >
-                       ∕ night
+                       
+                      ∕ night
                     </span>
                   </div>
                   <button
@@ -467,12 +471,14 @@ exports[`Main component snapshot test Main component should render main page
                     <b
                       className="place-card__price-value"
                     >
-                      €100
+                      €
+                      100
                     </b>
                     <span
                       className="place-card__price-text"
                     >
-                       ∕ night
+                       
+                      ∕ night
                     </span>
                   </div>
                   <button
@@ -564,12 +570,14 @@ exports[`Main component snapshot test Main component should render main page
                     <b
                       className="place-card__price-value"
                     >
-                      €150
+                      €
+                      150
                     </b>
                     <span
                       className="place-card__price-text"
                     >
-                       ∕ night
+                       
+                      ∕ night
                     </span>
                   </div>
                   <button
@@ -661,12 +669,14 @@ exports[`Main component snapshot test Main component should render main page
                     <b
                       className="place-card__price-value"
                     >
-                      €80
+                      €
+                      80
                     </b>
                     <span
                       className="place-card__price-text"
                     >
-                       ∕ night
+                       
+                      ∕ night
                     </span>
                   </div>
                   <button

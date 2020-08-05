@@ -7,13 +7,24 @@ import { ActionCreator } from '../../reducer/state/state.js';
 import { getOffers } from '../../reducer/data/selectors.js';
 
 class Main extends PureComponent {
-  componentDidMount() {
+  constructor(props) {
+    super(props);
+
+    this._updateCurrentCity = this._updateCurrentCity.bind(this);
+  }
+
+  _updateCurrentCity() {
     const { handleCityChange, offersDataArray } = this.props;
-    offersDataArray.length > 0 ? handleCityChange(offersDataArray[0].city) : '';
+    if (offersDataArray.length > 0) {
+      handleCityChange(offersDataArray[0].city);
+    }
+  }
+
+  componentDidMount() {
+    this._updateCurrentCity();
   }
   componentDidUpdate() {
-    const { handleCityChange, offersDataArray } = this.props;
-    offersDataArray.length > 0 ? handleCityChange(offersDataArray[0].city) : '';
+    this._updateCurrentCity();
   }
 
   render() {
@@ -71,8 +82,7 @@ Main.propTypes = {
       cityCoords: PropTypes.arrayOf(PropTypes.number, PropTypes.number),
       isPremium: PropTypes.bool.isRequired,
       image: PropTypes.string.isRequired,
-      priceValue: PropTypes.string.isRequired,
-      priceText: PropTypes.string.isRequired,
+      priceValue: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
       coords: PropTypes.arrayOf(PropTypes.number, PropTypes.number).isRequired,
