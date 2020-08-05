@@ -1,15 +1,19 @@
 import React, { PureComponent } from 'react';
-
-import PropTypes, { object } from 'prop-types';
+import PropTypes from 'prop-types';
 import CitiesList from '../cities-list/cities-list.jsx';
 import Offers from '../offers/offers.jsx';
 import { connect } from 'react-redux';
-import { ActionCreator } from '../../reducer.js';
+import { ActionCreator } from '../../reducer/state/state.js';
+import { getOffers } from '../../reducer/data/selectors.js';
 
 class Main extends PureComponent {
   componentDidMount() {
     const { handleCityChange, offersDataArray } = this.props;
-    handleCityChange(offersDataArray[0].city);
+    offersDataArray.length > 0 ? handleCityChange(offersDataArray[0].city) : '';
+  }
+  componentDidUpdate() {
+    const { handleCityChange, offersDataArray } = this.props;
+    offersDataArray.length > 0 ? handleCityChange(offersDataArray[0].city) : '';
   }
 
   render() {
@@ -65,7 +69,7 @@ Main.propTypes = {
     PropTypes.shape({
       city: PropTypes.string.isRequired,
       cityCoords: PropTypes.arrayOf(PropTypes.number, PropTypes.number),
-      quality: PropTypes.string.isRequired,
+      isPremium: PropTypes.bool.isRequired,
       image: PropTypes.string.isRequired,
       priceValue: PropTypes.string.isRequired,
       priceText: PropTypes.string.isRequired,
@@ -78,7 +82,7 @@ Main.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  offersDataArray: state.offers,
+  offersDataArray: getOffers(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({

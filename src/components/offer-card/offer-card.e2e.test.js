@@ -4,13 +4,16 @@ import Adapter from 'enzyme-adapter-react-16';
 import OfferCard from './offer-card.jsx';
 
 const cardData = {
-  quality: `Premium`,
-  image: `img/apartment-04.jpg`,
-  priceValue: `&euro;80`,
-  priceText: `&#47;&nbsp;night`,
-  name: `Nice, cozy, warm big bed apartment`,
+  city: 'Amsterdam',
+  cityCoords: [52.38333, 4.9],
+  isPremium: true,
+  cityZoom: 12,
+  image: `img/apartment-01.jpg`,
+  priceValue: `\u20AC120`,
+  priceText: ` \u2215\u0020night`,
+  name: `Beautiful & luxurious apartment at great location`,
   type: `Apartment`,
-  coords: [52.3809553943508, 49.39309666406198],
+  coords: [52.3909553943508, 4.85309666406198],
 };
 
 configure({

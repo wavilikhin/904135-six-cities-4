@@ -3,7 +3,8 @@ import renderer from 'react-test-renderer';
 import OfferCard from './offer-card.jsx';
 
 const cardData = {
-  quality: `Premium`,
+  isPremium: true,
+  cityZoom: 12,
   image: `img/apartment-01.jpg`,
   priceValue: `&euro;160`,
   priceText: `&#47;&nbsp;night`,

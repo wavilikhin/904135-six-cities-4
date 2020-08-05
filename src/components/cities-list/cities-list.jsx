@@ -2,18 +2,14 @@ import React, { memo } from 'react';
 import withActiveItem from '../../hocs/with-active-item/with-active-item.jsx';
 
 let CitiesList = memo((props) => {
-  const { offersArray, currentCity, onActiveItemChange } = props;
-  const uniqueCities = [...new Set(offersArray.map((offer) => offer.city))];
+  const { currentCity, uniqueCities, onActiveItemChange } = props;
 
   return (
     <section className="locations container">
       <ul className="locations__list tabs__list">
         {uniqueCities.map((city, i) => {
           return (
-            <li
-              key={`${i}-` + city.replace(/\s/g, '')}
-              className="locations__item"
-            >
+            <li key={`${i}-${city}`} className="locations__item">
               <a
                 onClick={(e) => {
                   e.preventDefault();
@@ -34,6 +30,8 @@ let CitiesList = memo((props) => {
   );
 });
 
-export default withActiveItem(CitiesList, { stateUpdateRequired: true });
+export default withActiveItem(CitiesList, {
+  stateUpdateRequired: true,
+});
 
 export { CitiesList };

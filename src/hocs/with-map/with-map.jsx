@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import leaflet from 'leaflet';
-import * as COORDS from '../../__mocks__/coords.js';
 
 export const withMap = (Component) => {
   class WithMap extends PureComponent {
@@ -10,7 +9,7 @@ export const withMap = (Component) => {
     }
 
     componentDidMount() {
-      const { city, zoom, offers } = this.props;
+      const { offers } = this.props;
 
       const icon = leaflet.icon({
         iconUrl: `img/pin.svg`,
@@ -19,10 +18,13 @@ export const withMap = (Component) => {
       this.icon = icon;
 
       let cityCoords;
+      let zoom;
 
-      city === null
-        ? (cityCoords = [0, 0])
-        : (cityCoords = COORDS[city.toUpperCase()]);
+      offers.length > 0
+        ? (cityCoords = offers[0].cityCoords)
+        : (cityCoords = [0, 0]);
+
+      offers.length > 0 ? (zoom = offers[0].cityZoom) : (zoom = 12);
 
       const map = leaflet.map(`map`, {
         center: cityCoords,
@@ -58,10 +60,18 @@ export const withMap = (Component) => {
     }
 
     componentDidUpdate() {
-      const { city, zoom, offers } = this.props;
+      const { offers } = this.props;
 
-      let updatedCoords = COORDS[city.toUpperCase()];
-      let updatedZoom = zoom;
+      let updatedCoords;
+      let updatedZoom;
+
+      offers.length > 0
+        ? (updatedCoords = offers[0].cityCoords)
+        : (updatedCoords = [0, 0]);
+
+      offers.length > 0
+        ? (updatedZoom = offers[0].cityZoom)
+        : (updatedZoom = 12);
 
       this.map.setView(updatedCoords, updatedZoom);
 
@@ -86,11 +96,11 @@ export const withMap = (Component) => {
   }
 
   WithMap.propTypes = {
-    city: PropTypes.string,
-    zoom: PropTypes.number.isRequired,
     offers: PropTypes.arrayOf(
       PropTypes.shape({
-        quality: PropTypes.string.isRequired,
+        city: PropTypes.string.isRequired,
+        cityZoom: PropTypes.number.isRequired,
+        isPremium: PropTypes.bool.isRequired,
         image: PropTypes.string.isRequired,
         priceValue: PropTypes.string.isRequired,
         priceText: PropTypes.string.isRequired,

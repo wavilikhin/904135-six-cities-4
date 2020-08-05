@@ -72,86 +72,7 @@ exports[`App component test App component should render main page 1`] = `
       >
         <ul
           className="locations__list tabs__list"
-        >
-          <li
-            className="locations__item"
-          >
-            <a
-              className="locations__item-link tabs__item "
-              href="#"
-              onClick={[Function]}
-            >
-              <span>
-                Amsterdam
-              </span>
-            </a>
-          </li>
-          <li
-            className="locations__item"
-          >
-            <a
-              className="locations__item-link tabs__item "
-              href="#"
-              onClick={[Function]}
-            >
-              <span>
-                Paris
-              </span>
-            </a>
-          </li>
-          <li
-            className="locations__item"
-          >
-            <a
-              className="locations__item-link tabs__item "
-              href="#"
-              onClick={[Function]}
-            >
-              <span>
-                Cologne
-              </span>
-            </a>
-          </li>
-          <li
-            className="locations__item"
-          >
-            <a
-              className="locations__item-link tabs__item "
-              href="#"
-              onClick={[Function]}
-            >
-              <span>
-                Brusseles
-              </span>
-            </a>
-          </li>
-          <li
-            className="locations__item"
-          >
-            <a
-              className="locations__item-link tabs__item "
-              href="#"
-              onClick={[Function]}
-            >
-              <span>
-                Hamburg
-              </span>
-            </a>
-          </li>
-          <li
-            className="locations__item"
-          >
-            <a
-              className="locations__item-link tabs__item "
-              href="#"
-              onClick={[Function]}
-            >
-              <span>
-                Dusseldorf
-              </span>
-            </a>
-          </li>
-        </ul>
+        />
       </section>
     </div>
     <div
@@ -173,6 +94,7 @@ exports[`App component test App component should render main page 1`] = `
           >
             0
              places to stay in 
+            
           </b>
           <form
             action="#"

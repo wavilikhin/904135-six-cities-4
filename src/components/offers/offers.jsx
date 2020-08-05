@@ -1,16 +1,12 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import OffersList from '../offers-list/offers-list.jsx';
 import Map from '../map/map.jsx';
+import { getCity, getFiltredOffers } from '../../reducer/data/selectors.js';
 
 const Offers = (props) => {
-  const { offersDataArray, city } = props;
-
-  const filtredOffers = offersDataArray.filter((offer) => {
-    return offer.city === city;
-  });
+  const { filtredOffers, city } = props;
 
   return (
     <div className="cities">
@@ -50,7 +46,11 @@ const Offers = (props) => {
         </section>
         <div className="cities__right-section">
           <section className="cities__map map">
-            <Map city={city} zoom={12} offers={filtredOffers} />
+            <Map
+              city={city}
+              zoom={filtredOffers.length > 0 ? filtredOffers[0].cityZoom : 12}
+              offers={filtredOffers}
+            />
           </section>
         </div>
       </div>
@@ -59,11 +59,12 @@ const Offers = (props) => {
 };
 
 Offers.propTypes = {
-  offersDataArray: PropTypes.arrayOf(
+  filtredOffers: PropTypes.arrayOf(
     PropTypes.shape({
       city: PropTypes.string.isRequired,
       cityCoords: PropTypes.arrayOf(PropTypes.number, PropTypes.number),
-      quality: PropTypes.string.isRequired,
+      cityZoom: PropTypes.number.isRequired,
+      isPremium: PropTypes.bool.isRequired,
       image: PropTypes.string.isRequired,
       priceValue: PropTypes.string.isRequired,
       priceText: PropTypes.string.isRequired,
@@ -76,8 +77,8 @@ Offers.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  city: state.city,
-  offersDataArray: state.offers,
+  city: getCity(state),
+  filtredOffers: getFiltredOffers(state),
 });
 
 export { Offers };

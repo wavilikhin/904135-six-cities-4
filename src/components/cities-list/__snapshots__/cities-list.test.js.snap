@@ -29,33 +29,7 @@ exports[`Should render cities list with 6 cities 1`] = `
         onClick={[Function]}
       >
         <span>
-          Paris
-        </span>
-      </a>
-    </li>
-    <li
-      className="locations__item"
-    >
-      <a
-        className="locations__item-link tabs__item "
-        href="#"
-        onClick={[Function]}
-      >
-        <span>
-          Cologne
-        </span>
-      </a>
-    </li>
-    <li
-      className="locations__item"
-    >
-      <a
-        className="locations__item-link tabs__item "
-        href="#"
-        onClick={[Function]}
-      >
-        <span>
-          Brusseles
+          Dusseldorf
         </span>
       </a>
     </li>
@@ -81,7 +55,33 @@ exports[`Should render cities list with 6 cities 1`] = `
         onClick={[Function]}
       >
         <span>
-          Dusseldorf
+          Paris
+        </span>
+      </a>
+    </li>
+    <li
+      className="locations__item"
+    >
+      <a
+        className="locations__item-link tabs__item "
+        href="#"
+        onClick={[Function]}
+      >
+        <span>
+          Brusseles
+        </span>
+      </a>
+    </li>
+    <li
+      className="locations__item"
+    >
+      <a
+        className="locations__item-link tabs__item "
+        href="#"
+        onClick={[Function]}
+      >
+        <span>
+          Cologne
         </span>
       </a>
     </li>

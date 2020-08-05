@@ -1,16 +1,9 @@
-import offers from './__mocks__/offers';
-
 const initialState = {
-  city: null,
-  offers,
+  city: '',
 };
 
 const ActionType = {
   CHANGE_CITY: 'CHANGE_CITY',
-};
-
-const filterValues = (values, keyToFilter, valueToFilter) => {
-  return values.filter((value) => value[keyToFilter] === valueToFilter);
 };
 
 const ActionCreator = {

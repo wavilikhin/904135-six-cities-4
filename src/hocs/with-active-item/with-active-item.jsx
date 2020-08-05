@@ -1,7 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { ActionCreator } from '../../reducer.js';
+import { ActionCreator } from '../../reducer/state/state.js';
+import {
+  getCity,
+  getUniqueCities,
+  getFiltredOffers,
+} from '../../reducer/data/selectors.js';
 
 const withActiveItem = (Component, config) => {
   class WithActiveItem extends PureComponent {
@@ -39,7 +44,7 @@ const withActiveItem = (Component, config) => {
   WithActiveItem.propTypes = {
     offersArray: PropTypes.arrayOf(
       PropTypes.shape({
-        quality: PropTypes.string.isRequired,
+        isPremium: PropTypes.bool.isRequired,
         image: PropTypes.string.isRequired,
         priceValue: PropTypes.string.isRequired,
         priceText: PropTypes.string.isRequired,
@@ -48,13 +53,15 @@ const withActiveItem = (Component, config) => {
         coords: PropTypes.arrayOf(PropTypes.number).isRequired,
       }),
     ),
-    currentCity: PropTypes.string,
     handleCityChange: PropTypes.func,
+    currentCity: PropTypes.string.isRequired,
+    uniqueCities: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   const mapStateToProps = (state) => ({
-    offersArray: state.offers,
-    currentCity: state.city,
+    offersArray: getFiltredOffers(state),
+    currentCity: getCity(state),
+    uniqueCities: getUniqueCities(state),
   });
 
   let mapDispathcToProps;

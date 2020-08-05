@@ -2,13 +2,12 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Map from './map.jsx';
 
-const city = 'Amsterdam';
-const zoom = 12;
 const offers = [
   {
     city: 'Amsterdam',
     cityCoords: [52.38333, 4.9],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-01.jpg`,
     priceValue: `\u20AC120`,
     priceText: ` \u2215\u0020night`,
@@ -18,8 +17,10 @@ const offers = [
   },
   {
     city: 'Amsterdam',
+
     cityCoords: [52.38333, 4.9],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/room.jpg`,
     priceValue: `\u20AC110`,
     priceText: ` \u2215\u0020night`,
@@ -29,8 +30,10 @@ const offers = [
   },
   {
     city: 'Amsterdam',
+
     cityCoords: [52.38333, 4.9],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-02.jpg`,
     priceValue: `\u20AC100`,
     priceText: ` \u2215\u0020night`,
@@ -40,8 +43,10 @@ const offers = [
   },
   {
     city: 'Amsterdam',
+
     cityCoords: [52.38333, 4.9],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-03.jpg`,
     priceValue: `\u20AC150`,
     priceText: ` \u2215\u0020night`,
@@ -51,8 +56,10 @@ const offers = [
   },
   {
     city: 'Amsterdam',
+
     cityCoords: [52.38333, 4.9],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/room.jpg`,
     priceValue: `\u20AC80`,
     priceText: ` \u2215\u0020night`,
@@ -62,8 +69,10 @@ const offers = [
   },
   {
     city: 'Paris',
+
     cityCoords: [48.856979, 2.347253],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-01.jpg`,
     priceValue: `\u20AC120`,
     priceText: ` \u2215\u0020night`,
@@ -73,8 +82,10 @@ const offers = [
   },
   {
     city: 'Paris',
+
     cityCoords: [48.856979, 2.347253],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/room.jpg`,
     priceValue: `\u20AC110`,
     priceText: ` \u2215\u0020night`,
@@ -84,8 +95,10 @@ const offers = [
   },
   {
     city: 'Paris',
+
     cityCoords: [48.856979, 2.347253],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-02.jpg`,
     priceValue: `\u20AC100`,
     priceText: ` \u2215\u0020night`,
@@ -95,8 +108,10 @@ const offers = [
   },
   {
     city: 'Paris',
+
     cityCoords: [48.856979, 2.347253],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-03.jpg`,
     priceValue: `\u20AC150`,
     priceText: ` \u2215\u0020night`,
@@ -106,8 +121,10 @@ const offers = [
   },
   {
     city: 'Paris',
+
     cityCoords: [48.856979, 2.347253],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/room.jpg`,
     priceValue: `\u20AC80`,
     priceText: ` \u2215\u0020night`,
@@ -117,8 +134,10 @@ const offers = [
   },
   {
     city: 'Paris',
+
     cityCoords: [48.856979, 2.347253],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-03.jpg`,
     priceValue: `\u20AC150`,
     priceText: ` \u2215\u0020night`,
@@ -128,8 +147,10 @@ const offers = [
   },
   {
     city: 'Paris',
+
     cityCoords: [48.856979, 2.347253],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/room.jpg`,
     priceValue: `\u20AC80`,
     priceText: ` \u2215\u0020night`,
@@ -139,8 +160,10 @@ const offers = [
   },
   {
     city: 'Cologne',
+
     cityCoords: [50.936427, 6.966603],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-01.jpg`,
     priceValue: `\u20AC120`,
     priceText: ` \u2215\u0020night`,
@@ -150,8 +173,10 @@ const offers = [
   },
   {
     city: 'Cologne',
+
     cityCoords: [50.936427, 6.966603],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/room.jpg`,
     priceValue: `\u20AC110`,
     priceText: ` \u2215\u0020night`,
@@ -161,8 +186,10 @@ const offers = [
   },
   {
     city: 'Cologne',
+
     cityCoords: [50.936427, 6.966603],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-02.jpg`,
     priceValue: `\u20AC100`,
     priceText: ` \u2215\u0020night`,
@@ -173,7 +200,8 @@ const offers = [
   {
     city: 'Cologne',
     cityCoords: [50.936427, 6.966603],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-03.jpg`,
     priceValue: `\u20AC150`,
     priceText: ` \u2215\u0020night`,
@@ -184,7 +212,8 @@ const offers = [
   {
     city: 'Cologne',
     cityCoords: [50.936427, 6.966603],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/room.jpg`,
     priceValue: `\u20AC80`,
     priceText: ` \u2215\u0020night`,
@@ -195,7 +224,8 @@ const offers = [
   {
     city: 'Cologne',
     cityCoords: [50.936427, 6.966603],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-03.jpg`,
     priceValue: `\u20AC150`,
     priceText: ` \u2215\u0020night`,
@@ -206,7 +236,8 @@ const offers = [
   {
     city: 'Brusseles',
     cityCoords: [50.873122, 4.359721],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-01.jpg`,
     priceValue: `\u20AC120`,
     priceText: ` \u2215\u0020night`,
@@ -217,7 +248,8 @@ const offers = [
   {
     city: 'Brusseles',
     cityCoords: [50.873122, 4.359721],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/room.jpg`,
     priceValue: `\u20AC110`,
     priceText: ` \u2215\u0020night`,
@@ -228,7 +260,8 @@ const offers = [
   {
     city: 'Brusseles',
     cityCoords: [50.873122, 4.359721],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-02.jpg`,
     priceValue: `\u20AC100`,
     priceText: ` \u2215\u0020night`,
@@ -239,7 +272,8 @@ const offers = [
   {
     city: 'Brusseles',
     cityCoords: [50.873122, 4.359721],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-03.jpg`,
     priceValue: `\u20AC150`,
     priceText: ` \u2215\u0020night`,
@@ -250,7 +284,8 @@ const offers = [
   {
     city: 'Brusseles',
     cityCoords: [50.873122, 4.359721],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/room.jpg`,
     priceValue: `\u20AC80`,
     priceText: ` \u2215\u0020night`,
@@ -261,7 +296,8 @@ const offers = [
   {
     city: 'Brusseles',
     cityCoords: [50.873122, 4.359721],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-03.jpg`,
     priceValue: `\u20AC150`,
     priceText: ` \u2215\u0020night`,
@@ -272,7 +308,8 @@ const offers = [
   {
     city: 'Hamburg',
     cityCoords: [53.541761, 10.005761],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-01.jpg`,
     priceValue: `\u20AC120`,
     priceText: ` \u2215\u0020night`,
@@ -283,7 +320,8 @@ const offers = [
   {
     city: 'Hamburg',
     cityCoords: [53.541761, 10.005761],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/room.jpg`,
     priceValue: `\u20AC110`,
     priceText: ` \u2215\u0020night`,
@@ -294,7 +332,8 @@ const offers = [
   {
     city: 'Hamburg',
     cityCoords: [53.541761, 10.005761],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-02.jpg`,
     priceValue: `\u20AC100`,
     priceText: ` \u2215\u0020night`,
@@ -305,7 +344,8 @@ const offers = [
   {
     city: 'Hamburg',
     cityCoords: [53.541761, 10.005761],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-03.jpg`,
     priceValue: `\u20AC150`,
     priceText: ` \u2215\u0020night`,
@@ -316,7 +356,8 @@ const offers = [
   {
     city: 'Hamburg',
     cityCoords: [53.541761, 10.005761],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/room.jpg`,
     priceValue: `\u20AC80`,
     priceText: ` \u2215\u0020night`,
@@ -327,7 +368,8 @@ const offers = [
   {
     city: 'Hamburg',
     cityCoords: [53.541761, 10.005761],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-03.jpg`,
     priceValue: `\u20AC150`,
     priceText: ` \u2215\u0020night`,
@@ -338,7 +380,8 @@ const offers = [
   {
     city: 'Dusseldorf',
     cityCoords: [51.2415, 6.786019],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-01.jpg`,
     priceValue: `\u20AC120`,
     priceText: ` \u2215\u0020night`,
@@ -349,7 +392,8 @@ const offers = [
   {
     city: 'Dusseldorf',
     cityCoords: [51.2415, 6.786019],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/room.jpg`,
     priceValue: `\u20AC110`,
     priceText: ` \u2215\u0020night`,
@@ -360,7 +404,8 @@ const offers = [
   {
     city: 'Dusseldorf',
     cityCoords: [51.2415, 6.786019],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-02.jpg`,
     priceValue: `\u20AC100`,
     priceText: ` \u2215\u0020night`,
@@ -371,7 +416,8 @@ const offers = [
   {
     city: 'Dusseldorf',
     cityCoords: [51.2415, 6.786019],
-    quality: `Premium`,
+    isPremium: true,
+    cityZoom: 12,
     image: `img/apartment-03.jpg`,
     priceValue: `\u20AC150`,
     priceText: ` \u2215\u0020night`,
@@ -383,9 +429,7 @@ const offers = [
 
 describe('Map component snapshot test', () => {
   it(`Should render map with city coords, zoom and map icons`, () => {
-    const tree = renderer
-      .create(<Map city={city} zoom={zoom} offers={offers} />)
-      .toJSON();
+    const tree = renderer.create(<Map offers={offers} />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });

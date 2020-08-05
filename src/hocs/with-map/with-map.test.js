@@ -3,13 +3,12 @@ import renderer from 'react-test-renderer';
 import { withMap } from './with-map.jsx';
 
 const mockData = {
-  city: 'Amsterdam',
-  zoom: 12,
   offers: [
     {
       city: 'Amsterdam',
       cityCoords: [52.38333, 4.9],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-01.jpg`,
       priceValue: `\u20AC120`,
       priceText: ` \u2215\u0020night`,
@@ -20,7 +19,8 @@ const mockData = {
     {
       city: 'Amsterdam',
       cityCoords: [52.38333, 4.9],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/room.jpg`,
       priceValue: `\u20AC110`,
       priceText: ` \u2215\u0020night`,
@@ -31,7 +31,8 @@ const mockData = {
     {
       city: 'Amsterdam',
       cityCoords: [52.38333, 4.9],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-02.jpg`,
       priceValue: `\u20AC100`,
       priceText: ` \u2215\u0020night`,
@@ -41,8 +42,10 @@ const mockData = {
     },
     {
       city: 'Amsterdam',
+
       cityCoords: [52.38333, 4.9],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-03.jpg`,
       priceValue: `\u20AC150`,
       priceText: ` \u2215\u0020night`,
@@ -52,8 +55,10 @@ const mockData = {
     },
     {
       city: 'Amsterdam',
+
       cityCoords: [52.38333, 4.9],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/room.jpg`,
       priceValue: `\u20AC80`,
       priceText: ` \u2215\u0020night`,
@@ -63,8 +68,10 @@ const mockData = {
     },
     {
       city: 'Paris',
+
       cityCoords: [48.856979, 2.347253],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-01.jpg`,
       priceValue: `\u20AC120`,
       priceText: ` \u2215\u0020night`,
@@ -74,8 +81,10 @@ const mockData = {
     },
     {
       city: 'Paris',
+
       cityCoords: [48.856979, 2.347253],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/room.jpg`,
       priceValue: `\u20AC110`,
       priceText: ` \u2215\u0020night`,
@@ -85,8 +94,10 @@ const mockData = {
     },
     {
       city: 'Paris',
+
       cityCoords: [48.856979, 2.347253],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-02.jpg`,
       priceValue: `\u20AC100`,
       priceText: ` \u2215\u0020night`,
@@ -96,8 +107,10 @@ const mockData = {
     },
     {
       city: 'Paris',
+
       cityCoords: [48.856979, 2.347253],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-03.jpg`,
       priceValue: `\u20AC150`,
       priceText: ` \u2215\u0020night`,
@@ -107,8 +120,10 @@ const mockData = {
     },
     {
       city: 'Paris',
+
       cityCoords: [48.856979, 2.347253],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/room.jpg`,
       priceValue: `\u20AC80`,
       priceText: ` \u2215\u0020night`,
@@ -118,8 +133,10 @@ const mockData = {
     },
     {
       city: 'Paris',
+
       cityCoords: [48.856979, 2.347253],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-03.jpg`,
       priceValue: `\u20AC150`,
       priceText: ` \u2215\u0020night`,
@@ -129,8 +146,10 @@ const mockData = {
     },
     {
       city: 'Paris',
+
       cityCoords: [48.856979, 2.347253],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/room.jpg`,
       priceValue: `\u20AC80`,
       priceText: ` \u2215\u0020night`,
@@ -140,8 +159,10 @@ const mockData = {
     },
     {
       city: 'Cologne',
+
       cityCoords: [50.936427, 6.966603],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-01.jpg`,
       priceValue: `\u20AC120`,
       priceText: ` \u2215\u0020night`,
@@ -151,8 +172,10 @@ const mockData = {
     },
     {
       city: 'Cologne',
+
       cityCoords: [50.936427, 6.966603],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/room.jpg`,
       priceValue: `\u20AC110`,
       priceText: ` \u2215\u0020night`,
@@ -162,8 +185,10 @@ const mockData = {
     },
     {
       city: 'Cologne',
+
       cityCoords: [50.936427, 6.966603],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-02.jpg`,
       priceValue: `\u20AC100`,
       priceText: ` \u2215\u0020night`,
@@ -174,7 +199,8 @@ const mockData = {
     {
       city: 'Cologne',
       cityCoords: [50.936427, 6.966603],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-03.jpg`,
       priceValue: `\u20AC150`,
       priceText: ` \u2215\u0020night`,
@@ -185,7 +211,8 @@ const mockData = {
     {
       city: 'Cologne',
       cityCoords: [50.936427, 6.966603],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/room.jpg`,
       priceValue: `\u20AC80`,
       priceText: ` \u2215\u0020night`,
@@ -196,7 +223,8 @@ const mockData = {
     {
       city: 'Cologne',
       cityCoords: [50.936427, 6.966603],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-03.jpg`,
       priceValue: `\u20AC150`,
       priceText: ` \u2215\u0020night`,
@@ -207,7 +235,8 @@ const mockData = {
     {
       city: 'Brusseles',
       cityCoords: [50.873122, 4.359721],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-01.jpg`,
       priceValue: `\u20AC120`,
       priceText: ` \u2215\u0020night`,
@@ -218,7 +247,8 @@ const mockData = {
     {
       city: 'Brusseles',
       cityCoords: [50.873122, 4.359721],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/room.jpg`,
       priceValue: `\u20AC110`,
       priceText: ` \u2215\u0020night`,
@@ -229,7 +259,8 @@ const mockData = {
     {
       city: 'Brusseles',
       cityCoords: [50.873122, 4.359721],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-02.jpg`,
       priceValue: `\u20AC100`,
       priceText: ` \u2215\u0020night`,
@@ -240,7 +271,8 @@ const mockData = {
     {
       city: 'Brusseles',
       cityCoords: [50.873122, 4.359721],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-03.jpg`,
       priceValue: `\u20AC150`,
       priceText: ` \u2215\u0020night`,
@@ -251,7 +283,8 @@ const mockData = {
     {
       city: 'Brusseles',
       cityCoords: [50.873122, 4.359721],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/room.jpg`,
       priceValue: `\u20AC80`,
       priceText: ` \u2215\u0020night`,
@@ -262,7 +295,8 @@ const mockData = {
     {
       city: 'Brusseles',
       cityCoords: [50.873122, 4.359721],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-03.jpg`,
       priceValue: `\u20AC150`,
       priceText: ` \u2215\u0020night`,
@@ -273,7 +307,8 @@ const mockData = {
     {
       city: 'Hamburg',
       cityCoords: [53.541761, 10.005761],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-01.jpg`,
       priceValue: `\u20AC120`,
       priceText: ` \u2215\u0020night`,
@@ -284,7 +319,8 @@ const mockData = {
     {
       city: 'Hamburg',
       cityCoords: [53.541761, 10.005761],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/room.jpg`,
       priceValue: `\u20AC110`,
       priceText: ` \u2215\u0020night`,
@@ -295,7 +331,8 @@ const mockData = {
     {
       city: 'Hamburg',
       cityCoords: [53.541761, 10.005761],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-02.jpg`,
       priceValue: `\u20AC100`,
       priceText: ` \u2215\u0020night`,
@@ -306,7 +343,8 @@ const mockData = {
     {
       city: 'Hamburg',
       cityCoords: [53.541761, 10.005761],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-03.jpg`,
       priceValue: `\u20AC150`,
       priceText: ` \u2215\u0020night`,
@@ -317,7 +355,8 @@ const mockData = {
     {
       city: 'Hamburg',
       cityCoords: [53.541761, 10.005761],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/room.jpg`,
       priceValue: `\u20AC80`,
       priceText: ` \u2215\u0020night`,
@@ -328,7 +367,8 @@ const mockData = {
     {
       city: 'Hamburg',
       cityCoords: [53.541761, 10.005761],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-03.jpg`,
       priceValue: `\u20AC150`,
       priceText: ` \u2215\u0020night`,
@@ -339,7 +379,8 @@ const mockData = {
     {
       city: 'Dusseldorf',
       cityCoords: [51.2415, 6.786019],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-01.jpg`,
       priceValue: `\u20AC120`,
       priceText: ` \u2215\u0020night`,
@@ -350,7 +391,8 @@ const mockData = {
     {
       city: 'Dusseldorf',
       cityCoords: [51.2415, 6.786019],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/room.jpg`,
       priceValue: `\u20AC110`,
       priceText: ` \u2215\u0020night`,
@@ -361,7 +403,8 @@ const mockData = {
     {
       city: 'Dusseldorf',
       cityCoords: [51.2415, 6.786019],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-02.jpg`,
       priceValue: `\u20AC100`,
       priceText: ` \u2215\u0020night`,
@@ -372,7 +415,8 @@ const mockData = {
     {
       city: 'Dusseldorf',
       cityCoords: [51.2415, 6.786019],
-      quality: `Premium`,
+      isPremium: true,
+      cityZoom: 12,
       image: `img/apartment-03.jpg`,
       priceValue: `\u20AC150`,
       priceText: ` \u2215\u0020night`,
@@ -391,13 +435,7 @@ const MockComponentWrapped = withMap(MockComponent);
 
 it(`withMap is rendered correctly`, () => {
   const tree = renderer
-    .create(
-      <MockComponentWrapped
-        city={mockData.city}
-        zoom={mockData.zoom}
-        offers={mockData.offers}
-      />,
-    )
+    .create(<MockComponentWrapped offers={mockData.offers} />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();

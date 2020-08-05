@@ -3,15 +3,11 @@ import withActiveItem from '../../hocs/with-active-item/with-active-item.jsx';
 import OfferCard from '../offer-card/offer-card.jsx';
 
 let OffersList = memo((props) => {
-  const { offersArray, currentCity, onActiveItemChange } = props;
-
-  const filtredOffers = offersArray.filter((offer) => {
-    return offer.city === currentCity;
-  });
+  const { offersArray, onActiveItemChange } = props;
 
   return (
     <div className="cities__places-list places__list tabs__content">
-      {filtredOffers.map((offerData, i) => {
+      {offersArray.map((offerData, i) => {
         return (
           <OfferCard
             key={`${i}-` + offerData.name.replace(/\s/g, '')}

@@ -20,7 +20,7 @@ class OfferCard extends PureComponent {
 
   render() {
     const {
-      cardData: { quality, image, priceValue, priceText, name, type },
+      cardData: { isPremium, image, priceValue, priceText, name, type },
     } = this.props;
 
     return (
@@ -29,9 +29,11 @@ class OfferCard extends PureComponent {
         onMouseEnter={this._handleMouseEnter}
         onMouseLeave={this._handleMouseLeave}
       >
-        <div className="place-card__mark">
-          <span>{quality}</span>
-        </div>
+        {isPremium && (
+          <div className="place-card__mark">
+            <span>Premium</span>
+          </div>
+        )}
         <div className="cities__image-wrapper place-card__image-wrapper">
           <a href="#">
             <img
@@ -78,7 +80,7 @@ class OfferCard extends PureComponent {
 OfferCard.propTypes = {
   handleHover: PropTypes.func.isRequired,
   cardData: PropTypes.shape({
-    quality: PropTypes.string.isRequired,
+    isPremium: PropTypes.bool.isRequired,
     image: PropTypes.string.isRequired,
     priceValue: PropTypes.string.isRequired,
     priceValue: PropTypes.string.isRequired,
