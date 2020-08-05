@@ -450,7 +450,12 @@ describe(`Main component snapshot test`, () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <Main handleCityChange={() => {}} offersDataArray={offersDataArray} />
+          <Main
+            handleCityChange={() => {}}
+            offersDataArray={offersDataArray}
+            authStatus=""
+            userEmail=""
+          />
         </Provider>,
       )
       .toJSON();

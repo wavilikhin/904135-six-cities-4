@@ -5,6 +5,7 @@ import Offers from '../offers/offers.jsx';
 import { connect } from 'react-redux';
 import { ActionCreator } from '../../reducer/state/state.js';
 import { getOffers } from '../../reducer/data/selectors.js';
+import { getAuthStatus, getUserEmail } from '../../reducer/user/selectors.js';
 
 class Main extends PureComponent {
   componentDidMount() {
@@ -17,6 +18,8 @@ class Main extends PureComponent {
   }
 
   render() {
+    const { authStatus, userEmail } = this.props;
+
     return (
       <div className="page page--gray page--main">
         <header className="header">
@@ -41,8 +44,8 @@ class Main extends PureComponent {
                       href="#"
                     >
                       <div className="header__avatar-wrapper user__avatar-wrapper"></div>
-                      <span className="header__user-name user__name">
-                        Oliver.conner@gmail.com
+                      <span>
+                        {authStatus === 'NO_AUTH' ? `Sign In` : userEmail}
                       </span>
                     </a>
                   </li>
@@ -79,10 +82,14 @@ Main.propTypes = {
     }),
   ).isRequired,
   handleCityChange: PropTypes.func,
+  authStatus: PropTypes.string.isRequired,
+  userEmail: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   offersDataArray: getOffers(state),
+  authStatus: getAuthStatus(state),
+  userEmail: getUserEmail(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({

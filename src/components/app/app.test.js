@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from './app.jsx';
+import { App } from './app.jsx';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import NameSpace from '../../reducer/name-space.js';
@@ -15,6 +15,10 @@ describe(`App component test`, () => {
       },
       [NameSpace.STATE]: {
         city: '',
+      },
+      [NameSpace.USER]: {
+        authStatus: '',
+        userEmail: '',
       },
     });
     const tree = renderer

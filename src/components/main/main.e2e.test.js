@@ -457,6 +457,8 @@ describe(`Main component's end-to-end test`, () => {
         <Main
           handleCityChange={onHeaderClick}
           offersDataArray={offersDataArray}
+          authStatus=""
+          userEmail=""
         />
       </Provider>,
     );

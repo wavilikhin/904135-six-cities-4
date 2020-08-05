@@ -44,10 +44,8 @@ exports[`App component test App component should render main page 1`] = `
                 <div
                   className="header__avatar-wrapper user__avatar-wrapper"
                 />
-                <span
-                  className="header__user-name user__name"
-                >
-                  Oliver.conner@gmail.com
+                <span>
+                  
                 </span>
               </a>
             </li>
