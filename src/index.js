@@ -9,13 +9,13 @@ import { Operation as DataOperation } from './reducer/data/data.js';
 import {
   Operation as UserOperation,
   ActionCreator,
-  AuthorizationStatus,
 } from './reducer/user/user.js';
 import { createApi } from './api.js';
 import App from './components/app/app.jsx';
+import { AuthStatus } from './const.js';
 
 const onUnauthorized = () => {
-  store.dispatch(ActionCreator.updateAuthStatus(AuthorizationStatus.NO_AUTH));
+  store.dispatch(ActionCreator.updateAuthStatus(AuthStatus.NO_AUTH));
 };
 
 const api = createApi(onUnauthorized);
@@ -25,8 +25,8 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(thunk.withExtraArgument(api))),
 );
 
-store.dispatch(UserOperation.updateAuthStatus());
 store.dispatch(DataOperation.updateOffers());
+store.dispatch(UserOperation.updateAuthStatus());
 
 ReactDOM.render(
   <Provider store={store}>

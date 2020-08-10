@@ -1,16 +1,15 @@
-const AuthorizationStatus = {
-  AUTH: `AUTH`,
-  NO_AUTH: `NO_AUTH`,
-};
+import { AuthStatus } from '../../const.js';
 
 const initialState = {
-  authStatus: AuthorizationStatus.NO_AUTH,
+  authStatus: AuthStatus.NO_AUTH,
   userEmail: '',
+  userFavorites: [],
 };
 
 const ActionType = {
   UPDATE_AUTH_STATUS: 'UPDATE_AUTH_STATUS',
   UPDATE_USER_EMAIL: 'UPDATE_USER_EMAIL',
+  UPDATE_USER_FAVORITES: 'UPDATE_USER_FAVORITES',
 };
 
 const ActionCreator = {
@@ -18,17 +17,40 @@ const ActionCreator = {
     type: ActionType.UPDATE_AUTH_STATUS,
     payload: status,
   }),
+
   updateUserEmail: (email) => ({
     type: ActionType.UPDATE_USER_EMAIL,
     payload: email,
   }),
+
+  updateUserFavorites: (id) => {
+    const updatedFavorites = [];
+
+    state.userFavorites.indexOf(id) < 0
+      ? (updatedFavorites = [...state.userFavorites, id])
+      : (updatedFavorites = state.userFavorites.splice(
+          state.userFavorites.indexOf(id),
+          1,
+        ));
+
+    return {
+      type: ActionType.UPDATE_USER_FAVORITES,
+      payload: updatedFavorites,
+    };
+  },
 };
 
 const Operation = {
   updateAuthStatus: () => (dispatch, getState, api) => {
-    return api.get('/login').then(() => {
-      dispatch(ActionCreator.updateAuthStatus(AuthorizationStatus.AUTH));
-    });
+    return api
+      .get('/login')
+      .then((response) => {
+        dispatch(ActionCreator.updateAuthStatus(AuthStatus.AUTH));
+        dispatch(ActionCreator.updateUserEmail(response.data.email));
+      })
+      .catch((err) => {
+        throw err;
+      });
   },
 
   logIn: (authData) => (dispatch, getState, api) => {
@@ -38,9 +60,8 @@ const Operation = {
         password: authData.password,
       })
       .then((response) => {
-        console.log(response);
-        dispatch(ActionCreator.updateAuthStatus(AuthorizationStatus.AUTH));
-        dispatch(ActionCreator.updateUserEmail(response.email));
+        dispatch(ActionCreator.updateAuthStatus(AuthStatus.AUTH));
+        dispatch(ActionCreator.updateUserEmail(response.data.email));
       });
   },
 };
@@ -55,8 +76,12 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         userEmail: action.payload,
       });
+    case ActionType.UPDATE_USER_FAVORITES:
+      return Object.assign({}, state, {
+        userFavorites: action.payload,
+      });
   }
   return state;
 };
 
-export { reducer, ActionType, ActionCreator, Operation, AuthorizationStatus };
+export { reducer, ActionType, ActionCreator, Operation, AuthStatus };

@@ -9,3 +9,7 @@ export const getAuthStatus = (state) => {
 export const getUserEmail = (state) => {
   return state[NAME_SPACE].userEmail;
 };
+
+export const getUserFavorites = (state) => {
+  return state[NAME_SPACE].userFavorites;
+};

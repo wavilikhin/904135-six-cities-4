@@ -2,10 +2,12 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import CitiesList from '../cities-list/cities-list.jsx';
 import Offers from '../offers/offers.jsx';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { ActionCreator } from '../../reducer/state/state.js';
 import { getOffers } from '../../reducer/data/selectors.js';
 import { getAuthStatus, getUserEmail } from '../../reducer/user/selectors.js';
+import { AppRoutes } from '../../const.js';
 
 class Main extends PureComponent {
   constructor(props) {
@@ -25,6 +27,7 @@ class Main extends PureComponent {
     this._updateCurrentCity();
   }
   componentDidUpdate() {
+    // проверить ренедрится ли все по новой и если что поправить
     this._updateCurrentCity();
   }
 
@@ -50,15 +53,17 @@ class Main extends PureComponent {
               <nav className="header__nav">
                 <ul className="header__nav-list">
                   <li className="header__nav-item user">
-                    <a
-                      className="header__nav-link header__nav-link--profile"
-                      href="#"
+                    <Link
+                      to={
+                        authStatus === 'NO_AUTH'
+                          ? AppRoutes.FAVORITES
+                          : AppRoutes.LOGIN
+                      }
                     >
-                      <div className="header__avatar-wrapper user__avatar-wrapper"></div>
                       <span>
                         {authStatus === 'NO_AUTH' ? `Sign In` : userEmail}
                       </span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>

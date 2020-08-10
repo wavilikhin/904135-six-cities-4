@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
-
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { ActionCreator } from '../../reducer/user/user.js';
+import { getUserFavorites } from '../../reducer/user/selectors.js';
 
 class OfferCard extends PureComponent {
   constructor(props) {
@@ -17,6 +19,8 @@ class OfferCard extends PureComponent {
   _handleMouseLeave() {
     this.props.handleHover(null);
   }
+  //  Замутить с ActiveItem HOC
+  // _handleFavoritesUpdate
 
   render() {
     const {
@@ -53,7 +57,6 @@ class OfferCard extends PureComponent {
                 {' '}
                 &#x2215;&#32;night
               </span>
-              {/* <span className="place-card__price-text">\u2215\u0020night</span> */}
             </div>
             <button
               className="place-card__bookmark-button button"
@@ -91,6 +94,19 @@ OfferCard.propTypes = {
     type: PropTypes.string.isRequired,
     coords: PropTypes.arrayOf(PropTypes.number).isRequired,
   }).isRequired,
+  userFavorites: PropTypes.arrayOf(PropTypes.number),
 };
 
-export default OfferCard;
+const mapStateToProps = (state) => ({
+  userFavorites: getUserFavorites(state),
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  handleFavoritesUpdate(id) {
+    dispatch(ActionCreator.updateUserFavorites(id));
+  },
+});
+
+export { OfferCard };
+
+export default connect(mapStateToProps, mapDispatchToProps)(OfferCard);

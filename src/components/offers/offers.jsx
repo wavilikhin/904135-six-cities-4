@@ -46,11 +46,11 @@ const Offers = (props) => {
         </section>
         <div className="cities__right-section">
           <section className="cities__map map">
-            <Map
+            {/* <Map
               city={city}
               zoom={filtredOffers.length > 0 ? filtredOffers[0].cityZoom : 12}
               offers={filtredOffers}
-            />
+            /> */}
           </section>
         </div>
       </div>
