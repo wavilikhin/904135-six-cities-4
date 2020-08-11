@@ -23,11 +23,10 @@ const ActionCreator = {
     payload: email,
   }),
 
-  updateUserFavorites: (id) => {
-    console.log(id);
+  updateUserFavorites: (id, isFavorite) => {
     return {
       type: ActionType.UPDATE_USER_FAVORITES,
-      payload: id,
+      payload: { id, isFavorite },
     };
   },
 };
@@ -56,6 +55,14 @@ const Operation = {
         dispatch(ActionCreator.updateUserEmail(response.data.email));
       });
   },
+
+  updateFavorites: (id, status) => (dispatch, getState, api) => {
+    return api.post(`/favorite/${id}/${status}`).then((response) => {
+      dispatch(
+        ActionCreator.updateUserFavorites(id, response.data.is_favorite),
+      );
+    });
+  },
 };
 
 const reducer = (state = initialState, action) => {
@@ -72,10 +79,10 @@ const reducer = (state = initialState, action) => {
 
     case ActionType.UPDATE_USER_FAVORITES:
       let updatedFavorites = [];
-      state.userFavorites.indexOf(action.payload) === -1
-        ? (updatedFavorites = [...state.userFavorites, action.payload])
+      action.payload.isFavorite === true
+        ? (updatedFavorites = [...state.userFavorites, action.payload.id])
         : (updatedFavorites = state.userFavorites.filter(
-            (id) => id !== action.payload,
+            (id) => id !== action.payload.id,
           ));
       return Object.assign({}, state, {
         userFavorites: updatedFavorites,

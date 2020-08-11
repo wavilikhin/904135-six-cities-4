@@ -43,7 +43,7 @@ exports[`ContentCard component snapshot test Should render content card with qua
           className="place-card__price-value"
         >
           €
-          160
+          120
         </b>
         <span
           className="place-card__price-text"
@@ -53,7 +53,8 @@ exports[`ContentCard component snapshot test Should render content card with qua
         </span>
       </div>
       <button
-        className="place-card__bookmark-button button"
+        className="place-card__bookmark-button button "
+        onClick={[Function]}
         type="button"
       >
         <svg
@@ -92,7 +93,7 @@ exports[`ContentCard component snapshot test Should render content card with qua
       <a
         href="#"
       >
-        Beautiful apartment near the city center
+        Beautiful & luxurious apartment at great location
       </a>
     </h2>
     <p

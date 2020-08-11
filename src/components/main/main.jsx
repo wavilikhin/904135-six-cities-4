@@ -56,8 +56,8 @@ class Main extends PureComponent {
                     <Link
                       to={
                         authStatus === 'NO_AUTH'
-                          ? AppRoutes.FAVORITES
-                          : AppRoutes.LOGIN
+                          ? AppRoutes.LOGIN
+                          : AppRoutes.FAVORITES
                       }
                     >
                       <span>

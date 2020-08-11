@@ -168,6 +168,7 @@ describe('Operation works well', () => {
         type: ActionType.UPDATE_OFFERS,
         payload: [
           {
+            id: 1,
             city: 'Amsterdam',
             cityZoom: 10,
             isPremium: false,

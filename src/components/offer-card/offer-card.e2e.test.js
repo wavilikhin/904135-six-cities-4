@@ -2,18 +2,10 @@ import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import OfferCard from './offer-card.jsx';
+import { OFFERS } from '../../test/__mocks__/offers.js';
 
-const cardData = {
-  city: 'Amsterdam',
-  cityCoords: [52.38333, 4.9],
-  isPremium: true,
-  cityZoom: 12,
-  image: `img/apartment-01.jpg`,
-  priceValue: 120,
-  name: `Beautiful & luxurious apartment at great location`,
-  type: `Apartment`,
-  coords: [52.3909553943508, 4.85309666406198],
-};
+const cardData = OFFERS[0];
+const userFavorites = [];
 
 configure({
   adapter: new Adapter(),
@@ -26,7 +18,12 @@ describe(`OfferCard component test`, () => {
     });
 
     const offerCard = shallow(
-      <OfferCard handleHover={onHover} cardData={cardData} />,
+      <OfferCard
+        handleHover={onHover}
+        cardData={cardData}
+        handleFavoritesUpdate={() => {}}
+        userFavorites={userFavorites}
+      />,
     );
 
     offerCard.simulate('mouseEnter');

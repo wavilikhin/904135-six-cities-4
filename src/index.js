@@ -12,10 +12,12 @@ import {
 } from './reducer/user/user.js';
 import { createApi } from './api.js';
 import App from './components/app/app.jsx';
-import { AuthStatus } from './const.js';
+import { AuthStatus, AppRoutes } from './const.js';
+import history from './history.js';
 
 const onUnauthorized = () => {
   store.dispatch(ActionCreator.updateAuthStatus(AuthStatus.NO_AUTH));
+  history.push(AppRoutes.LOGIN);
 };
 
 const api = createApi(onUnauthorized);

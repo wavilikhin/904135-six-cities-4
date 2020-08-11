@@ -40,12 +40,9 @@ exports[`Main component snapshot test Main component should render main page
               className="header__nav-item user"
             >
               <a
-                className="header__nav-link header__nav-link--profile"
-                href="#"
+                href="/favorites"
+                onClick={[Function]}
               >
-                <div
-                  className="header__avatar-wrapper user__avatar-wrapper"
-                />
                 <span>
                   
                 </span>
@@ -282,7 +279,8 @@ exports[`Main component snapshot test Main component should render main page
                     </span>
                   </div>
                   <button
-                    className="place-card__bookmark-button button"
+                    className="place-card__bookmark-button button "
+                    onClick={[Function]}
                     type="button"
                   >
                     <svg
@@ -381,7 +379,8 @@ exports[`Main component snapshot test Main component should render main page
                     </span>
                   </div>
                   <button
-                    className="place-card__bookmark-button button"
+                    className="place-card__bookmark-button button "
+                    onClick={[Function]}
                     type="button"
                   >
                     <svg
@@ -480,7 +479,8 @@ exports[`Main component snapshot test Main component should render main page
                     </span>
                   </div>
                   <button
-                    className="place-card__bookmark-button button"
+                    className="place-card__bookmark-button button "
+                    onClick={[Function]}
                     type="button"
                   >
                     <svg
@@ -579,7 +579,8 @@ exports[`Main component snapshot test Main component should render main page
                     </span>
                   </div>
                   <button
-                    className="place-card__bookmark-button button"
+                    className="place-card__bookmark-button button "
+                    onClick={[Function]}
                     type="button"
                   >
                     <svg
@@ -678,7 +679,8 @@ exports[`Main component snapshot test Main component should render main page
                     </span>
                   </div>
                   <button
-                    className="place-card__bookmark-button button"
+                    className="place-card__bookmark-button button "
+                    onClick={[Function]}
                     type="button"
                   >
                     <svg
@@ -735,16 +737,7 @@ exports[`Main component snapshot test Main component should render main page
         >
           <section
             className="cities__map map"
-          >
-            <div
-              id="map"
-              style={
-                Object {
-                  "height": "100vh",
-                }
-              }
-            />
-          </section>
+          />
         </div>
       </div>
     </div>

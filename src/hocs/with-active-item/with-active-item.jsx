@@ -7,7 +7,7 @@ import {
   getUniqueCities,
   getFiltredOffers,
 } from '../../reducer/data/selectors.js';
-import { ActionCreator as UserActionCreator } from '../../reducer/user/user.js';
+import { Operation as UserOperation } from '../../reducer/user/user.js';
 import { getUserFavorites } from '../../reducer/user/selectors.js';
 
 const withActiveItem = (Component, config) => {
@@ -32,7 +32,13 @@ const withActiveItem = (Component, config) => {
     }
 
     _handleFavoritesUpdate(id) {
-      this.props.handleFavoritesChange(id);
+      let status;
+
+      this.props.userFavorites.some((fav) => fav === id)
+        ? (status = 0)
+        : (status = 1);
+
+      this.props.handleFavoritesChange(id, status);
     }
 
     render() {
@@ -80,8 +86,8 @@ const withActiveItem = (Component, config) => {
     handleCityChange(city) {
       dispatch(StateActionCreator.changeCiy(city));
     },
-    handleFavoritesChange(id) {
-      dispatch(UserActionCreator.updateUserFavorites(id));
+    handleFavoritesChange(id, status) {
+      dispatch(UserOperation.updateFavorites(id, status));
     },
   });
 

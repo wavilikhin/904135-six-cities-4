@@ -8,6 +8,7 @@ it(`User reducer without additional params returns initnial state`, () => {
   expect(reducer(void 0, {})).toEqual({
     authStatus: 'NO_AUTH',
     userEmail: '',
+    userFavorites: [],
   });
 });
 
@@ -21,6 +22,7 @@ describe(`User reducer works well`, () => {
     ).toEqual({
       authStatus: 'AUTH',
       userEmail: '',
+      userFavorites: [],
     });
   });
 
@@ -33,6 +35,7 @@ describe(`User reducer works well`, () => {
     ).toEqual({
       authStatus: 'NO_AUTH',
       userEmail: 'test@mail.ru',
+      userFavorites: [],
     });
   });
 });
@@ -46,7 +49,7 @@ describe(`User Operation works well`, () => {
     apiMock.onGet('/login').reply(200, { id: 1, email: 'fake.mail@com' });
 
     return updateAuthStatus(dispatch, () => {}, api).then(() => {
-      expect(dispatch).toHaveBeenCalledTimes(1);
+      expect(dispatch).toHaveBeenCalledTimes(2);
       expect(dispatch).toHaveBeenNthCalledWith(1, {
         type: ActionType.UPDATE_AUTH_STATUS,
         payload: 'AUTH',
