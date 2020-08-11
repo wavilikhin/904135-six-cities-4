@@ -737,7 +737,16 @@ exports[`Main component snapshot test Main component should render main page
         >
           <section
             className="cities__map map"
-          />
+          >
+            <div
+              id="map"
+              style={
+                Object {
+                  "height": "100vh",
+                }
+              }
+            />
+          </section>
         </div>
       </div>
     </div>

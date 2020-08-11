@@ -387,7 +387,16 @@ exports[`Should render offers component with offers cards and map 1`] = `
     >
       <section
         className="cities__map map"
-      />
+      >
+        <div
+          id="map"
+          style={
+            Object {
+              "height": "100vh",
+            }
+          }
+        />
+      </section>
     </div>
   </div>
 </div>
