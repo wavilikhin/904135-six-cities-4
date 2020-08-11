@@ -61,6 +61,7 @@ const Offers = (props) => {
 Offers.propTypes = {
   filtredOffers: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.number.isRequired,
       city: PropTypes.string.isRequired,
       cityCoords: PropTypes.arrayOf(PropTypes.number, PropTypes.number),
       cityZoom: PropTypes.number.isRequired,

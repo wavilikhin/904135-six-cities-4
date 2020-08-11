@@ -1,8 +1,5 @@
 import React, { PureComponent } from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { ActionCreator } from '../../reducer/user/user.js';
-import { getUserFavorites } from '../../reducer/user/selectors.js';
 
 class OfferCard extends PureComponent {
   constructor(props) {
@@ -10,6 +7,7 @@ class OfferCard extends PureComponent {
 
     this._handleMouseEnter = this._handleMouseEnter.bind(this);
     this._handleMouseLeave = this._handleMouseLeave.bind(this);
+    this._handleFavoritesUpdate = this._handleFavoritesUpdate.bind(this);
   }
 
   _handleMouseEnter() {
@@ -19,12 +17,15 @@ class OfferCard extends PureComponent {
   _handleMouseLeave() {
     this.props.handleHover(null);
   }
-  //  Замутить с ActiveItem HOC
-  // _handleFavoritesUpdate
+
+  _handleFavoritesUpdate(id) {
+    this.props.handleFavoritesUpdate(id);
+  }
 
   render() {
     const {
-      cardData: { isPremium, image, priceValue, priceText, name, type },
+      cardData: { id, isPremium, image, priceValue, name, type },
+      userFavorites,
     } = this.props;
 
     return (
@@ -59,8 +60,15 @@ class OfferCard extends PureComponent {
               </span>
             </div>
             <button
-              className="place-card__bookmark-button button"
+              className={`place-card__bookmark-button button ${
+                userFavorites.some((fav) => fav === id)
+                  ? 'place-card__bookmark-button--active'
+                  : ''
+              }`}
               type="button"
+              onClick={() => {
+                this._handleFavoritesUpdate(id);
+              }}
             >
               <svg className="place-card__bookmark-icon" width="18" height="19">
                 <use xlinkHref="#icon-bookmark"></use>
@@ -87,6 +95,7 @@ class OfferCard extends PureComponent {
 OfferCard.propTypes = {
   handleHover: PropTypes.func.isRequired,
   cardData: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     isPremium: PropTypes.bool.isRequired,
     image: PropTypes.string.isRequired,
     priceValue: PropTypes.number.isRequired,
@@ -94,19 +103,8 @@ OfferCard.propTypes = {
     type: PropTypes.string.isRequired,
     coords: PropTypes.arrayOf(PropTypes.number).isRequired,
   }).isRequired,
-  userFavorites: PropTypes.arrayOf(PropTypes.number),
+  handleFavoritesUpdate: PropTypes.func.isRequired,
+  userFavorites: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
-const mapStateToProps = (state) => ({
-  userFavorites: getUserFavorites(state),
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  handleFavoritesUpdate(id) {
-    dispatch(ActionCreator.updateUserFavorites(id));
-  },
-});
-
-export { OfferCard };
-
-export default connect(mapStateToProps, mapDispatchToProps)(OfferCard);
+export default OfferCard;

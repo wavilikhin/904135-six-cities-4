@@ -86,6 +86,7 @@ class Main extends PureComponent {
 Main.propTypes = {
   offersDataArray: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.number.isRequired,
       city: PropTypes.string.isRequired,
       cityCoords: PropTypes.arrayOf(PropTypes.number, PropTypes.number),
       isPremium: PropTypes.bool.isRequired,

@@ -3,7 +3,12 @@ import withActiveItem from '../../hocs/with-active-item/with-active-item.jsx';
 import OfferCard from '../offer-card/offer-card.jsx';
 
 let OffersList = memo((props) => {
-  const { offersArray, onActiveItemChange } = props;
+  const {
+    offersArray,
+    userFavorites,
+    onActiveItemChange,
+    onFavoritesUpdate,
+  } = props;
 
   return (
     <div className="cities__places-list places__list tabs__content">
@@ -13,6 +18,8 @@ let OffersList = memo((props) => {
             key={`${i}-` + offerData.name.replace(/\s/g, '')}
             cardData={offerData}
             handleHover={onActiveItemChange}
+            handleFavoritesUpdate={onFavoritesUpdate}
+            userFavorites={userFavorites}
           />
         );
       })}

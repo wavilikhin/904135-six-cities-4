@@ -24,18 +24,10 @@ const ActionCreator = {
   }),
 
   updateUserFavorites: (id) => {
-    const updatedFavorites = [];
-
-    state.userFavorites.indexOf(id) < 0
-      ? (updatedFavorites = [...state.userFavorites, id])
-      : (updatedFavorites = state.userFavorites.splice(
-          state.userFavorites.indexOf(id),
-          1,
-        ));
-
+    console.log(id);
     return {
       type: ActionType.UPDATE_USER_FAVORITES,
-      payload: updatedFavorites,
+      payload: id,
     };
   },
 };
@@ -72,13 +64,21 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         authStatus: action.payload,
       });
+
     case ActionType.UPDATE_USER_EMAIL:
       return Object.assign({}, state, {
         userEmail: action.payload,
       });
+
     case ActionType.UPDATE_USER_FAVORITES:
+      let updatedFavorites = [];
+      state.userFavorites.indexOf(action.payload) === -1
+        ? (updatedFavorites = [...state.userFavorites, action.payload])
+        : (updatedFavorites = state.userFavorites.filter(
+            (id) => id !== action.payload,
+          ));
       return Object.assign({}, state, {
-        userFavorites: action.payload,
+        userFavorites: updatedFavorites,
       });
   }
   return state;

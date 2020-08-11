@@ -1,4 +1,5 @@
 export const createOffer = (offer) => ({
+  id: offer.id,
   city: offer.city.name,
   cityZoom: offer.city.location.zoom,
   isPremium: offer.is_premium,
