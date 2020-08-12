@@ -11,11 +11,9 @@ configure({
   adapter: new Adapter(),
 });
 
-describe(`OfferCard component test`, () => {
+describe(`OfferCard component e2e test`, () => {
   it(`Should onHover be called twice`, () => {
-    const onHover = jest.fn((val) => {
-      return val;
-    });
+    const onHover = jest.fn((val) => val);
 
     const offerCard = shallow(
       <OfferCard
@@ -33,5 +31,27 @@ describe(`OfferCard component test`, () => {
     expect(onHover.mock.results[1].value).toBe(null);
 
     expect(onHover).toHaveBeenCalledTimes(2);
+  });
+
+  it(`Should handleFavoritesUpdate be called once with id value = 1`, () => {
+    const updateFavorites = jest.fn((val) => val);
+
+    const offerCard = shallow(
+      <OfferCard
+        handleHover={() => {}}
+        cardData={cardData}
+        handleFavoritesUpdate={updateFavorites}
+        userFavorites={userFavorites}
+      />,
+    );
+
+    const addToFavoritesButton = offerCard.find(
+      `button.place-card__bookmark-button`,
+    );
+
+    addToFavoritesButton.simulate(`click`, { preventDefault() {} });
+
+    expect(updateFavorites.mock.results[0].value).toBe(1);
+    expect(updateFavorites).toHaveBeenCalledTimes(1);
   });
 });

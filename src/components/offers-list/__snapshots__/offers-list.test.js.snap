@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OffersList component snapshot test Should render a list of 5 offers with data and images 1`] = `
+exports[`OffersList component snapshot test Should render a list offers 1`] = `
 <div
   className="cities__places-list places__list tabs__content"
 >
@@ -10,13 +10,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseLeave={[Function]}
   >
     <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
-    <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
       <a
@@ -26,7 +19,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-01.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg"
           width="260"
         />
       </a>
@@ -44,207 +37,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            120
-          </b>
-          <span
-            className="place-card__price-text"
-          >
-             
-            ∕ night
-          </span>
-        </div>
-        <button
-          className="place-card__bookmark-button button "
-          onClick={[Function]}
-          type="button"
-        >
-          <svg
-            className="place-card__bookmark-icon"
-            height="19"
-            width="18"
-          >
-            <use
-              xlinkHref="#icon-bookmark"
-            />
-          </svg>
-          <span
-            className="visually-hidden"
-          >
-            To bookmarks
-          </span>
-        </button>
-      </div>
-      <div
-        className="place-card__rating rating"
-      >
-        <div
-          className="place-card__stars rating__stars"
-        >
-          <span />
-          <span
-            className="visually-hidden"
-          >
-            Rating
-          </span>
-        </div>
-      </div>
-      <h2
-        className="place-card__name"
-      >
-        <a
-          href="#"
-        >
-          Beautiful & luxurious apartment at great location
-        </a>
-      </h2>
-      <p
-        className="place-card__type"
-      >
-        Apartment
-      </p>
-    </div>
-  </article>
-  <article
-    className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
-    <div
-      className="cities__image-wrapper place-card__image-wrapper"
-    >
-      <a
-        href="#"
-      >
-        <img
-          alt="Place image"
-          className="place-card__image"
-          height="200"
-          src="img/room.jpg"
-          width="260"
-        />
-      </a>
-    </div>
-    <div
-      className="place-card__info"
-    >
-      <div
-        className="place-card__price-wrapper"
-      >
-        <div
-          className="place-card__price"
-        >
-          <b
-            className="place-card__price-value"
-          >
-            €
-            110
-          </b>
-          <span
-            className="place-card__price-text"
-          >
-             
-            ∕ night
-          </span>
-        </div>
-        <button
-          className="place-card__bookmark-button button "
-          onClick={[Function]}
-          type="button"
-        >
-          <svg
-            className="place-card__bookmark-icon"
-            height="19"
-            width="18"
-          >
-            <use
-              xlinkHref="#icon-bookmark"
-            />
-          </svg>
-          <span
-            className="visually-hidden"
-          >
-            To bookmarks
-          </span>
-        </button>
-      </div>
-      <div
-        className="place-card__rating rating"
-      >
-        <div
-          className="place-card__stars rating__stars"
-        >
-          <span />
-          <span
-            className="visually-hidden"
-          >
-            Rating
-          </span>
-        </div>
-      </div>
-      <h2
-        className="place-card__name"
-      >
-        <a
-          href="#"
-        >
-          Just a nice place
-        </a>
-      </h2>
-      <p
-        className="place-card__type"
-      >
-        Room
-      </p>
-    </div>
-  </article>
-  <article
-    className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
-    <div
-      className="cities__image-wrapper place-card__image-wrapper"
-    >
-      <a
-        href="#"
-      >
-        <img
-          alt="Place image"
-          className="place-card__image"
-          height="200"
-          src="img/apartment-02.jpg"
-          width="260"
-        />
-      </a>
-    </div>
-    <div
-      className="place-card__info"
-    >
-      <div
-        className="place-card__price-wrapper"
-      >
-        <div
-          className="place-card__price"
-        >
-          <b
-            className="place-card__price-value"
-          >
-            €
-            100
+            813
           </b>
           <span
             className="place-card__price-text"
@@ -300,7 +93,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
       <p
         className="place-card__type"
       >
-        Apartment
+        house
       </p>
     </div>
   </article>
@@ -309,13 +102,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -326,7 +112,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-03.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg"
           width="260"
         />
       </a>
@@ -344,7 +130,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            150
+            238
           </b>
           <span
             className="place-card__price-text"
@@ -394,13 +180,13 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
         <a
           href="#"
         >
-          Canal View Prinsengracht
+          Amazing and Extremely Central Flat
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Apartment
+        apartment
       </p>
     </div>
   </article>
@@ -409,13 +195,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -426,7 +205,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/room.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg"
           width="260"
         />
       </a>
@@ -444,7 +223,565 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            80
+            722
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Pondhouse - A Magical Place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/1.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            309
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Joshua Tree House
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            101
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Perfectly located Castro
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            269
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Amazing and Extremely Central Flat
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            227
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Amazing and Extremely Central Flat
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            226
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The house among olive 
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/20.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            227
           </b>
           <span
             className="place-card__price-text"
@@ -500,7 +837,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
       <p
         className="place-card__type"
       >
-        Room
+        room
       </p>
     </div>
   </article>
@@ -509,13 +846,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -526,7 +856,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-01.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg"
           width="260"
         />
       </a>
@@ -544,7 +874,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            120
+            185
           </b>
           <span
             className="place-card__price-text"
@@ -594,13 +924,13 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
         <a
           href="#"
         >
-          Beautiful & luxurious apartment at great location
+          Waterfront with extraordinary view
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Apartment
+        room
       </p>
     </div>
   </article>
@@ -609,13 +939,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -626,7 +949,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/room.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg"
           width="260"
         />
       </a>
@@ -644,7 +967,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            110
+            205
           </b>
           <span
             className="place-card__price-text"
@@ -694,13 +1017,13 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
         <a
           href="#"
         >
-          Just a nice place
+          Penthouse, 4-5 rooms + 5 balconies
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Room
+        house
       </p>
     </div>
   </article>
@@ -709,13 +1032,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -726,7 +1042,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-02.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg"
           width="260"
         />
       </a>
@@ -744,7 +1060,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            100
+            264
           </b>
           <span
             className="place-card__price-text"
@@ -794,13 +1110,13 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
         <a
           href="#"
         >
-          Wood and stone place
+          Loft Studio in the Central Area
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Apartment
+        room
       </p>
     </div>
   </article>
@@ -826,7 +1142,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-03.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg"
           width="260"
         />
       </a>
@@ -844,7 +1160,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            150
+            289
           </b>
           <span
             className="place-card__price-text"
@@ -900,7 +1216,472 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
       <p
         className="place-card__type"
       >
-        Apartment
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            423
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Penthouse, 4-5 rooms + 5 balconies
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        hotel
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            134
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Loft Studio in the Central Area
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            314
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Tile House
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            836
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Joshua Tree House
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            825
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The house among olive 
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
       </p>
     </div>
   </article>
@@ -926,7 +1707,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/room.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg"
           width="260"
         />
       </a>
@@ -944,7 +1725,1895 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            80
+            326
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The house among olive 
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            108
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Waterfront with extraordinary view
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            409
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Amazing and Extremely Central Flat
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            143
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Joshua Tree House
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            107
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Perfectly located Castro
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/7.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            210
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Pondhouse - A Magical Place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            147
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Pondhouse - A Magical Place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            820
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Pondhouse - A Magical Place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="place-card__mark"
+    >
+      <span>
+        Premium
+      </span>
+    </div>
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            994
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Penthouse, 4-5 rooms + 5 balconies
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="place-card__mark"
+    >
+      <span>
+        Premium
+      </span>
+    </div>
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            208
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The house among olive 
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            786
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Beautiful & luxurious apartment at great location
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="place-card__mark"
+    >
+      <span>
+        Premium
+      </span>
+    </div>
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/20.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            450
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Waterfront with extraordinary view
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            104
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Canal View Prinsengracht
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            279
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Wood and stone place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            770
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Perfectly located Castro
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="place-card__mark"
+    >
+      <span>
+        Premium
+      </span>
+    </div>
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            963
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Waterfront with extraordinary view
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            410
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Penthouse, 4-5 rooms + 5 balconies
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            278
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Wood and stone place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            187
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Beautiful & luxurious apartment at great location
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            755
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Joshua Tree House
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            945
           </b>
           <span
             className="place-card__price-text"
@@ -1000,7 +3669,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
       <p
         className="place-card__type"
       >
-        Room
+        house
       </p>
     </div>
   </article>
@@ -1009,13 +3678,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -1026,207 +3688,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-03.jpg"
-          width="260"
-        />
-      </a>
-    </div>
-    <div
-      className="place-card__info"
-    >
-      <div
-        className="place-card__price-wrapper"
-      >
-        <div
-          className="place-card__price"
-        >
-          <b
-            className="place-card__price-value"
-          >
-            €
-            150
-          </b>
-          <span
-            className="place-card__price-text"
-          >
-             
-            ∕ night
-          </span>
-        </div>
-        <button
-          className="place-card__bookmark-button button "
-          onClick={[Function]}
-          type="button"
-        >
-          <svg
-            className="place-card__bookmark-icon"
-            height="19"
-            width="18"
-          >
-            <use
-              xlinkHref="#icon-bookmark"
-            />
-          </svg>
-          <span
-            className="visually-hidden"
-          >
-            To bookmarks
-          </span>
-        </button>
-      </div>
-      <div
-        className="place-card__rating rating"
-      >
-        <div
-          className="place-card__stars rating__stars"
-        >
-          <span />
-          <span
-            className="visually-hidden"
-          >
-            Rating
-          </span>
-        </div>
-      </div>
-      <h2
-        className="place-card__name"
-      >
-        <a
-          href="#"
-        >
-          Place to stay with family
-        </a>
-      </h2>
-      <p
-        className="place-card__type"
-      >
-        Apartment
-      </p>
-    </div>
-  </article>
-  <article
-    className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
-    <div
-      className="cities__image-wrapper place-card__image-wrapper"
-    >
-      <a
-        href="#"
-      >
-        <img
-          alt="Place image"
-          className="place-card__image"
-          height="200"
-          src="img/room.jpg"
-          width="260"
-        />
-      </a>
-    </div>
-    <div
-      className="place-card__info"
-    >
-      <div
-        className="place-card__price-wrapper"
-      >
-        <div
-          className="place-card__price"
-        >
-          <b
-            className="place-card__price-value"
-          >
-            €
-            80
-          </b>
-          <span
-            className="place-card__price-text"
-          >
-             
-            ∕ night
-          </span>
-        </div>
-        <button
-          className="place-card__bookmark-button button "
-          onClick={[Function]}
-          type="button"
-        >
-          <svg
-            className="place-card__bookmark-icon"
-            height="19"
-            width="18"
-          >
-            <use
-              xlinkHref="#icon-bookmark"
-            />
-          </svg>
-          <span
-            className="visually-hidden"
-          >
-            To bookmarks
-          </span>
-        </button>
-      </div>
-      <div
-        className="place-card__rating rating"
-      >
-        <div
-          className="place-card__stars rating__stars"
-        >
-          <span />
-          <span
-            className="visually-hidden"
-          >
-            Rating
-          </span>
-        </div>
-      </div>
-      <h2
-        className="place-card__name"
-      >
-        <a
-          href="#"
-        >
-          Best view in Paris
-        </a>
-      </h2>
-      <p
-        className="place-card__type"
-      >
-        Room
-      </p>
-    </div>
-  </article>
-  <article
-    className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
-    <div
-      className="cities__image-wrapper place-card__image-wrapper"
-    >
-      <a
-        href="#"
-      >
-        <img
-          alt="Place image"
-          className="place-card__image"
-          height="200"
-          src="img/apartment-01.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg"
           width="260"
         />
       </a>
@@ -1294,13 +3756,13 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
         <a
           href="#"
         >
-          Beautiful & luxurious apartment at great location
+          The Joshua Tree House
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Apartment
+        room
       </p>
     </div>
   </article>
@@ -1309,13 +3771,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -1326,7 +3781,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/room.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg"
           width="260"
         />
       </a>
@@ -1344,307 +3799,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            110
-          </b>
-          <span
-            className="place-card__price-text"
-          >
-             
-            ∕ night
-          </span>
-        </div>
-        <button
-          className="place-card__bookmark-button button "
-          onClick={[Function]}
-          type="button"
-        >
-          <svg
-            className="place-card__bookmark-icon"
-            height="19"
-            width="18"
-          >
-            <use
-              xlinkHref="#icon-bookmark"
-            />
-          </svg>
-          <span
-            className="visually-hidden"
-          >
-            To bookmarks
-          </span>
-        </button>
-      </div>
-      <div
-        className="place-card__rating rating"
-      >
-        <div
-          className="place-card__stars rating__stars"
-        >
-          <span />
-          <span
-            className="visually-hidden"
-          >
-            Rating
-          </span>
-        </div>
-      </div>
-      <h2
-        className="place-card__name"
-      >
-        <a
-          href="#"
-        >
-          Just a nice place
-        </a>
-      </h2>
-      <p
-        className="place-card__type"
-      >
-        Room
-      </p>
-    </div>
-  </article>
-  <article
-    className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
-    <div
-      className="cities__image-wrapper place-card__image-wrapper"
-    >
-      <a
-        href="#"
-      >
-        <img
-          alt="Place image"
-          className="place-card__image"
-          height="200"
-          src="img/apartment-02.jpg"
-          width="260"
-        />
-      </a>
-    </div>
-    <div
-      className="place-card__info"
-    >
-      <div
-        className="place-card__price-wrapper"
-      >
-        <div
-          className="place-card__price"
-        >
-          <b
-            className="place-card__price-value"
-          >
-            €
-            100
-          </b>
-          <span
-            className="place-card__price-text"
-          >
-             
-            ∕ night
-          </span>
-        </div>
-        <button
-          className="place-card__bookmark-button button "
-          onClick={[Function]}
-          type="button"
-        >
-          <svg
-            className="place-card__bookmark-icon"
-            height="19"
-            width="18"
-          >
-            <use
-              xlinkHref="#icon-bookmark"
-            />
-          </svg>
-          <span
-            className="visually-hidden"
-          >
-            To bookmarks
-          </span>
-        </button>
-      </div>
-      <div
-        className="place-card__rating rating"
-      >
-        <div
-          className="place-card__stars rating__stars"
-        >
-          <span />
-          <span
-            className="visually-hidden"
-          >
-            Rating
-          </span>
-        </div>
-      </div>
-      <h2
-        className="place-card__name"
-      >
-        <a
-          href="#"
-        >
-          Wood and stone place
-        </a>
-      </h2>
-      <p
-        className="place-card__type"
-      >
-        Apartment
-      </p>
-    </div>
-  </article>
-  <article
-    className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
-    <div
-      className="cities__image-wrapper place-card__image-wrapper"
-    >
-      <a
-        href="#"
-      >
-        <img
-          alt="Place image"
-          className="place-card__image"
-          height="200"
-          src="img/apartment-03.jpg"
-          width="260"
-        />
-      </a>
-    </div>
-    <div
-      className="place-card__info"
-    >
-      <div
-        className="place-card__price-wrapper"
-      >
-        <div
-          className="place-card__price"
-        >
-          <b
-            className="place-card__price-value"
-          >
-            €
-            150
-          </b>
-          <span
-            className="place-card__price-text"
-          >
-             
-            ∕ night
-          </span>
-        </div>
-        <button
-          className="place-card__bookmark-button button "
-          onClick={[Function]}
-          type="button"
-        >
-          <svg
-            className="place-card__bookmark-icon"
-            height="19"
-            width="18"
-          >
-            <use
-              xlinkHref="#icon-bookmark"
-            />
-          </svg>
-          <span
-            className="visually-hidden"
-          >
-            To bookmarks
-          </span>
-        </button>
-      </div>
-      <div
-        className="place-card__rating rating"
-      >
-        <div
-          className="place-card__stars rating__stars"
-        >
-          <span />
-          <span
-            className="visually-hidden"
-          >
-            Rating
-          </span>
-        </div>
-      </div>
-      <h2
-        className="place-card__name"
-      >
-        <a
-          href="#"
-        >
-          Canal View Prinsengracht
-        </a>
-      </h2>
-      <p
-        className="place-card__type"
-      >
-        Apartment
-      </p>
-    </div>
-  </article>
-  <article
-    className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
-    <div
-      className="cities__image-wrapper place-card__image-wrapper"
-    >
-      <a
-        href="#"
-      >
-        <img
-          alt="Place image"
-          className="place-card__image"
-          height="200"
-          src="img/room.jpg"
-          width="260"
-        />
-      </a>
-    </div>
-    <div
-      className="place-card__info"
-    >
-      <div
-        className="place-card__price-wrapper"
-      >
-        <div
-          className="place-card__price"
-        >
-          <b
-            className="place-card__price-value"
-          >
-            €
-            80
+            558
           </b>
           <span
             className="place-card__price-text"
@@ -1700,7 +3855,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
       <p
         className="place-card__type"
       >
-        Room
+        house
       </p>
     </div>
   </article>
@@ -1709,13 +3864,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -1726,7 +3874,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-03.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg"
           width="260"
         />
       </a>
@@ -1744,7 +3892,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            150
+            366
           </b>
           <span
             className="place-card__price-text"
@@ -1794,13 +3942,13 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
         <a
           href="#"
         >
-          Place to stay with family
+          Canal View Prinsengracht
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Apartment
+        hotel
       </p>
     </div>
   </article>
@@ -1809,13 +3957,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -1826,7 +3967,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-01.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg"
           width="260"
         />
       </a>
@@ -1844,7 +3985,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            120
+            765
           </b>
           <span
             className="place-card__price-text"
@@ -1894,13 +4035,13 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
         <a
           href="#"
         >
-          Beautiful & luxurious apartment at great location
+          Penthouse, 4-5 rooms + 5 balconies
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Apartment
+        house
       </p>
     </div>
   </article>
@@ -1909,13 +4050,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -1926,7 +4060,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/room.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg"
           width="260"
         />
       </a>
@@ -1994,13 +4128,13 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
         <a
           href="#"
         >
-          Just a nice place
+          Tile House
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Room
+        hotel
       </p>
     </div>
   </article>
@@ -2026,7 +4160,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-02.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg"
           width="260"
         />
       </a>
@@ -2044,7 +4178,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            100
+            864
           </b>
           <span
             className="place-card__price-text"
@@ -2094,13 +4228,13 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
         <a
           href="#"
         >
-          Wood and stone place
+          Amazing and Extremely Central Flat
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Apartment
+        house
       </p>
     </div>
   </article>
@@ -2109,13 +4243,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -2126,7 +4253,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-03.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg"
           width="260"
         />
       </a>
@@ -2144,107 +4271,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            150
-          </b>
-          <span
-            className="place-card__price-text"
-          >
-             
-            ∕ night
-          </span>
-        </div>
-        <button
-          className="place-card__bookmark-button button "
-          onClick={[Function]}
-          type="button"
-        >
-          <svg
-            className="place-card__bookmark-icon"
-            height="19"
-            width="18"
-          >
-            <use
-              xlinkHref="#icon-bookmark"
-            />
-          </svg>
-          <span
-            className="visually-hidden"
-          >
-            To bookmarks
-          </span>
-        </button>
-      </div>
-      <div
-        className="place-card__rating rating"
-      >
-        <div
-          className="place-card__stars rating__stars"
-        >
-          <span />
-          <span
-            className="visually-hidden"
-          >
-            Rating
-          </span>
-        </div>
-      </div>
-      <h2
-        className="place-card__name"
-      >
-        <a
-          href="#"
-        >
-          Canal View Prinsengracht
-        </a>
-      </h2>
-      <p
-        className="place-card__type"
-      >
-        Apartment
-      </p>
-    </div>
-  </article>
-  <article
-    className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
-    <div
-      className="cities__image-wrapper place-card__image-wrapper"
-    >
-      <a
-        href="#"
-      >
-        <img
-          alt="Place image"
-          className="place-card__image"
-          height="200"
-          src="img/room.jpg"
-          width="260"
-        />
-      </a>
-    </div>
-    <div
-      className="place-card__info"
-    >
-      <div
-        className="place-card__price-wrapper"
-      >
-        <div
-          className="place-card__price"
-        >
-          <b
-            className="place-card__price-value"
-          >
-            €
-            80
+            448
           </b>
           <span
             className="place-card__price-text"
@@ -2300,7 +4327,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
       <p
         className="place-card__type"
       >
-        Room
+        apartment
       </p>
     </div>
   </article>
@@ -2309,13 +4336,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -2326,7 +4346,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-03.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg"
           width="260"
         />
       </a>
@@ -2344,7 +4364,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            150
+            123
           </b>
           <span
             className="place-card__price-text"
@@ -2394,13 +4414,13 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
         <a
           href="#"
         >
-          Place to stay with family
+          Canal View Prinsengracht
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Apartment
+        room
       </p>
     </div>
   </article>
@@ -2409,13 +4429,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -2426,7 +4439,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-01.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg"
           width="260"
         />
       </a>
@@ -2444,7 +4457,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            120
+            139
           </b>
           <span
             className="place-card__price-text"
@@ -2494,13 +4507,13 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
         <a
           href="#"
         >
-          Beautiful & luxurious apartment at great location
+          The Joshua Tree House
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Apartment
+        hotel
       </p>
     </div>
   </article>
@@ -2509,13 +4522,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -2526,7 +4532,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/room.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg"
           width="260"
         />
       </a>
@@ -2544,7 +4550,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            110
+            190
           </b>
           <span
             className="place-card__price-text"
@@ -2594,13 +4600,13 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
         <a
           href="#"
         >
-          Just a nice place
+          Penthouse, 4-5 rooms + 5 balconies
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Room
+        hotel
       </p>
     </div>
   </article>
@@ -2609,13 +4615,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -2626,7 +4625,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-02.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg"
           width="260"
         />
       </a>
@@ -2644,7 +4643,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            100
+            998
           </b>
           <span
             className="place-card__price-text"
@@ -2694,13 +4693,13 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
         <a
           href="#"
         >
-          Wood and stone place
+          The house among olive 
         </a>
       </h2>
       <p
         className="place-card__type"
       >
-        Apartment
+        house
       </p>
     </div>
   </article>
@@ -2709,13 +4708,6 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -2726,7 +4718,193 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-03.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            737
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Pondhouse - A Magical Place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            590
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Amazing and Extremely Central Flat
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg"
           width="260"
         />
       </a>
@@ -2800,7 +4978,286 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
       <p
         className="place-card__type"
       >
-        Apartment
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            272
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Pondhouse - A Magical Place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            134
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Canal View Prinsengracht
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            121
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          House in countryside
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
       </p>
     </div>
   </article>
@@ -2826,7 +5283,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/room.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg"
           width="260"
         />
       </a>
@@ -2844,7 +5301,1695 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            80
+            347
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Perfectly located Castro
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        hotel
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            165
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Penthouse, 4-5 rooms + 5 balconies
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            196
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The house among olive 
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            412
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Wood and stone place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            364
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Joshua Tree House
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            361
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Loft Studio in the Central Area
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        hotel
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            138
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Perfectly located Castro
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="place-card__mark"
+    >
+      <span>
+        Premium
+      </span>
+    </div>
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            135
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Pondhouse - A Magical Place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        hotel
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            261
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          House in countryside
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        hotel
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            365
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Wood and stone place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            469
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Waterfront with extraordinary view
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        hotel
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            437
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Canal View Prinsengracht
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            183
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Penthouse, 4-5 rooms + 5 balconies
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            248
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Wood and stone place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            291
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Beautiful & luxurious apartment at great location
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            183
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Loft Studio in the Central Area
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        hotel
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="place-card__mark"
+    >
+      <span>
+        Premium
+      </span>
+    </div>
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            215
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Wood and stone place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            865
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Wood and stone place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            726
           </b>
           <span
             className="place-card__price-text"
@@ -2900,7 +7045,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
       <p
         className="place-card__type"
       >
-        Room
+        house
       </p>
     </div>
   </article>
@@ -2926,7 +7071,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-03.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg"
           width="260"
         />
       </a>
@@ -2944,307 +7089,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            150
-          </b>
-          <span
-            className="place-card__price-text"
-          >
-             
-            ∕ night
-          </span>
-        </div>
-        <button
-          className="place-card__bookmark-button button "
-          onClick={[Function]}
-          type="button"
-        >
-          <svg
-            className="place-card__bookmark-icon"
-            height="19"
-            width="18"
-          >
-            <use
-              xlinkHref="#icon-bookmark"
-            />
-          </svg>
-          <span
-            className="visually-hidden"
-          >
-            To bookmarks
-          </span>
-        </button>
-      </div>
-      <div
-        className="place-card__rating rating"
-      >
-        <div
-          className="place-card__stars rating__stars"
-        >
-          <span />
-          <span
-            className="visually-hidden"
-          >
-            Rating
-          </span>
-        </div>
-      </div>
-      <h2
-        className="place-card__name"
-      >
-        <a
-          href="#"
-        >
-          Place to stay with family
-        </a>
-      </h2>
-      <p
-        className="place-card__type"
-      >
-        Apartment
-      </p>
-    </div>
-  </article>
-  <article
-    className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
-    <div
-      className="cities__image-wrapper place-card__image-wrapper"
-    >
-      <a
-        href="#"
-      >
-        <img
-          alt="Place image"
-          className="place-card__image"
-          height="200"
-          src="img/apartment-01.jpg"
-          width="260"
-        />
-      </a>
-    </div>
-    <div
-      className="place-card__info"
-    >
-      <div
-        className="place-card__price-wrapper"
-      >
-        <div
-          className="place-card__price"
-        >
-          <b
-            className="place-card__price-value"
-          >
-            €
-            120
-          </b>
-          <span
-            className="place-card__price-text"
-          >
-             
-            ∕ night
-          </span>
-        </div>
-        <button
-          className="place-card__bookmark-button button "
-          onClick={[Function]}
-          type="button"
-        >
-          <svg
-            className="place-card__bookmark-icon"
-            height="19"
-            width="18"
-          >
-            <use
-              xlinkHref="#icon-bookmark"
-            />
-          </svg>
-          <span
-            className="visually-hidden"
-          >
-            To bookmarks
-          </span>
-        </button>
-      </div>
-      <div
-        className="place-card__rating rating"
-      >
-        <div
-          className="place-card__stars rating__stars"
-        >
-          <span />
-          <span
-            className="visually-hidden"
-          >
-            Rating
-          </span>
-        </div>
-      </div>
-      <h2
-        className="place-card__name"
-      >
-        <a
-          href="#"
-        >
-          Beautiful & luxurious apartment at great location
-        </a>
-      </h2>
-      <p
-        className="place-card__type"
-      >
-        Apartment
-      </p>
-    </div>
-  </article>
-  <article
-    className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
-    <div
-      className="cities__image-wrapper place-card__image-wrapper"
-    >
-      <a
-        href="#"
-      >
-        <img
-          alt="Place image"
-          className="place-card__image"
-          height="200"
-          src="img/room.jpg"
-          width="260"
-        />
-      </a>
-    </div>
-    <div
-      className="place-card__info"
-    >
-      <div
-        className="place-card__price-wrapper"
-      >
-        <div
-          className="place-card__price"
-        >
-          <b
-            className="place-card__price-value"
-          >
-            €
-            110
-          </b>
-          <span
-            className="place-card__price-text"
-          >
-             
-            ∕ night
-          </span>
-        </div>
-        <button
-          className="place-card__bookmark-button button "
-          onClick={[Function]}
-          type="button"
-        >
-          <svg
-            className="place-card__bookmark-icon"
-            height="19"
-            width="18"
-          >
-            <use
-              xlinkHref="#icon-bookmark"
-            />
-          </svg>
-          <span
-            className="visually-hidden"
-          >
-            To bookmarks
-          </span>
-        </button>
-      </div>
-      <div
-        className="place-card__rating rating"
-      >
-        <div
-          className="place-card__stars rating__stars"
-        >
-          <span />
-          <span
-            className="visually-hidden"
-          >
-            Rating
-          </span>
-        </div>
-      </div>
-      <h2
-        className="place-card__name"
-      >
-        <a
-          href="#"
-        >
-          Just a nice place
-        </a>
-      </h2>
-      <p
-        className="place-card__type"
-      >
-        Room
-      </p>
-    </div>
-  </article>
-  <article
-    className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="place-card__mark"
-    >
-      <span>
-        Premium
-      </span>
-    </div>
-    <div
-      className="cities__image-wrapper place-card__image-wrapper"
-    >
-      <a
-        href="#"
-      >
-        <img
-          alt="Place image"
-          className="place-card__image"
-          height="200"
-          src="img/apartment-02.jpg"
-          width="260"
-        />
-      </a>
-    </div>
-    <div
-      className="place-card__info"
-    >
-      <div
-        className="place-card__price-wrapper"
-      >
-        <div
-          className="place-card__price"
-        >
-          <b
-            className="place-card__price-value"
-          >
-            €
-            100
+            121
           </b>
           <span
             className="place-card__price-text"
@@ -3300,7 +7145,193 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
       <p
         className="place-card__type"
       >
-        Apartment
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            118
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Nice, cozy, warm big bed apartment
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        hotel
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/7.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            252
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Wood and stone place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        hotel
       </p>
     </div>
   </article>
@@ -3326,7 +7357,7 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-03.jpg"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg"
           width="260"
         />
       </a>
@@ -3344,7 +7375,479 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
             className="place-card__price-value"
           >
             €
-            150
+            197
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Pondhouse - A Magical Place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        apartment
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            253
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The Joshua Tree House
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            458
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Wood and stone place
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            880
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The house among olive 
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            174
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          The house among olive 
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="place-card__mark"
+    >
+      <span>
+        Premium
+      </span>
+    </div>
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            314
           </b>
           <span
             className="place-card__price-text"
@@ -3400,7 +7903,386 @@ exports[`OffersList component snapshot test Should render a list of 5 offers wit
       <p
         className="place-card__type"
       >
-        Apartment
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            793
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Tile House
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        house
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            264
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Tile House
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="place-card__mark"
+    >
+      <span>
+        Premium
+      </span>
+    </div>
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            238
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Tile House
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
+      </p>
+    </div>
+  </article>
+  <article
+    className="cities__place-card place-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="cities__image-wrapper place-card__image-wrapper"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Place image"
+          className="place-card__image"
+          height="200"
+          src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg"
+          width="260"
+        />
+      </a>
+    </div>
+    <div
+      className="place-card__info"
+    >
+      <div
+        className="place-card__price-wrapper"
+      >
+        <div
+          className="place-card__price"
+        >
+          <b
+            className="place-card__price-value"
+          >
+            €
+            205
+          </b>
+          <span
+            className="place-card__price-text"
+          >
+             
+            ∕ night
+          </span>
+        </div>
+        <button
+          className="place-card__bookmark-button button "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="place-card__bookmark-icon"
+            height="19"
+            width="18"
+          >
+            <use
+              xlinkHref="#icon-bookmark"
+            />
+          </svg>
+          <span
+            className="visually-hidden"
+          >
+            To bookmarks
+          </span>
+        </button>
+      </div>
+      <div
+        className="place-card__rating rating"
+      >
+        <div
+          className="place-card__stars rating__stars"
+        >
+          <span />
+          <span
+            className="visually-hidden"
+          >
+            Rating
+          </span>
+        </div>
+      </div>
+      <h2
+        className="place-card__name"
+      >
+        <a
+          href="#"
+        >
+          Nice, cozy, warm big bed apartment
+        </a>
+      </h2>
+      <p
+        className="place-card__type"
+      >
+        room
       </p>
     </div>
   </article>

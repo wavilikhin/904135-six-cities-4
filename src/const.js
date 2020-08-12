@@ -1,7 +1,7 @@
 export const AppRoutes = {
   ROOT: '/',
   LOGIN: '/login',
-  OFFER: '/offer',
+  ROOM: '/offer/:id?',
   FAVORITES: '/favorites',
 };
 

@@ -72,7 +72,7 @@ const withActiveItem = (Component, config) => {
     handleCityChange: PropTypes.func,
     currentCity: PropTypes.string.isRequired,
     uniqueCities: PropTypes.arrayOf(PropTypes.string).isRequired,
-    userFavorites: PropTypes.arrayOf(PropTypes.number),
+    userFavorites: PropTypes.arrayOf(PropTypes.number).isRequired,
   };
 
   const mapStateToProps = (state) => ({

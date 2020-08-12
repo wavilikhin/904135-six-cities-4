@@ -4,15 +4,15 @@ import { reducer, ActionType, Operation } from './user.js';
 
 const api = createApi(() => {});
 
-it(`User reducer without additional params returns initnial state`, () => {
-  expect(reducer(void 0, {})).toEqual({
-    authStatus: 'NO_AUTH',
-    userEmail: '',
-    userFavorites: [],
+describe(`User reducer test`, () => {
+  it(`User reducer without additional params returns initnial state`, () => {
+    expect(reducer(void 0, {})).toEqual({
+      authStatus: 'NO_AUTH',
+      userEmail: '',
+      userFavorites: [],
+    });
   });
-});
 
-describe(`User reducer works well`, () => {
   it(`User reducer updates authStatus correctly`, () => {
     expect(
       reducer(void 0, {
@@ -38,9 +38,20 @@ describe(`User reducer works well`, () => {
       userFavorites: [],
     });
   });
-});
 
-describe(`User Operation works well`, () => {
+  it(`User reducer updates userFavorites correctly`, () => {
+    expect(
+      reducer(void 0, {
+        type: ActionType.UPDATE_USER_FAVORITES,
+        payload: { id: 2, isFavorite: true },
+      }),
+    ).toEqual({
+      authStatus: 'NO_AUTH',
+      userEmail: '',
+      userFavorites: [2],
+    });
+  });
+
   it(`Should make correct api call for auth status`, () => {
     const apiMock = new MockAdapter(api);
     const dispatch = jest.fn();
@@ -72,6 +83,69 @@ describe(`User Operation works well`, () => {
       expect(dispatch).toHaveBeenNthCalledWith(1, {
         type: ActionType.UPDATE_AUTH_STATUS,
         payload: 'AUTH',
+      });
+    });
+  });
+
+  it(`Should make correct api call for updateFavorites `, () => {
+    const apiMock = new MockAdapter(api);
+    const dispatch = jest.fn();
+    const updateFavorites = Operation.updateFavorites(1, 1);
+
+    apiMock.onPost(`/favorite/1/1`).reply(200, {
+      id: 1,
+      city: 'Amsterdam',
+      cityZoom: 13,
+      isPremium: false,
+      cityCoords: [52.37454, 4.897976],
+      image:
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg',
+      priceValue: 813,
+      name: 'Wood and stone place',
+      type: 'house',
+      coords: [52.385540000000006, 4.886976],
+      bedrooms: 5,
+      description:
+        'I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station. The apartment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.',
+      goods: ['Laptop friendly workspace'],
+      host: {
+        avatar_url: 'img/avatar-angelina.jpg',
+        id: 25,
+        isPro: true,
+        name: 'Angelina',
+      },
+      images: [
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/20.jpg',
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg',
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg',
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg',
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg',
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg',
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg',
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg',
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg',
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg',
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg',
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg',
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/7.jpg',
+        'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg',
+      ],
+      is_favorite: true,
+      location: {
+        latitude: 52.385540000000006,
+        longitude: 4.886976,
+        zoom: 16,
+      },
+      maxAdults: 6,
+      rating: 2.4,
+    });
+
+    return updateFavorites(dispatch, () => {}, api).then(() => {
+      expect(dispatch).toHaveBeenCalledTimes(1);
+
+      expect(dispatch).toHaveBeenNthCalledWith(1, {
+        type: ActionType.UPDATE_USER_FAVORITES,
+        payload: { id: 1, isFavorite: true },
       });
     });
   });

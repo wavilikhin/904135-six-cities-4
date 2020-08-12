@@ -15,8 +15,8 @@ const offersDataArray = OFFERS;
 const city = 'Amsterdam';
 
 describe(`Main component snapshot test`, () => {
-  it(`Main component should render main page
-      with number of awaliable places = 11,
+  it(`Main component should render "main" page
+      with 11 avaliable places
       and places infos`, () => {
     const store = mockStore({
       [NameSpace.DATA]: {
@@ -26,6 +26,8 @@ describe(`Main component snapshot test`, () => {
         city: city,
       },
       [NameSpace.USER]: {
+        authStatus: 'NO_AUTH',
+        userEmail: '',
         userFavorites: [],
       },
     });

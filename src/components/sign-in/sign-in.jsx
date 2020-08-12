@@ -26,7 +26,6 @@ class SignIn extends PureComponent {
   }
 
   _handleSubmit(evt) {
-    console.log(this.state.email, '\n', this.state.password);
     evt.preventDefault();
     this.props.onSubmit({
       email: this.state.email,

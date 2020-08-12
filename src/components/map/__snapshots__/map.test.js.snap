@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Map component snapshot test Should render map with city coords, zoom and map icons 1`] = `
+exports[`Map component snapshot test Should render map 1`] = `
 <div
   id="map"
   style={

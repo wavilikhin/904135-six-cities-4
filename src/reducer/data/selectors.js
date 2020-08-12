@@ -22,3 +22,7 @@ export const getFiltredOffers = createSelector(
     });
   },
 );
+
+export const getOfferInfo = (state, id) => {
+  return state[NameSpace.DATA].offers.filter((offer) => offer.id === id)[0];
+};

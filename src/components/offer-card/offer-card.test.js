@@ -5,10 +5,8 @@ import { OFFERS } from '../../test/__mocks__/offers.js';
 
 const cardData = OFFERS[0];
 
-describe(`ContentCard component snapshot test`, () => {
-  it(`Should render content card with quality=Premium,
-        price=&euro;160/night, name=Beautiful apartment near the city center
-        and type=Apartment`, () => {
+describe(`OfferCard component snapshot test`, () => {
+  it(`Should render content card with given data`, () => {
     const tree = renderer
       .create(
         <OfferCard

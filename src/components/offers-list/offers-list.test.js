@@ -7,7 +7,7 @@ const offersDataArray = OFFERS;
 const currentCity = 'Amsterdam';
 
 describe('OffersList component snapshot test', () => {
-  it(`Should render a list of 5 offers with data and images`, () => {
+  it(`Should render a list offers`, () => {
     const tree = renderer
       .create(
         <OffersList

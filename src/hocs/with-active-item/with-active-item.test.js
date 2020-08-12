@@ -11,6 +11,7 @@ const mockStore = configureStore([]);
 const mockData = {
   activeItem: 'Amsterdam',
   onActiveItemChange: () => {},
+  onFavoritesUpdate: () => {},
 };
 
 const MockComponent = (props) => {
@@ -32,6 +33,8 @@ it(`withActiveItem is rendered correctly`, () => {
       offers: OFFERS,
     },
     [NameSpace.USER]: {
+      authStatus: 'NO_AUTH',
+      userEmail: '',
       userFavorites: [],
     },
   });
@@ -41,6 +44,7 @@ it(`withActiveItem is rendered correctly`, () => {
         <MockComponentWrapped
           activeItem={mockData.activeItem}
           onActiveItemChange={mockData.onActiveItemChange}
+          onFavoritesUpdate={mockData.onFavoritesUpdate}
         />
       </Provider>,
     )

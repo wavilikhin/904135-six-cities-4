@@ -7,8 +7,8 @@ import NameSpace from '../../reducer/name-space.js';
 
 const mockStore = configureStore([]);
 
-describe(`App component test`, () => {
-  it(`App component should render main page`, () => {
+describe(`App component snapshot test`, () => {
+  it(`App component should render "main" page with link to "favorites"`, () => {
     const store = mockStore({
       [NameSpace.DATA]: {
         offers: [],
@@ -17,8 +17,34 @@ describe(`App component test`, () => {
         city: '',
       },
       [NameSpace.USER]: {
-        authStatus: '',
+        authStatus: 'AUTH',
         userEmail: '',
+        userFavorites: [],
+      },
+    });
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <App />
+        </Provider>,
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it(`App component should render "main" page  with link to "sign in"`, () => {
+    const store = mockStore({
+      [NameSpace.DATA]: {
+        offers: [],
+      },
+      [NameSpace.STATE]: {
+        city: '',
+      },
+      [NameSpace.USER]: {
+        authStatus: 'NO_AUTH',
+        userEmail: '',
+        userFavorites: [],
       },
     });
     const tree = renderer

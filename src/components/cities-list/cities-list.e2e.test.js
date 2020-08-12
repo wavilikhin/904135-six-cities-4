@@ -17,22 +17,24 @@ Enzyme.configure({
   adapter: new Adapter(),
 });
 
-it(`Should all headers be pressed`, () => {
-  const onHeaderClick = jest.fn();
+describe(`CitiesList component e2e test`, () => {
+  it(`Should all headers be pressed`, () => {
+    const onHeaderClick = jest.fn();
 
-  const citiesListComponent = shallow(
-    <CitiesList
-      currentCity={currentCity}
-      uniqueCities={uniqueCities}
-      onActiveItemChange={onHeaderClick}
-    />,
-  );
+    const citiesListComponent = shallow(
+      <CitiesList
+        currentCity={currentCity}
+        uniqueCities={uniqueCities}
+        onActiveItemChange={onHeaderClick}
+      />,
+    );
 
-  const headers = citiesListComponent.find(`a.locations__item-link`);
+    const headers = citiesListComponent.find(`a.locations__item-link`);
 
-  headers.forEach((header) => {
-    header.simulate(`click`, { preventDefault() {} });
+    headers.forEach((header) => {
+      header.simulate(`click`, { preventDefault() {} });
+    });
+
+    expect(onHeaderClick).toHaveBeenCalledTimes(6);
   });
-
-  expect(onHeaderClick).toHaveBeenCalledTimes(6);
 });

@@ -1,25 +1,21 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Offers } from './offers.jsx';
+import { OFFERS } from '../../test/__mocks__/offers.js';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import NameSpace from '../../reducer/name-space.js';
-import { OFFERS } from '../../test/__mocks__/offers.js';
+import { SignIn } from './sign-in.jsx';
 
 const mockStore = configureStore([]);
 
-const filtredOffers = [OFFERS[0], OFFERS[1], OFFERS[2]];
-
-const city = 'Amsterdam';
-
-describe(`Offers component snapshot test`, () => {
-  it(`Should render offers component with offers cards and map`, () => {
+describe(`SignIn component snapshot test`, () => {
+  it(`Should render "sign in" page`, () => {
     const store = mockStore({
       [NameSpace.DATA]: {
-        offers: filtredOffers,
+        offers: [],
       },
       [NameSpace.STATE]: {
-        city: city,
+        city: '',
       },
       [NameSpace.USER]: {
         authStatus: 'NO_AUTH',
@@ -31,7 +27,7 @@ describe(`Offers component snapshot test`, () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <Offers filtredOffers={filtredOffers} city={city} />
+          <SignIn onSubmit={() => {}} />
         </Provider>,
       )
       .toJSON();

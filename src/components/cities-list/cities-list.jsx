@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import withActiveItem from '../../hocs/with-active-item/with-active-item.jsx';
 
 let CitiesList = memo((props) => {
@@ -29,6 +30,12 @@ let CitiesList = memo((props) => {
     </section>
   );
 });
+
+CitiesList.propTypes = {
+  currentCity: PropTypes.string.isRequired,
+  uniqueCities: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onActiveItemChange: PropTypes.func.isRequired,
+};
 
 export default withActiveItem(CitiesList, {
   stateUpdateRequired: true,
