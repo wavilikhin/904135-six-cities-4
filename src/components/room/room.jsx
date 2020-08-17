@@ -1,12 +1,34 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getCurrentOffer } from '../../reducer/data/selectors.js';
+import { Operation as DataOperation } from '../../reducer/data/data.js';
+import {
+  getCurrentOffer,
+  getCurrentOfferReviews,
+} from '../../reducer/data/selectors.js';
+import ReviewsList from '../reviews-list/reviews-list.jsx';
+import ReviewForm from '../review-form/review-form.jsx';
 
 class Room extends PureComponent {
   constructor(props) {
     super(props);
+
+    this._updateReviews = this._updateReviews.bind(this);
+    this._postReview = this._postReview.bind(this);
   }
+
+  _updateReviews(id) {
+    this.props.updateReviews(id);
+  }
+
+  _postReview(hotelId, reviewData) {
+    this.props.postReview(hotelId, reviewData);
+  }
+
+  componentDidMount() {
+    this._updateReviews(this.props.currentOffer.id);
+  }
+
   render() {
     const {
       id,
@@ -29,6 +51,8 @@ class Room extends PureComponent {
       maxAdults,
       rating,
     } = this.props.currentOffer;
+
+    const { reviews = [] } = this.props;
 
     return (
       <main className="page__main page__main--property">
@@ -113,7 +137,7 @@ class Room extends PureComponent {
                   >
                     <img
                       className="property__avatar user__avatar"
-                      src={host.avatar_url}
+                      src={`../${host.avatar_url}`}
                       width={74}
                       height={74}
                       alt="Host avatar"
@@ -126,159 +150,14 @@ class Room extends PureComponent {
                 </div>
               </div>
               <section className="property__reviews reviews">
-                <h2 className="reviews__title">
-                  Reviews · <span className="reviews__amount">1</span>
-                </h2>
-                <ul className="reviews__list">
-                  <li className="reviews__item">
-                    <div className="reviews__user user">
-                      <div className="reviews__avatar-wrapper user__avatar-wrapper">
-                        <img
-                          className="reviews__avatar user__avatar"
-                          src="img/avatar-max.jpg"
-                          width={54}
-                          height={54}
-                          alt="Reviews avatar"
-                        />
-                      </div>
-                      <span className="reviews__user-name">Max</span>
-                    </div>
-                    <div className="reviews__info">
-                      <div className="reviews__rating rating">
-                        <div className="reviews__stars rating__stars">
-                          <span style={{ width: '80%' }} />
-                          <span className="visually-hidden">Rating</span>
-                        </div>
-                      </div>
-                      <p className="reviews__text">
-                        A quiet cozy and picturesque that hides behind a a river
-                        by the unique lightness of Amsterdam. The building is
-                        green and from 18th century.
-                      </p>
-                      <time className="reviews__time" dateTime="2019-04-24">
-                        April 2019
-                      </time>
-                    </div>
-                  </li>
-                </ul>
-                <form className="reviews__form form" action="#" method="post">
-                  <label
-                    className="reviews__label form__label"
-                    htmlFor="review"
-                  >
-                    Your review
-                  </label>
-                  <div className="reviews__rating-form form__rating">
-                    <input
-                      className="form__rating-input visually-hidden"
-                      name="rating"
-                      defaultValue={5}
-                      id="5-stars"
-                      type="radio"
-                    />
-                    <label
-                      htmlFor="5-stars"
-                      className="reviews__rating-label form__rating-label"
-                      title="perfect"
-                    >
-                      <svg className="form__star-image" width={37} height={33}>
-                        <use xlinkHref="#icon-star" />
-                      </svg>
-                    </label>
-                    <input
-                      className="form__rating-input visually-hidden"
-                      name="rating"
-                      defaultValue={4}
-                      id="4-stars"
-                      type="radio"
-                    />
-                    <label
-                      htmlFor="4-stars"
-                      className="reviews__rating-label form__rating-label"
-                      title="good"
-                    >
-                      <svg className="form__star-image" width={37} height={33}>
-                        <use xlinkHref="#icon-star" />
-                      </svg>
-                    </label>
-                    <input
-                      className="form__rating-input visually-hidden"
-                      name="rating"
-                      defaultValue={3}
-                      id="3-stars"
-                      type="radio"
-                    />
-                    <label
-                      htmlFor="3-stars"
-                      className="reviews__rating-label form__rating-label"
-                      title="not bad"
-                    >
-                      <svg className="form__star-image" width={37} height={33}>
-                        <use xlinkHref="#icon-star" />
-                      </svg>
-                    </label>
-                    <input
-                      className="form__rating-input visually-hidden"
-                      name="rating"
-                      defaultValue={2}
-                      id="2-stars"
-                      type="radio"
-                    />
-                    <label
-                      htmlFor="2-stars"
-                      className="reviews__rating-label form__rating-label"
-                      title="badly"
-                    >
-                      <svg className="form__star-image" width={37} height={33}>
-                        <use xlinkHref="#icon-star" />
-                      </svg>
-                    </label>
-                    <input
-                      className="form__rating-input visually-hidden"
-                      name="rating"
-                      defaultValue={1}
-                      id="1-star"
-                      type="radio"
-                    />
-                    <label
-                      htmlFor="1-star"
-                      className="reviews__rating-label form__rating-label"
-                      title="terribly"
-                    >
-                      <svg className="form__star-image" width={37} height={33}>
-                        <use xlinkHref="#icon-star" />
-                      </svg>
-                    </label>
-                  </div>
-                  <textarea
-                    className="reviews__textarea form__textarea"
-                    id="review"
-                    name="review"
-                    placeholder="Tell how was your stay, what you like and what can be improved"
-                    defaultValue={''}
-                  />
-                  <div className="reviews__button-wrapper">
-                    <p className="reviews__help">
-                      To submit review please make sure to set{' '}
-                      <span className="reviews__star">rating</span> and describe
-                      your stay with at least{' '}
-                      <b className="reviews__text-amount">50 characters</b>.
-                    </p>
-                    <button
-                      className="reviews__submit form__submit button"
-                      type="submit"
-                      disabled
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </form>
+                <ReviewsList reviews={reviews} />
+                <ReviewForm hotelId={id} handleSubmit={this._postReview} />
               </section>
             </div>
           </div>
-          <section className="property__map map" />
+          {/* <section className="property__map map" /> */}
         </section>
-        <div className="container">
+        {/* <div className="container">
           <section className="near-places places">
             <h2 className="near-places__title">
               Other places in the neighbourhood
@@ -424,83 +303,25 @@ class Room extends PureComponent {
               </article>
             </div>
           </section>
-        </div>
+        </div> */}
       </main>
     );
   }
 }
 
-Room.defaultProps = {
-  currentOffer: {
-    id: 0,
-    city: '',
-    cityZoom: 0,
-    isPremium: false,
-    cityCoords: [],
-    image: '',
-    priceValue: 0,
-    name: '',
-    type: '',
-    coords: [],
-    bedrooms: 0,
-    description: '',
-    goods: [],
-    host: {
-      avatar_url: '',
-      id: 0,
-      isPro: false,
-      name: '',
-    },
-    images: [],
-    isFavorite: false,
-    location: {
-      latitude: 0,
-      longitude: 0,
-      zoom: 0,
-    },
-    maxAdults: 0,
-    rating: 0,
-  },
-};
-
-// const Room = (props) => {
-// const {
-//   offerInfo = {
-//     id: 0,
-//     city: '',
-//     cityZoom: 0,
-//     isPremium: false,
-//     cityCoords: [],
-//     image: '',
-//     priceValue: 0,
-//     name: '',
-//     type: '',
-//     coords: [],
-//     bedrooms: 0,
-//     description: '',
-//     goods: [],
-//     host: {
-//       avatar_url: '',
-//       id: 0,
-//       isPro: false,
-//       name: '',
-//     },
-//     images: [],
-//     isFavorite: false,
-//     location: {
-//       latitude: 0,
-//       longitude: 0,
-//       zoom: 0,
-//     },
-//     maxAdults: 0,
-//     rating: 0,
-//   },
-// } = props;
-
-// };
-
 const mapStateToProps = (state) => ({
   currentOffer: getCurrentOffer(state),
+  reviews: getCurrentOfferReviews(state),
+});
+
+const mapDispatchToPops = (dispatch) => ({
+  updateReviews(id) {
+    dispatch(DataOperation.updateCurrentOfferReviews(id));
+  },
+
+  postReview(hotelId, reviewData) {
+    dispatch(DataOperation.postReview(hotelId, reviewData));
+  },
 });
 
 Room.propTypes = {
@@ -535,7 +356,8 @@ Room.propTypes = {
     rating: PropTypes.number.isRequired,
   }),
   offerId: PropTypes.string.isRequired,
+  updateReviews: PropTypes.func.isRequired,
 };
 
 export { Room };
-export default connect(mapStateToProps, null)(Room);
+export default connect(mapStateToProps, mapDispatchToPops)(Room);

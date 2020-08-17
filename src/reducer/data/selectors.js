@@ -26,3 +26,7 @@ export const getFiltredOffers = createSelector(
 export const getCurrentOffer = (state) => {
   return state[NameSpace.DATA].currentOffer;
 };
+
+export const getCurrentOfferReviews = (state) => {
+  return state[NameSpace.DATA].currentOfferReviews;
+};
