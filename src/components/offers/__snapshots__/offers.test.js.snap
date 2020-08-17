@@ -81,8 +81,6 @@ exports[`Offers component snapshot test Should render offers component with offe
       >
         <article
           className="cities__place-card place-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
         >
           <div
             className="cities__image-wrapper place-card__image-wrapper"
@@ -160,7 +158,8 @@ exports[`Offers component snapshot test Should render offers component with offe
               className="place-card__name"
             >
               <a
-                href="#"
+                href="/offer/1"
+                onClick={[Function]}
               >
                 Wood and stone place
               </a>

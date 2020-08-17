@@ -1,39 +1,35 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { number } from 'prop-types';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { ActionCreator } from '../../reducer/data/data.js';
 
 class OfferCard extends PureComponent {
   constructor(props) {
     super(props);
 
-    this._handleMouseEnter = this._handleMouseEnter.bind(this);
-    this._handleMouseLeave = this._handleMouseLeave.bind(this);
-    this._handleFavoritesUpdate = this._handleFavoritesUpdate.bind(this);
+    this._handleToggleFavorites = this._handleToggleFavorites.bind(this);
+
+    this._updateCurrentOffer = this._updateCurrentOffer.bind(this);
   }
 
-  _handleMouseEnter() {
-    this.props.handleHover(this.props.cardData);
+  _handleToggleFavorites(id, status) {
+    this.props.handleToggleFavorites(id, status);
+    this.props.handleGetFavorites();
   }
 
-  _handleMouseLeave() {
-    this.props.handleHover(null);
-  }
-
-  _handleFavoritesUpdate(id) {
-    this.props.handleFavoritesUpdate(id);
+  _updateCurrentOffer(id) {
+    this.props.handleCurrentOfferUpdate(id);
   }
 
   render() {
     const {
       cardData: { id, isPremium, image, priceValue, name, type },
-      userFavorites,
+      favoritesIds,
     } = this.props;
 
     return (
-      <article
-        className="cities__place-card place-card"
-        onMouseEnter={this._handleMouseEnter}
-        onMouseLeave={this._handleMouseLeave}
-      >
+      <article className="cities__place-card place-card">
         {isPremium && (
           <div className="place-card__mark">
             <span>Premium</span>
@@ -61,13 +57,17 @@ class OfferCard extends PureComponent {
             </div>
             <button
               className={`place-card__bookmark-button button ${
-                userFavorites.some((fav) => fav === id)
+                favoritesIds.some((fav) => fav === id)
                   ? 'place-card__bookmark-button--active'
                   : ''
               }`}
               type="button"
               onClick={() => {
-                this._handleFavoritesUpdate(id);
+                let status;
+                favoritesIds.some((fav) => fav === id)
+                  ? (status = 0)
+                  : (status = 1);
+                this._handleToggleFavorites(id, status);
               }}
             >
               <svg className="place-card__bookmark-icon" width="18" height="19">
@@ -83,7 +83,14 @@ class OfferCard extends PureComponent {
             </div>
           </div>
           <h2 className="place-card__name">
-            <a href="#">{name}</a>
+            <Link
+              to={`/offer/${id}`}
+              onClick={() => {
+                this._updateCurrentOffer(id);
+              }}
+            >
+              {name}
+            </Link>
           </h2>
           <p className="place-card__type">{type}</p>
         </div>
@@ -93,7 +100,6 @@ class OfferCard extends PureComponent {
 }
 
 OfferCard.propTypes = {
-  handleHover: PropTypes.func.isRequired,
   cardData: PropTypes.shape({
     id: PropTypes.number.isRequired,
     isPremium: PropTypes.bool.isRequired,
@@ -103,8 +109,18 @@ OfferCard.propTypes = {
     type: PropTypes.string.isRequired,
     coords: PropTypes.arrayOf(PropTypes.number).isRequired,
   }).isRequired,
-  handleFavoritesUpdate: PropTypes.func.isRequired,
-  userFavorites: PropTypes.arrayOf(PropTypes.number).isRequired,
+  handleToggleFavorites: PropTypes.func.isRequired,
+  favoritesIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+  handleCurrentOfferUpdate: PropTypes.func.isRequired,
+  handleGetFavorites: PropTypes.func.isRequired,
 };
 
-export default OfferCard;
+const mapDispatchToProps = (dispatch) => ({
+  handleCurrentOfferUpdate(id) {
+    dispatch(ActionCreator.updateCurrentOffer(id));
+  },
+});
+
+export { OfferCard };
+
+export default connect(null, mapDispatchToProps)(OfferCard);

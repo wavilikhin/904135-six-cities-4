@@ -12,134 +12,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
     >
       <div
         className="property__gallery"
-      >
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/20.jpg"
-          />
-        </div>
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg"
-          />
-        </div>
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg"
-          />
-        </div>
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg"
-          />
-        </div>
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg"
-          />
-        </div>
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg"
-          />
-        </div>
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg"
-          />
-        </div>
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg"
-          />
-        </div>
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg"
-          />
-        </div>
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg"
-          />
-        </div>
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg"
-          />
-        </div>
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg"
-          />
-        </div>
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/7.jpg"
-          />
-        </div>
-        <div
-          className="property__image-wrapper"
-        >
-          <img
-            alt="Photo studio"
-            className="property__image"
-            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg"
-          />
-        </div>
-      </div>
+      />
     </div>
     <div
       className="property__container container"
@@ -153,7 +26,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
           <h1
             className="property__name"
           >
-            Wood and stone place
+            
           </h1>
           <button
             className="property__bookmark-button button"
@@ -197,7 +70,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
           <span
             className="property__rating-value rating__value"
           >
-            2.4
+            0
           </span>
         </div>
         <ul
@@ -206,19 +79,19 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
           <li
             className="property__feature property__feature--entire"
           >
-            house
+            
           </li>
           <li
             className="property__feature property__feature--bedrooms"
           >
-            5
+            0
              Bedrooms
           </li>
           <li
             className="property__feature property__feature--adults"
           >
             Max 
-            6
+            0
              adults
           </li>
         </ul>
@@ -229,7 +102,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
             className="property__price-value"
           >
             €
-            813
+            0
           </b>
           <span
             className="property__price-text"
@@ -247,13 +120,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
           </h2>
           <ul
             className="property__inside-list"
-          >
-            <li
-              className="property__inside-item"
-            >
-              Laptop friendly workspace
-            </li>
-          </ul>
+          />
         </div>
         <div
           className="property__host"
@@ -267,20 +134,20 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
             className="property__host-user user"
           >
             <div
-              className="property__avatar-wrapper user__avatar-wrapper property__avatar-wrapper--pro"
+              className="property__avatar-wrapper user__avatar-wrapper "
             >
               <img
                 alt="Host avatar"
                 className="property__avatar user__avatar"
                 height={74}
-                src="img/avatar-angelina.jpg"
+                src=""
                 width={74}
               />
             </div>
             <span
               className="property__user-name"
             >
-              Angelina
+              
             </span>
           </div>
           <div
@@ -289,7 +156,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
             <p
               className="property__text"
             >
-              I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station. The apartment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.
+              
             </p>
           </div>
         </div>

@@ -28,7 +28,7 @@ describe(`Room component snapshot test`, () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <Room offerInfo={offerInfo} />
+          <Room offerInfo={offerInfo} offerId={1} />
         </Provider>,
       )
       .toJSON();

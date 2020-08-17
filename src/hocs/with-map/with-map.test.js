@@ -399,7 +399,7 @@ const MockComponent = () => {
 
 const MockComponentWrapped = withMap(MockComponent);
 
-it(`withMap is rendered correctly`, () => {
+it(`WithMap snapthot test`, () => {
   const tree = renderer
     .create(<MockComponentWrapped offers={mockData.offers} />)
     .toJSON();

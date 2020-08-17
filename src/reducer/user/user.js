@@ -1,4 +1,5 @@
 import { AuthStatus } from '../../const.js';
+import { createOffer } from '../../adapters/offers.js';
 
 const initialState = {
   authStatus: AuthStatus.NO_AUTH,
@@ -9,6 +10,7 @@ const initialState = {
 const ActionType = {
   UPDATE_AUTH_STATUS: 'UPDATE_AUTH_STATUS',
   UPDATE_USER_EMAIL: 'UPDATE_USER_EMAIL',
+  TOGGLE_FAVORITE: 'TOGGLE_FAVORITE',
   UPDATE_USER_FAVORITES: 'UPDATE_USER_FAVORITES',
 };
 
@@ -23,10 +25,19 @@ const ActionCreator = {
     payload: email,
   }),
 
-  updateUserFavorites: (id, isFavorite) => {
+  toggleFavorite: (id, status) => ({
+    type: ActionType.TOGGLE_FAVORITE,
+    payload: { id, status },
+  }),
+
+  updateUserFavorites: (favorites) => {
+    const adaptedOffers = favorites.map((fav) => {
+      return createOffer(fav);
+    });
+
     return {
       type: ActionType.UPDATE_USER_FAVORITES,
-      payload: { id, isFavorite },
+      payload: adaptedOffers,
     };
   },
 };
@@ -56,12 +67,14 @@ const Operation = {
       });
   },
 
-  updateFavorites: (id, status) => (dispatch, getState, api) => {
-    return api.post(`/favorite/${id}/${status}`).then((response) => {
-      dispatch(
-        ActionCreator.updateUserFavorites(id, response.data.is_favorite),
-      );
+  getFavorites: () => (dispatch, getState, api) => {
+    return api.get(`/favorite`).then((response) => {
+      dispatch(ActionCreator.updateUserFavorites(response.data));
     });
+  },
+
+  toggleFavorites: (id, status) => (dispatch, getState, api) => {
+    return api.post(`/favorite/${id}/${status}`);
   },
 };
 
@@ -78,14 +91,8 @@ const reducer = (state = initialState, action) => {
       });
 
     case ActionType.UPDATE_USER_FAVORITES:
-      let updatedFavorites = [];
-      action.payload.isFavorite === true
-        ? (updatedFavorites = [...state.userFavorites, action.payload.id])
-        : (updatedFavorites = state.userFavorites.filter(
-            (id) => id !== action.payload.id,
-          ));
       return Object.assign({}, state, {
-        userFavorites: updatedFavorites,
+        userFavorites: action.payload,
       });
   }
   return state;

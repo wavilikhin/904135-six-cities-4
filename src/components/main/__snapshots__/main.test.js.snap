@@ -231,8 +231,6 @@ exports[`Main component snapshot test Main component should render "main" page
           >
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
@@ -310,7 +308,8 @@ exports[`Main component snapshot test Main component should render "main" page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/1"
+                    onClick={[Function]}
                   >
                     Wood and stone place
                   </a>
@@ -324,8 +323,6 @@ exports[`Main component snapshot test Main component should render "main" page
             </article>
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
@@ -403,7 +400,8 @@ exports[`Main component snapshot test Main component should render "main" page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/5"
+                    onClick={[Function]}
                   >
                     Perfectly located Castro
                   </a>
@@ -417,8 +415,6 @@ exports[`Main component snapshot test Main component should render "main" page
             </article>
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
@@ -496,7 +492,8 @@ exports[`Main component snapshot test Main component should render "main" page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/14"
+                    onClick={[Function]}
                   >
                     Penthouse, 4-5 rooms + 5 balconies
                   </a>
@@ -510,8 +507,6 @@ exports[`Main component snapshot test Main component should render "main" page
             </article>
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
@@ -589,7 +584,8 @@ exports[`Main component snapshot test Main component should render "main" page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/15"
+                    onClick={[Function]}
                   >
                     Loft Studio in the Central Area
                   </a>
@@ -603,8 +599,6 @@ exports[`Main component snapshot test Main component should render "main" page
             </article>
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
@@ -682,7 +676,8 @@ exports[`Main component snapshot test Main component should render "main" page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/26"
+                    onClick={[Function]}
                   >
                     The Pondhouse - A Magical Place
                   </a>
@@ -696,8 +691,6 @@ exports[`Main component snapshot test Main component should render "main" page
             </article>
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
@@ -775,7 +768,8 @@ exports[`Main component snapshot test Main component should render "main" page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/29"
+                    onClick={[Function]}
                   >
                     Beautiful & luxurious apartment at great location
                   </a>
@@ -789,8 +783,6 @@ exports[`Main component snapshot test Main component should render "main" page
             </article>
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
@@ -868,7 +860,8 @@ exports[`Main component snapshot test Main component should render "main" page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/46"
+                    onClick={[Function]}
                   >
                     Nice, cozy, warm big bed apartment
                   </a>
@@ -882,8 +875,6 @@ exports[`Main component snapshot test Main component should render "main" page
             </article>
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
@@ -961,7 +952,8 @@ exports[`Main component snapshot test Main component should render "main" page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/48"
+                    onClick={[Function]}
                   >
                     The Joshua Tree House
                   </a>
@@ -975,8 +967,6 @@ exports[`Main component snapshot test Main component should render "main" page
             </article>
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
@@ -1054,7 +1044,8 @@ exports[`Main component snapshot test Main component should render "main" page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/69"
+                    onClick={[Function]}
                   >
                     Penthouse, 4-5 rooms + 5 balconies
                   </a>
@@ -1068,8 +1059,6 @@ exports[`Main component snapshot test Main component should render "main" page
             </article>
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="place-card__mark"
@@ -1154,7 +1143,8 @@ exports[`Main component snapshot test Main component should render "main" page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/73"
+                    onClick={[Function]}
                   >
                     Wood and stone place
                   </a>
@@ -1168,8 +1158,6 @@ exports[`Main component snapshot test Main component should render "main" page
             </article>
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
@@ -1247,7 +1235,8 @@ exports[`Main component snapshot test Main component should render "main" page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/85"
+                    onClick={[Function]}
                   >
                     Tile House
                   </a>

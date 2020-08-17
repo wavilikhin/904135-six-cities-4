@@ -2,6 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Offers } from './offers.jsx';
 import { Provider } from 'react-redux';
+import { Router } from 'react-router-dom';
+import history from '../../history.js';
 import configureStore from 'redux-mock-store';
 import NameSpace from '../../reducer/name-space.js';
 import { OFFERS } from '../../test/__mocks__/offers.js';
@@ -30,9 +32,11 @@ describe(`Offers component snapshot test`, () => {
 
     const tree = renderer
       .create(
-        <Provider store={store}>
-          <Offers filtredOffers={filtredOffers} city={city} />
-        </Provider>,
+        <Router history={history}>
+          <Provider store={store}>
+            <Offers filtredOffers={filtredOffers} city={city} />
+          </Provider>
+        </Router>,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();

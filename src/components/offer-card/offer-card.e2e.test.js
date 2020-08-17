@@ -12,33 +12,11 @@ configure({
 });
 
 describe(`OfferCard component e2e test`, () => {
-  it(`Should onHover be called twice`, () => {
-    const onHover = jest.fn((val) => val);
-
-    const offerCard = shallow(
-      <OfferCard
-        handleHover={onHover}
-        cardData={cardData}
-        handleFavoritesUpdate={() => {}}
-        userFavorites={userFavorites}
-      />,
-    );
-
-    offerCard.simulate('mouseEnter');
-    offerCard.simulate('mouseLeave');
-
-    expect(onHover.mock.results[0].value).toBe(cardData);
-    expect(onHover.mock.results[1].value).toBe(null);
-
-    expect(onHover).toHaveBeenCalledTimes(2);
-  });
-
   it(`Should handleFavoritesUpdate be called once with id value = 1`, () => {
     const updateFavorites = jest.fn((val) => val);
 
     const offerCard = shallow(
       <OfferCard
-        handleHover={() => {}}
         cardData={cardData}
         handleFavoritesUpdate={updateFavorites}
         userFavorites={userFavorites}

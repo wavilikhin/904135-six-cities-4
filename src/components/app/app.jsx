@@ -32,7 +32,7 @@ const App = (props) => {
           path={AppRoutes.ROOM}
           exact
           render={(props) => {
-            return <Room />;
+            return <Room offerId={props.match.params.id} />;
           }}
         />
       </Switch>

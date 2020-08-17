@@ -6,8 +6,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
 >
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -85,7 +83,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/1"
+          onClick={[Function]}
         >
           Wood and stone place
         </a>
@@ -99,8 +98,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -178,7 +175,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/2"
+          onClick={[Function]}
         >
           Amazing and Extremely Central Flat
         </a>
@@ -192,8 +190,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -271,7 +267,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/3"
+          onClick={[Function]}
         >
           The Pondhouse - A Magical Place
         </a>
@@ -285,8 +282,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -364,7 +359,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/4"
+          onClick={[Function]}
         >
           The Joshua Tree House
         </a>
@@ -378,8 +374,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -457,7 +451,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/5"
+          onClick={[Function]}
         >
           Perfectly located Castro
         </a>
@@ -471,8 +466,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -550,7 +543,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/6"
+          onClick={[Function]}
         >
           Amazing and Extremely Central Flat
         </a>
@@ -564,8 +558,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -643,7 +635,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/7"
+          onClick={[Function]}
         >
           Amazing and Extremely Central Flat
         </a>
@@ -657,8 +650,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -736,7 +727,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/8"
+          onClick={[Function]}
         >
           The house among olive 
         </a>
@@ -750,8 +742,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -829,7 +819,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/9"
+          onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment
         </a>
@@ -843,8 +834,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -922,7 +911,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/10"
+          onClick={[Function]}
         >
           Waterfront with extraordinary view
         </a>
@@ -936,8 +926,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -1015,7 +1003,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/11"
+          onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
         </a>
@@ -1029,8 +1018,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -1108,7 +1095,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/12"
+          onClick={[Function]}
         >
           Loft Studio in the Central Area
         </a>
@@ -1122,8 +1110,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -1208,7 +1194,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/13"
+          onClick={[Function]}
         >
           Canal View Prinsengracht
         </a>
@@ -1222,8 +1209,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -1301,7 +1286,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/14"
+          onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
         </a>
@@ -1315,8 +1301,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -1394,7 +1378,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/15"
+          onClick={[Function]}
         >
           Loft Studio in the Central Area
         </a>
@@ -1408,8 +1393,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -1487,7 +1470,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/16"
+          onClick={[Function]}
         >
           Tile House
         </a>
@@ -1501,8 +1485,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -1580,7 +1562,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/17"
+          onClick={[Function]}
         >
           The Joshua Tree House
         </a>
@@ -1594,8 +1577,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -1673,7 +1654,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/18"
+          onClick={[Function]}
         >
           The house among olive 
         </a>
@@ -1687,8 +1669,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -1773,7 +1753,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/19"
+          onClick={[Function]}
         >
           The house among olive 
         </a>
@@ -1787,8 +1768,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -1866,7 +1845,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/20"
+          onClick={[Function]}
         >
           Waterfront with extraordinary view
         </a>
@@ -1880,8 +1860,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -1959,7 +1937,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/21"
+          onClick={[Function]}
         >
           Amazing and Extremely Central Flat
         </a>
@@ -1973,8 +1952,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -2052,7 +2029,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/22"
+          onClick={[Function]}
         >
           The Joshua Tree House
         </a>
@@ -2066,8 +2044,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -2145,7 +2121,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/23"
+          onClick={[Function]}
         >
           Perfectly located Castro
         </a>
@@ -2159,8 +2136,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -2238,7 +2213,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/24"
+          onClick={[Function]}
         >
           The Pondhouse - A Magical Place
         </a>
@@ -2252,8 +2228,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -2331,7 +2305,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/25"
+          onClick={[Function]}
         >
           The Pondhouse - A Magical Place
         </a>
@@ -2345,8 +2320,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -2424,7 +2397,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/26"
+          onClick={[Function]}
         >
           The Pondhouse - A Magical Place
         </a>
@@ -2438,8 +2412,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -2524,7 +2496,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/27"
+          onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
         </a>
@@ -2538,8 +2511,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -2624,7 +2595,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/28"
+          onClick={[Function]}
         >
           The house among olive 
         </a>
@@ -2638,8 +2610,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -2717,7 +2687,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/29"
+          onClick={[Function]}
         >
           Beautiful & luxurious apartment at great location
         </a>
@@ -2731,8 +2702,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -2817,7 +2786,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/30"
+          onClick={[Function]}
         >
           Waterfront with extraordinary view
         </a>
@@ -2831,8 +2801,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -2910,7 +2878,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/31"
+          onClick={[Function]}
         >
           Canal View Prinsengracht
         </a>
@@ -2924,8 +2893,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -3003,7 +2970,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/32"
+          onClick={[Function]}
         >
           Wood and stone place
         </a>
@@ -3017,8 +2985,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -3096,7 +3062,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/33"
+          onClick={[Function]}
         >
           Perfectly located Castro
         </a>
@@ -3110,8 +3077,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -3196,7 +3161,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/34"
+          onClick={[Function]}
         >
           Waterfront with extraordinary view
         </a>
@@ -3210,8 +3176,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -3289,7 +3253,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/35"
+          onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
         </a>
@@ -3303,8 +3268,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -3382,7 +3345,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/36"
+          onClick={[Function]}
         >
           Wood and stone place
         </a>
@@ -3396,8 +3360,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -3475,7 +3437,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/37"
+          onClick={[Function]}
         >
           Beautiful & luxurious apartment at great location
         </a>
@@ -3489,8 +3452,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -3568,7 +3529,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/38"
+          onClick={[Function]}
         >
           The Joshua Tree House
         </a>
@@ -3582,8 +3544,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -3661,7 +3621,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/39"
+          onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment
         </a>
@@ -3675,8 +3636,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -3754,7 +3713,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/40"
+          onClick={[Function]}
         >
           The Joshua Tree House
         </a>
@@ -3768,8 +3728,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -3847,7 +3805,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/41"
+          onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment
         </a>
@@ -3861,8 +3820,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -3940,7 +3897,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/42"
+          onClick={[Function]}
         >
           Canal View Prinsengracht
         </a>
@@ -3954,8 +3912,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -4033,7 +3989,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/43"
+          onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
         </a>
@@ -4047,8 +4004,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -4126,7 +4081,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/44"
+          onClick={[Function]}
         >
           Tile House
         </a>
@@ -4140,8 +4096,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -4226,7 +4180,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/45"
+          onClick={[Function]}
         >
           Amazing and Extremely Central Flat
         </a>
@@ -4240,8 +4195,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -4319,7 +4272,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/46"
+          onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment
         </a>
@@ -4333,8 +4287,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -4412,7 +4364,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/47"
+          onClick={[Function]}
         >
           Canal View Prinsengracht
         </a>
@@ -4426,8 +4379,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -4505,7 +4456,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/48"
+          onClick={[Function]}
         >
           The Joshua Tree House
         </a>
@@ -4519,8 +4471,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -4598,7 +4548,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/49"
+          onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
         </a>
@@ -4612,8 +4563,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -4691,7 +4640,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/50"
+          onClick={[Function]}
         >
           The house among olive 
         </a>
@@ -4705,8 +4655,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -4784,7 +4732,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/51"
+          onClick={[Function]}
         >
           The Pondhouse - A Magical Place
         </a>
@@ -4798,8 +4747,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -4877,7 +4824,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/52"
+          onClick={[Function]}
         >
           Amazing and Extremely Central Flat
         </a>
@@ -4891,8 +4839,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -4970,7 +4916,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/53"
+          onClick={[Function]}
         >
           Canal View Prinsengracht
         </a>
@@ -4984,8 +4931,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -5063,7 +5008,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/54"
+          onClick={[Function]}
         >
           The Pondhouse - A Magical Place
         </a>
@@ -5077,8 +5023,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -5156,7 +5100,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/55"
+          onClick={[Function]}
         >
           Canal View Prinsengracht
         </a>
@@ -5170,8 +5115,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -5249,7 +5192,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/56"
+          onClick={[Function]}
         >
           House in countryside
         </a>
@@ -5263,8 +5207,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -5349,7 +5291,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/57"
+          onClick={[Function]}
         >
           Perfectly located Castro
         </a>
@@ -5363,8 +5306,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -5442,7 +5383,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/58"
+          onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
         </a>
@@ -5456,8 +5398,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -5535,7 +5475,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/59"
+          onClick={[Function]}
         >
           The house among olive 
         </a>
@@ -5549,8 +5490,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -5628,7 +5567,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/60"
+          onClick={[Function]}
         >
           Wood and stone place
         </a>
@@ -5642,8 +5582,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -5721,7 +5659,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/61"
+          onClick={[Function]}
         >
           The Joshua Tree House
         </a>
@@ -5735,8 +5674,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -5814,7 +5751,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/62"
+          onClick={[Function]}
         >
           Loft Studio in the Central Area
         </a>
@@ -5828,8 +5766,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -5907,7 +5843,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/63"
+          onClick={[Function]}
         >
           Perfectly located Castro
         </a>
@@ -5921,8 +5858,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -6007,7 +5942,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/64"
+          onClick={[Function]}
         >
           The Pondhouse - A Magical Place
         </a>
@@ -6021,8 +5957,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -6100,7 +6034,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/65"
+          onClick={[Function]}
         >
           House in countryside
         </a>
@@ -6114,8 +6049,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -6193,7 +6126,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/66"
+          onClick={[Function]}
         >
           Wood and stone place
         </a>
@@ -6207,8 +6141,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -6286,7 +6218,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/67"
+          onClick={[Function]}
         >
           Waterfront with extraordinary view
         </a>
@@ -6300,8 +6233,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -6379,7 +6310,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/68"
+          onClick={[Function]}
         >
           Canal View Prinsengracht
         </a>
@@ -6393,8 +6325,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -6472,7 +6402,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/69"
+          onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
         </a>
@@ -6486,8 +6417,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -6565,7 +6494,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/70"
+          onClick={[Function]}
         >
           Wood and stone place
         </a>
@@ -6579,8 +6509,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -6658,7 +6586,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/71"
+          onClick={[Function]}
         >
           Beautiful & luxurious apartment at great location
         </a>
@@ -6672,8 +6601,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -6751,7 +6678,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/72"
+          onClick={[Function]}
         >
           Loft Studio in the Central Area
         </a>
@@ -6765,8 +6693,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -6851,7 +6777,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/73"
+          onClick={[Function]}
         >
           Wood and stone place
         </a>
@@ -6865,8 +6792,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -6944,7 +6869,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/74"
+          onClick={[Function]}
         >
           Wood and stone place
         </a>
@@ -6958,8 +6884,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -7037,7 +6961,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/75"
+          onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment
         </a>
@@ -7051,8 +6976,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -7137,7 +7060,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/76"
+          onClick={[Function]}
         >
           Wood and stone place
         </a>
@@ -7151,8 +7075,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -7230,7 +7152,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/77"
+          onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment
         </a>
@@ -7244,8 +7167,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -7323,7 +7244,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/78"
+          onClick={[Function]}
         >
           Wood and stone place
         </a>
@@ -7337,8 +7259,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -7423,7 +7343,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/79"
+          onClick={[Function]}
         >
           The Pondhouse - A Magical Place
         </a>
@@ -7437,8 +7358,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -7516,7 +7435,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/80"
+          onClick={[Function]}
         >
           The Joshua Tree House
         </a>
@@ -7530,8 +7450,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -7609,7 +7527,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/81"
+          onClick={[Function]}
         >
           Wood and stone place
         </a>
@@ -7623,8 +7542,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -7702,7 +7619,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/82"
+          onClick={[Function]}
         >
           The house among olive 
         </a>
@@ -7716,8 +7634,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -7795,7 +7711,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/83"
+          onClick={[Function]}
         >
           The house among olive 
         </a>
@@ -7809,8 +7726,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -7895,7 +7810,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/84"
+          onClick={[Function]}
         >
           Canal View Prinsengracht
         </a>
@@ -7909,8 +7825,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -7988,7 +7902,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/85"
+          onClick={[Function]}
         >
           Tile House
         </a>
@@ -8002,8 +7917,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -8081,7 +7994,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/86"
+          onClick={[Function]}
         >
           Tile House
         </a>
@@ -8095,8 +8009,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="place-card__mark"
@@ -8181,7 +8093,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/87"
+          onClick={[Function]}
         >
           Tile House
         </a>
@@ -8195,8 +8108,6 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <div
       className="cities__image-wrapper place-card__image-wrapper"
@@ -8274,7 +8185,8 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         className="place-card__name"
       >
         <a
-          href="#"
+          href="/offer/88"
+          onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment
         </a>

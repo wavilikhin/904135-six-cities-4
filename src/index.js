@@ -17,7 +17,7 @@ import history from './history.js';
 
 const onUnauthorized = () => {
   store.dispatch(ActionCreator.updateAuthStatus(AuthStatus.NO_AUTH));
-  history.push(AppRoutes.LOGIN);
+  // history.push(AppRoutes.LOGIN);
 };
 
 const api = createApi(onUnauthorized);
@@ -29,6 +29,7 @@ const store = createStore(
 
 store.dispatch(DataOperation.updateOffers());
 store.dispatch(UserOperation.updateAuthStatus());
+store.dispatch(UserOperation.getFavorites());
 
 ReactDOM.render(
   <Provider store={store}>

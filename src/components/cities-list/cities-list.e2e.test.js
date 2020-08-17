@@ -25,7 +25,7 @@ describe(`CitiesList component e2e test`, () => {
       <CitiesList
         currentCity={currentCity}
         uniqueCities={uniqueCities}
-        onActiveItemChange={onHeaderClick}
+        handleCityChange={onHeaderClick}
       />,
     );
 
