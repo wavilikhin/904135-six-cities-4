@@ -30,3 +30,7 @@ export const getCurrentOffer = (state) => {
 export const getCurrentOfferReviews = (state) => {
   return state[NameSpace.DATA].currentOfferReviews;
 };
+
+export const getCurrentOfferNearby = (state) => {
+  return state[NameSpace.DATA].currentOfferNearby;
+};

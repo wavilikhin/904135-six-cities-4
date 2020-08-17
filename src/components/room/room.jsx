@@ -5,9 +5,11 @@ import { Operation as DataOperation } from '../../reducer/data/data.js';
 import {
   getCurrentOffer,
   getCurrentOfferReviews,
+  getCurrentOfferNearby,
 } from '../../reducer/data/selectors.js';
 import ReviewsList from '../reviews-list/reviews-list.jsx';
 import ReviewForm from '../review-form/review-form.jsx';
+import OfferCard from '../offer-card/offer-card.jsx';
 
 class Room extends PureComponent {
   constructor(props) {
@@ -15,6 +17,7 @@ class Room extends PureComponent {
 
     this._updateReviews = this._updateReviews.bind(this);
     this._postReview = this._postReview.bind(this);
+    this._updateNearby = this._updateNearby.bind(this);
   }
 
   _updateReviews(id) {
@@ -25,8 +28,13 @@ class Room extends PureComponent {
     this.props.postReview(hotelId, reviewData);
   }
 
+  _updateNearby(id) {
+    this.props.updateNearby(id);
+  }
+
   componentDidMount() {
     this._updateReviews(this.props.currentOffer.id);
+    this._updateNearby(this.props.currentOffer.id);
   }
 
   render() {
@@ -52,7 +60,7 @@ class Room extends PureComponent {
       rating,
     } = this.props.currentOffer;
 
-    const { reviews = [] } = this.props;
+    const { reviews = [], offersNearby } = this.props;
 
     return (
       <main className="page__main page__main--property">
@@ -155,155 +163,30 @@ class Room extends PureComponent {
               </section>
             </div>
           </div>
-          {/* <section className="property__map map" /> */}
+          <section className="property__map map" />
         </section>
-        {/* <div className="container">
+        <div className="container">
           <section className="near-places places">
             <h2 className="near-places__title">
               Other places in the neighbourhood
             </h2>
             <div className="near-places__list places__list">
-              <article className="near-places__card place-card">
-                <div className="near-places__image-wrapper place-card__image-wrapper">
-                  <a href="#">
-                    <img
-                      className="place-card__image"
-                      src="img/room.jpg"
-                      width={260}
-                      height={200}
-                      alt="Place image"
-                    />
-                  </a>
-                </div>
-                <div className="place-card__info">
-                  <div className="place-card__price-wrapper">
-                    <div className="place-card__price">
-                      <b className="place-card__price-value">€80</b>
-                      <span className="place-card__price-text">
-                        /&nbsp;night
-                      </span>
-                    </div>
-                    <button
-                      className="place-card__bookmark-button place-card__bookmark-button--active button"
-                      type="button"
-                    >
-                      <svg
-                        className="place-card__bookmark-icon"
-                        width={18}
-                        height={19}
-                      >
-                        <use xlinkHref="#icon-bookmark" />
-                      </svg>
-                      <span className="visually-hidden">In bookmarks</span>
-                    </button>
-                  </div>
-                  <div className="place-card__rating rating">
-                    <div className="place-card__stars rating__stars">
-                      <span style={{ width: '80%' }} />
-                      <span className="visually-hidden">Rating</span>
-                    </div>
-                  </div>
-                  <h2 className="place-card__name">
-                    <a href="#">Wood and stone place</a>
-                  </h2>
-                  <p className="place-card__type">Private room</p>
-                </div>
-              </article>
-              <article className="near-places__card place-card">
-                <div className="near-places__image-wrapper place-card__image-wrapper">
-                  <a href="#">
-                    <img
-                      className="place-card__image"
-                      src="img/apartment-02.jpg"
-                      width={260}
-                      height={200}
-                      alt="Place image"
-                    />
-                  </a>
-                </div>
-                <div className="place-card__info">
-                  <div className="place-card__price-wrapper">
-                    <div className="place-card__price">
-                      <b className="place-card__price-value">€132</b>
-                      <span className="place-card__price-text">
-                        /&nbsp;night
-                      </span>
-                    </div>
-                    <button
-                      className="place-card__bookmark-button button"
-                      type="button"
-                    >
-                      <svg
-                        className="place-card__bookmark-icon"
-                        width={18}
-                        height={19}
-                      >
-                        <use xlinkHref="#icon-bookmark" />
-                      </svg>
-                      <span className="visually-hidden">To bookmarks</span>
-                    </button>
-                  </div>
-                  <div className="place-card__rating rating">
-                    <div className="place-card__stars rating__stars">
-                      <span style={{ width: '80%' }} />
-                      <span className="visually-hidden">Rating</span>
-                    </div>
-                  </div>
-                  <h2 className="place-card__name">
-                    <a href="#">Canal View Prinsengracht</a>
-                  </h2>
-                  <p className="place-card__type">Apartment</p>
-                </div>
-              </article>
-              <article className="near-places__card place-card">
-                <div className="near-places__image-wrapper place-card__image-wrapper">
-                  <a href="#">
-                    <img
-                      className="place-card__image"
-                      src="img/apartment-03.jpg"
-                      width={260}
-                      height={200}
-                      alt="Place image"
-                    />
-                  </a>
-                </div>
-                <div className="place-card__info">
-                  <div className="place-card__price-wrapper">
-                    <div className="place-card__price">
-                      <b className="place-card__price-value">€180</b>
-                      <span className="place-card__price-text">
-                        /&nbsp;night
-                      </span>
-                    </div>
-                    <button
-                      className="place-card__bookmark-button button"
-                      type="button"
-                    >
-                      <svg
-                        className="place-card__bookmark-icon"
-                        width={18}
-                        height={19}
-                      >
-                        <use xlinkHref="#icon-bookmark" />
-                      </svg>
-                      <span className="visually-hidden">To bookmarks</span>
-                    </button>
-                  </div>
-                  <div className="place-card__rating rating">
-                    <div className="place-card__stars rating__stars">
-                      <span style={{ width: '100%' }} />
-                      <span className="visually-hidden">Rating</span>
-                    </div>
-                  </div>
-                  <h2 className="place-card__name">
-                    <a href="#">Nice, cozy, warm big bed apartment</a>
-                  </h2>
-                  <p className="place-card__type">Apartment</p>
-                </div>
-              </article>
+              {/* TODO:  Доработать HOC add to favorites, обновить пропсы */}
+              {offersNearby.map((offer, i) => {
+                return (
+                  <OfferCard
+                    key={`${offer.id}+${i}`}
+                    cardData={offer}
+                    handleToggleFavorites={() => {}}
+                    favoritesIds={[]}
+                    handleCurrentOfferUpdate={() => {}}
+                    handleGetFavorites={() => {}}
+                  />
+                );
+              })}
             </div>
           </section>
-        </div> */}
+        </div>
       </main>
     );
   }
@@ -312,6 +195,7 @@ class Room extends PureComponent {
 const mapStateToProps = (state) => ({
   currentOffer: getCurrentOffer(state),
   reviews: getCurrentOfferReviews(state),
+  offersNearby: getCurrentOfferNearby(state),
 });
 
 const mapDispatchToPops = (dispatch) => ({
@@ -321,6 +205,10 @@ const mapDispatchToPops = (dispatch) => ({
 
   postReview(hotelId, reviewData) {
     dispatch(DataOperation.postReview(hotelId, reviewData));
+  },
+
+  updateNearby(id) {
+    dispatch(DataOperation.updateCurrentOfferNearby(id));
   },
 });
 
@@ -357,6 +245,38 @@ Room.propTypes = {
   }),
   offerId: PropTypes.string.isRequired,
   updateReviews: PropTypes.func.isRequired,
+  offersNearby: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      city: PropTypes.string.isRequired,
+      cityZoom: PropTypes.number.isRequired,
+      isPremium: PropTypes.bool.isRequired,
+      cityCoords: PropTypes.arrayOf(PropTypes.number).isRequired,
+      image: PropTypes.string.isRequired,
+      priceValue: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      coords: PropTypes.arrayOf(PropTypes.number).isRequired,
+      bedrooms: PropTypes.number.isRequired,
+      description: PropTypes.string.isRequired,
+      goods: PropTypes.arrayOf(PropTypes.string).isRequired,
+      host: PropTypes.shape({
+        avatar_url: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired,
+        isPro: PropTypes.bool.isRequired,
+        name: PropTypes.string.isRequired,
+      }),
+      images: PropTypes.arrayOf(PropTypes.string).isRequired,
+      isFavorite: PropTypes.bool.isRequired,
+      location: PropTypes.shape({
+        latitude: PropTypes.number.isRequired,
+        longitude: PropTypes.number.isRequired,
+        zoom: PropTypes.number.isRequired,
+      }),
+      maxAdults: PropTypes.number.isRequired,
+      rating: PropTypes.number.isRequired,
+    }),
+  ),
 };
 
 export { Room };

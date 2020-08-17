@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Operation as UserOperation } from '../../reducer/user/user.js';
 import { getUserFavorites } from '../../reducer/user/selectors.js';
-import { getOffers } from '../../reducer/data/selectors.js';
 
 const withAddFavorites = (Component) => {
   class WithAddFavorites extends PureComponent {
