@@ -9,6 +9,7 @@ export const withMap = (Component) => {
     }
 
     componentDidMount() {
+      console.count(`Map mounted`);
       const { offers } = this.props;
 
       const icon = leaflet.icon({
@@ -17,14 +18,10 @@ export const withMap = (Component) => {
       });
       this.icon = icon;
 
-      let cityCoords;
-      let zoom;
+      if (offers.length === 0) return;
 
-      offers.length > 0
-        ? (cityCoords = offers[0].cityCoords)
-        : (cityCoords = [0, 0]);
-
-      offers.length > 0 ? (zoom = offers[0].cityZoom) : (zoom = 12);
+      let cityCoords = offers[0].cityCoords;
+      let zoom = offers[0].cityZoom;
 
       const map = leaflet.map(`map`, {
         center: cityCoords,
@@ -47,8 +44,13 @@ export const withMap = (Component) => {
 
       let markersLayer = [];
 
-      for (const offer in offers) {
-        markersLayer.push(offer);
+      for (const offer of offers) {
+        markersLayer.push(
+          leaflet.marker(
+            [offer.location.latitude, offer.location.longitude],
+            icon,
+          ),
+        );
       }
 
       let offersLayer = leaflet.layerGroup(markersLayer);
@@ -60,34 +62,49 @@ export const withMap = (Component) => {
     }
 
     componentDidUpdate() {
+      console.count(`Map updated`);
       const { offers } = this.props;
 
-      let updatedCoords;
-      let updatedZoom;
+      let updatedCoords = offers[0].cityCoords;
+      let updatedZoom = 12;
+      let updatedMap;
 
-      offers.length > 0
-        ? (updatedCoords = offers[0].cityCoords)
-        : (updatedCoords = [0, 0]);
+      this.map
+        ? (updatedMap = this.map)
+        : (updatedMap = leaflet.map(`map`, {
+            center: updatedCoords,
+            zoom: updatedZoom,
+            zoomControl: false,
+            marker: true,
+          }));
 
-      offers.length > 0
-        ? (updatedZoom = offers[0].cityZoom)
-        : (updatedZoom = 12);
-
-      this.map.setView(updatedCoords, updatedZoom);
+      updatedMap.setView(updatedCoords, updatedZoom);
+      leaflet
+        .tileLayer(
+          `https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`,
+          {
+            attribution:
+              '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          },
+        )
+        .addTo(updatedMap);
 
       let markersLayer = [];
-
       offers.forEach((offer) => {
-        markersLayer.push(leaflet.marker(offer.coords, this.icon));
+        markersLayer.push(
+          leaflet.marker(
+            [offer.location.latitude, offer.location.longitude],
+            this.icon,
+          ),
+        );
       });
 
-      this.offersLayer.remove();
+      this.offersLayer ? this.offersLayer.remove() : null;
 
       let offersLayer = leaflet.layerGroup(markersLayer);
+      offersLayer.addTo(updatedMap);
 
       this.offersLayer = offersLayer;
-
-      offersLayer.addTo(this.map);
     }
 
     render() {

@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ReviewItem = ({ comment, id, date, raiting, user }) => {
+const ReviewItem = ({ comment, id, date, rating, user }) => {
   const formatedDate = `
     ${new Date(date).getUTCFullYear()}-${
     new Date(date).getUTCMonth() + 1
   }-${new Date(date).getUTCDate()}
   `;
+  const ratingStars = rating * 2 * 10;
   return (
     <li className="reviews__item">
       <div className="reviews__user user">
@@ -24,7 +25,7 @@ const ReviewItem = ({ comment, id, date, raiting, user }) => {
       <div className="reviews__info">
         <div className="reviews__rating rating">
           <div className="reviews__stars rating__stars">
-            <span style={{ width: '80%' }} />
+            <span style={{ width: `${ratingStars}%` }} />
             <span className="visually-hidden">Rating</span>
           </div>
         </div>

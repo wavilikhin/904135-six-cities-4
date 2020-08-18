@@ -14,7 +14,7 @@ class OfferCard extends PureComponent {
   }
 
   _handleUpdateFavorites(id) {
-    this.props.handleUpdateFavorites(id);
+    this.props.handleFavoritesUpdate(id);
   }
 
   _updateCurrentOffer(id) {
@@ -23,9 +23,10 @@ class OfferCard extends PureComponent {
 
   render() {
     const {
-      cardData: { id, isPremium, image, priceValue, name, type },
+      cardData: { id, isPremium, image, priceValue, name, type, rating },
       favoritesIds,
     } = this.props;
+    const ratingStars = rating * 2 * 10;
 
     return (
       <article className="cities__place-card place-card">
@@ -73,7 +74,7 @@ class OfferCard extends PureComponent {
           </div>
           <div className="place-card__rating rating">
             <div className="place-card__stars rating__stars">
-              <span></span>
+              <span style={{ width: `${ratingStars}%` }}></span>
               <span className="visually-hidden">Rating</span>
             </div>
           </div>
@@ -104,7 +105,7 @@ OfferCard.propTypes = {
     type: PropTypes.string.isRequired,
     coords: PropTypes.arrayOf(PropTypes.number).isRequired,
   }).isRequired,
-  handleUpdateFavorites: PropTypes.func.isRequired,
+  handleFavoritesUpdate: PropTypes.func.isRequired,
   favoritesIds: PropTypes.arrayOf(PropTypes.number).isRequired,
   handleCurrentOfferUpdate: PropTypes.func.isRequired,
 };

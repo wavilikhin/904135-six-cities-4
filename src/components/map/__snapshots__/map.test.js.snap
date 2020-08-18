@@ -5,7 +5,7 @@ exports[`Map component snapshot test Should render map 1`] = `
   id="map"
   style={
     Object {
-      "height": "100vh",
+      "height": "100%",
     }
   }
 />

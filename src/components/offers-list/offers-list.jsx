@@ -4,21 +4,17 @@ import { connect } from 'react-redux';
 import { getFiltredOffers } from '../../reducer/data/selectors.js';
 import withAddFavorites from '../../hocs/with-add-favorites/with-add-favorites.jsx';
 import OfferCard from '../offer-card/offer-card.jsx';
+const OfferCardWrapped = withAddFavorites(OfferCard);
 
 let OffersList = memo(
-  ({ filtredOffers, userFavorites, handleFavoritesUpdate, getFavorites }) => {
-    const favoritesIds = [...new Set(userFavorites.map((fav) => fav.id))];
-
+  ({ filtredOffers, handleFavoritesUpdate, favoritesIds }) => {
     return (
       <div className="cities__places-list places__list tabs__content">
         {filtredOffers.map((offerData, i) => {
           return (
-            <OfferCard
+            <OfferCardWrapped
               key={`${i}-` + offerData.name.replace(/\s/g, '')}
               cardData={offerData}
-              handleUpdateFavorites={handleFavoritesUpdate}
-              handleGetFavorites={getFavorites}
-              favoritesIds={favoritesIds}
             />
           );
         })}
@@ -42,39 +38,6 @@ OffersList.propTypes = {
       coords: PropTypes.arrayOf(PropTypes.number, PropTypes.number).isRequired,
     }),
   ),
-  userFavorites: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      city: PropTypes.string.isRequired,
-      cityZoom: PropTypes.number.isRequired,
-      isPremium: PropTypes.bool.isRequired,
-      cityCoords: PropTypes.arrayOf(PropTypes.number).isRequired,
-      image: PropTypes.string.isRequired,
-      priceValue: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
-      coords: PropTypes.arrayOf(PropTypes.number).isRequired,
-      bedrooms: PropTypes.number.isRequired,
-      description: PropTypes.string.isRequired,
-      goods: PropTypes.arrayOf(PropTypes.string).isRequired,
-      host: PropTypes.shape({
-        avatar_url: PropTypes.string.isRequired,
-        id: PropTypes.number.isRequired,
-        isPro: PropTypes.bool.isRequired,
-        name: PropTypes.string.isRequired,
-      }),
-      images: PropTypes.arrayOf(PropTypes.string).isRequired,
-      isFavorite: PropTypes.bool.isRequired,
-      location: PropTypes.shape({
-        latitude: PropTypes.number.isRequired,
-        longitude: PropTypes.number.isRequired,
-        zoom: PropTypes.number.isRequired,
-      }),
-      maxAdults: PropTypes.number.isRequired,
-      rating: PropTypes.number.isRequired,
-    }),
-  ).isRequired,
-  handleFavoritesUpdate: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
@@ -83,4 +46,4 @@ const mapStateToProps = (state) => ({
 
 export { OffersList };
 
-export default withAddFavorites(connect(mapStateToProps, null)(OffersList));
+export default connect(mapStateToProps, null)(OffersList);

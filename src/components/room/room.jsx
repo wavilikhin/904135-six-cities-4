@@ -10,6 +10,9 @@ import {
 import ReviewsList from '../reviews-list/reviews-list.jsx';
 import ReviewForm from '../review-form/review-form.jsx';
 import OfferCard from '../offer-card/offer-card.jsx';
+import Map from '../map/map.jsx';
+import withAddFavorites from '../../hocs/with-add-favorites/with-add-favorites.jsx';
+const OfferCardWrapped = withAddFavorites(OfferCard);
 
 class Room extends PureComponent {
   constructor(props) {
@@ -18,6 +21,7 @@ class Room extends PureComponent {
     this._updateReviews = this._updateReviews.bind(this);
     this._postReview = this._postReview.bind(this);
     this._updateNearby = this._updateNearby.bind(this);
+    this._updateFavorites = this._updateFavorites.bind(this);
   }
 
   _updateReviews(id) {
@@ -30,6 +34,10 @@ class Room extends PureComponent {
 
   _updateNearby(id) {
     this.props.updateNearby(id);
+  }
+
+  _updateFavorites(id) {
+    this.props.handleFavoritesUpdate(id);
   }
 
   componentDidMount() {
@@ -60,8 +68,8 @@ class Room extends PureComponent {
       rating,
     } = this.props.currentOffer;
 
-    const { reviews = [], offersNearby } = this.props;
-
+    const { reviews = [], offersNearby, favoritesIds } = this.props;
+    const ratingStars = rating * 2 * 10;
     return (
       <main className="page__main page__main--property">
         <section className="property">
@@ -88,8 +96,15 @@ class Room extends PureComponent {
               <div className="property__name-wrapper">
                 <h1 className="property__name">{name}</h1>
                 <button
-                  className="property__bookmark-button button"
+                  className={`property__bookmark-button button ${
+                    favoritesIds.some((fav) => fav === id)
+                      ? 'property__bookmark-button--active'
+                      : ''
+                  }`}
                   type="button"
+                  onClick={() => {
+                    this._updateFavorites(id);
+                  }}
                 >
                   <svg
                     className="property__bookmark-icon"
@@ -103,7 +118,7 @@ class Room extends PureComponent {
               </div>
               <div className="property__rating rating">
                 <div className="property__stars rating__stars">
-                  <span style={{ width: '80%' }} />
+                  <span style={{ width: `${ratingStars}%` }} />
                   <span className="visually-hidden">Rating</span>
                 </div>
                 <span className="property__rating-value rating__value">
@@ -163,7 +178,9 @@ class Room extends PureComponent {
               </section>
             </div>
           </div>
-          <section className="property__map map" />
+          <section className="property__map map">
+            <Map city={city} zoom={cityZoom} offers={offersNearby} />
+          </section>
         </section>
         <div className="container">
           <section className="near-places places">
@@ -171,17 +188,9 @@ class Room extends PureComponent {
               Other places in the neighbourhood
             </h2>
             <div className="near-places__list places__list">
-              {/* TODO:  Доработать HOC add to favorites, обновить пропсы */}
               {offersNearby.map((offer, i) => {
                 return (
-                  <OfferCard
-                    key={`${offer.id}+${i}`}
-                    cardData={offer}
-                    handleToggleFavorites={() => {}}
-                    favoritesIds={[]}
-                    handleCurrentOfferUpdate={() => {}}
-                    handleGetFavorites={() => {}}
-                  />
+                  <OfferCardWrapped key={`${offer.id}+${i}`} cardData={offer} />
                 );
               })}
             </div>
@@ -277,7 +286,10 @@ Room.propTypes = {
       rating: PropTypes.number.isRequired,
     }),
   ),
+  handleFavoritesUpdate: PropTypes.func.isRequired,
 };
 
 export { Room };
-export default connect(mapStateToProps, mapDispatchToPops)(Room);
+export default withAddFavorites(
+  connect(mapStateToProps, mapDispatchToPops)(Room),
+);

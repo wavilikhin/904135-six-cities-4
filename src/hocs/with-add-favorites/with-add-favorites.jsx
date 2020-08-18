@@ -31,13 +31,16 @@ const withAddFavorites = (Component) => {
     }
 
     render() {
+      const favoritesIds = [
+        ...new Set(this.props.userFavorites.map((fav) => fav.id)),
+      ];
       return (
         <Component
           {...this.props}
           handleFavoritesUpdate={(id) => {
             this._updateFavorites(id);
           }}
-          getFavorites={this._getFavorites}
+          favoritesIds={favoritesIds}
         />
       );
     }
@@ -76,8 +79,8 @@ const withAddFavorites = (Component) => {
         rating: PropTypes.number.isRequired,
       }),
     ).isRequired,
-    toggleFavorites: PropTypes.func.isRequired,
     getFavorites: PropTypes.func.isRequired,
+    toggleFavorites: PropTypes.func.isRequired,
   };
 
   const mapStateToProps = (state) => ({

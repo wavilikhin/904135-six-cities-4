@@ -296,7 +296,13 @@ exports[`Main component snapshot test Main component should render "main" page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "48%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -388,7 +394,13 @@ exports[`Main component snapshot test Main component should render "main" page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "70%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -480,7 +492,13 @@ exports[`Main component snapshot test Main component should render "main" page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "94%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -572,7 +590,13 @@ exports[`Main component snapshot test Main component should render "main" page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "58%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -664,7 +688,13 @@ exports[`Main component snapshot test Main component should render "main" page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "72%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -756,7 +786,13 @@ exports[`Main component snapshot test Main component should render "main" page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "48%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -848,7 +884,13 @@ exports[`Main component snapshot test Main component should render "main" page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "70%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -940,7 +982,13 @@ exports[`Main component snapshot test Main component should render "main" page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "42%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -1032,7 +1080,13 @@ exports[`Main component snapshot test Main component should render "main" page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "46%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -1131,7 +1185,13 @@ exports[`Main component snapshot test Main component should render "main" page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "64%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -1223,7 +1283,13 @@ exports[`Main component snapshot test Main component should render "main" page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "84%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -1261,7 +1327,7 @@ exports[`Main component snapshot test Main component should render "main" page
               id="map"
               style={
                 Object {
-                  "height": "100vh",
+                  "height": "100%",
                 }
               }
             />

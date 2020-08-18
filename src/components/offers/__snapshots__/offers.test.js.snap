@@ -146,7 +146,13 @@ exports[`Offers component snapshot test Should render offers component with offe
               <div
                 className="place-card__stars rating__stars"
               >
-                <span />
+                <span
+                  style={
+                    Object {
+                      "width": "48%",
+                    }
+                  }
+                />
                 <span
                   className="visually-hidden"
                 >
@@ -184,7 +190,7 @@ exports[`Offers component snapshot test Should render offers component with offe
           id="map"
           style={
             Object {
-              "height": "100vh",
+              "height": "100%",
             }
           }
         />

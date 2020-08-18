@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import OffersList from '../offers-list/offers-list.jsx';
 import Map from '../map/map.jsx';
 import { getCity, getFiltredOffers } from '../../reducer/data/selectors.js';
+import MainEmpty from '../main-empty/main-empty.jsx';
 
 const Offers = (props) => {
   const { filtredOffers, city } = props;
@@ -42,15 +43,23 @@ const Offers = (props) => {
               </li>
             </ul>
           </form>
-          <OffersList />
+          {filtredOffers.length === 0 ? (
+            <MainEmpty city={city} />
+          ) : (
+            <OffersList />
+          )}
         </section>
         <div className="cities__right-section">
           <section className="cities__map map">
-            <Map
-              city={city}
-              zoom={filtredOffers.length > 0 ? filtredOffers[0].cityZoom : 12}
-              offers={filtredOffers}
-            />
+            {filtredOffers.length === 0 ? (
+              ''
+            ) : (
+              <Map
+                city={city}
+                zoom={filtredOffers[0].cityZoom}
+                offers={filtredOffers}
+              />
+            )}
           </section>
         </div>
       </div>

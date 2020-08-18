@@ -29,13 +29,22 @@ class ReviewForm extends PureComponent {
 
   _handleSubmit(e) {
     e.preventDefault();
+    // TODO Доделать оповещение об ошибке
     if (this.state.text.replace(/\s/g, '').length < 50)
       return console.log(`2short`);
+
+    // TODO Доделать оповещение об ошибке
     if (this.state.raiting == null) return console.log(`Raiting null`);
-    console.log(`eeee`);
+
+    // TODO Доделать отчистку формы (использовать рефсы?)
     this.props.handleSubmit(this.props.hotelId, {
       comment: this.state.text,
       raiting: this.state.raiting,
+    });
+
+    this.setState({
+      text: '',
+      raiting: null,
     });
   }
 
