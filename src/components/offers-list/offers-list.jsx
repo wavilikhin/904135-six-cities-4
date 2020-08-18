@@ -6,7 +6,7 @@ import withAddFavorites from '../../hocs/with-add-favorites/with-add-favorites.j
 import OfferCard from '../offer-card/offer-card.jsx';
 
 let OffersList = memo(
-  ({ filtredOffers, userFavorites, onToggleFavorites, getFavorites }) => {
+  ({ filtredOffers, userFavorites, handleFavoritesUpdate, getFavorites }) => {
     const favoritesIds = [...new Set(userFavorites.map((fav) => fav.id))];
 
     return (
@@ -16,7 +16,7 @@ let OffersList = memo(
             <OfferCard
               key={`${i}-` + offerData.name.replace(/\s/g, '')}
               cardData={offerData}
-              handleToggleFavorites={onToggleFavorites}
+              handleUpdateFavorites={handleFavoritesUpdate}
               handleGetFavorites={getFavorites}
               favoritesIds={favoritesIds}
             />
@@ -74,7 +74,7 @@ OffersList.propTypes = {
       rating: PropTypes.number.isRequired,
     }),
   ).isRequired,
-  onToggleFavorites: PropTypes.func.isRequired,
+  handleFavoritesUpdate: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({

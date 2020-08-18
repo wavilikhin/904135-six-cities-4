@@ -8,14 +8,13 @@ class OfferCard extends PureComponent {
   constructor(props) {
     super(props);
 
-    this._handleToggleFavorites = this._handleToggleFavorites.bind(this);
+    this._handleUpdateFavorites = this._handleUpdateFavorites.bind(this);
 
     this._updateCurrentOffer = this._updateCurrentOffer.bind(this);
   }
 
-  _handleToggleFavorites(id, status) {
-    this.props.handleToggleFavorites(id, status);
-    this.props.handleGetFavorites();
+  _handleUpdateFavorites(id) {
+    this.props.handleUpdateFavorites(id);
   }
 
   _updateCurrentOffer(id) {
@@ -63,11 +62,7 @@ class OfferCard extends PureComponent {
               }`}
               type="button"
               onClick={() => {
-                let status;
-                favoritesIds.some((fav) => fav === id)
-                  ? (status = 0)
-                  : (status = 1);
-                this._handleToggleFavorites(id, status);
+                this._handleUpdateFavorites(id);
               }}
             >
               <svg className="place-card__bookmark-icon" width="18" height="19">
@@ -109,10 +104,9 @@ OfferCard.propTypes = {
     type: PropTypes.string.isRequired,
     coords: PropTypes.arrayOf(PropTypes.number).isRequired,
   }).isRequired,
-  handleToggleFavorites: PropTypes.func.isRequired,
+  handleUpdateFavorites: PropTypes.func.isRequired,
   favoritesIds: PropTypes.arrayOf(PropTypes.number).isRequired,
   handleCurrentOfferUpdate: PropTypes.func.isRequired,
-  handleGetFavorites: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => ({

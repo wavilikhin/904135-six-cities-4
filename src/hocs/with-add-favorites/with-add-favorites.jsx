@@ -11,21 +11,31 @@ const withAddFavorites = (Component) => {
 
       this._toggleFavorite = this._toggleFavorite.bind(this);
       this._getFavorites = this._getFavorites.bind(this);
+      this._updateFavorites = this._updateFavorites.bind(this);
     }
     _getFavorites() {
       this.props.getFavorites();
     }
 
-    _toggleFavorite(id, status) {
+    _toggleFavorite(id) {
+      let status;
+      this.props.userFavorites.some((fav) => fav.id === id)
+        ? (status = 0)
+        : (status = 1);
       this.props.toggleFavorites(id, status);
+    }
+
+    _updateFavorites(id) {
+      this._toggleFavorite(id);
+      this._getFavorites();
     }
 
     render() {
       return (
         <Component
           {...this.props}
-          onToggleFavorites={(id, status) => {
-            this._toggleFavorite(id, status);
+          handleFavoritesUpdate={(id) => {
+            this._updateFavorites(id);
           }}
           getFavorites={this._getFavorites}
         />
