@@ -68,7 +68,13 @@ exports[`OfferCard component snapshot test Should render content card with given
       <div
         className="place-card__stars rating__stars"
       >
-        <span />
+        <span
+          style={
+            Object {
+              "width": "48%",
+            }
+          }
+        />
         <span
           className="visually-hidden"
         >
@@ -81,6 +87,7 @@ exports[`OfferCard component snapshot test Should render content card with given
     >
       <a
         href="/offer/1"
+        id="linkToOffer"
         onClick={[Function]}
       >
         Wood and stone place

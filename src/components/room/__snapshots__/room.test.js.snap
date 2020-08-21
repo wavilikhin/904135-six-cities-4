@@ -12,7 +12,134 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
     >
       <div
         className="property__gallery"
-      />
+      >
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/20.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/7.jpg"
+          />
+        </div>
+        <div
+          className="property__image-wrapper"
+        >
+          <img
+            alt="Photo studio"
+            className="property__image"
+            src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg"
+          />
+        </div>
+      </div>
     </div>
     <div
       className="property__container container"
@@ -29,7 +156,8 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
             
           </h1>
           <button
-            className="property__bookmark-button button"
+            className="property__bookmark-button button property__bookmark-button--active"
+            onClick={[Function]}
             type="button"
           >
             <svg
@@ -57,7 +185,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
             <span
               style={
                 Object {
-                  "width": "80%",
+                  "width": "48%",
                 }
               }
             />
@@ -70,7 +198,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
           <span
             className="property__rating-value rating__value"
           >
-            0
+            2.4
           </span>
         </div>
         <ul
@@ -79,19 +207,19 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
           <li
             className="property__feature property__feature--entire"
           >
-            
+            house
           </li>
           <li
             className="property__feature property__feature--bedrooms"
           >
-            0
+            5
              Bedrooms
           </li>
           <li
             className="property__feature property__feature--adults"
           >
             Max 
-            0
+            6
              adults
           </li>
         </ul>
@@ -102,7 +230,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
             className="property__price-value"
           >
             €
-            0
+            813
           </b>
           <span
             className="property__price-text"
@@ -120,7 +248,13 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
           </h2>
           <ul
             className="property__inside-list"
-          />
+          >
+            <li
+              className="property__inside-item"
+            >
+              Laptop friendly workspace
+            </li>
+          </ul>
         </div>
         <div
           className="property__host"
@@ -134,20 +268,20 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
             className="property__host-user user"
           >
             <div
-              className="property__avatar-wrapper user__avatar-wrapper "
+              className="property__avatar-wrapper user__avatar-wrapper property__avatar-wrapper--pro"
             >
               <img
                 alt="Host avatar"
                 className="property__avatar user__avatar"
                 height={74}
-                src=""
+                src="../img/avatar-angelina.jpg"
                 width={74}
               />
             </div>
             <span
               className="property__user-name"
             >
-              
+              Angelina
             </span>
           </div>
           <div
@@ -156,7 +290,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
             <p
               className="property__text"
             >
-              
+              I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station. The apartment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.
             </p>
           </div>
         </div>
@@ -170,72 +304,12 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
             <span
               className="reviews__amount"
             >
-              1
+              0
             </span>
           </h2>
           <ul
             className="reviews__list"
-          >
-            <li
-              className="reviews__item"
-            >
-              <div
-                className="reviews__user user"
-              >
-                <div
-                  className="reviews__avatar-wrapper user__avatar-wrapper"
-                >
-                  <img
-                    alt="Reviews avatar"
-                    className="reviews__avatar user__avatar"
-                    height={54}
-                    src="img/avatar-max.jpg"
-                    width={54}
-                  />
-                </div>
-                <span
-                  className="reviews__user-name"
-                >
-                  Max
-                </span>
-              </div>
-              <div
-                className="reviews__info"
-              >
-                <div
-                  className="reviews__rating rating"
-                >
-                  <div
-                    className="reviews__stars rating__stars"
-                  >
-                    <span
-                      style={
-                        Object {
-                          "width": "80%",
-                        }
-                      }
-                    />
-                    <span
-                      className="visually-hidden"
-                    >
-                      Rating
-                    </span>
-                  </div>
-                </div>
-                <p
-                  className="reviews__text"
-                >
-                  A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.
-                </p>
-                <time
-                  className="reviews__time"
-                  dateTime="2019-04-24"
-                >
-                  April 2019
-                </time>
-              </div>
-            </li>
-          </ul>
+          />
           <form
             action="#"
             className="reviews__form form"
@@ -255,6 +329,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
                 defaultValue={5}
                 id="5-stars"
                 name="rating"
+                onChange={[Function]}
                 type="radio"
               />
               <label
@@ -277,6 +352,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
                 defaultValue={4}
                 id="4-stars"
                 name="rating"
+                onChange={[Function]}
                 type="radio"
               />
               <label
@@ -299,6 +375,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
                 defaultValue={3}
                 id="3-stars"
                 name="rating"
+                onChange={[Function]}
                 type="radio"
               />
               <label
@@ -321,6 +398,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
                 defaultValue={2}
                 id="2-stars"
                 name="rating"
+                onChange={[Function]}
                 type="radio"
               />
               <label
@@ -343,6 +421,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
                 defaultValue={1}
                 id="1-star"
                 name="rating"
+                onChange={[Function]}
                 type="radio"
               />
               <label
@@ -366,6 +445,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
               defaultValue=""
               id="review"
               name="review"
+              onChange={[Function]}
               placeholder="Tell how was your stay, what you like and what can be improved"
             />
             <div
@@ -381,8 +461,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
                 >
                   rating
                 </span>
-                 and describe your stay with at least
-                 
+                 and describe your stay with at least 
                 <b
                   className="reviews__text-amount"
                 >
@@ -392,7 +471,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
               </p>
               <button
                 className="reviews__submit form__submit button"
-                disabled={true}
+                onClick={[Function]}
                 type="submit"
               >
                 Submit
@@ -404,7 +483,16 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
     </div>
     <section
       className="property__map map"
-    />
+    >
+      <div
+        id="map"
+        style={
+          Object {
+            "height": "100%",
+          }
+        }
+      />
+    </section>
   </section>
   <div
     className="container"
@@ -421,10 +509,10 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
         className="near-places__list places__list"
       >
         <article
-          className="near-places__card place-card"
+          className="cities__place-card place-card"
         >
           <div
-            className="near-places__image-wrapper place-card__image-wrapper"
+            className="cities__image-wrapper place-card__image-wrapper"
           >
             <a
               href="#"
@@ -432,9 +520,9 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
               <img
                 alt="Place image"
                 className="place-card__image"
-                height={200}
-                src="img/room.jpg"
-                width={260}
+                height="200"
+                src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg"
+                width="260"
               />
             </a>
           </div>
@@ -450,116 +538,25 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
                 <b
                   className="place-card__price-value"
                 >
-                  €80
+                  €
+                  238
                 </b>
                 <span
                   className="place-card__price-text"
                 >
-                  / night
+                   
+                  ∕ night
                 </span>
               </div>
               <button
-                className="place-card__bookmark-button place-card__bookmark-button--active button"
+                className="place-card__bookmark-button button "
+                onClick={[Function]}
                 type="button"
               >
                 <svg
                   className="place-card__bookmark-icon"
-                  height={19}
-                  width={18}
-                >
-                  <use
-                    xlinkHref="#icon-bookmark"
-                  />
-                </svg>
-                <span
-                  className="visually-hidden"
-                >
-                  In bookmarks
-                </span>
-              </button>
-            </div>
-            <div
-              className="place-card__rating rating"
-            >
-              <div
-                className="place-card__stars rating__stars"
-              >
-                <span
-                  style={
-                    Object {
-                      "width": "80%",
-                    }
-                  }
-                />
-                <span
-                  className="visually-hidden"
-                >
-                  Rating
-                </span>
-              </div>
-            </div>
-            <h2
-              className="place-card__name"
-            >
-              <a
-                href="#"
-              >
-                Wood and stone place
-              </a>
-            </h2>
-            <p
-              className="place-card__type"
-            >
-              Private room
-            </p>
-          </div>
-        </article>
-        <article
-          className="near-places__card place-card"
-        >
-          <div
-            className="near-places__image-wrapper place-card__image-wrapper"
-          >
-            <a
-              href="#"
-            >
-              <img
-                alt="Place image"
-                className="place-card__image"
-                height={200}
-                src="img/apartment-02.jpg"
-                width={260}
-              />
-            </a>
-          </div>
-          <div
-            className="place-card__info"
-          >
-            <div
-              className="place-card__price-wrapper"
-            >
-              <div
-                className="place-card__price"
-              >
-                <b
-                  className="place-card__price-value"
-                >
-                  €132
-                </b>
-                <span
-                  className="place-card__price-text"
-                >
-                  / night
-                </span>
-              </div>
-              <button
-                className="place-card__bookmark-button button"
-                type="button"
-              >
-                <svg
-                  className="place-card__bookmark-icon"
-                  height={19}
-                  width={18}
+                  height="19"
+                  width="18"
                 >
                   <use
                     xlinkHref="#icon-bookmark"
@@ -581,7 +578,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
                 <span
                   style={
                     Object {
-                      "width": "80%",
+                      "width": "62%",
                     }
                   }
                 />
@@ -596,23 +593,25 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
               className="place-card__name"
             >
               <a
-                href="#"
+                href="/offer/2"
+                id="linkToOffer"
+                onClick={[Function]}
               >
-                Canal View Prinsengracht
+                Amazing and Extremely Central Flat
               </a>
             </h2>
             <p
               className="place-card__type"
             >
-              Apartment
+              apartment
             </p>
           </div>
         </article>
         <article
-          className="near-places__card place-card"
+          className="cities__place-card place-card"
         >
           <div
-            className="near-places__image-wrapper place-card__image-wrapper"
+            className="cities__image-wrapper place-card__image-wrapper"
           >
             <a
               href="#"
@@ -620,9 +619,9 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
               <img
                 alt="Place image"
                 className="place-card__image"
-                height={200}
-                src="img/apartment-03.jpg"
-                width={260}
+                height="200"
+                src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg"
+                width="260"
               />
             </a>
           </div>
@@ -638,22 +637,25 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
                 <b
                   className="place-card__price-value"
                 >
-                  €180
+                  €
+                  722
                 </b>
                 <span
                   className="place-card__price-text"
                 >
-                  / night
+                   
+                  ∕ night
                 </span>
               </div>
               <button
-                className="place-card__bookmark-button button"
+                className="place-card__bookmark-button button "
+                onClick={[Function]}
                 type="button"
               >
                 <svg
                   className="place-card__bookmark-icon"
-                  height={19}
-                  width={18}
+                  height="19"
+                  width="18"
                 >
                   <use
                     xlinkHref="#icon-bookmark"
@@ -675,7 +677,7 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
                 <span
                   style={
                     Object {
-                      "width": "100%",
+                      "width": "88%",
                     }
                   }
                 />
@@ -690,15 +692,116 @@ exports[`Room component snapshot test Should render room offer page 1`] = `
               className="place-card__name"
             >
               <a
-                href="#"
+                href="/offer/3"
+                id="linkToOffer"
+                onClick={[Function]}
               >
-                Nice, cozy, warm big bed apartment
+                The Pondhouse - A Magical Place
               </a>
             </h2>
             <p
               className="place-card__type"
             >
-              Apartment
+              house
+            </p>
+          </div>
+        </article>
+        <article
+          className="cities__place-card place-card"
+        >
+          <div
+            className="cities__image-wrapper place-card__image-wrapper"
+          >
+            <a
+              href="#"
+            >
+              <img
+                alt="Place image"
+                className="place-card__image"
+                height="200"
+                src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/1.jpg"
+                width="260"
+              />
+            </a>
+          </div>
+          <div
+            className="place-card__info"
+          >
+            <div
+              className="place-card__price-wrapper"
+            >
+              <div
+                className="place-card__price"
+              >
+                <b
+                  className="place-card__price-value"
+                >
+                  €
+                  309
+                </b>
+                <span
+                  className="place-card__price-text"
+                >
+                   
+                  ∕ night
+                </span>
+              </div>
+              <button
+                className="place-card__bookmark-button button "
+                onClick={[Function]}
+                type="button"
+              >
+                <svg
+                  className="place-card__bookmark-icon"
+                  height="19"
+                  width="18"
+                >
+                  <use
+                    xlinkHref="#icon-bookmark"
+                  />
+                </svg>
+                <span
+                  className="visually-hidden"
+                >
+                  To bookmarks
+                </span>
+              </button>
+            </div>
+            <div
+              className="place-card__rating rating"
+            >
+              <div
+                className="place-card__stars rating__stars"
+              >
+                <span
+                  style={
+                    Object {
+                      "width": "92%",
+                    }
+                  }
+                />
+                <span
+                  className="visually-hidden"
+                >
+                  Rating
+                </span>
+              </div>
+            </div>
+            <h2
+              className="place-card__name"
+            >
+              <a
+                href="/offer/4"
+                id="linkToOffer"
+                onClick={[Function]}
+              >
+                The Joshua Tree House
+              </a>
+            </h2>
+            <p
+              className="place-card__type"
+            >
+              apartment
             </p>
           </div>
         </article>

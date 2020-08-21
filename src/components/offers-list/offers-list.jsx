@@ -6,23 +6,21 @@ import withAddFavorites from '../../hocs/with-add-favorites/with-add-favorites.j
 import OfferCard from '../offer-card/offer-card.jsx';
 const OfferCardWrapped = withAddFavorites(OfferCard);
 
-let OffersList = memo(
-  ({ filtredOffers, handleFavoritesUpdate, favoritesIds }) => {
-    return (
-      <div className="cities__places-list places__list tabs__content">
-        {filtredOffers.map((offerData, i) => {
-          return (
-            <OfferCardWrapped
-              key={`${i}-` + offerData.name.replace(/\s/g, '')}
-              cardData={offerData}
-            />
-          );
-        })}
-        ;
-      </div>
-    );
-  },
-);
+let OffersList = memo(({ filtredOffers }) => {
+  return (
+    <div className="cities__places-list places__list tabs__content">
+      {filtredOffers.map((offerData, i) => {
+        return (
+          <OfferCardWrapped
+            key={`${i}-` + offerData.name.replace(/\s/g, '')}
+            cardData={offerData}
+          />
+        );
+      })}
+      ;
+    </div>
+  );
+});
 
 OffersList.propTypes = {
   filtredOffers: PropTypes.arrayOf(

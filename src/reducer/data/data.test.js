@@ -1,6 +1,6 @@
 import MockAdapter from 'axios-mock-adapter';
 import { createApi } from '../../api.js';
-import { reducer, ActionType, Operation } from './data.js';
+import { reducer, ActionType, ActionCreator, Operation } from './data.js';
 
 const api = createApi(() => {});
 
@@ -62,103 +62,141 @@ describe(`Data reducer test`, () => {
   it(`Data reducer without additional params returns initnial state`, () => {
     expect(reducer(void 0, {})).toEqual({
       offers: [],
+      currentOffer: {},
+      currentOfferNearby: [],
+      currentOfferReviews: [],
     });
   });
 
   it(`Data reducer updates offers correctly`, () => {
-    expect(
-      reducer(void 0, {
-        type: ActionType.UPDATE_OFFERS,
-        payload: [
-          {
-            bedrooms: 3,
-            city: {
-              location: {
-                latitude: 52.370216,
-                longitude: 4.895168,
-                zoom: 10,
-              },
-              name: 'Amsterdam',
-            },
-            description:
-              'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',
-            goods: [
-              'Heating',
-              'Kitchen',
-              'Cable TV',
-              'Washing machine',
-              'Coffee machine',
-              'Dishwasher',
-            ],
-            host: {
-              avatar_url: 'img/1.png',
-              id: 3,
-              is_pro: true,
-              name: 'Angelina',
-            },
-            id: 1,
-            images: ['img/1.png', 'img/2.png'],
-            is_favorite: false,
-            is_premium: false,
-            location: {
-              latitude: 52.35514938496378,
-              longitude: 4.673877537499948,
-              zoom: 8,
-            },
-            max_adults: 4,
-            preview_image: 'img/1.png',
-            price: 120,
-            rating: 4.8,
-            title: 'Beautiful & luxurious studio at great location',
-            type: 'apartment',
-          },
-        ],
-      }),
-    ).toEqual({
-      offers: [
-        {
-          bedrooms: 3,
-          city: {
-            location: {
-              latitude: 52.370216,
-              longitude: 4.895168,
-              zoom: 10,
-            },
-            name: 'Amsterdam',
-          },
-          description:
-            'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',
-          goods: [
-            'Heating',
-            'Kitchen',
-            'Cable TV',
-            'Washing machine',
-            'Coffee machine',
-            'Dishwasher',
-          ],
-          host: {
-            avatar_url: 'img/1.png',
-            id: 3,
-            is_pro: true,
-            name: 'Angelina',
-          },
-          id: 1,
-          images: ['img/1.png', 'img/2.png'],
-          is_favorite: false,
-          is_premium: false,
-          location: {
-            latitude: 52.35514938496378,
-            longitude: 4.673877537499948,
-            zoom: 8,
-          },
-          max_adults: 4,
-          preview_image: 'img/1.png',
-          price: 120,
-          rating: 4.8,
-          title: 'Beautiful & luxurious studio at great location',
-          type: 'apartment',
+    const offerFromServer = [
+      {
+        bedrooms: 4,
+        city: {
+          location: { latitude: 48.85661, longitude: 2.351499, zoom: 13 },
+          name: 'Paris',
         },
-      ],
+
+        description:
+          'Design interior in most sympathetic area! Complitely renovated, well-equipped, cosy studio in idyllic, over 100 years old wooden house. Calm street, fast connection to center and airport.',
+        goods: [
+          'Fridge',
+          'Washing machine',
+          'Breakfast',
+          'Air conditioning',
+          'Coffee machine',
+          'Baby seat',
+          'Laptop friendly workspace',
+          'Washer',
+          'Towels',
+          'Dishwasher',
+        ],
+        host: {
+          avatar_url: 'img/avatar-angelina.jpg',
+          id: 25,
+          is_pro: true,
+          name: 'Angelina',
+        },
+
+        id: 3,
+        images: [
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/20.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/1.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg',
+        ],
+
+        is_favorite: true,
+        is_premium: false,
+        location: {
+          latitude: 48.868610000000004,
+          longitude: 2.342499,
+          zoom: 16,
+        },
+        max_adults: 6,
+        preview_image:
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg',
+        price: 722,
+        rating: 4.4,
+        title: 'The Pondhouse - A Magical Place',
+        type: 'house',
+      },
+    ];
+
+    const createdOffer = [
+      {
+        id: 3,
+        city: 'Paris',
+        cityZoom: 13,
+        isPremium: false,
+        cityCoords: [48.85661, 2.351499],
+        image:
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg',
+        priceValue: 722,
+        name: 'The Pondhouse - A Magical Place',
+        type: 'house',
+        coords: [48.868610000000004, 2.342499],
+        bedrooms: 4,
+        description:
+          'Design interior in most sympathetic area! Complitely renovated, well-equipped, cosy studio in idyllic, over 100 years old wooden house. Calm street, fast connection to center and airport.',
+        goods: [
+          'Fridge',
+          'Washing machine',
+          'Breakfast',
+          'Air conditioning',
+          'Coffee machine',
+          'Baby seat',
+          'Laptop friendly workspace',
+          'Washer',
+          'Towels',
+          'Dishwasher',
+        ],
+        host: {
+          avatar_url: 'img/avatar-angelina.jpg',
+          id: 25,
+          isPro: true,
+          name: 'Angelina',
+        },
+        images: [
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/20.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/1.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg',
+          'https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg',
+        ],
+        isFavorite: true,
+        location: {
+          latitude: 48.868610000000004,
+          longitude: 2.342499,
+          zoom: 16,
+        },
+        maxAdults: 6,
+        rating: 4.4,
+      },
+    ];
+
+    expect(ActionCreator.updateOffers(offerFromServer)).toEqual({
+      type: ActionType.UPDATE_OFFERS,
+      payload: createdOffer,
     });
   });
 

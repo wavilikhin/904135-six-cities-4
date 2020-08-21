@@ -315,6 +315,7 @@ exports[`Main component snapshot test Main component should render "main" page
                 >
                   <a
                     href="/offer/1"
+                    id="linkToOffer"
                     onClick={[Function]}
                   >
                     Wood and stone place
@@ -413,6 +414,7 @@ exports[`Main component snapshot test Main component should render "main" page
                 >
                   <a
                     href="/offer/5"
+                    id="linkToOffer"
                     onClick={[Function]}
                   >
                     Perfectly located Castro
@@ -511,6 +513,7 @@ exports[`Main component snapshot test Main component should render "main" page
                 >
                   <a
                     href="/offer/14"
+                    id="linkToOffer"
                     onClick={[Function]}
                   >
                     Penthouse, 4-5 rooms + 5 balconies
@@ -609,6 +612,7 @@ exports[`Main component snapshot test Main component should render "main" page
                 >
                   <a
                     href="/offer/15"
+                    id="linkToOffer"
                     onClick={[Function]}
                   >
                     Loft Studio in the Central Area
@@ -707,6 +711,7 @@ exports[`Main component snapshot test Main component should render "main" page
                 >
                   <a
                     href="/offer/26"
+                    id="linkToOffer"
                     onClick={[Function]}
                   >
                     The Pondhouse - A Magical Place
@@ -805,6 +810,7 @@ exports[`Main component snapshot test Main component should render "main" page
                 >
                   <a
                     href="/offer/29"
+                    id="linkToOffer"
                     onClick={[Function]}
                   >
                     Beautiful & luxurious apartment at great location
@@ -903,6 +909,7 @@ exports[`Main component snapshot test Main component should render "main" page
                 >
                   <a
                     href="/offer/46"
+                    id="linkToOffer"
                     onClick={[Function]}
                   >
                     Nice, cozy, warm big bed apartment
@@ -1001,6 +1008,7 @@ exports[`Main component snapshot test Main component should render "main" page
                 >
                   <a
                     href="/offer/48"
+                    id="linkToOffer"
                     onClick={[Function]}
                   >
                     The Joshua Tree House
@@ -1099,6 +1107,7 @@ exports[`Main component snapshot test Main component should render "main" page
                 >
                   <a
                     href="/offer/69"
+                    id="linkToOffer"
                     onClick={[Function]}
                   >
                     Penthouse, 4-5 rooms + 5 balconies
@@ -1204,6 +1213,7 @@ exports[`Main component snapshot test Main component should render "main" page
                 >
                   <a
                     href="/offer/73"
+                    id="linkToOffer"
                     onClick={[Function]}
                   >
                     Wood and stone place
@@ -1302,6 +1312,7 @@ exports[`Main component snapshot test Main component should render "main" page
                 >
                   <a
                     href="/offer/85"
+                    id="linkToOffer"
                     onClick={[Function]}
                   >
                     Tile House

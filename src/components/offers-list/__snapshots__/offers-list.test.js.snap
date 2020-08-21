@@ -71,7 +71,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "48%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -84,6 +90,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/1"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Wood and stone place
@@ -163,7 +170,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "62%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -176,6 +189,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/2"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Amazing and Extremely Central Flat
@@ -255,7 +269,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "88%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -268,6 +288,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/3"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Pondhouse - A Magical Place
@@ -347,7 +368,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "92%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -360,6 +387,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/4"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Joshua Tree House
@@ -439,7 +467,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "70%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -452,6 +486,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/5"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Perfectly located Castro
@@ -531,7 +566,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "58%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -544,6 +585,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/6"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Amazing and Extremely Central Flat
@@ -623,7 +665,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "66%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -636,6 +684,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/7"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Amazing and Extremely Central Flat
@@ -715,7 +764,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "86%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -728,6 +783,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/8"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The house among olive 
@@ -807,7 +863,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "44%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -820,6 +882,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/9"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment
@@ -899,7 +962,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "92%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -912,6 +981,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/10"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Waterfront with extraordinary view
@@ -991,7 +1061,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "70%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -1004,6 +1080,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/11"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
@@ -1083,7 +1160,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "48%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -1096,6 +1179,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/12"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Loft Studio in the Central Area
@@ -1182,7 +1266,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -1195,6 +1285,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/13"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Canal View Prinsengracht
@@ -1274,7 +1365,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "94%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -1287,6 +1384,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/14"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
@@ -1366,7 +1464,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "58%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -1379,6 +1483,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/15"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Loft Studio in the Central Area
@@ -1458,7 +1563,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "74%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -1471,6 +1582,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/16"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Tile House
@@ -1550,7 +1662,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "92%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -1563,6 +1681,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/17"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Joshua Tree House
@@ -1642,7 +1761,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "88%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -1655,6 +1780,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/18"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The house among olive 
@@ -1741,7 +1867,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "44%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -1754,6 +1886,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/19"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The house among olive 
@@ -1833,7 +1966,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "86%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -1846,6 +1985,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/20"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Waterfront with extraordinary view
@@ -1925,7 +2065,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "54%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -1938,6 +2084,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/21"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Amazing and Extremely Central Flat
@@ -2017,7 +2164,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "76%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -2030,6 +2183,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/22"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Joshua Tree House
@@ -2109,7 +2263,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "54%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -2122,6 +2282,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/23"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Perfectly located Castro
@@ -2201,7 +2362,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "58%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -2214,6 +2381,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/24"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Pondhouse - A Magical Place
@@ -2293,7 +2461,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "90%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -2306,6 +2480,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/25"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Pondhouse - A Magical Place
@@ -2385,7 +2560,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "72%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -2398,6 +2579,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/26"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Pondhouse - A Magical Place
@@ -2484,7 +2666,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "88%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -2497,6 +2685,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/27"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
@@ -2583,7 +2772,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "64%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -2596,6 +2791,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/28"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The house among olive 
@@ -2675,7 +2871,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "48%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -2688,6 +2890,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/29"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Beautiful & luxurious apartment at great location
@@ -2774,7 +2977,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "42%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -2787,6 +2996,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/30"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Waterfront with extraordinary view
@@ -2866,7 +3076,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "50%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -2879,6 +3095,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/31"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Canal View Prinsengracht
@@ -2958,7 +3175,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "82%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -2971,6 +3194,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/32"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Wood and stone place
@@ -3050,7 +3274,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "70%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -3063,6 +3293,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/33"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Perfectly located Castro
@@ -3149,7 +3380,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "44%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -3162,6 +3399,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/34"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Waterfront with extraordinary view
@@ -3241,7 +3479,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "46%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -3254,6 +3498,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/35"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
@@ -3333,7 +3578,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "66%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -3346,6 +3597,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/36"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Wood and stone place
@@ -3425,7 +3677,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "78%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -3438,6 +3696,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/37"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Beautiful & luxurious apartment at great location
@@ -3517,7 +3776,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "82%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -3530,6 +3795,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/38"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Joshua Tree House
@@ -3609,7 +3875,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "52%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -3622,6 +3894,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/39"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment
@@ -3701,7 +3974,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -3714,6 +3993,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/40"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Joshua Tree House
@@ -3793,7 +4073,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "58%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -3806,6 +4092,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/41"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment
@@ -3885,7 +4172,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "96%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -3898,6 +4191,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/42"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Canal View Prinsengracht
@@ -3977,7 +4271,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "86%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -3990,6 +4290,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/43"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
@@ -4069,7 +4370,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "66%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -4082,6 +4389,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/44"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Tile House
@@ -4168,7 +4476,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "76%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -4181,6 +4495,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/45"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Amazing and Extremely Central Flat
@@ -4260,7 +4575,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "70%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -4273,6 +4594,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/46"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment
@@ -4352,7 +4674,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "52%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -4365,6 +4693,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/47"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Canal View Prinsengracht
@@ -4444,7 +4773,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "42%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -4457,6 +4792,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/48"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Joshua Tree House
@@ -4536,7 +4872,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "86%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -4549,6 +4891,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/49"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
@@ -4628,7 +4971,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "88%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -4641,6 +4990,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/50"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The house among olive 
@@ -4720,7 +5070,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "46%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -4733,6 +5089,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/51"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Pondhouse - A Magical Place
@@ -4812,7 +5169,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "74%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -4825,6 +5188,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/52"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Amazing and Extremely Central Flat
@@ -4904,7 +5268,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "78%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -4917,6 +5287,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/53"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Canal View Prinsengracht
@@ -4996,7 +5367,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "66%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -5009,6 +5386,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/54"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Pondhouse - A Magical Place
@@ -5088,7 +5466,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "42%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -5101,6 +5485,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/55"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Canal View Prinsengracht
@@ -5180,7 +5565,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "98%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -5193,6 +5584,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/56"
+          id="linkToOffer"
           onClick={[Function]}
         >
           House in countryside
@@ -5279,7 +5671,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "88%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -5292,6 +5690,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/57"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Perfectly located Castro
@@ -5371,7 +5770,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "62%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -5384,6 +5789,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/58"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
@@ -5463,7 +5869,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "48%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -5476,6 +5888,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/59"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The house among olive 
@@ -5555,7 +5968,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "52%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -5568,6 +5987,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/60"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Wood and stone place
@@ -5647,7 +6067,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "94%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -5660,6 +6086,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/61"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Joshua Tree House
@@ -5739,7 +6166,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "66%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -5752,6 +6185,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/62"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Loft Studio in the Central Area
@@ -5831,7 +6265,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "78%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -5844,6 +6284,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/63"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Perfectly located Castro
@@ -5930,7 +6371,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "84%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -5943,6 +6390,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/64"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Pondhouse - A Magical Place
@@ -6022,7 +6470,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "64%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -6035,6 +6489,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/65"
+          id="linkToOffer"
           onClick={[Function]}
         >
           House in countryside
@@ -6114,7 +6569,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "98%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -6127,6 +6588,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/66"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Wood and stone place
@@ -6206,7 +6668,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "64%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -6219,6 +6687,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/67"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Waterfront with extraordinary view
@@ -6298,7 +6767,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "70%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -6311,6 +6786,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/68"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Canal View Prinsengracht
@@ -6390,7 +6866,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "46%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -6403,6 +6885,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/69"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Penthouse, 4-5 rooms + 5 balconies
@@ -6482,7 +6965,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "96%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -6495,6 +6984,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/70"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Wood and stone place
@@ -6574,7 +7064,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "84%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -6587,6 +7083,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/71"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Beautiful & luxurious apartment at great location
@@ -6666,7 +7163,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "88%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -6679,6 +7182,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/72"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Loft Studio in the Central Area
@@ -6765,7 +7269,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "64%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -6778,6 +7288,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/73"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Wood and stone place
@@ -6857,7 +7368,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "80%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -6870,6 +7387,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/74"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Wood and stone place
@@ -6949,7 +7467,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "64%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -6962,6 +7486,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/75"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment
@@ -7048,7 +7573,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "76%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -7061,6 +7592,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/76"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Wood and stone place
@@ -7140,7 +7672,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "60%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -7153,6 +7691,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/77"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment
@@ -7232,7 +7771,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "86%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -7245,6 +7790,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/78"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Wood and stone place
@@ -7331,7 +7877,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "58%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -7344,6 +7896,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/79"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Pondhouse - A Magical Place
@@ -7423,7 +7976,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "84%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -7436,6 +7995,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/80"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The Joshua Tree House
@@ -7515,7 +8075,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "70%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -7528,6 +8094,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/81"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Wood and stone place
@@ -7607,7 +8174,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "88%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -7620,6 +8193,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/82"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The house among olive 
@@ -7699,7 +8273,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "96%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -7712,6 +8292,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/83"
+          id="linkToOffer"
           onClick={[Function]}
         >
           The house among olive 
@@ -7798,7 +8379,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "56%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -7811,6 +8398,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/84"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Canal View Prinsengracht
@@ -7890,7 +8478,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "84%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -7903,6 +8497,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/85"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Tile House
@@ -7982,7 +8577,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "82%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -7995,6 +8596,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/86"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Tile House
@@ -8081,7 +8683,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "88%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -8094,6 +8702,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/87"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Tile House
@@ -8173,7 +8782,13 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
         <div
           className="place-card__stars rating__stars"
         >
-          <span />
+          <span
+            style={
+              Object {
+                "width": "78%",
+              }
+            }
+          />
           <span
             className="visually-hidden"
           >
@@ -8186,6 +8801,7 @@ exports[`OffersList component snapshot test Should render a list offers 1`] = `
       >
         <a
           href="/offer/88"
+          id="linkToOffer"
           onClick={[Function]}
         >
           Nice, cozy, warm big bed apartment

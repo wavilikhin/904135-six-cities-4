@@ -88,9 +88,10 @@ const reducer = (state = initialState, action) => {
       });
 
     case ActionType.UPDATE_CURRENT_OFFER:
-      const currentOffer = state.offers.find(
-        (offer) => offer.id === action.payload,
+      let currentOffer = state.offers.find(
+        (offer) => offer.id === parseInt(action.payload),
       );
+
       return Object.assign({}, state, {
         currentOffer: currentOffer,
       });

@@ -9,7 +9,6 @@ export const withMap = (Component) => {
     }
 
     componentDidMount() {
-      console.count(`Map mounted`);
       const { offers } = this.props;
 
       const icon = leaflet.icon({
@@ -62,23 +61,33 @@ export const withMap = (Component) => {
     }
 
     componentDidUpdate() {
-      console.count(`Map updated`);
       const { offers } = this.props;
+      console.log(offers);
+
+      if (offers.length === 0) return;
 
       let updatedCoords = offers[0].cityCoords;
       let updatedZoom = 12;
-      let updatedMap;
 
       this.map
-        ? (updatedMap = this.map)
-        : (updatedMap = leaflet.map(`map`, {
+        ? this.map.setView(updatedCoords, updatedZoom)
+        : (this.map = leaflet.map(`map`, {
             center: updatedCoords,
             zoom: updatedZoom,
             zoomControl: false,
             marker: true,
           }));
 
-      updatedMap.setView(updatedCoords, updatedZoom);
+      // this.map
+      //   ? (updatedMap = this.map)
+      //   : (updatedMap = leaflet.map(`map`, {
+      //       center: updatedCoords,
+      //       zoom: updatedZoom,
+      //       zoomControl: false,
+      //       marker: true,
+      //     }));
+
+      this.map.setView(updatedCoords, updatedZoom);
       leaflet
         .tileLayer(
           `https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`,
@@ -87,7 +96,7 @@ export const withMap = (Component) => {
               '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
           },
         )
-        .addTo(updatedMap);
+        .addTo(this.map);
 
       let markersLayer = [];
       offers.forEach((offer) => {
@@ -102,7 +111,7 @@ export const withMap = (Component) => {
       this.offersLayer ? this.offersLayer.remove() : null;
 
       let offersLayer = leaflet.layerGroup(markersLayer);
-      offersLayer.addTo(updatedMap);
+      offersLayer.addTo(this.map);
 
       this.offersLayer = offersLayer;
     }

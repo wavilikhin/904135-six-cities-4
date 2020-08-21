@@ -165,6 +165,7 @@ exports[`Offers component snapshot test Should render offers component with offe
             >
               <a
                 href="/offer/1"
+                id="linkToOffer"
                 onClick={[Function]}
               >
                 Wood and stone place

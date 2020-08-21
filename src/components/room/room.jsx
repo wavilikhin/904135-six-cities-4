@@ -1,7 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Operation as DataOperation } from '../../reducer/data/data.js';
+import {
+  Operation as DataOperation,
+  ActionCreator,
+} from '../../reducer/data/data.js';
 import {
   getCurrentOffer,
   getCurrentOfferReviews,
@@ -25,57 +28,57 @@ class Room extends PureComponent {
   }
 
   _updateReviews(id) {
+    if (id === -1) {
+      return;
+    }
     this.props.updateReviews(id);
   }
 
   _postReview(hotelId, reviewData) {
+    if (id === -1) {
+      return;
+    }
     this.props.postReview(hotelId, reviewData);
   }
 
   _updateNearby(id) {
+    if (id === -1) {
+      return;
+    }
     this.props.updateNearby(id);
   }
 
   _updateFavorites(id) {
+    if (id === -1) {
+      return;
+    }
     this.props.handleFavoritesUpdate(id);
   }
 
   componentDidMount() {
-    this._updateReviews(this.props.currentOffer.id);
-    this._updateNearby(this.props.currentOffer.id);
+    this.props.handleCurrentOfferUpdate(this.props.offerId);
+    this._updateReviews(this.props.offerId);
+    this._updateNearby(this.props.offerId);
   }
 
   render() {
-    const {
-      id,
-      city,
-      cityZoom,
-      isPremium,
-      cityCoords,
-      image,
-      priceValue,
-      name,
-      type,
-      coords,
-      bedrooms,
-      description,
-      goods,
-      host,
-      images,
-      isFavorite,
-      location,
-      maxAdults,
-      rating,
-    } = this.props.currentOffer;
+    const { defaultOffer, offer } = this.props;
+
+    let currentOffer = {};
+    Object.keys(offer).length === 0
+      ? (currentOffer = defaultOffer)
+      : (currentOffer = offer);
 
     const { reviews = [], offersNearby, favoritesIds } = this.props;
-    const ratingStars = rating * 2 * 10;
+
+    const ratingStars = currentOffer.rating * 2 * 10;
+
     return (
       <main className="page__main page__main--property">
         <section className="property">
           <div className="property__gallery-container container">
             <div className="property__gallery">
-              {images.map((image, i) => (
+              {currentOffer.images.map((image, i) => (
                 <div className="property__image-wrapper" key={`${image}+${i}`}>
                   <img
                     className="property__image"
@@ -88,7 +91,7 @@ class Room extends PureComponent {
           </div>
           <div className="property__container container">
             <div className="property__wrapper">
-              {isPremium && (
+              {currentOffer.isPremium && (
                 <div className="property__mark">
                   <span>Premium</span>
                 </div>
@@ -97,7 +100,7 @@ class Room extends PureComponent {
                 <h1 className="property__name">{name}</h1>
                 <button
                   className={`property__bookmark-button button ${
-                    favoritesIds.some((fav) => fav === id)
+                    favoritesIds.some((fav) => fav === currentOffer.id)
                       ? 'property__bookmark-button--active'
                       : ''
                   }`}
@@ -122,28 +125,30 @@ class Room extends PureComponent {
                   <span className="visually-hidden">Rating</span>
                 </div>
                 <span className="property__rating-value rating__value">
-                  {rating}
+                  {currentOffer.rating}
                 </span>
               </div>
               <ul className="property__features">
                 <li className="property__feature property__feature--entire">
-                  {type}
+                  {currentOffer.type}
                 </li>
                 <li className="property__feature property__feature--bedrooms">
-                  {bedrooms} Bedrooms
+                  {currentOffer.bedrooms} Bedrooms
                 </li>
                 <li className="property__feature property__feature--adults">
-                  Max {maxAdults} adults
+                  Max {currentOffer.maxAdults} adults
                 </li>
               </ul>
               <div className="property__price">
-                <b className="property__price-value">€{priceValue}</b>
+                <b className="property__price-value">
+                  €{currentOffer.priceValue}
+                </b>
                 <span className="property__price-text">&nbsp;night</span>
               </div>
               <div className="property__inside">
                 <h2 className="property__inside-title">What's inside</h2>
                 <ul className="property__inside-list">
-                  {goods.map((good, i) => (
+                  {currentOffer.goods.map((good, i) => (
                     <li className="property__inside-item" key={`${good}+${i}`}>
                       {good}
                     </li>
@@ -155,31 +160,42 @@ class Room extends PureComponent {
                 <div className="property__host-user user">
                   <div
                     className={`property__avatar-wrapper user__avatar-wrapper ${
-                      host.isPro ? 'property__avatar-wrapper--pro' : ''
+                      currentOffer.host.isPro
+                        ? 'property__avatar-wrapper--pro'
+                        : ''
                     }`}
                   >
                     <img
                       className="property__avatar user__avatar"
-                      src={`../${host.avatar_url}`}
+                      src={`../${currentOffer.host.avatar_url}`}
                       width={74}
                       height={74}
                       alt="Host avatar"
                     />
                   </div>
-                  <span className="property__user-name">{host.name}</span>
+                  <span className="property__user-name">
+                    {currentOffer.host.name}
+                  </span>
                 </div>
                 <div className="property__description">
-                  <p className="property__text">{description}</p>
+                  <p className="property__text">{currentOffer.description}</p>
                 </div>
               </div>
               <section className="property__reviews reviews">
                 <ReviewsList reviews={reviews} />
-                <ReviewForm hotelId={id} handleSubmit={this._postReview} />
+                <ReviewForm
+                  hotelId={currentOffer.id}
+                  handleSubmit={this._postReview}
+                />
               </section>
             </div>
           </div>
           <section className="property__map map">
-            <Map city={city} zoom={cityZoom} offers={offersNearby} />
+            <Map
+              city={currentOffer.city}
+              zoom={currentOffer.cityZoom}
+              offers={offersNearby}
+            />
           </section>
         </section>
         <div className="container">
@@ -201,8 +217,37 @@ class Room extends PureComponent {
   }
 }
 
+Room.defaultProps = {
+  defaultOffer: {
+    id: -1,
+    city: '',
+    city: '',
+    cityZoom: 0,
+    isPremium: false,
+    cityCoords: [],
+    image: '',
+    priceValue: 0,
+    name: '',
+    type: '',
+    coords: [],
+    bedrooms: 0,
+    description: '',
+    goods: [],
+    host: {
+      isPro: false,
+      avatar_url: '',
+      name: '',
+    },
+    images: [],
+    isFavorite: false,
+    location: {},
+    maxAdults: 0,
+    rating: 0,
+  },
+};
+
 const mapStateToProps = (state) => ({
-  currentOffer: getCurrentOffer(state),
+  offer: getCurrentOffer(state),
   reviews: getCurrentOfferReviews(state),
   offersNearby: getCurrentOfferNearby(state),
 });
@@ -219,40 +264,51 @@ const mapDispatchToPops = (dispatch) => ({
   updateNearby(id) {
     dispatch(DataOperation.updateCurrentOfferNearby(id));
   },
+
+  handleCurrentOfferUpdate(id) {
+    dispatch(ActionCreator.updateCurrentOffer(id));
+  },
 });
 
 Room.propTypes = {
-  currentOffer: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    city: PropTypes.string.isRequired,
-    cityZoom: PropTypes.number.isRequired,
-    isPremium: PropTypes.bool.isRequired,
-    cityCoords: PropTypes.arrayOf(PropTypes.number).isRequired,
-    image: PropTypes.string.isRequired,
-    priceValue: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    coords: PropTypes.arrayOf(PropTypes.number).isRequired,
-    bedrooms: PropTypes.number.isRequired,
-    description: PropTypes.string.isRequired,
-    goods: PropTypes.arrayOf(PropTypes.string).isRequired,
+  offer: PropTypes.shape({
+    id: PropTypes.number,
+    city: PropTypes.string,
+    cityZoom: PropTypes.number,
+    isPremium: PropTypes.bool,
+    cityCoords: PropTypes.arrayOf(PropTypes.number),
+    image: PropTypes.string,
+    priceValue: PropTypes.number,
+    name: PropTypes.string,
+    type: PropTypes.string,
+    coords: PropTypes.arrayOf(PropTypes.number),
+    bedrooms: PropTypes.number,
+    description: PropTypes.string,
+    goods: PropTypes.arrayOf(PropTypes.string),
     host: PropTypes.shape({
-      avatar_url: PropTypes.string.isRequired,
-      id: PropTypes.number.isRequired,
-      isPro: PropTypes.bool.isRequired,
-      name: PropTypes.string.isRequired,
+      avatar_url: PropTypes.string,
+      id: PropTypes.number,
+      isPro: PropTypes.bool,
+      name: PropTypes.string,
     }),
-    images: PropTypes.arrayOf(PropTypes.string).isRequired,
-    isFavorite: PropTypes.bool.isRequired,
+    images: PropTypes.arrayOf(PropTypes.string),
+    isFavorite: PropTypes.bool,
     location: PropTypes.shape({
-      latitude: PropTypes.number.isRequired,
-      longitude: PropTypes.number.isRequired,
-      zoom: PropTypes.number.isRequired,
+      latitude: PropTypes.number,
+      longitude: PropTypes.number,
+      zoom: PropTypes.number,
     }),
-    maxAdults: PropTypes.number.isRequired,
-    rating: PropTypes.number.isRequired,
+    maxAdults: PropTypes.number,
+    rating: PropTypes.number,
   }),
-  offerId: PropTypes.string.isRequired,
+  offerId: PropTypes.number.isRequired,
+  favoritesIds: PropTypes.arrayOf(PropTypes.number),
+  reviews: PropTypes.arrayOf(
+    PropTypes.shape({
+      comment: PropTypes.string.isRequired,
+      rating: PropTypes.number.isRequired,
+    }),
+  ),
   updateReviews: PropTypes.func.isRequired,
   offersNearby: PropTypes.arrayOf(
     PropTypes.shape({
@@ -286,6 +342,7 @@ Room.propTypes = {
       rating: PropTypes.number.isRequired,
     }),
   ),
+  updateNearby: PropTypes.func.isRequired,
   handleFavoritesUpdate: PropTypes.func.isRequired,
 };
 

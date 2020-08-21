@@ -1,24 +1,16 @@
 import React, { PureComponent } from 'react';
-import PropTypes, { number } from 'prop-types';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { ActionCreator } from '../../reducer/data/data.js';
 
 class OfferCard extends PureComponent {
   constructor(props) {
     super(props);
 
     this._handleUpdateFavorites = this._handleUpdateFavorites.bind(this);
-
-    this._updateCurrentOffer = this._updateCurrentOffer.bind(this);
   }
 
   _handleUpdateFavorites(id) {
     this.props.handleFavoritesUpdate(id);
-  }
-
-  _updateCurrentOffer(id) {
-    this.props.handleCurrentOfferUpdate(id);
   }
 
   render() {
@@ -79,12 +71,7 @@ class OfferCard extends PureComponent {
             </div>
           </div>
           <h2 className="place-card__name">
-            <Link
-              to={`/offer/${id}`}
-              onClick={() => {
-                this._updateCurrentOffer(id);
-              }}
-            >
+            <Link id="linkToOffer" to={`/offer/${id}`}>
               {name}
             </Link>
           </h2>
@@ -107,15 +94,6 @@ OfferCard.propTypes = {
   }).isRequired,
   handleFavoritesUpdate: PropTypes.func.isRequired,
   favoritesIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-  handleCurrentOfferUpdate: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  handleCurrentOfferUpdate(id) {
-    dispatch(ActionCreator.updateCurrentOffer(id));
-  },
-});
-
-export { OfferCard };
-
-export default connect(null, mapDispatchToProps)(OfferCard);
+export default OfferCard;
