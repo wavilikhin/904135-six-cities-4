@@ -252,7 +252,7 @@ const mapStateToProps = (state) => ({
   offersNearby: getCurrentOfferNearby(state),
 });
 
-const mapDispatchToPops = (dispatch) => ({
+const mapDispatchToProps = (dispatch) => ({
   updateReviews(id) {
     dispatch(DataOperation.updateCurrentOfferReviews(id));
   },
@@ -348,5 +348,5 @@ Room.propTypes = {
 
 export { Room };
 export default withAddFavorites(
-  connect(mapStateToProps, mapDispatchToPops)(Room),
+  connect(mapStateToProps, mapDispatchToProps)(Room),
 );

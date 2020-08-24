@@ -1,15 +1,15 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getFiltredOffers } from '../../reducer/data/selectors.js';
+import { getSortedFiltredOffers } from '../../reducer/data/selectors.js';
 import withAddFavorites from '../../hocs/with-add-favorites/with-add-favorites.jsx';
 import OfferCard from '../offer-card/offer-card.jsx';
 const OfferCardWrapped = withAddFavorites(OfferCard);
 
-let OffersList = memo(({ filtredOffers }) => {
+const OffersList = memo(({ sortedFiltredOffers }) => {
   return (
     <div className="cities__places-list places__list tabs__content">
-      {filtredOffers.map((offerData, i) => {
+      {sortedFiltredOffers.map((offerData, i) => {
         return (
           <OfferCardWrapped
             key={`${i}-` + offerData.name.replace(/\s/g, '')}
@@ -23,7 +23,7 @@ let OffersList = memo(({ filtredOffers }) => {
 });
 
 OffersList.propTypes = {
-  filtredOffers: PropTypes.arrayOf(
+  sortedFiltredOffers: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       city: PropTypes.string.isRequired,
@@ -39,7 +39,7 @@ OffersList.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  filtredOffers: getFiltredOffers(state),
+  sortedFiltredOffers: getSortedFiltredOffers(state),
 });
 
 export { OffersList };
