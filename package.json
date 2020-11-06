@@ -2,7 +2,7 @@
   "name": "six-cities",
   "version": "1.0.0",
   "private": true,
-  "description": "Личный проект «Шесть городов» от HTML Academy",
+  "description": "Личный проект «Шесть городов»",
   "scripts": {
     "eslint": "eslint --fix src/**/*.js",
     "test": "npm run test.jest",

@@ -1,15 +1,16 @@
-import { AuthStatus } from '../../const.js';
+import { AuthStatus } from "../../const.js";
 
 const initialState = {
-  authStatus: AuthStatus.NO_AUTH,
-  userEmail: '',
+  // FIXME: Переделать со своим серваком авторизации
+  authStatus: AuthStatus.AUTH,
+  userEmail: "default@gmail.com",
   userFavorites: [],
 };
 
 const ActionType = {
-  UPDATE_AUTH_STATUS: 'UPDATE_AUTH_STATUS',
-  UPDATE_USER_EMAIL: 'UPDATE_USER_EMAIL',
-  UPDATE_USER_FAVORITES: 'UPDATE_USER_FAVORITES',
+  UPDATE_AUTH_STATUS: "UPDATE_AUTH_STATUS",
+  UPDATE_USER_EMAIL: "UPDATE_USER_EMAIL",
+  UPDATE_USER_FAVORITES: "UPDATE_USER_FAVORITES",
 };
 
 const ActionCreator = {
@@ -34,7 +35,7 @@ const ActionCreator = {
 const Operation = {
   updateAuthStatus: () => (dispatch, getState, api) => {
     return api
-      .get('/login')
+      .get("/login")
       .then((response) => {
         dispatch(ActionCreator.updateAuthStatus(AuthStatus.AUTH));
         dispatch(ActionCreator.updateUserEmail(response.data.email));
@@ -46,20 +47,21 @@ const Operation = {
 
   logIn: (authData) => (dispatch, getState, api) => {
     return api
-      .post('/login', {
+      .post("/login", {
         email: authData.email,
         password: authData.password,
       })
       .then((response) => {
         dispatch(ActionCreator.updateAuthStatus(AuthStatus.AUTH));
         dispatch(ActionCreator.updateUserEmail(response.data.email));
-      });
+      })
+      .catch((err) => console.error(`Login error: ${err}`));
   },
 
   updateFavorites: (id, status) => (dispatch, getState, api) => {
     return api.post(`/favorite/${id}/${status}`).then((response) => {
       dispatch(
-        ActionCreator.updateUserFavorites(id, response.data.is_favorite),
+        ActionCreator.updateUserFavorites(id, response.data.is_favorite)
       );
     });
   },
@@ -82,7 +84,7 @@ const reducer = (state = initialState, action) => {
       action.payload.isFavorite === true
         ? (updatedFavorites = [...state.userFavorites, action.payload.id])
         : (updatedFavorites = state.userFavorites.filter(
-            (id) => id !== action.payload.id,
+            (id) => id !== action.payload.id
           ));
       return Object.assign({}, state, {
         userFavorites: updatedFavorites,

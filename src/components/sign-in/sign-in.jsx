@@ -1,15 +1,17 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { Operation as UserOperation } from '../../reducer/user/user.js';
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { Operation as UserOperation } from "../../reducer/user/user.js";
+import history from "../../history.js";
+import { AppRoutes } from "../../const.js";
 
 class SignIn extends PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     };
 
     this._handleEmailChange = this._handleEmailChange.bind(this);
@@ -26,18 +28,18 @@ class SignIn extends PureComponent {
   }
 
   _handleSubmit(evt) {
-    console.log(this.state.email, '\n', this.state.password);
     evt.preventDefault();
     this.props.onSubmit({
       email: this.state.email,
       password: this.state.password,
     });
+    history.push(AppRoutes.ROOT);
   }
 
   render() {
     return (
       <React.Fragment>
-        <div style={{ display: 'none' }}>
+        <div style={{ display: "none" }}>
           <svg xmlns="http://www.w3.org/2000/svg">
             <symbol id="icon-arrow-select" viewBox="0 0 7 4">
               <path
