@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import { AuthStatus } from "../../const.js";
+=======
+import { AuthStatus } from '../../const.js';
+import { createOffer } from '../../adapters/offers.js';
+>>>>>>> 829d14386c095516e992fec2eaf3170306bb8d4c
 
 const initialState = {
   // FIXME: Переделать со своим серваком авторизации
@@ -8,9 +13,16 @@ const initialState = {
 };
 
 const ActionType = {
+<<<<<<< HEAD
   UPDATE_AUTH_STATUS: "UPDATE_AUTH_STATUS",
   UPDATE_USER_EMAIL: "UPDATE_USER_EMAIL",
   UPDATE_USER_FAVORITES: "UPDATE_USER_FAVORITES",
+=======
+  UPDATE_AUTH_STATUS: 'UPDATE_AUTH_STATUS',
+  UPDATE_USER_EMAIL: 'UPDATE_USER_EMAIL',
+  TOGGLE_FAVORITE: 'TOGGLE_FAVORITE',
+  UPDATE_USER_FAVORITES: 'UPDATE_USER_FAVORITES',
+>>>>>>> 829d14386c095516e992fec2eaf3170306bb8d4c
 };
 
 const ActionCreator = {
@@ -24,10 +36,19 @@ const ActionCreator = {
     payload: email,
   }),
 
-  updateUserFavorites: (id, isFavorite) => {
+  toggleFavorite: (id, status) => ({
+    type: ActionType.TOGGLE_FAVORITE,
+    payload: { id, status },
+  }),
+
+  updateUserFavorites: (favorites) => {
+    const adaptedOffers = favorites.map((fav) => {
+      return createOffer(fav);
+    });
+
     return {
       type: ActionType.UPDATE_USER_FAVORITES,
-      payload: { id, isFavorite },
+      payload: adaptedOffers,
     };
   },
 };
@@ -58,12 +79,22 @@ const Operation = {
       .catch((err) => console.error(`Login error: ${err}`));
   },
 
+<<<<<<< HEAD
   updateFavorites: (id, status) => (dispatch, getState, api) => {
     return api.post(`/favorite/${id}/${status}`).then((response) => {
       dispatch(
         ActionCreator.updateUserFavorites(id, response.data.is_favorite)
       );
+=======
+  getFavorites: () => (dispatch, getState, api) => {
+    return api.get(`/favorite`).then((response) => {
+      dispatch(ActionCreator.updateUserFavorites(response.data));
+>>>>>>> 829d14386c095516e992fec2eaf3170306bb8d4c
     });
+  },
+
+  toggleFavorites: (id, status) => (dispatch, getState, api) => {
+    return api.post(`/favorite/${id}/${status}`);
   },
 };
 
@@ -80,14 +111,17 @@ const reducer = (state = initialState, action) => {
       });
 
     case ActionType.UPDATE_USER_FAVORITES:
+<<<<<<< HEAD
       let updatedFavorites = [];
       action.payload.isFavorite === true
         ? (updatedFavorites = [...state.userFavorites, action.payload.id])
         : (updatedFavorites = state.userFavorites.filter(
             (id) => id !== action.payload.id
           ));
+=======
+>>>>>>> 829d14386c095516e992fec2eaf3170306bb8d4c
       return Object.assign({}, state, {
-        userFavorites: updatedFavorites,
+        userFavorites: action.payload,
       });
   }
   return state;

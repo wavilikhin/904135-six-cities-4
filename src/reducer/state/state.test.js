@@ -1,6 +1,6 @@
 import { reducer, ActionType } from './state.js';
 
-describe(`State reducer works well`, () => {
+describe(`State reducer test `, () => {
   it(`State reducer without additional params returns initnial state`, () => {
     expect(reducer(void 0, {})).toEqual({
       city: '',

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`withMap is rendered correctly 1`] = `
+exports[`WithMap snapthot test 1`] = `
 <div
   id="map"
   style={

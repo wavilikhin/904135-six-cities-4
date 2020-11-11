@@ -1,9 +1,11 @@
 import React, { memo } from 'react';
-import withActiveItem from '../../hocs/with-active-item/with-active-item.jsx';
+import PropTypes from 'prop-types';
 
-let CitiesList = memo((props) => {
-  const { currentCity, uniqueCities, onActiveItemChange } = props;
+import { connect } from 'react-redux';
+import { ActionCreator as StateActionCreator } from '../../reducer/state/state.js';
+import { getCity, getUniqueCities } from '../../reducer/data/selectors.js';
 
+let CitiesList = memo(({ currentCity, uniqueCities, handleCityChange }) => {
   return (
     <section className="locations container">
       <ul className="locations__list tabs__list">
@@ -13,7 +15,7 @@ let CitiesList = memo((props) => {
               <a
                 onClick={(e) => {
                   e.preventDefault();
-                  onActiveItemChange(city);
+                  handleCityChange(city);
                 }}
                 className={`locations__item-link tabs__item ${
                   city === currentCity ? 'tabs__item--active' : ''
@@ -30,8 +32,22 @@ let CitiesList = memo((props) => {
   );
 });
 
-export default withActiveItem(CitiesList, {
-  stateUpdateRequired: true,
+CitiesList.propTypes = {
+  currentCity: PropTypes.string.isRequired,
+  uniqueCities: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  currentCity: getCity(state),
+  uniqueCities: getUniqueCities(state),
+});
+
+const mapDispathcToProps = (dispatch) => ({
+  handleCityChange(city) {
+    dispatch(StateActionCreator.changeCiy(city));
+  },
 });
 
 export { CitiesList };
+
+export default connect(mapStateToProps, mapDispathcToProps)(CitiesList);

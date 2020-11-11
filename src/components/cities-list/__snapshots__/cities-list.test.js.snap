@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render cities list with 6 cities 1`] = `
+exports[`CitiesList component snapshot test Should render cities list with 6 cities 1`] = `
 <section
   className="locations container"
 >

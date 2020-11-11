@@ -27,7 +27,6 @@ class Main extends PureComponent {
     this._updateCurrentCity();
   }
   componentDidUpdate() {
-    // проверить ренедрится ли все по новой и если что поправить
     this._updateCurrentCity();
   }
 

@@ -16,9 +16,13 @@ import { AuthStatus, AppRoutes } from "./const.js";
 import history from "./history.js";
 
 const onUnauthorized = () => {
+<<<<<<< HEAD
   console.warn("You are currently unauthorized, user set to default");
   // FIXME: Переделать со своим серваком авторизации
   // store.dispatch(ActionCreator.updateAuthStatus(AuthStatus.NO_AUTH));
+=======
+  store.dispatch(ActionCreator.updateAuthStatus(AuthStatus.NO_AUTH));
+>>>>>>> 829d14386c095516e992fec2eaf3170306bb8d4c
   // history.push(AppRoutes.LOGIN);
 };
 
@@ -30,8 +34,13 @@ const store = createStore(
 );
 
 store.dispatch(DataOperation.updateOffers());
+<<<<<<< HEAD
 // FIXME: Переделать со своим серваком авторизации
 // store.dispatch(UserOperation.updateAuthStatus());
+=======
+store.dispatch(UserOperation.updateAuthStatus());
+store.dispatch(UserOperation.getFavorites());
+>>>>>>> 829d14386c095516e992fec2eaf3170306bb8d4c
 
 ReactDOM.render(
   <Provider store={store}>

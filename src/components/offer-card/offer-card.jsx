@@ -1,39 +1,27 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class OfferCard extends PureComponent {
   constructor(props) {
     super(props);
 
-    this._handleMouseEnter = this._handleMouseEnter.bind(this);
-    this._handleMouseLeave = this._handleMouseLeave.bind(this);
-    this._handleFavoritesUpdate = this._handleFavoritesUpdate.bind(this);
+    this._handleUpdateFavorites = this._handleUpdateFavorites.bind(this);
   }
 
-  _handleMouseEnter() {
-    this.props.handleHover(this.props.cardData);
-  }
-
-  _handleMouseLeave() {
-    this.props.handleHover(null);
-  }
-
-  _handleFavoritesUpdate(id) {
+  _handleUpdateFavorites(id) {
     this.props.handleFavoritesUpdate(id);
   }
 
   render() {
     const {
-      cardData: { id, isPremium, image, priceValue, name, type },
-      userFavorites,
+      cardData: { id, isPremium, image, priceValue, name, type, rating },
+      favoritesIds,
     } = this.props;
+    const ratingStars = rating * 2 * 10;
 
     return (
-      <article
-        className="cities__place-card place-card"
-        onMouseEnter={this._handleMouseEnter}
-        onMouseLeave={this._handleMouseLeave}
-      >
+      <article className="cities__place-card place-card">
         {isPremium && (
           <div className="place-card__mark">
             <span>Premium</span>
@@ -61,13 +49,13 @@ class OfferCard extends PureComponent {
             </div>
             <button
               className={`place-card__bookmark-button button ${
-                userFavorites.some((fav) => fav === id)
+                favoritesIds.some((fav) => fav === id)
                   ? 'place-card__bookmark-button--active'
                   : ''
               }`}
               type="button"
               onClick={() => {
-                this._handleFavoritesUpdate(id);
+                this._handleUpdateFavorites(id);
               }}
             >
               <svg className="place-card__bookmark-icon" width="18" height="19">
@@ -78,12 +66,14 @@ class OfferCard extends PureComponent {
           </div>
           <div className="place-card__rating rating">
             <div className="place-card__stars rating__stars">
-              <span></span>
+              <span style={{ width: `${ratingStars}%` }}></span>
               <span className="visually-hidden">Rating</span>
             </div>
           </div>
           <h2 className="place-card__name">
-            <a href="#">{name}</a>
+            <Link id="linkToOffer" to={`/offer/${id}`}>
+              {name}
+            </Link>
           </h2>
           <p className="place-card__type">{type}</p>
         </div>
@@ -93,7 +83,6 @@ class OfferCard extends PureComponent {
 }
 
 OfferCard.propTypes = {
-  handleHover: PropTypes.func.isRequired,
   cardData: PropTypes.shape({
     id: PropTypes.number.isRequired,
     isPremium: PropTypes.bool.isRequired,
@@ -104,7 +93,7 @@ OfferCard.propTypes = {
     coords: PropTypes.arrayOf(PropTypes.number).isRequired,
   }).isRequired,
   handleFavoritesUpdate: PropTypes.func.isRequired,
-  userFavorites: PropTypes.arrayOf(PropTypes.number).isRequired,
+  favoritesIds: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
 export default OfferCard;

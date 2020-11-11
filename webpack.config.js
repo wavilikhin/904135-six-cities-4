@@ -5,10 +5,13 @@ module.exports = {
   output: {
     filename: `bundle.js`,
     path: path.join(__dirname, `public`),
+    publicPath: '',
   },
   devServer: {
     contentBase: path.join(__dirname, `public`),
     open: false,
+    inline: true,
+    hot: true,
     port: 1337,
     historyApiFallback: true,
   },

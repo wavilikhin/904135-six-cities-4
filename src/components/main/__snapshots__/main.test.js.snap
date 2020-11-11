@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Main component snapshot test Main component should render main page
-      with number of awaliable places = 11,
+exports[`Main component snapshot test Main component should render "main" page
+      with 11 avaliable places
       and places infos 1`] = `
 <div
   className="page page--gray page--main"
@@ -92,7 +92,7 @@ exports[`Main component snapshot test Main component should render main page
               onClick={[Function]}
             >
               <span>
-                Paris
+                Brussels
               </span>
             </a>
           </li>
@@ -118,7 +118,7 @@ exports[`Main component snapshot test Main component should render main page
               onClick={[Function]}
             >
               <span>
-                Brusseles
+                Dusseldorf
               </span>
             </a>
           </li>
@@ -144,7 +144,7 @@ exports[`Main component snapshot test Main component should render main page
               onClick={[Function]}
             >
               <span>
-                Dusseldorf
+                Paris
               </span>
             </a>
           </li>
@@ -168,7 +168,7 @@ exports[`Main component snapshot test Main component should render main page
           <b
             className="places__found"
           >
-            5
+            11
              places to stay in 
             Amsterdam
           </b>
@@ -184,9 +184,10 @@ exports[`Main component snapshot test Main component should render main page
             </span>
             <span
               className="places__sorting-type"
+              onClick={[Function]}
               tabIndex="0"
             >
-              Popular
+              popular
               <svg
                 className="places__sorting-arrow"
                 height="4"
@@ -198,28 +199,32 @@ exports[`Main component snapshot test Main component should render main page
               </svg>
             </span>
             <ul
-              className="places__options places__options--custom places__options--opened"
+              className="places__options places__options--custom "
             >
               <li
-                className="places__option places__option--active"
+                className="places__option places__option--active "
+                onClick={[Function]}
                 tabIndex="0"
               >
                 Popular
               </li>
               <li
-                className="places__option"
+                className="places__option  "
+                onClick={[Function]}
                 tabIndex="0"
               >
                 Price: low to high
               </li>
               <li
-                className="places__option"
+                className="places__option  "
+                onClick={[Function]}
                 tabIndex="0"
               >
                 Price: high to low
               </li>
               <li
-                className="places__option"
+                className="places__option  "
+                onClick={[Function]}
                 tabIndex="0"
               >
                 Top rated first
@@ -231,16 +236,7 @@ exports[`Main component snapshot test Main component should render main page
           >
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
-              <div
-                className="place-card__mark"
-              >
-                <span>
-                  Premium
-                </span>
-              </div>
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
               >
@@ -251,7 +247,7 @@ exports[`Main component snapshot test Main component should render main page
                     alt="Place image"
                     className="place-card__image"
                     height="200"
-                    src="img/apartment-01.jpg"
+                    src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg"
                     width="260"
                   />
                 </a>
@@ -269,7 +265,7 @@ exports[`Main component snapshot test Main component should render main page
                       className="place-card__price-value"
                     >
                       €
-                      120
+                      101
                     </b>
                     <span
                       className="place-card__price-text"
@@ -305,7 +301,13 @@ exports[`Main component snapshot test Main component should render main page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "70%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -317,7 +319,108 @@ exports[`Main component snapshot test Main component should render main page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/5"
+                    id="linkToOffer"
+                    onClick={[Function]}
+                  >
+                    Perfectly located Castro
+                  </a>
+                </h2>
+                <p
+                  className="place-card__type"
+                >
+                  room
+                </p>
+              </div>
+            </article>
+            <article
+              className="cities__place-card place-card"
+            >
+              <div
+                className="cities__image-wrapper place-card__image-wrapper"
+              >
+                <a
+                  href="#"
+                >
+                  <img
+                    alt="Place image"
+                    className="place-card__image"
+                    height="200"
+                    src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg"
+                    width="260"
+                  />
+                </a>
+              </div>
+              <div
+                className="place-card__info"
+              >
+                <div
+                  className="place-card__price-wrapper"
+                >
+                  <div
+                    className="place-card__price"
+                  >
+                    <b
+                      className="place-card__price-value"
+                    >
+                      €
+                      786
+                    </b>
+                    <span
+                      className="place-card__price-text"
+                    >
+                       
+                      ∕ night
+                    </span>
+                  </div>
+                  <button
+                    className="place-card__bookmark-button button "
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className="place-card__bookmark-icon"
+                      height="19"
+                      width="18"
+                    >
+                      <use
+                        xlinkHref="#icon-bookmark"
+                      />
+                    </svg>
+                    <span
+                      className="visually-hidden"
+                    >
+                      To bookmarks
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className="place-card__rating rating"
+                >
+                  <div
+                    className="place-card__stars rating__stars"
+                  >
+                    <span
+                      style={
+                        Object {
+                          "width": "48%",
+                        }
+                      }
+                    />
+                    <span
+                      className="visually-hidden"
+                    >
+                      Rating
+                    </span>
+                  </div>
+                </div>
+                <h2
+                  className="place-card__name"
+                >
+                  <a
+                    href="/offer/29"
+                    id="linkToOffer"
+                    onClick={[Function]}
                   >
                     Beautiful & luxurious apartment at great location
                   </a>
@@ -325,14 +428,12 @@ exports[`Main component snapshot test Main component should render main page
                 <p
                   className="place-card__type"
                 >
-                  Apartment
+                  house
                 </p>
               </div>
             </article>
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="place-card__mark"
@@ -351,7 +452,7 @@ exports[`Main component snapshot test Main component should render main page
                     alt="Place image"
                     className="place-card__image"
                     height="200"
-                    src="img/room.jpg"
+                    src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg"
                     width="260"
                   />
                 </a>
@@ -369,7 +470,7 @@ exports[`Main component snapshot test Main component should render main page
                       className="place-card__price-value"
                     >
                       €
-                      110
+                      215
                     </b>
                     <span
                       className="place-card__price-text"
@@ -405,7 +506,13 @@ exports[`Main component snapshot test Main component should render main page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "64%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -417,107 +524,9 @@ exports[`Main component snapshot test Main component should render main page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
-                  >
-                    Just a nice place
-                  </a>
-                </h2>
-                <p
-                  className="place-card__type"
-                >
-                  Room
-                </p>
-              </div>
-            </article>
-            <article
-              className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <div
-                className="place-card__mark"
-              >
-                <span>
-                  Premium
-                </span>
-              </div>
-              <div
-                className="cities__image-wrapper place-card__image-wrapper"
-              >
-                <a
-                  href="#"
-                >
-                  <img
-                    alt="Place image"
-                    className="place-card__image"
-                    height="200"
-                    src="img/apartment-02.jpg"
-                    width="260"
-                  />
-                </a>
-              </div>
-              <div
-                className="place-card__info"
-              >
-                <div
-                  className="place-card__price-wrapper"
-                >
-                  <div
-                    className="place-card__price"
-                  >
-                    <b
-                      className="place-card__price-value"
-                    >
-                      €
-                      100
-                    </b>
-                    <span
-                      className="place-card__price-text"
-                    >
-                       
-                      ∕ night
-                    </span>
-                  </div>
-                  <button
-                    className="place-card__bookmark-button button "
+                    href="/offer/73"
+                    id="linkToOffer"
                     onClick={[Function]}
-                    type="button"
-                  >
-                    <svg
-                      className="place-card__bookmark-icon"
-                      height="19"
-                      width="18"
-                    >
-                      <use
-                        xlinkHref="#icon-bookmark"
-                      />
-                    </svg>
-                    <span
-                      className="visually-hidden"
-                    >
-                      To bookmarks
-                    </span>
-                  </button>
-                </div>
-                <div
-                  className="place-card__rating rating"
-                >
-                  <div
-                    className="place-card__stars rating__stars"
-                  >
-                    <span />
-                    <span
-                      className="visually-hidden"
-                    >
-                      Rating
-                    </span>
-                  </div>
-                </div>
-                <h2
-                  className="place-card__name"
-                >
-                  <a
-                    href="#"
                   >
                     Wood and stone place
                   </a>
@@ -525,22 +534,13 @@ exports[`Main component snapshot test Main component should render main page
                 <p
                   className="place-card__type"
                 >
-                  Apartment
+                  apartment
                 </p>
               </div>
             </article>
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
-              <div
-                className="place-card__mark"
-              >
-                <span>
-                  Premium
-                </span>
-              </div>
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
               >
@@ -551,7 +551,7 @@ exports[`Main component snapshot test Main component should render main page
                     alt="Place image"
                     className="place-card__image"
                     height="200"
-                    src="img/apartment-03.jpg"
+                    src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg"
                     width="260"
                   />
                 </a>
@@ -569,7 +569,7 @@ exports[`Main component snapshot test Main component should render main page
                       className="place-card__price-value"
                     >
                       €
-                      150
+                      183
                     </b>
                     <span
                       className="place-card__price-text"
@@ -605,7 +605,13 @@ exports[`Main component snapshot test Main component should render main page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "46%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -617,30 +623,23 @@ exports[`Main component snapshot test Main component should render main page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/69"
+                    id="linkToOffer"
+                    onClick={[Function]}
                   >
-                    Canal View Prinsengracht
+                    Penthouse, 4-5 rooms + 5 balconies
                   </a>
                 </h2>
                 <p
                   className="place-card__type"
                 >
-                  Apartment
+                  room
                 </p>
               </div>
             </article>
             <article
               className="cities__place-card place-card"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
-              <div
-                className="place-card__mark"
-              >
-                <span>
-                  Premium
-                </span>
-              </div>
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
               >
@@ -651,7 +650,7 @@ exports[`Main component snapshot test Main component should render main page
                     alt="Place image"
                     className="place-card__image"
                     height="200"
-                    src="img/room.jpg"
+                    src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg"
                     width="260"
                   />
                 </a>
@@ -669,7 +668,7 @@ exports[`Main component snapshot test Main component should render main page
                       className="place-card__price-value"
                     >
                       €
-                      80
+                      139
                     </b>
                     <span
                       className="place-card__price-text"
@@ -705,7 +704,13 @@ exports[`Main component snapshot test Main component should render main page
                   <div
                     className="place-card__stars rating__stars"
                   >
-                    <span />
+                    <span
+                      style={
+                        Object {
+                          "width": "42%",
+                        }
+                      }
+                    />
                     <span
                       className="visually-hidden"
                     >
@@ -717,7 +722,405 @@ exports[`Main component snapshot test Main component should render main page
                   className="place-card__name"
                 >
                   <a
-                    href="#"
+                    href="/offer/48"
+                    id="linkToOffer"
+                    onClick={[Function]}
+                  >
+                    The Joshua Tree House
+                  </a>
+                </h2>
+                <p
+                  className="place-card__type"
+                >
+                  hotel
+                </p>
+              </div>
+            </article>
+            <article
+              className="cities__place-card place-card"
+            >
+              <div
+                className="cities__image-wrapper place-card__image-wrapper"
+              >
+                <a
+                  href="#"
+                >
+                  <img
+                    alt="Place image"
+                    className="place-card__image"
+                    height="200"
+                    src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg"
+                    width="260"
+                  />
+                </a>
+              </div>
+              <div
+                className="place-card__info"
+              >
+                <div
+                  className="place-card__price-wrapper"
+                >
+                  <div
+                    className="place-card__price"
+                  >
+                    <b
+                      className="place-card__price-value"
+                    >
+                      €
+                      134
+                    </b>
+                    <span
+                      className="place-card__price-text"
+                    >
+                       
+                      ∕ night
+                    </span>
+                  </div>
+                  <button
+                    className="place-card__bookmark-button button "
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className="place-card__bookmark-icon"
+                      height="19"
+                      width="18"
+                    >
+                      <use
+                        xlinkHref="#icon-bookmark"
+                      />
+                    </svg>
+                    <span
+                      className="visually-hidden"
+                    >
+                      To bookmarks
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className="place-card__rating rating"
+                >
+                  <div
+                    className="place-card__stars rating__stars"
+                  >
+                    <span
+                      style={
+                        Object {
+                          "width": "58%",
+                        }
+                      }
+                    />
+                    <span
+                      className="visually-hidden"
+                    >
+                      Rating
+                    </span>
+                  </div>
+                </div>
+                <h2
+                  className="place-card__name"
+                >
+                  <a
+                    href="/offer/15"
+                    id="linkToOffer"
+                    onClick={[Function]}
+                  >
+                    Loft Studio in the Central Area
+                  </a>
+                </h2>
+                <p
+                  className="place-card__type"
+                >
+                  house
+                </p>
+              </div>
+            </article>
+            <article
+              className="cities__place-card place-card"
+            >
+              <div
+                className="cities__image-wrapper place-card__image-wrapper"
+              >
+                <a
+                  href="#"
+                >
+                  <img
+                    alt="Place image"
+                    className="place-card__image"
+                    height="200"
+                    src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg"
+                    width="260"
+                  />
+                </a>
+              </div>
+              <div
+                className="place-card__info"
+              >
+                <div
+                  className="place-card__price-wrapper"
+                >
+                  <div
+                    className="place-card__price"
+                  >
+                    <b
+                      className="place-card__price-value"
+                    >
+                      €
+                      820
+                    </b>
+                    <span
+                      className="place-card__price-text"
+                    >
+                       
+                      ∕ night
+                    </span>
+                  </div>
+                  <button
+                    className="place-card__bookmark-button button "
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className="place-card__bookmark-icon"
+                      height="19"
+                      width="18"
+                    >
+                      <use
+                        xlinkHref="#icon-bookmark"
+                      />
+                    </svg>
+                    <span
+                      className="visually-hidden"
+                    >
+                      To bookmarks
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className="place-card__rating rating"
+                >
+                  <div
+                    className="place-card__stars rating__stars"
+                  >
+                    <span
+                      style={
+                        Object {
+                          "width": "72%",
+                        }
+                      }
+                    />
+                    <span
+                      className="visually-hidden"
+                    >
+                      Rating
+                    </span>
+                  </div>
+                </div>
+                <h2
+                  className="place-card__name"
+                >
+                  <a
+                    href="/offer/26"
+                    id="linkToOffer"
+                    onClick={[Function]}
+                  >
+                    The Pondhouse - A Magical Place
+                  </a>
+                </h2>
+                <p
+                  className="place-card__type"
+                >
+                  house
+                </p>
+              </div>
+            </article>
+            <article
+              className="cities__place-card place-card"
+            >
+              <div
+                className="cities__image-wrapper place-card__image-wrapper"
+              >
+                <a
+                  href="#"
+                >
+                  <img
+                    alt="Place image"
+                    className="place-card__image"
+                    height="200"
+                    src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg"
+                    width="260"
+                  />
+                </a>
+              </div>
+              <div
+                className="place-card__info"
+              >
+                <div
+                  className="place-card__price-wrapper"
+                >
+                  <div
+                    className="place-card__price"
+                  >
+                    <b
+                      className="place-card__price-value"
+                    >
+                      €
+                      423
+                    </b>
+                    <span
+                      className="place-card__price-text"
+                    >
+                       
+                      ∕ night
+                    </span>
+                  </div>
+                  <button
+                    className="place-card__bookmark-button button "
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className="place-card__bookmark-icon"
+                      height="19"
+                      width="18"
+                    >
+                      <use
+                        xlinkHref="#icon-bookmark"
+                      />
+                    </svg>
+                    <span
+                      className="visually-hidden"
+                    >
+                      To bookmarks
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className="place-card__rating rating"
+                >
+                  <div
+                    className="place-card__stars rating__stars"
+                  >
+                    <span
+                      style={
+                        Object {
+                          "width": "94%",
+                        }
+                      }
+                    />
+                    <span
+                      className="visually-hidden"
+                    >
+                      Rating
+                    </span>
+                  </div>
+                </div>
+                <h2
+                  className="place-card__name"
+                >
+                  <a
+                    href="/offer/14"
+                    id="linkToOffer"
+                    onClick={[Function]}
+                  >
+                    Penthouse, 4-5 rooms + 5 balconies
+                  </a>
+                </h2>
+                <p
+                  className="place-card__type"
+                >
+                  hotel
+                </p>
+              </div>
+            </article>
+            <article
+              className="cities__place-card place-card"
+            >
+              <div
+                className="cities__image-wrapper place-card__image-wrapper"
+              >
+                <a
+                  href="#"
+                >
+                  <img
+                    alt="Place image"
+                    className="place-card__image"
+                    height="200"
+                    src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg"
+                    width="260"
+                  />
+                </a>
+              </div>
+              <div
+                className="place-card__info"
+              >
+                <div
+                  className="place-card__price-wrapper"
+                >
+                  <div
+                    className="place-card__price"
+                  >
+                    <b
+                      className="place-card__price-value"
+                    >
+                      €
+                      448
+                    </b>
+                    <span
+                      className="place-card__price-text"
+                    >
+                       
+                      ∕ night
+                    </span>
+                  </div>
+                  <button
+                    className="place-card__bookmark-button button "
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className="place-card__bookmark-icon"
+                      height="19"
+                      width="18"
+                    >
+                      <use
+                        xlinkHref="#icon-bookmark"
+                      />
+                    </svg>
+                    <span
+                      className="visually-hidden"
+                    >
+                      To bookmarks
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className="place-card__rating rating"
+                >
+                  <div
+                    className="place-card__stars rating__stars"
+                  >
+                    <span
+                      style={
+                        Object {
+                          "width": "70%",
+                        }
+                      }
+                    />
+                    <span
+                      className="visually-hidden"
+                    >
+                      Rating
+                    </span>
+                  </div>
+                </div>
+                <h2
+                  className="place-card__name"
+                >
+                  <a
+                    href="/offer/46"
+                    id="linkToOffer"
+                    onClick={[Function]}
                   >
                     Nice, cozy, warm big bed apartment
                   </a>
@@ -725,7 +1128,205 @@ exports[`Main component snapshot test Main component should render main page
                 <p
                   className="place-card__type"
                 >
-                  Room
+                  apartment
+                </p>
+              </div>
+            </article>
+            <article
+              className="cities__place-card place-card"
+            >
+              <div
+                className="cities__image-wrapper place-card__image-wrapper"
+              >
+                <a
+                  href="#"
+                >
+                  <img
+                    alt="Place image"
+                    className="place-card__image"
+                    height="200"
+                    src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg"
+                    width="260"
+                  />
+                </a>
+              </div>
+              <div
+                className="place-card__info"
+              >
+                <div
+                  className="place-card__price-wrapper"
+                >
+                  <div
+                    className="place-card__price"
+                  >
+                    <b
+                      className="place-card__price-value"
+                    >
+                      €
+                      793
+                    </b>
+                    <span
+                      className="place-card__price-text"
+                    >
+                       
+                      ∕ night
+                    </span>
+                  </div>
+                  <button
+                    className="place-card__bookmark-button button "
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className="place-card__bookmark-icon"
+                      height="19"
+                      width="18"
+                    >
+                      <use
+                        xlinkHref="#icon-bookmark"
+                      />
+                    </svg>
+                    <span
+                      className="visually-hidden"
+                    >
+                      To bookmarks
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className="place-card__rating rating"
+                >
+                  <div
+                    className="place-card__stars rating__stars"
+                  >
+                    <span
+                      style={
+                        Object {
+                          "width": "84%",
+                        }
+                      }
+                    />
+                    <span
+                      className="visually-hidden"
+                    >
+                      Rating
+                    </span>
+                  </div>
+                </div>
+                <h2
+                  className="place-card__name"
+                >
+                  <a
+                    href="/offer/85"
+                    id="linkToOffer"
+                    onClick={[Function]}
+                  >
+                    Tile House
+                  </a>
+                </h2>
+                <p
+                  className="place-card__type"
+                >
+                  house
+                </p>
+              </div>
+            </article>
+            <article
+              className="cities__place-card place-card"
+            >
+              <div
+                className="cities__image-wrapper place-card__image-wrapper"
+              >
+                <a
+                  href="#"
+                >
+                  <img
+                    alt="Place image"
+                    className="place-card__image"
+                    height="200"
+                    src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg"
+                    width="260"
+                  />
+                </a>
+              </div>
+              <div
+                className="place-card__info"
+              >
+                <div
+                  className="place-card__price-wrapper"
+                >
+                  <div
+                    className="place-card__price"
+                  >
+                    <b
+                      className="place-card__price-value"
+                    >
+                      €
+                      813
+                    </b>
+                    <span
+                      className="place-card__price-text"
+                    >
+                       
+                      ∕ night
+                    </span>
+                  </div>
+                  <button
+                    className="place-card__bookmark-button button "
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className="place-card__bookmark-icon"
+                      height="19"
+                      width="18"
+                    >
+                      <use
+                        xlinkHref="#icon-bookmark"
+                      />
+                    </svg>
+                    <span
+                      className="visually-hidden"
+                    >
+                      To bookmarks
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className="place-card__rating rating"
+                >
+                  <div
+                    className="place-card__stars rating__stars"
+                  >
+                    <span
+                      style={
+                        Object {
+                          "width": "48%",
+                        }
+                      }
+                    />
+                    <span
+                      className="visually-hidden"
+                    >
+                      Rating
+                    </span>
+                  </div>
+                </div>
+                <h2
+                  className="place-card__name"
+                >
+                  <a
+                    href="/offer/1"
+                    id="linkToOffer"
+                    onClick={[Function]}
+                  >
+                    Wood and stone place
+                  </a>
+                </h2>
+                <p
+                  className="place-card__type"
+                >
+                  house
                 </p>
               </div>
             </article>
@@ -742,7 +1343,7 @@ exports[`Main component snapshot test Main component should render main page
               id="map"
               style={
                 Object {
-                  "height": "100vh",
+                  "height": "100%",
                 }
               }
             />

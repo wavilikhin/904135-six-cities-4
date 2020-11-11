@@ -1,20 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContentCard component snapshot test Should render content card with quality=Premium,
-        price=&euro;160/night, name=Beautiful apartment near the city center
-        and type=Apartment 1`] = `
+exports[`OfferCard component snapshot test Should render content card with given data 1`] = `
 <article
   className="cities__place-card place-card"
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
 >
-  <div
-    className="place-card__mark"
-  >
-    <span>
-      Premium
-    </span>
-  </div>
   <div
     className="cities__image-wrapper place-card__image-wrapper"
   >
@@ -25,7 +14,7 @@ exports[`ContentCard component snapshot test Should render content card with qua
         alt="Place image"
         className="place-card__image"
         height="200"
-        src="img/apartment-01.jpg"
+        src="https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg"
         width="260"
       />
     </a>
@@ -43,7 +32,7 @@ exports[`ContentCard component snapshot test Should render content card with qua
           className="place-card__price-value"
         >
           €
-          120
+          813
         </b>
         <span
           className="place-card__price-text"
@@ -79,7 +68,13 @@ exports[`ContentCard component snapshot test Should render content card with qua
       <div
         className="place-card__stars rating__stars"
       >
-        <span />
+        <span
+          style={
+            Object {
+              "width": "48%",
+            }
+          }
+        />
         <span
           className="visually-hidden"
         >
@@ -91,15 +86,17 @@ exports[`ContentCard component snapshot test Should render content card with qua
       className="place-card__name"
     >
       <a
-        href="#"
+        href="/offer/1"
+        id="linkToOffer"
+        onClick={[Function]}
       >
-        Beautiful & luxurious apartment at great location
+        Wood and stone place
       </a>
     </h2>
     <p
       className="place-card__type"
     >
-      Apartment
+      house
     </p>
   </div>
 </article>

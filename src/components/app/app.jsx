@@ -3,6 +3,7 @@ import { Router, Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import { getAuthStatus } from "../../reducer/user/selectors.js";
 
+<<<<<<< HEAD
 import Main from "../main/main.jsx";
 import SignIn from "../sign-in/sign-in.jsx";
 import { AppRoutes } from "../../const.js";
@@ -12,6 +13,16 @@ const App = (props) => {
   const { authStatus } = props;
   console.log("App -> authStatus", authStatus);
 
+=======
+import Main from '../main/main.jsx';
+import SignIn from '../sign-in/sign-in.jsx';
+import Room from '../room/room.jsx';
+
+import { AppRoutes } from '../../const.js';
+import history from '../../history.js';
+
+const App = (props) => {
+>>>>>>> 829d14386c095516e992fec2eaf3170306bb8d4c
   return (
     <Router history={history}>
       <Switch>
@@ -27,6 +38,13 @@ const App = (props) => {
           exact
           render={() => {
             return <SignIn />;
+          }}
+        />
+        <Route
+          path={AppRoutes.ROOM}
+          exact
+          render={(props) => {
+            return <Room offerId={props.match.params.id} />;
           }}
         />
       </Switch>

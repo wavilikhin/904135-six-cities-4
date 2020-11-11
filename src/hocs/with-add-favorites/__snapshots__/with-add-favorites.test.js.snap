@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WithAddFavorites component snapshot test Should render wrapped component well 1`] = `<div />`;

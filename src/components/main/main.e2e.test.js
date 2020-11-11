@@ -17,7 +17,40 @@ Enzyme.configure({
   adapter: new Adapter(),
 });
 
-describe(`Main component's end-to-end test`, () => {
+describe(`Main component e2e test`, () => {
+  it(`handleCityChange shouldn't be called`, () => {
+    const onHeaderClick = jest.fn();
+
+    const store = mockStore({
+      [NameSpace.DATA]: {
+        offers: [],
+      },
+      [NameSpace.STATE]: {
+        city: '',
+      },
+      [NameSpace.USER]: {
+        authStatus: 'NO_AUTH',
+        userEmail: '',
+        userFavorites: [],
+      },
+    });
+
+    const mainComponent = mount(
+      <Provider store={store}>
+        <Router history={history}>
+          <Main
+            handleCityChange={onHeaderClick}
+            offersDataArray={[]}
+            authStatus=""
+            userEmail=""
+          />
+        </Router>
+      </Provider>,
+    );
+
+    expect(onHeaderClick).toHaveBeenCalledTimes(0);
+  });
+
   it(`handleCityChange should be called once`, () => {
     const onHeaderClick = jest.fn();
 
@@ -29,6 +62,8 @@ describe(`Main component's end-to-end test`, () => {
         city: 'Amsterdam',
       },
       [NameSpace.USER]: {
+        authStatus: 'NO_AUTH',
+        userEmail: '',
         userFavorites: [],
       },
     });
@@ -50,18 +85,7 @@ describe(`Main component's end-to-end test`, () => {
       offersDataArray: [
         {
           city: 'Amsterdam',
-          cityCoords: [52.38333, 4.9],
-          isPremium: true,
-          cityZoom: 12,
-          image: `img/apartment-01.jpg`,
-          priceValue: 120,
-          name: `Beautiful & luxurious apartment at great location`,
-          type: `Apartment`,
-          coords: [52.3909553943508, 4.85309666406198],
-        },
-        {
-          city: 'Amsterdam',
-
+          id: 2,
           cityCoords: [52.38333, 4.9],
           isPremium: true,
           cityZoom: 12,
@@ -70,6 +94,18 @@ describe(`Main component's end-to-end test`, () => {
           name: `Just a nice place`,
           type: `Room`,
           coords: [52.369553943508, 4.85309666406198],
+        },
+        {
+          city: 'Amsterdam',
+          id: 3,
+          cityCoords: [52.38333, 4.9],
+          isPremium: true,
+          cityZoom: 12,
+          image: `img/apartment-02.jpg`,
+          priceValue: 100,
+          name: `Wood and stone place`,
+          type: `Apartment`,
+          coords: [52.3909553943508, 4.929309666406198],
         },
       ],
       handleCityChange: onHeaderClick,
