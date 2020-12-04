@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
+
 import CitiesList from "../cities-list/cities-list";
 import Offers from "../offers/offers";
 import { Link } from "react-router-dom";
@@ -8,15 +8,25 @@ import { ActionCreator } from "../../reducer/state/state";
 import { getOffers } from "../../reducer/data/selectors";
 import { getAuthStatus, getUserEmail } from "../../reducer/user/selectors";
 import { AppRoutes } from "../../const";
+import { OfferInfo } from "../offer-card/offer-card";
 
-class Main extends PureComponent {
+interface Props {
+  offersDataArray: OfferInfo[];
+  handleCityChange(city: string): void;
+  authStatus: string;
+  userEmail: string;
+}
+
+class Main extends PureComponent<Props> {
+  props: Props;
+
   constructor(props) {
     super(props);
 
     this._updateCurrentCity = this._updateCurrentCity.bind(this);
   }
 
-  _updateCurrentCity() {
+  _updateCurrentCity(): void {
     const { handleCityChange, offersDataArray } = this.props;
     if (offersDataArray.length > 0) {
       handleCityChange(offersDataArray[0].city);
@@ -81,25 +91,6 @@ class Main extends PureComponent {
     );
   }
 }
-
-Main.propTypes = {
-  offersDataArray: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      city: PropTypes.string.isRequired,
-      cityCoords: PropTypes.arrayOf(PropTypes.number, PropTypes.number),
-      isPremium: PropTypes.bool.isRequired,
-      image: PropTypes.string.isRequired,
-      priceValue: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
-      coords: PropTypes.arrayOf(PropTypes.number, PropTypes.number).isRequired,
-    })
-  ).isRequired,
-  handleCityChange: PropTypes.func,
-  authStatus: PropTypes.string.isRequired,
-  userEmail: PropTypes.string.isRequired,
-};
 
 const mapStateToProps = (state) => ({
   offersDataArray: getOffers(state),

@@ -1,7 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
 
-const MainEmpty = ({ city }) => {
+interface Props {
+  city: string;
+}
+
+const MainEmpty: React.FC<Props> = ({ city }) => {
   return (
     <div className="cities">
       <div className="cities__places-container cities__places-container--empty container">
@@ -18,10 +21,6 @@ const MainEmpty = ({ city }) => {
       </div>
     </div>
   );
-};
-
-MainEmpty.propTypes = {
-  city: PropTypes.string.isRequired,
 };
 
 export default MainEmpty;

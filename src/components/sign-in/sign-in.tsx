@@ -1,11 +1,22 @@
 import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Operation as UserOperation } from "../../reducer/user/user";
 import history from "../../history";
 import { AppRoutes } from "../../const";
 
-class SignIn extends PureComponent {
+type Cridetials = {
+  email: string;
+  password: string;
+};
+interface Props {
+  onSubmit(authData: Cridetials): void;
+}
+
+type State = Cridetials;
+class SignIn extends PureComponent<Props, State> {
+  props: Props;
+  state: State;
+
   constructor(props) {
     super(props);
 
@@ -19,15 +30,15 @@ class SignIn extends PureComponent {
     this._handleSubmit = this._handleSubmit.bind(this);
   }
 
-  _handleEmailChange(evt) {
+  _handleEmailChange(evt): void {
     this.setState({ email: evt.target.value });
   }
 
-  _handlePasswordChange(evt) {
+  _handlePasswordChange(evt): void {
     this.setState({ password: evt.target.value });
   }
 
-  _handleSubmit(evt) {
+  _handleSubmit(evt): void {
     evt.preventDefault();
     this.props.onSubmit({
       email: this.state.email,
@@ -130,10 +141,6 @@ class SignIn extends PureComponent {
     );
   }
 }
-
-SignIn.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
 
 const mapDispatchToProps = (dispatch) => ({
   onSubmit(authData) {

@@ -1,12 +1,27 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import React, { PureComponent } from "react";
 
-class ReviewForm extends PureComponent {
+type Comment = {
+  comment: string;
+  raiting: number;
+};
+interface Props {
+  hotelId: string;
+  handleSubmit(hotelId: string, {}: Comment): void;
+}
+
+interface State {
+  text: string;
+  raiting: number;
+}
+class ReviewForm extends PureComponent<Props, State> {
+  props: Props;
+  state: State;
+
   constructor(props) {
     super(props);
 
     this.state = {
-      text: '',
+      text: "",
       raiting: null,
     };
 
@@ -15,22 +30,22 @@ class ReviewForm extends PureComponent {
     this._handleSubmit = this._handleSubmit.bind(this);
   }
 
-  _handleTextChange(evt) {
+  _handleTextChange(evt): void {
     this.setState({
       text: evt.target.value,
     });
   }
 
-  _handleRaitingChange(evt) {
+  _handleRaitingChange(evt): void {
     this.setState({
       raiting: evt.target.value,
     });
   }
 
-  _handleSubmit(e) {
+  _handleSubmit(e): void {
     e.preventDefault();
     // TODO Доделать оповещение об ошибке
-    if (this.state.text.replace(/\s/g, '').length < 50)
+    if (this.state.text.replace(/\s/g, "").length < 50)
       return console.log(`2short`);
 
     // TODO Доделать оповещение об ошибке
@@ -43,7 +58,7 @@ class ReviewForm extends PureComponent {
     });
 
     this.setState({
-      text: '',
+      text: "",
       raiting: null,
     });
   }
@@ -146,12 +161,12 @@ class ReviewForm extends PureComponent {
           id="review"
           name="review"
           placeholder="Tell how was your stay, what you like and what can be improved"
-          defaultValue={''}
+          defaultValue={""}
           onChange={this._handleTextChange}
         />
         <div className="reviews__button-wrapper">
           <p className="reviews__help">
-            To submit review please make sure to set{' '}
+            To submit review please make sure to set{" "}
             <span className="reviews__star">rating</span> and describe your stay
             with at least <b className="reviews__text-amount">50 characters</b>.
           </p>
@@ -167,10 +182,4 @@ class ReviewForm extends PureComponent {
     );
   }
 }
-
-ReviewForm.propTypes = {
-  hotelId: PropTypes.number.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
-};
-
 export default ReviewForm;

@@ -1,9 +1,14 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import leaflet from 'leaflet';
+import React, { PureComponent } from "react";
+import leaflet from "leaflet";
+import { OfferInfo } from "../../components/offer-card/offer-card";
+interface Props {
+  offers: OfferInfo[];
+}
 
 export const withMap = (Component) => {
-  class WithMap extends PureComponent {
+  class WithMap extends PureComponent<Props> {
+    props: Props;
+
     constructor(props) {
       super(props);
     }
@@ -37,7 +42,7 @@ export const withMap = (Component) => {
           {
             attribution:
               '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-          },
+          }
         )
         .addTo(map);
 
@@ -47,8 +52,8 @@ export const withMap = (Component) => {
         markersLayer.push(
           leaflet.marker(
             [offer.location.latitude, offer.location.longitude],
-            icon,
-          ),
+            icon
+          )
         );
       }
 
@@ -94,7 +99,7 @@ export const withMap = (Component) => {
           {
             attribution:
               '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-          },
+          }
         )
         .addTo(this.map);
 
@@ -103,8 +108,8 @@ export const withMap = (Component) => {
         markersLayer.push(
           leaflet.marker(
             [offer.location.latitude, offer.location.longitude],
-            this.icon,
-          ),
+            this.icon
+          )
         );
       });
 
@@ -121,19 +126,5 @@ export const withMap = (Component) => {
     }
   }
 
-  WithMap.propTypes = {
-    offers: PropTypes.arrayOf(
-      PropTypes.shape({
-        city: PropTypes.string.isRequired,
-        cityZoom: PropTypes.number.isRequired,
-        isPremium: PropTypes.bool.isRequired,
-        image: PropTypes.string.isRequired,
-        priceValue: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-        type: PropTypes.string.isRequired,
-        coords: PropTypes.arrayOf(PropTypes.number).isRequired,
-      }),
-    ).isRequired,
-  };
   return WithMap;
 };

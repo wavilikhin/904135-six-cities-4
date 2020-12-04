@@ -1,5 +1,4 @@
 import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import {
   Operation as DataOperation,
@@ -12,12 +11,29 @@ import {
 } from "../../reducer/data/selectors";
 import ReviewsList from "../reviews-list/reviews-list";
 import ReviewForm from "../review-form/review-form";
-import { OfferCard } from "../offer-card/offer-card";
+import { OfferCard, OfferInfo } from "../offer-card/offer-card";
+import { ReviewItemType } from "../review-item/review-item";
 import Map from "../map/map";
 import withAddFavorites from "../../hocs/with-add-favorites/with-add-favorites";
 const OfferCardWrapped = withAddFavorites(OfferCard);
 
-class Room extends PureComponent {
+interface Props {
+  defaultOffer: OfferInfo;
+  offers: OfferInfo[];
+  reviews: ReviewItemType[];
+  offersNearby: OfferInfo[];
+  favoritesIds: number[];
+  offerId: number;
+  updateReviews(id: number): void;
+  postReview(hotelId: number, reviewData: ReviewItemType): void;
+  updateNearby(id: number): void;
+  handleCurrentOfferUpdate(id: number): void;
+  handleFavoritesUpdate(id: number): void;
+}
+
+class Room extends PureComponent<Props> {
+  props: Props;
+
   constructor(props) {
     super(props);
 
@@ -27,28 +43,28 @@ class Room extends PureComponent {
     this._updateFavorites = this._updateFavorites.bind(this);
   }
 
-  _updateReviews(id) {
+  _updateReviews(id: number): void {
     if (id === -1) {
       return;
     }
     this.props.updateReviews(id);
   }
 
-  _postReview(hotelId, reviewData) {
-    if (id === -1) {
+  _postReview(hotelId: number, reviewData: ReviewItemType): void {
+    if (hotelId === -1) {
       return;
     }
     this.props.postReview(hotelId, reviewData);
   }
 
-  _updateNearby(id) {
+  _updateNearby(id: number): void {
     if (id === -1) {
       return;
     }
     this.props.updateNearby(id);
   }
 
-  _updateFavorites(id) {
+  _updateFavorites(id: number): void {
     if (id === -1) {
       return;
     }
@@ -220,36 +236,63 @@ class Room extends PureComponent {
       </main>
     );
   }
+
+  static defaultProps = {
+    defaultOffer: {
+      id: -1,
+      city: "",
+      cityZoom: 0,
+      isPremium: false,
+      cityCoords: [],
+      image: "",
+      priceValue: 0,
+      name: "",
+      type: "",
+      coords: [],
+      bedrooms: 0,
+      description: "",
+      goods: [],
+      host: {
+        isPro: false,
+        avatar_url: "",
+        name: "",
+      },
+      images: [],
+      isFavorite: false,
+      location: {},
+      maxAdults: 0,
+      rating: 0,
+    },
+  };
 }
 
-Room.defaultProps = {
-  defaultOffer: {
-    id: -1,
-    city: "",
-    city: "",
-    cityZoom: 0,
-    isPremium: false,
-    cityCoords: [],
-    image: "",
-    priceValue: 0,
-    name: "",
-    type: "",
-    coords: [],
-    bedrooms: 0,
-    description: "",
-    goods: [],
-    host: {
-      isPro: false,
-      avatar_url: "",
-      name: "",
-    },
-    images: [],
-    isFavorite: false,
-    location: {},
-    maxAdults: 0,
-    rating: 0,
-  },
-};
+// Room.defaultProps = {
+//   defaultOffer: {
+//     id: -1,
+//     city: "",
+//     cityZoom: 0,
+//     isPremium: false,
+//     cityCoords: [],
+//     image: "",
+//     priceValue: 0,
+//     name: "",
+//     type: "",
+//     coords: [],
+//     bedrooms: 0,
+//     description: "",
+//     goods: [],
+//     host: {
+//       isPro: false,
+//       avatar_url: "",
+//       name: "",
+//     },
+//     images: [],
+//     isFavorite: false,
+//     location: {},
+//     maxAdults: 0,
+//     rating: 0,
+//   },
+// };
 
 const mapStateToProps = (state) => ({
   offers: getOffers(state),

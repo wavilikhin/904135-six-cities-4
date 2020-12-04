@@ -2,7 +2,18 @@ import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 import { ActionCreator } from "../../reducer/state/state";
 
-class PlaceSorting extends PureComponent {
+interface Props {
+  sortBy(value: string): void;
+}
+
+interface State {
+  isSortSecletOpen: boolean;
+  sortBy: string;
+}
+class PlaceSorting extends PureComponent<Props, State> {
+  props: Props;
+  state: State;
+
   constructor(props) {
     super(props);
 
@@ -16,7 +27,7 @@ class PlaceSorting extends PureComponent {
     };
   }
 
-  _toggleSortSelect() {
+  _toggleSortSelect(): void {
     this.setState((state) => {
       return {
         isSortSecletOpen: !state.isSortSecletOpen,
@@ -24,17 +35,17 @@ class PlaceSorting extends PureComponent {
     });
   }
 
-  _updateSortBy(value) {
+  _updateSortBy(value: string): void {
     this.setState({
       sortBy: value,
     });
   }
 
-  _handleSort(value) {
+  _handleSort(value: string): void {
     this.props.sortBy(value);
   }
 
-  _sortByNewValue(newValue) {
+  _sortByNewValue(newValue: string): void {
     this._updateSortBy(newValue);
     this._handleSort(newValue);
     this._toggleSortSelect();

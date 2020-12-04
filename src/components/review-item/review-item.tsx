@@ -1,13 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
 
-const ReviewItem = ({ comment, id, date, rating, user }) => {
+type User = {
+  avatar_url: string;
+  id: number;
+  is_pro: boolean;
+  name: string;
+};
+type ReviewItemType = {
+  comment: string;
+  id: number;
+  date: string;
+  raiting: number;
+  user: User;
+};
+
+type Props = ReviewItemType;
+
+const ReviewItem: React.FC<Props> = ({ comment, date, raiting, user }) => {
   const formatedDate = `
     ${new Date(date).getUTCFullYear()}-${
     new Date(date).getUTCMonth() + 1
   }-${new Date(date).getUTCDate()}
   `;
-  const ratingStars = rating * 2 * 10;
+  const ratingStars = raiting * 2 * 10;
   return (
     <li className="reviews__item">
       <div className="reviews__user user">
@@ -38,17 +53,4 @@ const ReviewItem = ({ comment, id, date, rating, user }) => {
   );
 };
 
-ReviewItem.prototypes = {
-  comment: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
-  date: PropTypes.string.isRequired,
-  raiting: PropTypes.number.isRequired,
-  user: PropTypes.shape({
-    avatar_url: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-    is_pro: PropTypes.bool.isRequired,
-    name: PropTypes.string.isRequired,
-  }),
-};
-
-export default ReviewItem;
+export { ReviewItem, ReviewItemType };

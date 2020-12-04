@@ -1,6 +1,18 @@
 import React, { PureComponent } from "react";
 import { Link } from "react-router-dom";
 
+type Host = {
+  isPro: boolean;
+  avatar_url: string;
+  name: string;
+};
+
+type Location = {
+  latitude: number;
+  longitude: number;
+  zoom: number;
+};
+
 type OfferInfo = {
   id: number;
   city: string;
@@ -12,6 +24,16 @@ type OfferInfo = {
   type: string;
   coords: number[];
   rating: number;
+  cityZoom: number;
+  bedrooms: number;
+  description: string;
+  goods: string[];
+  host: Host;
+  images: string[];
+  isFavorite: boolean;
+  location: Location;
+  maxAdults: number;
+  raiting: number;
 };
 
 interface Props {
@@ -29,7 +51,7 @@ class OfferCard extends PureComponent<Props> {
     this._handleUpdateFavorites = this._handleUpdateFavorites.bind(this);
   }
 
-  _handleUpdateFavorites(id) {
+  _handleUpdateFavorites(id: number): void {
     this.props.handleFavoritesUpdate(id);
   }
 

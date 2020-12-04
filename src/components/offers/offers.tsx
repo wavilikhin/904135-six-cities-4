@@ -1,15 +1,18 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import OffersList from "../offers-list/offers-list";
 import Map from "../map/map";
 import { getCity, getFiltredOffers } from "../../reducer/data/selectors";
 import MainEmpty from "../main-empty/main-empty";
 import PlaceSorting from "../place-sorting/place-sorting";
+import { OfferInfo } from "../offer-card/offer-card";
 
-const Offers = (props) => {
-  const { filtredOffers, city } = props;
+interface Props {
+  filtredOffers: OfferInfo[];
+  city: string;
+}
 
+const Offers: React.FC<Props> = ({ filtredOffers, city }) => {
   return (
     <div className="cities">
       <div className="cities__places-container container">
@@ -41,24 +44,6 @@ const Offers = (props) => {
       </div>
     </div>
   );
-};
-
-Offers.propTypes = {
-  filtredOffers: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      city: PropTypes.string.isRequired,
-      cityCoords: PropTypes.arrayOf(PropTypes.number, PropTypes.number),
-      cityZoom: PropTypes.number.isRequired,
-      isPremium: PropTypes.bool.isRequired,
-      image: PropTypes.string.isRequired,
-      priceValue: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
-      coords: PropTypes.arrayOf(PropTypes.number, PropTypes.number).isRequired,
-    })
-  ).isRequired,
-  city: PropTypes.string,
 };
 
 const mapStateToProps = (state) => ({

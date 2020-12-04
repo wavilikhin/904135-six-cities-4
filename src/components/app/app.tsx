@@ -6,7 +6,7 @@ import Room from "../room/room";
 import { AppRoutes } from "../../const";
 import history from "../../history";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <Router history={history}>
       <Switch>
