@@ -1,13 +1,13 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import CitiesList from '../cities-list/cities-list.jsx';
-import Offers from '../offers/offers.jsx';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { ActionCreator } from '../../reducer/state/state.js';
-import { getOffers } from '../../reducer/data/selectors.js';
-import { getAuthStatus, getUserEmail } from '../../reducer/user/selectors.js';
-import { AppRoutes } from '../../const.js';
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import CitiesList from "../cities-list/cities-list";
+import Offers from "../offers/offers";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { ActionCreator } from "../../reducer/state/state";
+import { getOffers } from "../../reducer/data/selectors";
+import { getAuthStatus, getUserEmail } from "../../reducer/user/selectors";
+import { AppRoutes } from "../../const";
 
 class Main extends PureComponent {
   constructor(props) {
@@ -54,13 +54,13 @@ class Main extends PureComponent {
                   <li className="header__nav-item user">
                     <Link
                       to={
-                        authStatus === 'NO_AUTH'
+                        authStatus === "NO_AUTH"
                           ? AppRoutes.LOGIN
                           : AppRoutes.FAVORITES
                       }
                     >
                       <span>
-                        {authStatus === 'NO_AUTH' ? `Sign In` : userEmail}
+                        {authStatus === "NO_AUTH" ? `Sign In` : userEmail}
                       </span>
                     </Link>
                   </li>
@@ -94,7 +94,7 @@ Main.propTypes = {
       name: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
       coords: PropTypes.arrayOf(PropTypes.number, PropTypes.number).isRequired,
-    }),
+    })
   ).isRequired,
   handleCityChange: PropTypes.func,
   authStatus: PropTypes.string.isRequired,

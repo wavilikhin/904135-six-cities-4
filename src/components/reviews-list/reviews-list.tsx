@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import ReviewItem from '../review-item/review-item.jsx';
+import React, { Fragment } from "react";
+import PropTypes from "prop-types";
+import ReviewItem from "../review-item/review-item";
 
 const ReviewsList = ({ reviews }) => {
   return (
@@ -39,7 +39,7 @@ ReviewsList.prototypes = {
         is_pro: PropTypes.bool.isRequired,
         name: PropTypes.string.isRequired,
       }),
-    }),
+    })
   ),
 };
 export default ReviewsList;

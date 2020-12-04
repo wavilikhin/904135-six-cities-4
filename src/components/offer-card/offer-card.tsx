@@ -1,8 +1,28 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import React, { PureComponent } from "react";
+import { Link } from "react-router-dom";
 
-class OfferCard extends PureComponent {
+type OfferInfo = {
+  id: number;
+  city: string;
+  cityCoords: number[];
+  isPremium: boolean;
+  image: string;
+  priceValue: number;
+  name: string;
+  type: string;
+  coords: number[];
+  rating: number;
+};
+
+interface Props {
+  cardData: OfferInfo;
+  handleFavoritesUpdate(id: number): void;
+  favoritesIds: number[];
+}
+
+class OfferCard extends PureComponent<Props> {
+  props: Props;
+
   constructor(props) {
     super(props);
 
@@ -43,15 +63,15 @@ class OfferCard extends PureComponent {
             <div className="place-card__price">
               <b className="place-card__price-value">&#8364;{priceValue}</b>
               <span className="place-card__price-text">
-                {' '}
+                {" "}
                 &#x2215;&#32;night
               </span>
             </div>
             <button
               className={`place-card__bookmark-button button ${
                 favoritesIds.some((fav) => fav === id)
-                  ? 'place-card__bookmark-button--active'
-                  : ''
+                  ? "place-card__bookmark-button--active"
+                  : ""
               }`}
               type="button"
               onClick={() => {
@@ -82,18 +102,4 @@ class OfferCard extends PureComponent {
   }
 }
 
-OfferCard.propTypes = {
-  cardData: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    isPremium: PropTypes.bool.isRequired,
-    image: PropTypes.string.isRequired,
-    priceValue: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    coords: PropTypes.arrayOf(PropTypes.number).isRequired,
-  }).isRequired,
-  handleFavoritesUpdate: PropTypes.func.isRequired,
-  favoritesIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-};
-
-export default OfferCard;
+export { OfferCard, OfferInfo };

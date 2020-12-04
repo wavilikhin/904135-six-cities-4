@@ -1,13 +1,14 @@
 const path = require(`path`);
 
 module.exports = {
-  entry: `./src/index.js`,
+  entry: `./src/index.tsx`,
   output: {
     filename: `bundle.js`,
     path: path.join(__dirname, `public`),
-    publicPath: '',
+    publicPath: "/",
   },
   devServer: {
+    publicPath: "/",
     contentBase: path.join(__dirname, `public`),
     open: false,
     inline: true,
@@ -24,7 +25,14 @@ module.exports = {
           loader: `babel-loader`,
         },
       },
+      {
+        test: /\.(tsx|ts)?$/,
+        loader: `ts-loader`,
+      },
     ],
+  },
+  resolve: {
+    extensions: [`.ts`, `.tsx`, `.js`, `json`],
   },
   devtool: `source-map`,
 };

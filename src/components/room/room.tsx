@@ -1,20 +1,20 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import {
   Operation as DataOperation,
   ActionCreator,
-} from '../../reducer/data/data.js';
+} from "../../reducer/data/data";
 import {
-  getCurrentOffer,
   getCurrentOfferReviews,
   getCurrentOfferNearby,
-} from '../../reducer/data/selectors.js';
-import ReviewsList from '../reviews-list/reviews-list.jsx';
-import ReviewForm from '../review-form/review-form.jsx';
-import OfferCard from '../offer-card/offer-card.jsx';
-import Map from '../map/map.jsx';
-import withAddFavorites from '../../hocs/with-add-favorites/with-add-favorites.jsx';
+  getOffers,
+} from "../../reducer/data/selectors";
+import ReviewsList from "../reviews-list/reviews-list";
+import ReviewForm from "../review-form/review-form";
+import { OfferCard } from "../offer-card/offer-card";
+import Map from "../map/map";
+import withAddFavorites from "../../hocs/with-add-favorites/with-add-favorites";
 const OfferCardWrapped = withAddFavorites(OfferCard);
 
 class Room extends PureComponent {
@@ -62,14 +62,19 @@ class Room extends PureComponent {
   }
 
   render() {
-    const { defaultOffer, offer } = this.props;
+    const {
+      defaultOffer,
+      offers,
+      reviews = [],
+      offersNearby,
+      favoritesIds,
+      offerId,
+    } = this.props;
 
-    let currentOffer = {};
-    Object.keys(offer).length === 0
-      ? (currentOffer = defaultOffer)
-      : (currentOffer = offer);
-
-    const { reviews = [], offersNearby, favoritesIds } = this.props;
+    let currentOffer;
+    offers.length > 0
+      ? (currentOffer = offers.find((offer) => offer.id == offerId))
+      : (currentOffer = defaultOffer);
 
     const ratingStars = currentOffer.rating * 2 * 10;
 
@@ -101,12 +106,12 @@ class Room extends PureComponent {
                 <button
                   className={`property__bookmark-button button ${
                     favoritesIds.some((fav) => fav === currentOffer.id)
-                      ? 'property__bookmark-button--active'
-                      : ''
+                      ? "property__bookmark-button--active"
+                      : ""
                   }`}
                   type="button"
                   onClick={() => {
-                    this._updateFavorites(id);
+                    this._updateFavorites(offer.id);
                   }}
                 >
                   <svg
@@ -161,8 +166,8 @@ class Room extends PureComponent {
                   <div
                     className={`property__avatar-wrapper user__avatar-wrapper ${
                       currentOffer.host.isPro
-                        ? 'property__avatar-wrapper--pro'
-                        : ''
+                        ? "property__avatar-wrapper--pro"
+                        : ""
                     }`}
                   >
                     <img
@@ -220,23 +225,23 @@ class Room extends PureComponent {
 Room.defaultProps = {
   defaultOffer: {
     id: -1,
-    city: '',
-    city: '',
+    city: "",
+    city: "",
     cityZoom: 0,
     isPremium: false,
     cityCoords: [],
-    image: '',
+    image: "",
     priceValue: 0,
-    name: '',
-    type: '',
+    name: "",
+    type: "",
     coords: [],
     bedrooms: 0,
-    description: '',
+    description: "",
     goods: [],
     host: {
       isPro: false,
-      avatar_url: '',
-      name: '',
+      avatar_url: "",
+      name: "",
     },
     images: [],
     isFavorite: false,
@@ -247,7 +252,7 @@ Room.defaultProps = {
 };
 
 const mapStateToProps = (state) => ({
-  offer: getCurrentOffer(state),
+  offers: getOffers(state),
   reviews: getCurrentOfferReviews(state),
   offersNearby: getCurrentOfferNearby(state),
 });
@@ -270,83 +275,7 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
-Room.propTypes = {
-  offer: PropTypes.shape({
-    id: PropTypes.number,
-    city: PropTypes.string,
-    cityZoom: PropTypes.number,
-    isPremium: PropTypes.bool,
-    cityCoords: PropTypes.arrayOf(PropTypes.number),
-    image: PropTypes.string,
-    priceValue: PropTypes.number,
-    name: PropTypes.string,
-    type: PropTypes.string,
-    coords: PropTypes.arrayOf(PropTypes.number),
-    bedrooms: PropTypes.number,
-    description: PropTypes.string,
-    goods: PropTypes.arrayOf(PropTypes.string),
-    host: PropTypes.shape({
-      avatar_url: PropTypes.string,
-      id: PropTypes.number,
-      isPro: PropTypes.bool,
-      name: PropTypes.string,
-    }),
-    images: PropTypes.arrayOf(PropTypes.string),
-    isFavorite: PropTypes.bool,
-    location: PropTypes.shape({
-      latitude: PropTypes.number,
-      longitude: PropTypes.number,
-      zoom: PropTypes.number,
-    }),
-    maxAdults: PropTypes.number,
-    rating: PropTypes.number,
-  }),
-  offerId: PropTypes.number.isRequired,
-  favoritesIds: PropTypes.arrayOf(PropTypes.number),
-  reviews: PropTypes.arrayOf(
-    PropTypes.shape({
-      comment: PropTypes.string.isRequired,
-      rating: PropTypes.number.isRequired,
-    }),
-  ),
-  updateReviews: PropTypes.func.isRequired,
-  offersNearby: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      city: PropTypes.string.isRequired,
-      cityZoom: PropTypes.number.isRequired,
-      isPremium: PropTypes.bool.isRequired,
-      cityCoords: PropTypes.arrayOf(PropTypes.number).isRequired,
-      image: PropTypes.string.isRequired,
-      priceValue: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
-      coords: PropTypes.arrayOf(PropTypes.number).isRequired,
-      bedrooms: PropTypes.number.isRequired,
-      description: PropTypes.string.isRequired,
-      goods: PropTypes.arrayOf(PropTypes.string).isRequired,
-      host: PropTypes.shape({
-        avatar_url: PropTypes.string.isRequired,
-        id: PropTypes.number.isRequired,
-        isPro: PropTypes.bool.isRequired,
-        name: PropTypes.string.isRequired,
-      }),
-      images: PropTypes.arrayOf(PropTypes.string).isRequired,
-      isFavorite: PropTypes.bool.isRequired,
-      location: PropTypes.shape({
-        latitude: PropTypes.number.isRequired,
-        longitude: PropTypes.number.isRequired,
-        zoom: PropTypes.number.isRequired,
-      }),
-      maxAdults: PropTypes.number.isRequired,
-      rating: PropTypes.number.isRequired,
-    }),
-  ),
-  updateNearby: PropTypes.func.isRequired,
-  handleFavoritesUpdate: PropTypes.func.isRequired,
-};
-
 export { Room };
 export default withAddFavorites(
-  connect(mapStateToProps, mapDispatchToProps)(Room),
+  connect(mapStateToProps, mapDispatchToProps)(Room)
 );

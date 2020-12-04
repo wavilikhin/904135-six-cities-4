@@ -1,16 +1,16 @@
 // main
-import React from 'react';
-import renderer from 'react-test-renderer';
+import React from "react";
+import renderer from "react-test-renderer";
 // router
-import { Router } from 'react-router-dom';
-import history from '../../history.js';
+import { Router } from "react-router-dom";
+import history from "../../history.js";
 // store
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
+import { Provider } from "react-redux";
+import configureStore from "redux-mock-store";
 //data
-import OfferCard from './offer-card.jsx';
-import { OFFERS } from '../../test/__mocks__/offers.js';
-import { mockedStore } from '../../test/__mocks__/store.js';
+import { OfferCard } from "./offer-card.jsx";
+import { OFFERS } from "../../test/__mocks__/offers.js";
+import { mockedStore } from "../../test/__mocks__/store.js";
 
 const mockStore = configureStore([]);
 const store = mockStore(mockedStore);
@@ -29,7 +29,7 @@ describe(`OfferCard component snapshot test`, () => {
               handleCurrentOfferUpdate={() => {}}
             />
           </Router>
-        </Provider>,
+        </Provider>
       )
       .toJSON();
 

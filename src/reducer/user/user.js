@@ -1,28 +1,17 @@
-<<<<<<< HEAD
 import { AuthStatus } from "../../const.js";
-=======
-import { AuthStatus } from '../../const.js';
-import { createOffer } from '../../adapters/offers.js';
->>>>>>> 829d14386c095516e992fec2eaf3170306bb8d4c
+import { createOffer } from "../../adapters/offers.js";
 
 const initialState = {
-  // FIXME: Переделать со своим серваком авторизации
-  authStatus: AuthStatus.AUTH,
-  userEmail: "default@gmail.com",
+  authStatus: AuthStatus.NO_AUTH,
+  userEmail: "",
   userFavorites: [],
 };
 
 const ActionType = {
-<<<<<<< HEAD
   UPDATE_AUTH_STATUS: "UPDATE_AUTH_STATUS",
   UPDATE_USER_EMAIL: "UPDATE_USER_EMAIL",
+  TOGGLE_FAVORITE: "TOGGLE_FAVORITE",
   UPDATE_USER_FAVORITES: "UPDATE_USER_FAVORITES",
-=======
-  UPDATE_AUTH_STATUS: 'UPDATE_AUTH_STATUS',
-  UPDATE_USER_EMAIL: 'UPDATE_USER_EMAIL',
-  TOGGLE_FAVORITE: 'TOGGLE_FAVORITE',
-  UPDATE_USER_FAVORITES: 'UPDATE_USER_FAVORITES',
->>>>>>> 829d14386c095516e992fec2eaf3170306bb8d4c
 };
 
 const ActionCreator = {
@@ -79,17 +68,9 @@ const Operation = {
       .catch((err) => console.error(`Login error: ${err}`));
   },
 
-<<<<<<< HEAD
-  updateFavorites: (id, status) => (dispatch, getState, api) => {
-    return api.post(`/favorite/${id}/${status}`).then((response) => {
-      dispatch(
-        ActionCreator.updateUserFavorites(id, response.data.is_favorite)
-      );
-=======
   getFavorites: () => (dispatch, getState, api) => {
     return api.get(`/favorite`).then((response) => {
       dispatch(ActionCreator.updateUserFavorites(response.data));
->>>>>>> 829d14386c095516e992fec2eaf3170306bb8d4c
     });
   },
 
@@ -111,15 +92,6 @@ const reducer = (state = initialState, action) => {
       });
 
     case ActionType.UPDATE_USER_FAVORITES:
-<<<<<<< HEAD
-      let updatedFavorites = [];
-      action.payload.isFavorite === true
-        ? (updatedFavorites = [...state.userFavorites, action.payload.id])
-        : (updatedFavorites = state.userFavorites.filter(
-            (id) => id !== action.payload.id
-          ));
-=======
->>>>>>> 829d14386c095516e992fec2eaf3170306bb8d4c
       return Object.assign({}, state, {
         userFavorites: action.payload,
       });

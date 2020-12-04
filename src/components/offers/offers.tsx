@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import OffersList from '../offers-list/offers-list.jsx';
-import Map from '../map/map.jsx';
-import { getCity, getFiltredOffers } from '../../reducer/data/selectors.js';
-import MainEmpty from '../main-empty/main-empty.jsx';
-import PlaceSorting from '../place-sorting/place-sorting.jsx';
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import OffersList from "../offers-list/offers-list";
+import Map from "../map/map";
+import { getCity, getFiltredOffers } from "../../reducer/data/selectors";
+import MainEmpty from "../main-empty/main-empty";
+import PlaceSorting from "../place-sorting/place-sorting";
 
 const Offers = (props) => {
   const { filtredOffers, city } = props;
@@ -28,7 +28,7 @@ const Offers = (props) => {
         <div className="cities__right-section">
           <section className="cities__map map">
             {filtredOffers.length === 0 ? (
-              ''
+              ""
             ) : (
               <Map
                 city={city}
@@ -56,7 +56,7 @@ Offers.propTypes = {
       name: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
       coords: PropTypes.arrayOf(PropTypes.number, PropTypes.number).isRequired,
-    }),
+    })
   ).isRequired,
   city: PropTypes.string,
 };

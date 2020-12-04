@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { Operation as UserOperation } from '../../reducer/user/user.js';
-import { getUserFavorites } from '../../reducer/user/selectors.js';
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { Operation as UserOperation } from "../../reducer/user/user";
+import { getUserFavorites } from "../../reducer/user/selectors";
 
 const withAddFavorites = (Component) => {
   class WithAddFavorites extends PureComponent {
@@ -77,7 +77,7 @@ const withAddFavorites = (Component) => {
         }),
         maxAdults: PropTypes.number.isRequired,
         rating: PropTypes.number.isRequired,
-      }),
+      })
     ).isRequired,
     getFavorites: PropTypes.func.isRequired,
     toggleFavorites: PropTypes.func.isRequired,

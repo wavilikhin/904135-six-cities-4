@@ -1,9 +1,9 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { Operation as UserOperation } from "../../reducer/user/user.js";
-import history from "../../history.js";
-import { AppRoutes } from "../../const.js";
+import { Operation as UserOperation } from "../../reducer/user/user";
+import history from "../../history";
+import { AppRoutes } from "../../const";
 
 class SignIn extends PureComponent {
   constructor(props) {
