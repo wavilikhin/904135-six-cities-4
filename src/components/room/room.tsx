@@ -1,37 +1,37 @@
-import React, { PureComponent } from "react";
-import { connect } from "react-redux";
+import * as React from 'react';
+import { connect } from 'react-redux';
 import {
   Operation as DataOperation,
   ActionCreator,
-} from "../../reducer/data/data";
+} from '../../reducer/data/data';
 import {
   getCurrentOfferReviews,
   getCurrentOfferNearby,
   getOffers,
-} from "../../reducer/data/selectors";
-import ReviewsList from "../reviews-list/reviews-list";
-import ReviewForm from "../review-form/review-form";
-import { OfferCard, OfferInfo } from "../offer-card/offer-card";
-import { ReviewItemType } from "../review-item/review-item";
-import Map from "../map/map";
-import withAddFavorites from "../../hocs/with-add-favorites/with-add-favorites";
+} from '../../reducer/data/selectors';
+import ReviewsList from '../reviews-list/reviews-list';
+import ReviewForm from '../review-form/review-form';
+import { OfferCard } from '../offer-card/offer-card';
+import Map from '../map/map';
+import withAddFavorites from '../../hocs/with-add-favorites/with-add-favorites';
 const OfferCardWrapped = withAddFavorites(OfferCard);
+import { ReviewItem, OfferInfo, Comment } from '../../types';
 
 interface Props {
   defaultOffer: OfferInfo;
   offers: OfferInfo[];
-  reviews: ReviewItemType[];
+  reviews: ReviewItem[];
   offersNearby: OfferInfo[];
   favoritesIds: number[];
   offerId: number;
-  updateReviews(id: number): void;
-  postReview(hotelId: number, reviewData: ReviewItemType): void;
-  updateNearby(id: number): void;
-  handleCurrentOfferUpdate(id: number): void;
-  handleFavoritesUpdate(id: number): void;
+  updateReviews: (id: number) => void;
+  postReview: (hotelId: number, reviewData: Comment) => void;
+  updateNearby: (id: number) => void;
+  handleCurrentOfferUpdate: (id: number) => void;
+  handleFavoritesUpdate: (id: number) => void;
 }
 
-class Room extends PureComponent<Props> {
+class Room extends React.PureComponent<Props> {
   props: Props;
 
   constructor(props) {
@@ -50,7 +50,7 @@ class Room extends PureComponent<Props> {
     this.props.updateReviews(id);
   }
 
-  _postReview(hotelId: number, reviewData: ReviewItemType): void {
+  _postReview(hotelId: number, reviewData: Comment): void {
     if (hotelId === -1) {
       return;
     }
@@ -118,16 +118,16 @@ class Room extends PureComponent<Props> {
                 </div>
               )}
               <div className="property__name-wrapper">
-                <h1 className="property__name">{name}</h1>
+                <h1 className="property__name">{currentOffer.name}</h1>
                 <button
                   className={`property__bookmark-button button ${
                     favoritesIds.some((fav) => fav === currentOffer.id)
-                      ? "property__bookmark-button--active"
-                      : ""
+                      ? 'property__bookmark-button--active'
+                      : ''
                   }`}
                   type="button"
                   onClick={() => {
-                    this._updateFavorites(offer.id);
+                    this._updateFavorites(currentOffer.id);
                   }}
                 >
                   <svg
@@ -182,8 +182,8 @@ class Room extends PureComponent<Props> {
                   <div
                     className={`property__avatar-wrapper user__avatar-wrapper ${
                       currentOffer.host.isPro
-                        ? "property__avatar-wrapper--pro"
-                        : ""
+                        ? 'property__avatar-wrapper--pro'
+                        : ''
                     }`}
                   >
                     <img
@@ -212,11 +212,11 @@ class Room extends PureComponent<Props> {
             </div>
           </div>
           <section className="property__map map">
-            <Map
+            {/* <Map
               city={currentOffer.city}
               zoom={currentOffer.cityZoom}
               offers={offersNearby}
-            />
+            /> */}
           </section>
         </section>
         <div className="container">
@@ -240,22 +240,22 @@ class Room extends PureComponent<Props> {
   static defaultProps = {
     defaultOffer: {
       id: -1,
-      city: "",
+      city: '',
       cityZoom: 0,
       isPremium: false,
       cityCoords: [],
-      image: "",
+      image: '',
       priceValue: 0,
-      name: "",
-      type: "",
+      name: '',
+      type: '',
       coords: [],
       bedrooms: 0,
-      description: "",
+      description: '',
       goods: [],
       host: {
         isPro: false,
-        avatar_url: "",
-        name: "",
+        avatar_url: '',
+        name: '',
       },
       images: [],
       isFavorite: false,
@@ -320,5 +320,5 @@ const mapDispatchToProps = (dispatch) => ({
 
 export { Room };
 export default withAddFavorites(
-  connect(mapStateToProps, mapDispatchToProps)(Room)
+  connect(mapStateToProps, mapDispatchToProps)(Room),
 );

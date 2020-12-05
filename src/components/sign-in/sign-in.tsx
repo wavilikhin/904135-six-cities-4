@@ -1,8 +1,8 @@
-import React, { PureComponent } from "react";
-import { connect } from "react-redux";
-import { Operation as UserOperation } from "../../reducer/user/user";
-import history from "../../history";
-import { AppRoutes } from "../../const";
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
+import { Operation as UserOperation } from '../../reducer/user/user';
+import history from '../../history';
+import { AppRoutes } from '../../const';
 
 type Cridetials = {
   email: string;
@@ -21,8 +21,8 @@ class SignIn extends PureComponent<Props, State> {
     super(props);
 
     this.state = {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
     };
 
     this._handleEmailChange = this._handleEmailChange.bind(this);
@@ -50,7 +50,7 @@ class SignIn extends PureComponent<Props, State> {
   render() {
     return (
       <React.Fragment>
-        <div style={{ display: "none" }}>
+        <div style={{ display: 'none' }}>
           <svg xmlns="http://www.w3.org/2000/svg">
             <symbol id="icon-arrow-select" viewBox="0 0 7 4">
               <path
@@ -103,7 +103,7 @@ class SignIn extends PureComponent<Props, State> {
                       type="email"
                       name="email"
                       placeholder="Email"
-                      required=""
+                      required={true}
                       onChange={this._handleEmailChange}
                     ></input>
                   </div>
@@ -114,7 +114,7 @@ class SignIn extends PureComponent<Props, State> {
                       type="password"
                       name="password"
                       placeholder="Password"
-                      required=""
+                      required={true}
                       onChange={this._handlePasswordChange}
                     ></input>
                   </div>

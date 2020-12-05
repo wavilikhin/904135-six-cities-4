@@ -1,16 +1,16 @@
-import React, { PureComponent } from "react";
-import { connect } from "react-redux";
-import { ActionCreator } from "../../reducer/state/state";
+import * as React from 'react';
+import { connect } from 'react-redux';
+import { ActionCreator } from '../../reducer/state/state';
 
 interface Props {
-  sortBy(value: string): void;
+  sortBy: (value: string) => void;
 }
 
 interface State {
   isSortSecletOpen: boolean;
   sortBy: string;
 }
-class PlaceSorting extends PureComponent<Props, State> {
+class PlaceSorting extends React.PureComponent<Props, State> {
   props: Props;
   state: State;
 
@@ -23,7 +23,7 @@ class PlaceSorting extends PureComponent<Props, State> {
 
     this.state = {
       isSortSecletOpen: false,
-      sortBy: "popular",
+      sortBy: 'popular',
     };
   }
 
@@ -57,7 +57,7 @@ class PlaceSorting extends PureComponent<Props, State> {
         <span className="places__sorting-caption">Sort by</span>
         <span
           className="places__sorting-type"
-          tabIndex="0"
+          tabIndex={0}
           onClick={this._toggleSortSelect}
         >
           {this.state.sortBy}
@@ -67,51 +67,51 @@ class PlaceSorting extends PureComponent<Props, State> {
         </span>
         <ul
           className={`places__options places__options--custom ${
-            this.state.isSortSecletOpen ? " places__options--opened" : ""
+            this.state.isSortSecletOpen ? ' places__options--opened' : ''
           }`}
         >
           <li
             className={`places__option ${
-              this.state.sortBy === "popular" ? `places__option--active` : ""
+              this.state.sortBy === 'popular' ? `places__option--active` : ''
             } `}
-            tabIndex="0"
+            tabIndex={0}
             onClick={() => {
-              this._sortByNewValue("popular");
+              this._sortByNewValue('popular');
             }}
           >
             Popular
           </li>
           <li
             className={`places__option ${
-              this.state.sortBy === "lowToHigh" ? `places__option--active` : ""
+              this.state.sortBy === 'lowToHigh' ? `places__option--active` : ''
             } `}
-            tabIndex="0"
+            tabIndex={0}
             onClick={() => {
-              this._sortByNewValue("lowToHigh");
+              this._sortByNewValue('lowToHigh');
             }}
           >
             Price: low to high
           </li>
           <li
             className={`places__option ${
-              this.state.sortBy === "highToLow" ? `places__option--active` : ""
+              this.state.sortBy === 'highToLow' ? `places__option--active` : ''
             } `}
-            tabIndex="0"
+            tabIndex={0}
             onClick={() => {
-              this._sortByNewValue("highToLow");
+              this._sortByNewValue('highToLow');
             }}
           >
             Price: high to low
           </li>
           <li
             className={`places__option ${
-              this.state.sortBy === "topRatedFirst"
+              this.state.sortBy === 'topRatedFirst'
                 ? `places__option--active`
-                : ""
+                : ''
             } `}
-            tabIndex="0"
+            tabIndex={0}
             onClick={() => {
-              this._sortByNewValue("topRatedFirst");
+              this._sortByNewValue('topRatedFirst');
             }}
           >
             Top rated first

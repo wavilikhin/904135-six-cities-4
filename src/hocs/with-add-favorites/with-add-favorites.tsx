@@ -1,17 +1,17 @@
-import React, { PureComponent } from "react";
-import { connect } from "react-redux";
-import { Operation as UserOperation } from "../../reducer/user/user";
-import { getUserFavorites } from "../../reducer/user/selectors";
-import { OfferInfo } from "../../components/offer-card/offer-card";
+import * as React from 'react';
+import { connect } from 'react-redux';
+import { Operation as UserOperation } from '../../reducer/user/user';
+import { getUserFavorites } from '../../reducer/user/selectors';
+import { OfferInfo } from '../../types';
 
 interface Props {
-  getFavorites(): void;
+  getFavorites: () => void;
   userFavorites: OfferInfo[];
-  toggleFavorites(id: number, status: boolean): void;
+  toggleFavorites: (id: number, status: boolean) => void;
 }
 
 const withAddFavorites = (Component) => {
-  class WithAddFavorites extends PureComponent<Props> {
+  class WithAddFavorites extends React.PureComponent<Props> {
     props: Props;
 
     constructor(props) {

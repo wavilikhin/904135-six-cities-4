@@ -1,8 +1,8 @@
 export const AppRoutes = {
-  ROOT: '/',
-  LOGIN: '/login',
-  ROOM: '/offer/:id?',
-  FAVORITES: '/favorites',
+  ROOT: `/`,
+  LOGIN: `/login`,
+  ROOM: `/offer/:id?`,
+  FAVORITES: `/favorites`,
 };
 
 export const AuthStatus = {

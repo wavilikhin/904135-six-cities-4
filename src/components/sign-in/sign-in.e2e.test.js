@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { SignIn } from './sign-in.jsx';
@@ -12,15 +12,15 @@ describe(`SignIn component e2e test`, () => {
     const onSubmit = jest.fn((authData) => ({ authData }));
 
     const signIn = shallow(<SignIn onSubmit={onSubmit} />);
-    signIn.setState({ email: '' });
-    signIn.setState({ password: '' });
+    signIn.setState({ email: `` });
+    signIn.setState({ password: `` });
 
     const submitBtn = signIn.find(`button.login__submit`);
-    submitBtn.simulate('click', { preventDefault() {} });
+    submitBtn.simulate(`click`, { preventDefault() {} });
 
     expect(onSubmit).toHaveBeenCalledTimes(1);
     expect(onSubmit.mock.results[0].value).toMatchObject({
-      authData: { email: '', password: '' },
+      authData: { email: ``, password: `` },
     });
   });
 
@@ -28,15 +28,15 @@ describe(`SignIn component e2e test`, () => {
     const onSubmit = jest.fn((authData) => ({ authData }));
 
     const signIn = shallow(<SignIn onSubmit={onSubmit} />);
-    signIn.setState({ email: 'fake@mail.com' });
-    signIn.setState({ password: 'fakepass' });
+    signIn.setState({ email: `fake@mail.com` });
+    signIn.setState({ password: `fakepass` });
 
     const submitBtn = signIn.find(`button.login__submit`);
-    submitBtn.simulate('click', { preventDefault() {} });
+    submitBtn.simulate(`click`, { preventDefault() {} });
 
     expect(onSubmit).toHaveBeenCalledTimes(1);
     expect(onSubmit.mock.results[0].value).toMatchObject({
-      authData: { email: 'fake@mail.com', password: 'fakepass' },
+      authData: { email: `fake@mail.com`, password: `fakepass` },
     });
   });
 });

@@ -1,11 +1,11 @@
-import React from "react";
-import { connect } from "react-redux";
-import OffersList from "../offers-list/offers-list";
-import Map from "../map/map";
-import { getCity, getFiltredOffers } from "../../reducer/data/selectors";
-import MainEmpty from "../main-empty/main-empty";
-import PlaceSorting from "../place-sorting/place-sorting";
-import { OfferInfo } from "../offer-card/offer-card";
+import * as React from 'react';
+import { connect } from 'react-redux';
+import OffersList from '../offers-list/offers-list';
+import Map from '../map/map';
+import { getCity, getFiltredOffers } from '../../reducer/data/selectors';
+import MainEmpty from '../main-empty/main-empty';
+import PlaceSorting from '../place-sorting/place-sorting';
+import { OfferInfo } from '../../types';
 
 interface Props {
   filtredOffers: OfferInfo[];
@@ -30,15 +30,7 @@ const Offers: React.FC<Props> = ({ filtredOffers, city }) => {
         </section>
         <div className="cities__right-section">
           <section className="cities__map map">
-            {filtredOffers.length === 0 ? (
-              ""
-            ) : (
-              <Map
-                city={city}
-                zoom={filtredOffers[0].cityZoom}
-                offers={filtredOffers}
-              />
-            )}
+            <Map offers={filtredOffers} />
           </section>
         </div>
       </div>

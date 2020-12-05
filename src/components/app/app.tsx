@@ -1,10 +1,10 @@
-import React from "react";
-import { Router, Switch, Route } from "react-router-dom";
-import Main from "../main/main";
-import SignIn from "../sign-in/sign-in";
-import Room from "../room/room";
-import { AppRoutes } from "../../const";
-import history from "../../history";
+import * as React from 'react';
+import { Router, Switch, Route } from 'react-router-dom';
+import Main from '../main/main';
+import SignIn from '../sign-in/sign-in';
+import Room from '../room/room';
+import { AppRoutes } from '../../const';
+import history from '../../history';
 
 const App: React.FC = () => {
   return (

@@ -13,6 +13,7 @@ export const createOffer = (offer) => ({
   description: offer.description,
   goods: offer.goods,
   host: {
+    // eslint-disable-next-line camelcase
     avatar_url: offer.host.avatar_url,
     id: offer.host.id,
     isPro: offer.host.is_pro,

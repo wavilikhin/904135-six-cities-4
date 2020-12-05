@@ -7,11 +7,11 @@ export const mockedStore = {
     currentOfferNearby: [],
   },
   [NameSpace.STATE]: {
-    city: '',
+    city: ``,
   },
   [NameSpace.USER]: {
-    authStatus: 'NO_AUTH',
-    userEmail: '',
+    authStatus: `NO_AUTH`,
+    userEmail: ``,
     userFavorites: [],
   },
 };

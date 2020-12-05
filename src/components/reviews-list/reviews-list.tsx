@@ -1,6 +1,7 @@
-import React, { Fragment } from "react";
+import * as React from 'react';
 
-import { ReviewItem, ReviewItemType } from "../review-item/review-item";
+import { ReviewItem } from '../review-item/review-item';
+import { ReviewItem as ReviewItemType } from '../../types';
 
 interface Props {
   reviews: ReviewItemType[];
@@ -8,7 +9,7 @@ interface Props {
 
 const ReviewsList: React.FC<Props> = ({ reviews }) => {
   return (
-    <Fragment>
+    <>
       <h2 className="reviews__title">
         Reviews · <span className="reviews__amount">{reviews.length}</span>
       </h2>
@@ -26,7 +27,7 @@ const ReviewsList: React.FC<Props> = ({ reviews }) => {
           );
         })}
       </ul>
-    </Fragment>
+    </>
   );
 };
 

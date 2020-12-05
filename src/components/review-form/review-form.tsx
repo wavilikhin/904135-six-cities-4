@@ -1,19 +1,15 @@
-import React, { PureComponent } from "react";
-
-type Comment = {
-  comment: string;
-  raiting: number;
-};
+import * as React from 'react';
+import { Comment } from '../../types';
 interface Props {
   hotelId: string;
-  handleSubmit(hotelId: string, {}: Comment): void;
+  handleSubmit: (hotelId: number, obj: Comment) => void;
 }
 
 interface State {
   text: string;
   raiting: number;
 }
-class ReviewForm extends PureComponent<Props, State> {
+class ReviewForm extends React.PureComponent<Props, State> {
   props: Props;
   state: State;
 
@@ -21,7 +17,7 @@ class ReviewForm extends PureComponent<Props, State> {
     super(props);
 
     this.state = {
-      text: "",
+      text: '',
       raiting: null,
     };
 
@@ -45,20 +41,20 @@ class ReviewForm extends PureComponent<Props, State> {
   _handleSubmit(e): void {
     e.preventDefault();
     // TODO Доделать оповещение об ошибке
-    if (this.state.text.replace(/\s/g, "").length < 50)
+    if (this.state.text.replace(/\s/g, '').length < 50)
       return console.log(`2short`);
 
     // TODO Доделать оповещение об ошибке
     if (this.state.raiting == null) return console.log(`Raiting null`);
 
     // TODO Доделать отчистку формы (использовать рефсы?)
-    this.props.handleSubmit(this.props.hotelId, {
+    this.props.handleSubmit(parseInt(this.props.hotelId, 10), {
       comment: this.state.text,
       raiting: this.state.raiting,
     });
 
     this.setState({
-      text: "",
+      text: '',
       raiting: null,
     });
   }
@@ -161,12 +157,12 @@ class ReviewForm extends PureComponent<Props, State> {
           id="review"
           name="review"
           placeholder="Tell how was your stay, what you like and what can be improved"
-          defaultValue={""}
+          defaultValue={''}
           onChange={this._handleTextChange}
         />
         <div className="reviews__button-wrapper">
           <p className="reviews__help">
-            To submit review please make sure to set{" "}
+            To submit review please make sure to set{' '}
             <span className="reviews__star">rating</span> and describe your stay
             with at least <b className="reviews__text-amount">50 characters</b>.
           </p>

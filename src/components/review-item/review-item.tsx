@@ -1,20 +1,7 @@
-import React from "react";
+import * as React from 'react';
+import { ReviewItem } from '../../types';
 
-type User = {
-  avatar_url: string;
-  id: number;
-  is_pro: boolean;
-  name: string;
-};
-type ReviewItemType = {
-  comment: string;
-  id: number;
-  date: string;
-  raiting: number;
-  user: User;
-};
-
-type Props = ReviewItemType;
+type Props = ReviewItem;
 
 const ReviewItem: React.FC<Props> = ({ comment, date, raiting, user }) => {
   const formatedDate = `
@@ -53,4 +40,4 @@ const ReviewItem: React.FC<Props> = ({ comment, date, raiting, user }) => {
   );
 };
 
-export { ReviewItem, ReviewItemType };
+export { ReviewItem };

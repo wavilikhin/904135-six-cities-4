@@ -1,4 +1,4 @@
-import { createOffer } from '../../adapters/offers.js';
+import {createOffer} from "../../adapters/offers.js";
 
 const initialState = {
   offers: [],
@@ -8,11 +8,11 @@ const initialState = {
 };
 
 const ActionType = {
-  UPDATE_OFFERS: 'UPDATE_OFFERS',
-  UPDATE_CURRENT_OFFER: 'UPDATE_CURRENT_OFFER',
-  UPDATE_CURRENT_OFFER_REVIEWS: 'UPDATE_CURRENT_OFFER_REVIEWS',
-  POST_REVIEW: 'POST_REVIEW',
-  UPDATE_CURRENT_OFFER_NEARBY: 'UPDATE_CURRENT_OFFER_NEARBY',
+  UPDATE_OFFERS: `UPDATE_OFFERS`,
+  UPDATE_CURRENT_OFFER: `UPDATE_CURRENT_OFFER`,
+  UPDATE_CURRENT_OFFER_REVIEWS: `UPDATE_CURRENT_OFFER_REVIEWS`,
+  POST_REVIEW: `POST_REVIEW`,
+  UPDATE_CURRENT_OFFER_NEARBY: `UPDATE_CURRENT_OFFER_NEARBY`,
 };
 
 const ActionCreator = {
@@ -50,7 +50,7 @@ const ActionCreator = {
 
 const Operation = {
   updateOffers: () => (dispatch, getState, api) => {
-    return api.get('/hotels').then((response) => {
+    return api.get(`/hotels`).then((response) => {
       dispatch(ActionCreator.updateOffers(response.data));
     });
   },
@@ -71,10 +71,9 @@ const Operation = {
     return api
       .post(`/comments/${hotelId}`, {
         comment: reviewData.comment,
-        rating: parseInt(reviewData.raiting),
+        rating: parseInt(reviewData.raiting, 10),
       })
       .then((response) => {
-        console.log(response);
         dispatch(ActionCreator.updateCurrentOfferReviews(response.data));
       });
   },
@@ -89,11 +88,11 @@ const reducer = (state = initialState, action) => {
 
     case ActionType.UPDATE_CURRENT_OFFER:
       let currentOffer = state.offers.find(
-        (offer) => offer.id === parseInt(action.payload),
+          (offer) => offer.id === parseInt(action.payload, 10)
       );
 
       return Object.assign({}, state, {
-        currentOffer: currentOffer,
+        currentOffer,
       });
 
     case ActionType.UPDATE_CURRENT_OFFER_NEARBY:
@@ -109,4 +108,4 @@ const reducer = (state = initialState, action) => {
   return state;
 };
 
-export { reducer, Operation, ActionType, ActionCreator };
+export {reducer, Operation, ActionType, ActionCreator};

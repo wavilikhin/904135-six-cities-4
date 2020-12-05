@@ -4,7 +4,9 @@
   "private": true,
   "description": "Личный проект «Шесть городов»",
   "scripts": {
-    "eslint": "eslint --fix src/**/*.js",
+    "eslint": "npm run eslint.js && npm run eslint.ts",
+    "eslint.js": "eslint --ignore-pattern 'src/components/**/*.test.js' --ignore-pattern 'src/components/**/*.test.e2e.js' --ignore-pattern 'src/components/test/**'  --ignore-pattern 'src/reducer/**/*.test.js' --ignore-pattern 'src/hocs/**/*.test.js' --ignore-pattern 'src/test/**' --fix --ext .jsx --ext .js src/",
+    "eslint.ts": "eslint --ignore-pattern 'src/components/**/*.test.js' --ignore-pattern 'src/components/**/*.test.e2e.js' --ignore-pattern 'src/components/test/**'  --ignore-pattern 'src/reducer/**/*.test.js' --ignore-pattern 'src/hocs/**/*.test.js' --ignore-pattern 'src/test/**' --fix --config .eslintrc-ts.yml --ext .tsx src/",
     "test": "npm run test.jest",
     "build": "webpack --mode production",
     "start": "webpack-dev-server",
@@ -16,6 +18,8 @@
     "@babel/preset-env": "7.10.2",
     "@babel/preset-react": "7.10.1",
     "@types/react": "17.0.0",
+    "@typescript-eslint/eslint-plugin": "4.9.0",
+    "@typescript-eslint/parser": "4.9.0",
     "axios-mock-adapter": "1.18.2",
     "babel-jest": "26.0.1",
     "babel-loader": "8.1.0",
@@ -39,6 +43,8 @@
     "node": "10"
   },
   "dependencies": {
+    "@types/geojson": "^7946.0.7",
+    "@types/leaflet": "^1.5.19",
     "axios": "0.19.2",
     "history": "4.10.1",
     "leaflet": "1.6.0",

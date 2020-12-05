@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import renderer from 'react-test-renderer';
 import { OFFERS } from '../../test/__mocks__/offers.js';
 import { Provider } from 'react-redux';

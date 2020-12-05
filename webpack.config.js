@@ -5,10 +5,10 @@ module.exports = {
   output: {
     filename: `bundle.js`,
     path: path.join(__dirname, `public`),
-    publicPath: "/",
+    publicPath: `/`,
   },
   devServer: {
-    publicPath: "/",
+    publicPath: `/`,
     contentBase: path.join(__dirname, `public`),
     open: false,
     inline: true,

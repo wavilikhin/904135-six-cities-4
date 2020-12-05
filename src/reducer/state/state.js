@@ -1,11 +1,11 @@
 const initialState = {
-  city: '',
-  sortBy: 'popular',
+  city: ``,
+  sortBy: `popular`,
 };
 
 const ActionType = {
-  CHANGE_CITY: 'CHANGE_CITY',
-  CHANGE_SORT_BY: 'CHANGE_SORT_BY',
+  CHANGE_CITY: `CHANGE_CITY`,
+  CHANGE_SORT_BY: `CHANGE_SORT_BY`,
 };
 
 const ActionCreator = {
@@ -33,4 +33,4 @@ const reducer = (state = initialState, action) => {
   return state;
 };
 
-export { reducer, ActionType, ActionCreator };
+export {reducer, ActionType, ActionCreator};

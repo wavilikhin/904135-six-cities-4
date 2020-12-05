@@ -1,16 +1,16 @@
-import React, { memo } from "react";
+import * as React from 'react';
 
-import { connect } from "react-redux";
-import { ActionCreator as StateActionCreator } from "../../reducer/state/state";
-import { getCity, getUniqueCities } from "../../reducer/data/selectors";
+import { connect } from 'react-redux';
+import { ActionCreator as StateActionCreator } from '../../reducer/state/state';
+import { getCity, getUniqueCities } from '../../reducer/data/selectors';
 
 interface Props {
   currentCity: string;
   uniqueCities: string[];
-  handleCityChange(city: string): void;
+  handleCityChange: (city: string) => void;
 }
 
-const CitiesList: React.FC<Props> = memo(
+const CitiesList: React.FC<Props> = React.memo(
   ({ currentCity, uniqueCities, handleCityChange }) => {
     return (
       <section className="locations container">
@@ -24,7 +24,7 @@ const CitiesList: React.FC<Props> = memo(
                     handleCityChange(city);
                   }}
                   className={`locations__item-link tabs__item ${
-                    city === currentCity ? "tabs__item--active" : ""
+                    city === currentCity ? 'tabs__item--active' : ''
                   }`}
                   href="#"
                 >
@@ -36,7 +36,7 @@ const CitiesList: React.FC<Props> = memo(
         </ul>
       </section>
     );
-  }
+  },
 );
 
 const mapStateToProps = (state) => ({

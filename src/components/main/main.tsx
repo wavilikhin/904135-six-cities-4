@@ -1,23 +1,23 @@
-import React, { PureComponent } from "react";
+import * as React from 'react';
 
-import CitiesList from "../cities-list/cities-list";
-import Offers from "../offers/offers";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { ActionCreator } from "../../reducer/state/state";
-import { getOffers } from "../../reducer/data/selectors";
-import { getAuthStatus, getUserEmail } from "../../reducer/user/selectors";
-import { AppRoutes } from "../../const";
-import { OfferInfo } from "../offer-card/offer-card";
+import CitiesList from '../cities-list/cities-list';
+import Offers from '../offers/offers';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { ActionCreator } from '../../reducer/state/state';
+import { getOffers } from '../../reducer/data/selectors';
+import { getAuthStatus, getUserEmail } from '../../reducer/user/selectors';
+import { AppRoutes } from '../../const';
+import { OfferInfo } from '../../types';
 
 interface Props {
   offersDataArray: OfferInfo[];
-  handleCityChange(city: string): void;
+  handleCityChange: (city: string) => void;
   authStatus: string;
   userEmail: string;
 }
 
-class Main extends PureComponent<Props> {
+class Main extends React.PureComponent<Props> {
   props: Props;
 
   constructor(props) {
@@ -64,13 +64,13 @@ class Main extends PureComponent<Props> {
                   <li className="header__nav-item user">
                     <Link
                       to={
-                        authStatus === "NO_AUTH"
+                        authStatus === 'NO_AUTH'
                           ? AppRoutes.LOGIN
                           : AppRoutes.FAVORITES
                       }
                     >
                       <span>
-                        {authStatus === "NO_AUTH" ? `Sign In` : userEmail}
+                        {authStatus === 'NO_AUTH' ? `Sign In` : userEmail}
                       </span>
                     </Link>
                   </li>

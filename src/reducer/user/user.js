@@ -1,17 +1,17 @@
-import { AuthStatus } from "../../const.js";
-import { createOffer } from "../../adapters/offers.js";
+import {AuthStatus} from "../../const.js";
+import {createOffer} from "../../adapters/offers.js";
 
 const initialState = {
   authStatus: AuthStatus.NO_AUTH,
-  userEmail: "",
+  userEmail: ``,
   userFavorites: [],
 };
 
 const ActionType = {
-  UPDATE_AUTH_STATUS: "UPDATE_AUTH_STATUS",
-  UPDATE_USER_EMAIL: "UPDATE_USER_EMAIL",
-  TOGGLE_FAVORITE: "TOGGLE_FAVORITE",
-  UPDATE_USER_FAVORITES: "UPDATE_USER_FAVORITES",
+  UPDATE_AUTH_STATUS: `UPDATE_AUTH_STATUS`,
+  UPDATE_USER_EMAIL: `UPDATE_USER_EMAIL`,
+  TOGGLE_FAVORITE: `TOGGLE_FAVORITE`,
+  UPDATE_USER_FAVORITES: `UPDATE_USER_FAVORITES`,
 };
 
 const ActionCreator = {
@@ -27,7 +27,7 @@ const ActionCreator = {
 
   toggleFavorite: (id, status) => ({
     type: ActionType.TOGGLE_FAVORITE,
-    payload: { id, status },
+    payload: {id, status},
   }),
 
   updateUserFavorites: (favorites) => {
@@ -45,7 +45,7 @@ const ActionCreator = {
 const Operation = {
   updateAuthStatus: () => (dispatch, getState, api) => {
     return api
-      .get("/login")
+      .get(`/login`)
       .then((response) => {
         dispatch(ActionCreator.updateAuthStatus(AuthStatus.AUTH));
         dispatch(ActionCreator.updateUserEmail(response.data.email));
@@ -56,16 +56,19 @@ const Operation = {
   },
 
   logIn: (authData) => (dispatch, getState, api) => {
-    return api
-      .post("/login", {
-        email: authData.email,
-        password: authData.password,
-      })
-      .then((response) => {
-        dispatch(ActionCreator.updateAuthStatus(AuthStatus.AUTH));
-        dispatch(ActionCreator.updateUserEmail(response.data.email));
-      })
-      .catch((err) => console.error(`Login error: ${err}`));
+    return (
+      api
+        .post(`/login`, {
+          email: authData.email,
+          password: authData.password,
+        })
+        .then((response) => {
+          dispatch(ActionCreator.updateAuthStatus(AuthStatus.AUTH));
+          dispatch(ActionCreator.updateUserEmail(response.data.email));
+        })
+        // eslint-disable-next-line no-console
+        .catch((err) => console.error(`Login error: ${err}`))
+    );
   },
 
   getFavorites: () => (dispatch, getState, api) => {
@@ -99,4 +102,4 @@ const reducer = (state = initialState, action) => {
   return state;
 };
 
-export { reducer, ActionType, ActionCreator, Operation, AuthStatus };
+export {reducer, ActionType, ActionCreator, Operation, AuthStatus};

@@ -8,7 +8,7 @@ const Error = {
 
 export const createApi = (onUnauthorized) => {
   const api = axios.create({
-    baseURL: 'https://4.react.pages.academy/six-cities',
+    baseURL: `https://4.react.pages.academy/six-cities`,
     timeout: 5000,
     withCredentials: true,
   });
@@ -18,7 +18,7 @@ export const createApi = (onUnauthorized) => {
   };
 
   const onFail = (err) => {
-    const { response } = err;
+    const {response} = err;
 
     if (response.status === Error.UNAUTHORIZED) {
       onUnauthorized();

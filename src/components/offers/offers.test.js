@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import renderer from 'react-test-renderer';
 import { Offers } from './offers.jsx';
 import { Provider } from 'react-redux';
