@@ -1,4 +1,5 @@
 type Host = {
+  id: number;
   isPro: boolean;
   avatar_url: string;
   name: string;
@@ -13,15 +14,15 @@ type Location = {
 export type OfferInfo = {
   id: number;
   city: string;
-  cityCoords: number[];
+  cityZoom: number;
   isPremium: boolean;
+  cityCoords: number[];
   image: string;
   priceValue: number;
   name: string;
   type: string;
   coords: number[];
   rating: number;
-  cityZoom: number;
   bedrooms: number;
   description: string;
   goods: string[];

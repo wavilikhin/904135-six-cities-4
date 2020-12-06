@@ -11,13 +11,14 @@ import { createApi } from './api';
 import App from './components/app/app';
 import { AuthStatus, AppRoutes } from './const';
 import history from './history';
+import { AxiosInstance } from 'axios';
 
-const onUnauthorized = () => {
+const onUnauthorized = (): void => {
   store.dispatch(ActionCreator.updateAuthStatus(AuthStatus.NO_AUTH));
   history.push(AppRoutes.LOGIN);
 };
 
-const api = createApi(onUnauthorized);
+const api: AxiosInstance = createApi(onUnauthorized);
 
 const store = createStore(
   reducer,

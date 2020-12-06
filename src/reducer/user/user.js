@@ -1,5 +1,5 @@
-import {AuthStatus} from "../../const.js";
-import {createOffer} from "../../adapters/offers.js";
+import { AuthStatus } from '../../const';
+import { createOffer } from '../../adapters/offers';
 
 const initialState = {
   authStatus: AuthStatus.NO_AUTH,
@@ -27,7 +27,7 @@ const ActionCreator = {
 
   toggleFavorite: (id, status) => ({
     type: ActionType.TOGGLE_FAVORITE,
-    payload: {id, status},
+    payload: { id, status },
   }),
 
   updateUserFavorites: (favorites) => {
@@ -102,4 +102,4 @@ const reducer = (state = initialState, action) => {
   return state;
 };
 
-export {reducer, ActionType, ActionCreator, Operation, AuthStatus};
+export { reducer, ActionType, ActionCreator, Operation, AuthStatus };

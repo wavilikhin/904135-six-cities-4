@@ -1,19 +1,19 @@
-export const OFFERS = [
+import { OfferInfo } from '../../types';
+
+export const OFFERS: OfferInfo[] = [
   {
     id: 1,
     city: `Amsterdam`,
     cityZoom: 13,
     isPremium: false,
     cityCoords: [52.37454, 4.897976],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg`,
     priceValue: 813,
     name: `Wood and stone place`,
     type: `house`,
     coords: [52.385540000000006, 4.886976],
     bedrooms: 5,
-    description:
-      `I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station. The apartment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.`,
+    description: `I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station. The apartment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.`,
     goods: [`Laptop friendly workspace`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -44,7 +44,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 6,
-    rating: 2.4,
+    raiting: 2.4,
   },
   {
     id: 2,
@@ -52,15 +52,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [53.550341, 10.000654],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg`,
     priceValue: 238,
     name: `Amazing and Extremely Central Flat`,
     type: `apartment`,
     coords: [53.558341000000006, 10.001654],
     bedrooms: 2,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [`Laptop friendly workspace`, `Breakfast`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -91,7 +89,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 7,
-    rating: 3.1,
+    raiting: 3.1,
   },
   {
     id: 3,
@@ -99,15 +97,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg`,
     priceValue: 722,
     name: `The Pondhouse - A Magical Place`,
     type: `house`,
     coords: [48.868610000000004, 2.342499],
     bedrooms: 4,
-    description:
-      `Design interior in most sympathetic area! Complitely renovated, well-equipped, cosy studio in idyllic, over 100 years old wooden house. Calm street, fast connection to center and airport.`,
+    description: `Design interior in most sympathetic area! Complitely renovated, well-equipped, cosy studio in idyllic, over 100 years old wooden house. Calm street, fast connection to center and airport.`,
     goods: [
       `Fridge`,
       `Washing machine`,
@@ -149,7 +145,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 6,
-    rating: 4.4,
+    raiting: 4.4,
   },
   {
     id: 4,
@@ -157,15 +153,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/1.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/1.jpg`,
     priceValue: 309,
     name: `The Joshua Tree House`,
     type: `apartment`,
     coords: [51.236402000000005, 6.784314],
     bedrooms: 1,
-    description:
-      `I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station. The apartment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.`,
+    description: `I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station. The apartment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.`,
     goods: [
       `Laptop friendly workspace`,
       `Dishwasher`,
@@ -205,7 +199,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 8,
-    rating: 4.6,
+    raiting: 4.6,
   },
   {
     id: 5,
@@ -213,15 +207,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [52.37454, 4.897976],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg`,
     priceValue: 101,
     name: `Perfectly located Castro`,
     type: `room`,
     coords: [52.397540000000006, 4.9099759999999995],
     bedrooms: 1,
-    description:
-      `I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station. The apartment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.`,
+    description: `I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station. The apartment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.`,
     goods: [
       `Coffee machine`,
       `Laptop friendly workspace`,
@@ -263,7 +255,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 2,
-    rating: 3.5,
+    raiting: 3.5,
   },
   {
     id: 6,
@@ -271,15 +263,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg`,
     priceValue: 269,
     name: `Amazing and Extremely Central Flat`,
     type: `room`,
     coords: [48.84761, 2.356499],
     bedrooms: 1,
-    description:
-      `Design interior in most sympathetic area! Complitely renovated, well-equipped, cosy studio in idyllic, over 100 years old wooden house. Calm street, fast connection to center and airport.`,
+    description: `Design interior in most sympathetic area! Complitely renovated, well-equipped, cosy studio in idyllic, over 100 years old wooden house. Calm street, fast connection to center and airport.`,
     goods: [
       `Air conditioning`,
       `Breakfast`,
@@ -318,7 +308,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 3,
-    rating: 2.9,
+    raiting: 2.9,
   },
   {
     id: 7,
@@ -326,15 +316,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
     priceValue: 227,
     name: `Amazing and Extremely Central Flat`,
     type: `house`,
     coords: [51.237402, 6.797314],
     bedrooms: 2,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [`Breakfast`, `Laptop friendly workspace`, `Washer`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -365,7 +353,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 8,
-    rating: 3.3,
+    raiting: 3.3,
   },
   {
     id: 8,
@@ -373,15 +361,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [53.550341, 10.000654],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg`,
     priceValue: 226,
     name: `The house among olive `,
     type: `apartment`,
     coords: [53.534341000000005, 9.998654],
     bedrooms: 4,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Air conditioning`,
       `Breakfast`,
@@ -417,7 +403,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 7,
-    rating: 4.3,
+    raiting: 4.3,
   },
   {
     id: 9,
@@ -425,15 +411,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/20.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/20.jpg`,
     priceValue: 227,
     name: `Nice, cozy, warm big bed apartment`,
     type: `room`,
     coords: [50.842557, 4.3536969999999995],
     bedrooms: 1,
-    description:
-      `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
+    description: `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
     goods: [
       `Washer`,
       `Fridge`,
@@ -473,7 +457,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 1,
-    rating: 2.2,
+    raiting: 2.2,
   },
   {
     id: 10,
@@ -481,15 +465,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg`,
     priceValue: 185,
     name: `Waterfront with extraordinary view`,
     type: `room`,
     coords: [51.239402000000005, 6.756314000000001],
     bedrooms: 1,
-    description:
-      `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
+    description: `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
     goods: [
       `Fridge`,
       `Coffee machine`,
@@ -531,7 +513,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 2,
-    rating: 4.6,
+    raiting: 4.6,
   },
   {
     id: 11,
@@ -539,15 +521,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
     priceValue: 205,
     name: `Penthouse, 4-5 rooms + 5 balconies`,
     type: `house`,
     coords: [51.248402000000006, 6.763314],
     bedrooms: 2,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Breakfast`,
       `Air conditioning`,
@@ -584,7 +564,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 7,
-    rating: 3.5,
+    raiting: 3.5,
   },
   {
     id: 12,
@@ -592,15 +572,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg`,
     priceValue: 264,
     name: `Loft Studio in the Central Area`,
     type: `room`,
     coords: [50.837557, 4.339697],
     bedrooms: 1,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [
       `Dishwasher`,
       `Breakfast`,
@@ -640,7 +618,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 2,
-    rating: 2.4,
+    raiting: 2.4,
   },
   {
     id: 13,
@@ -648,15 +626,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [53.550341, 10.000654],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg`,
     priceValue: 289,
     name: `Canal View Prinsengracht`,
     type: `house`,
     coords: [53.563341, 9.975654],
     bedrooms: 2,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [`Laptop friendly workspace`, `Breakfast`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -687,7 +663,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 5,
-    rating: 5,
+    raiting: 5,
   },
   {
     id: 14,
@@ -695,15 +671,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [52.37454, 4.897976],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg`,
     priceValue: 423,
     name: `Penthouse, 4-5 rooms + 5 balconies`,
     type: `hotel`,
     coords: [52.370540000000005, 4.9099759999999995],
     bedrooms: 4,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [`Breakfast`, `Laptop friendly workspace`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -734,7 +708,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 7,
-    rating: 4.7,
+    raiting: 4.7,
   },
   {
     id: 15,
@@ -742,15 +716,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [52.37454, 4.897976],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
     priceValue: 134,
     name: `Loft Studio in the Central Area`,
     type: `house`,
     coords: [52.36354, 4.911976],
     bedrooms: 3,
-    description:
-      `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
+    description: `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
     goods: [
       `Breakfast`,
       `Air conditioning`,
@@ -787,7 +759,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 6,
-    rating: 2.9,
+    raiting: 2.9,
   },
   {
     id: 16,
@@ -795,15 +767,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
     priceValue: 314,
     name: `Tile House`,
     type: `apartment`,
     coords: [51.222402, 6.786314],
     bedrooms: 2,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [`Breakfast`, `Laptop friendly workspace`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -834,7 +804,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 9,
-    rating: 3.7,
+    raiting: 3.7,
   },
   {
     id: 17,
@@ -842,15 +812,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg`,
     priceValue: 836,
     name: `The Joshua Tree House`,
     type: `house`,
     coords: [50.827557, 4.336697],
     bedrooms: 3,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Washer`,
       `Baby seat`,
@@ -890,7 +858,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 7,
-    rating: 4.6,
+    raiting: 4.6,
   },
   {
     id: 18,
@@ -898,15 +866,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [53.550341, 10.000654],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg`,
     priceValue: 825,
     name: `The house among olive `,
     type: `house`,
     coords: [53.573341000000006, 10.025654000000001],
     bedrooms: 3,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [
       `Breakfast`,
       `Air conditioning`,
@@ -942,7 +908,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 3,
-    rating: 4.4,
+    raiting: 4.4,
   },
   {
     id: 19,
@@ -950,15 +916,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg`,
     priceValue: 326,
     name: `The house among olive `,
     type: `house`,
     coords: [50.954361, 6.982974],
     bedrooms: 5,
-    description:
-      `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
+    description: `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
     goods: [
       `Washer`,
       `Breakfast`,
@@ -994,7 +958,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 7,
-    rating: 2.2,
+    raiting: 2.2,
   },
   {
     id: 20,
@@ -1002,15 +966,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg`,
     priceValue: 108,
     name: `Waterfront with extraordinary view`,
     type: `room`,
     coords: [48.83961, 2.342499],
     bedrooms: 1,
-    description:
-      `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
+    description: `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
     goods: [
       `Towels`,
       `Washing machine`,
@@ -1052,7 +1014,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 3,
-    rating: 4.3,
+    raiting: 4.3,
   },
   {
     id: 21,
@@ -1060,15 +1022,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
     priceValue: 409,
     name: `Amazing and Extremely Central Flat`,
     type: `apartment`,
     coords: [50.960361, 6.967974],
     bedrooms: 3,
-    description:
-      `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
+    description: `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
     goods: [
       `Washer`,
       `Breakfast`,
@@ -1106,7 +1066,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 5,
-    rating: 2.7,
+    raiting: 2.7,
   },
   {
     id: 22,
@@ -1114,15 +1074,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg`,
     priceValue: 143,
     name: `The Joshua Tree House`,
     type: `room`,
     coords: [50.945361, 6.935974],
     bedrooms: 1,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Air conditioning`,
       `Towels`,
@@ -1160,7 +1118,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 2,
-    rating: 3.8,
+    raiting: 3.8,
   },
   {
     id: 23,
@@ -1168,15 +1126,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg`,
     priceValue: 107,
     name: `Perfectly located Castro`,
     type: `house`,
     coords: [50.839557, 4.346697],
     bedrooms: 3,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Washer`,
       `Air conditioning`,
@@ -1213,7 +1169,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 8,
-    rating: 2.7,
+    raiting: 2.7,
   },
   {
     id: 24,
@@ -1221,15 +1177,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/7.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/7.jpg`,
     priceValue: 210,
     name: `The Pondhouse - A Magical Place`,
     type: `room`,
     coords: [50.835556999999994, 4.354697],
     bedrooms: 1,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Dishwasher`,
       `Baby seat`,
@@ -1271,7 +1225,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 1,
-    rating: 2.9,
+    raiting: 2.9,
   },
   {
     id: 25,
@@ -1279,15 +1233,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg`,
     priceValue: 147,
     name: `The Pondhouse - A Magical Place`,
     type: `room`,
     coords: [48.846610000000005, 2.374499],
     bedrooms: 1,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Fridge`,
       `Coffee machine`,
@@ -1329,7 +1281,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 2,
-    rating: 4.5,
+    raiting: 4.5,
   },
   {
     id: 26,
@@ -1337,15 +1289,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [52.37454, 4.897976],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg`,
     priceValue: 820,
     name: `The Pondhouse - A Magical Place`,
     type: `house`,
     coords: [52.389540000000004, 4.883976],
     bedrooms: 3,
-    description:
-      `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
+    description: `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
     goods: [`Laptop friendly workspace`, `Breakfast`, `Washer`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -1376,7 +1326,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 10,
-    rating: 3.6,
+    raiting: 3.6,
   },
   {
     id: 27,
@@ -1384,15 +1334,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg`,
     priceValue: 994,
     name: `Penthouse, 4-5 rooms + 5 balconies`,
     type: `house`,
     coords: [51.211402, 6.756314000000001],
     bedrooms: 1,
-    description:
-      `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
+    description: `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
     goods: [
       `Breakfast`,
       `Laptop friendly workspace`,
@@ -1430,7 +1378,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 7,
-    rating: 4.4,
+    raiting: 4.4,
   },
   {
     id: 28,
@@ -1438,15 +1386,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg`,
     priceValue: 208,
     name: `The house among olive `,
     type: `apartment`,
     coords: [51.216402, 6.758314],
     bedrooms: 3,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Laptop friendly workspace`,
       `Air conditioning`,
@@ -1483,7 +1429,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 10,
-    rating: 3.2,
+    raiting: 3.2,
   },
   {
     id: 29,
@@ -1491,15 +1437,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [52.37454, 4.897976],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg`,
     priceValue: 786,
     name: `Beautiful & luxurious apartment at great location`,
     type: `house`,
     coords: [52.37554, 4.9019759999999994],
     bedrooms: 1,
-    description:
-      `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
+    description: `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
     goods: [
       `Washer`,
       `Air conditioning`,
@@ -1541,7 +1485,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 5,
-    rating: 2.4,
+    raiting: 2.4,
   },
   {
     id: 30,
@@ -1549,15 +1493,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/20.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/20.jpg`,
     priceValue: 450,
     name: `Waterfront with extraordinary view`,
     type: `apartment`,
     coords: [51.243402, 6.791314],
     bedrooms: 2,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Breakfast`,
       `Laptop friendly workspace`,
@@ -1594,7 +1536,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 4,
-    rating: 2.1,
+    raiting: 2.1,
   },
   {
     id: 31,
@@ -1602,15 +1544,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
     priceValue: 104,
     name: `Canal View Prinsengracht`,
     type: `room`,
     coords: [51.204402, 6.7773140000000005],
     bedrooms: 1,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [`Breakfast`, `Laptop friendly workspace`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -1641,7 +1581,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 3,
-    rating: 2.5,
+    raiting: 2.5,
   },
   {
     id: 32,
@@ -1649,15 +1589,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg`,
     priceValue: 279,
     name: `Wood and stone place`,
     type: `room`,
     coords: [50.932361, 6.960974],
     bedrooms: 1,
-    description:
-      `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
+    description: `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
     goods: [
       `Baby seat`,
       `Breakfast`,
@@ -1696,7 +1634,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 2,
-    rating: 4.1,
+    raiting: 4.1,
   },
   {
     id: 33,
@@ -1704,15 +1642,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg`,
     priceValue: 770,
     name: `Perfectly located Castro`,
     type: `house`,
     coords: [48.843610000000005, 2.338499],
     bedrooms: 3,
-    description:
-      `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
+    description: `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
     goods: [`Breakfast`, `Laptop friendly workspace`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -1743,7 +1679,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 9,
-    rating: 3.5,
+    raiting: 3.5,
   },
   {
     id: 34,
@@ -1751,15 +1687,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg`,
     priceValue: 963,
     name: `Waterfront with extraordinary view`,
     type: `house`,
     coords: [50.932361, 6.937974],
     bedrooms: 4,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [`Laptop friendly workspace`, `Breakfast`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -1790,7 +1724,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 7,
-    rating: 2.2,
+    raiting: 2.2,
   },
   {
     id: 35,
@@ -1798,15 +1732,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg`,
     priceValue: 410,
     name: `Penthouse, 4-5 rooms + 5 balconies`,
     type: `apartment`,
     coords: [48.858610000000006, 2.330499],
     bedrooms: 3,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Washer`,
       `Breakfast`,
@@ -1842,7 +1774,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 6,
-    rating: 2.3,
+    raiting: 2.3,
   },
   {
     id: 36,
@@ -1850,15 +1782,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg`,
     priceValue: 278,
     name: `Wood and stone place`,
     type: `room`,
     coords: [48.87961000000001, 2.353499],
     bedrooms: 1,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Laptop friendly workspace`,
       `Air conditioning`,
@@ -1894,7 +1824,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 1,
-    rating: 3.3,
+    raiting: 3.3,
   },
   {
     id: 37,
@@ -1902,15 +1832,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg`,
     priceValue: 187,
     name: `Beautiful & luxurious apartment at great location`,
     type: `apartment`,
     coords: [50.867557, 4.339697],
     bedrooms: 4,
-    description:
-      `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
+    description: `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
     goods: [
       `Fridge`,
       `Towels`,
@@ -1949,7 +1877,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 6,
-    rating: 3.9,
+    raiting: 3.9,
   },
   {
     id: 38,
@@ -1957,15 +1885,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
     priceValue: 755,
     name: `The Joshua Tree House`,
     type: `house`,
     coords: [48.85761, 2.358499],
     bedrooms: 4,
-    description:
-      `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
+    description: `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
     goods: [
       `Laptop friendly workspace`,
       `Dishwasher`,
@@ -2007,7 +1933,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 8,
-    rating: 4.1,
+    raiting: 4.1,
   },
   {
     id: 39,
@@ -2015,15 +1941,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg`,
     priceValue: 945,
     name: `Nice, cozy, warm big bed apartment`,
     type: `house`,
     coords: [50.959361, 6.978974],
     bedrooms: 2,
-    description:
-      `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
+    description: `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
     goods: [
       `Laptop friendly workspace`,
       `Breakfast`,
@@ -2059,7 +1983,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 5,
-    rating: 2.6,
+    raiting: 2.6,
   },
   {
     id: 40,
@@ -2067,15 +1991,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg`,
     priceValue: 120,
     name: `The Joshua Tree House`,
     type: `room`,
     coords: [50.822556999999996, 4.347697],
     bedrooms: 1,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Air conditioning`,
       `Towels`,
@@ -2113,7 +2035,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 2,
-    rating: 5,
+    raiting: 5,
   },
   {
     id: 41,
@@ -2121,15 +2043,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
     priceValue: 558,
     name: `Nice, cozy, warm big bed apartment`,
     type: `house`,
     coords: [50.852557, 4.3376969999999995],
     bedrooms: 4,
-    description:
-      `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
+    description: `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
     goods: [`Breakfast`, `Washer`, `Laptop friendly workspace`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -2160,7 +2080,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 9,
-    rating: 2.9,
+    raiting: 2.9,
   },
   {
     id: 42,
@@ -2168,15 +2088,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg`,
     priceValue: 366,
     name: `Canal View Prinsengracht`,
     type: `hotel`,
     coords: [51.250402, 6.7853140000000005],
     bedrooms: 1,
-    description:
-      `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
+    description: `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
     goods: [
       `Dishwasher`,
       `Washer`,
@@ -2217,7 +2135,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 3,
-    rating: 4.8,
+    raiting: 4.8,
   },
   {
     id: 43,
@@ -2225,15 +2143,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg`,
     priceValue: 765,
     name: `Penthouse, 4-5 rooms + 5 balconies`,
     type: `house`,
     coords: [48.834610000000005, 2.364499],
     bedrooms: 3,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [`Laptop friendly workspace`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -2264,7 +2180,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 6,
-    rating: 4.3,
+    raiting: 4.3,
   },
   {
     id: 44,
@@ -2272,15 +2188,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [53.550341, 10.000654],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg`,
     priceValue: 110,
     name: `Tile House`,
     type: `hotel`,
     coords: [53.555341000000006, 9.975654],
     bedrooms: 3,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Breakfast`,
       `Laptop friendly workspace`,
@@ -2316,7 +2230,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 6,
-    rating: 3.3,
+    raiting: 3.3,
   },
   {
     id: 45,
@@ -2324,15 +2238,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg`,
     priceValue: 864,
     name: `Amazing and Extremely Central Flat`,
     type: `house`,
     coords: [50.947361, 6.9799739999999995],
     bedrooms: 2,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Towels`,
       `Air conditioning`,
@@ -2372,7 +2284,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 9,
-    rating: 3.8,
+    raiting: 3.8,
   },
   {
     id: 46,
@@ -2380,15 +2292,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [52.37454, 4.897976],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/2.jpg`,
     priceValue: 448,
     name: `Nice, cozy, warm big bed apartment`,
     type: `apartment`,
     coords: [52.364540000000005, 4.9019759999999994],
     bedrooms: 1,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [`Breakfast`, `Laptop friendly workspace`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -2419,7 +2329,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 5,
-    rating: 3.5,
+    raiting: 3.5,
   },
   {
     id: 47,
@@ -2427,15 +2337,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
     priceValue: 123,
     name: `Canal View Prinsengracht`,
     type: `room`,
     coords: [50.865556999999995, 4.371696999999999],
     bedrooms: 1,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Washer`,
       `Air conditioning`,
@@ -2472,7 +2380,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 2,
-    rating: 2.6,
+    raiting: 2.6,
   },
   {
     id: 48,
@@ -2480,15 +2388,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [52.37454, 4.897976],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg`,
     priceValue: 139,
     name: `The Joshua Tree House`,
     type: `hotel`,
     coords: [52.35754, 4.9179759999999995],
     bedrooms: 4,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Breakfast`,
       `Washer`,
@@ -2527,7 +2433,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 5,
-    rating: 2.1,
+    raiting: 2.1,
   },
   {
     id: 49,
@@ -2535,15 +2441,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [53.550341, 10.000654],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
     priceValue: 190,
     name: `Penthouse, 4-5 rooms + 5 balconies`,
     type: `hotel`,
     coords: [53.574341000000004, 10.022654000000001],
     bedrooms: 1,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Breakfast`,
       `Air conditioning`,
@@ -2581,7 +2485,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 2,
-    rating: 4.3,
+    raiting: 4.3,
   },
   {
     id: 50,
@@ -2589,15 +2493,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
     priceValue: 998,
     name: `The house among olive `,
     type: `house`,
     coords: [50.960361, 6.9509739999999995],
     bedrooms: 3,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [
       `Washer`,
       `Laptop friendly workspace`,
@@ -2635,7 +2537,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 7,
-    rating: 4.4,
+    raiting: 4.4,
   },
   {
     id: 51,
@@ -2643,15 +2545,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg`,
     priceValue: 737,
     name: `The Pondhouse - A Magical Place`,
     type: `house`,
     coords: [48.834610000000005, 2.335499],
     bedrooms: 2,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Towels`,
       `Baby seat`,
@@ -2692,7 +2592,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 4,
-    rating: 2.3,
+    raiting: 2.3,
   },
   {
     id: 52,
@@ -2700,15 +2600,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/15.jpg`,
     priceValue: 590,
     name: `Amazing and Extremely Central Flat`,
     type: `house`,
     coords: [50.941361, 6.956974],
     bedrooms: 4,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [
       `Fridge`,
       `Air conditioning`,
@@ -2749,7 +2647,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 9,
-    rating: 3.7,
+    raiting: 3.7,
   },
   {
     id: 53,
@@ -2757,15 +2655,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg`,
     priceValue: 150,
     name: `Canal View Prinsengracht`,
     type: `room`,
     coords: [51.232402, 6.800314],
     bedrooms: 1,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Air conditioning`,
       `Fridge`,
@@ -2806,7 +2702,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 1,
-    rating: 3.9,
+    raiting: 3.9,
   },
   {
     id: 54,
@@ -2814,15 +2710,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg`,
     priceValue: 272,
     name: `The Pondhouse - A Magical Place`,
     type: `room`,
     coords: [48.87561, 2.375499],
     bedrooms: 1,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [`Laptop friendly workspace`, `Washer`, `Breakfast`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -2853,7 +2747,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 2,
-    rating: 3.3,
+    raiting: 3.3,
   },
   {
     id: 55,
@@ -2861,15 +2755,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [53.550341, 10.000654],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg`,
     priceValue: 134,
     name: `Canal View Prinsengracht`,
     type: `room`,
     coords: [53.540341000000005, 10.025654000000001],
     bedrooms: 1,
-    description:
-      `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
+    description: `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
     goods: [
       `Washing machine`,
       `Baby seat`,
@@ -2911,7 +2803,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 1,
-    rating: 2.1,
+    raiting: 2.1,
   },
   {
     id: 56,
@@ -2919,15 +2811,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg`,
     priceValue: 121,
     name: `House in countryside`,
     type: `house`,
     coords: [51.241402, 6.782314],
     bedrooms: 2,
-    description:
-      `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
+    description: `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
     goods: [
       `Washer`,
       `Breakfast`,
@@ -2969,7 +2859,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 4,
-    rating: 4.9,
+    raiting: 4.9,
   },
   {
     id: 57,
@@ -2977,15 +2867,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
     priceValue: 347,
     name: `Perfectly located Castro`,
     type: `hotel`,
     coords: [51.228402, 6.784314],
     bedrooms: 4,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [
       `Washer`,
       `Breakfast`,
@@ -3021,7 +2909,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 6,
-    rating: 4.4,
+    raiting: 4.4,
   },
   {
     id: 58,
@@ -3029,15 +2917,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
     priceValue: 165,
     name: `Penthouse, 4-5 rooms + 5 balconies`,
     type: `apartment`,
     coords: [51.217402, 6.7693140000000005],
     bedrooms: 3,
-    description:
-      `Design interior in most sympathetic area! Complitely renovated, well-equipped, cosy studio in idyllic, over 100 years old wooden house. Calm street, fast connection to center and airport.`,
+    description: `Design interior in most sympathetic area! Complitely renovated, well-equipped, cosy studio in idyllic, over 100 years old wooden house. Calm street, fast connection to center and airport.`,
     goods: [
       `Air conditioning`,
       `Fridge`,
@@ -3080,7 +2966,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 10,
-    rating: 3.1,
+    raiting: 3.1,
   },
   {
     id: 59,
@@ -3088,15 +2974,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg`,
     priceValue: 196,
     name: `The house among olive `,
     type: `apartment`,
     coords: [51.235402, 6.800314],
     bedrooms: 4,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [
       `Towels`,
       `Fridge`,
@@ -3136,7 +3020,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 9,
-    rating: 2.4,
+    raiting: 2.4,
   },
   {
     id: 60,
@@ -3144,15 +3028,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
     priceValue: 412,
     name: `Wood and stone place`,
     type: `house`,
     coords: [50.854557, 4.364697],
     bedrooms: 4,
-    description:
-      `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
+    description: `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
     goods: [
       `Air conditioning`,
       `Breakfast`,
@@ -3188,7 +3070,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 5,
-    rating: 2.6,
+    raiting: 2.6,
   },
   {
     id: 61,
@@ -3196,15 +3078,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [53.550341, 10.000654],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/3.jpg`,
     priceValue: 364,
     name: `The Joshua Tree House`,
     type: `house`,
     coords: [53.563341, 10.019654000000001],
     bedrooms: 4,
-    description:
-      `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
+    description: `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
     goods: [`Laptop friendly workspace`, `Breakfast`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -3235,7 +3115,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 6,
-    rating: 4.7,
+    raiting: 4.7,
   },
   {
     id: 62,
@@ -3243,15 +3123,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
     priceValue: 361,
     name: `Loft Studio in the Central Area`,
     type: `hotel`,
     coords: [50.950361, 6.961974],
     bedrooms: 2,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Dishwasher`,
       `Fridge`,
@@ -3294,7 +3172,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 2,
-    rating: 3.3,
+    raiting: 3.3,
   },
   {
     id: 63,
@@ -3302,15 +3180,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [53.550341, 10.000654],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg`,
     priceValue: 138,
     name: `Perfectly located Castro`,
     type: `apartment`,
     coords: [53.573341000000006, 9.994654],
     bedrooms: 2,
-    description:
-      `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
+    description: `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
     goods: [
       `Dishwasher`,
       `Baby seat`,
@@ -3352,7 +3228,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 6,
-    rating: 3.9,
+    raiting: 3.9,
   },
   {
     id: 64,
@@ -3360,15 +3236,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg`,
     priceValue: 135,
     name: `The Pondhouse - A Magical Place`,
     type: `hotel`,
     coords: [51.205402, 6.7613140000000005],
     bedrooms: 1,
-    description:
-      `I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station. The apartment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.`,
+    description: `I rent out a very sunny and bright apartment only 7 minutes walking distance to the metro station. The apartment has a spacious living room with a kitchen, one bedroom and a bathroom with mit bath. A terrace can be used in summer.`,
     goods: [
       `Laptop friendly workspace`,
       `Washer`,
@@ -3405,7 +3279,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 9,
-    rating: 4.2,
+    raiting: 4.2,
   },
   {
     id: 65,
@@ -3413,15 +3287,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/10.jpg`,
     priceValue: 261,
     name: `House in countryside`,
     type: `hotel`,
     coords: [48.84461, 2.374499],
     bedrooms: 5,
-    description:
-      `Design interior in most sympathetic area! Complitely renovated, well-equipped, cosy studio in idyllic, over 100 years old wooden house. Calm street, fast connection to center and airport.`,
+    description: `Design interior in most sympathetic area! Complitely renovated, well-equipped, cosy studio in idyllic, over 100 years old wooden house. Calm street, fast connection to center and airport.`,
     goods: [
       `Baby seat`,
       `Laptop friendly workspace`,
@@ -3460,7 +3332,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 7,
-    rating: 3.2,
+    raiting: 3.2,
   },
   {
     id: 66,
@@ -3468,15 +3340,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
     priceValue: 365,
     name: `Wood and stone place`,
     type: `apartment`,
     coords: [50.934361, 6.943974],
     bedrooms: 3,
-    description:
-      `Design interior in most sympathetic area! Complitely renovated, well-equipped, cosy studio in idyllic, over 100 years old wooden house. Calm street, fast connection to center and airport.`,
+    description: `Design interior in most sympathetic area! Complitely renovated, well-equipped, cosy studio in idyllic, over 100 years old wooden house. Calm street, fast connection to center and airport.`,
     goods: [`Laptop friendly workspace`, `Breakfast`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -3507,7 +3377,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 7,
-    rating: 4.9,
+    raiting: 4.9,
   },
   {
     id: 67,
@@ -3515,15 +3385,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/14.jpg`,
     priceValue: 469,
     name: `Waterfront with extraordinary view`,
     type: `hotel`,
     coords: [50.945361, 6.962974],
     bedrooms: 5,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Washer`,
       `Towels`,
@@ -3564,7 +3432,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 10,
-    rating: 3.2,
+    raiting: 3.2,
   },
   {
     id: 68,
@@ -3572,15 +3440,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [53.550341, 10.000654],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg`,
     priceValue: 437,
     name: `Canal View Prinsengracht`,
     type: `apartment`,
     coords: [53.550341, 9.980654000000001],
     bedrooms: 2,
-    description:
-      `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
+    description: `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
     goods: [
       `Washer`,
       `Washing machine`,
@@ -3623,7 +3489,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 7,
-    rating: 3.5,
+    raiting: 3.5,
   },
   {
     id: 69,
@@ -3631,15 +3497,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [52.37454, 4.897976],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg`,
     priceValue: 183,
     name: `Penthouse, 4-5 rooms + 5 balconies`,
     type: `room`,
     coords: [52.37154, 4.889976],
     bedrooms: 1,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Dishwasher`,
       `Towels`,
@@ -3679,7 +3543,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 2,
-    rating: 2.3,
+    raiting: 2.3,
   },
   {
     id: 70,
@@ -3687,15 +3551,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
     priceValue: 248,
     name: `Wood and stone place`,
     type: `room`,
     coords: [48.837610000000005, 2.3454990000000002],
     bedrooms: 1,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Air conditioning`,
       `Baby seat`,
@@ -3732,7 +3594,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 1,
-    rating: 4.8,
+    raiting: 4.8,
   },
   {
     id: 71,
@@ -3740,15 +3602,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/12.jpg`,
     priceValue: 291,
     name: `Beautiful & luxurious apartment at great location`,
     type: `apartment`,
     coords: [48.877610000000004, 2.333499],
     bedrooms: 3,
-    description:
-      `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
+    description: `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
     goods: [
       `Laptop friendly workspace`,
       `Breakfast`,
@@ -3784,7 +3644,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 5,
-    rating: 4.2,
+    raiting: 4.2,
   },
   {
     id: 72,
@@ -3792,15 +3652,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/17.jpg`,
     priceValue: 183,
     name: `Loft Studio in the Central Area`,
     type: `hotel`,
     coords: [50.869557, 4.332697],
     bedrooms: 2,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Towels`,
       `Fridge`,
@@ -3841,7 +3699,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 3,
-    rating: 4.4,
+    raiting: 4.4,
   },
   {
     id: 73,
@@ -3849,15 +3707,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [52.37454, 4.897976],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/6.jpg`,
     priceValue: 215,
     name: `Wood and stone place`,
     type: `apartment`,
     coords: [52.385540000000006, 4.902976],
     bedrooms: 5,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Dishwasher`,
       `Fridge`,
@@ -3898,7 +3754,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 7,
-    rating: 3.2,
+    raiting: 3.2,
   },
   {
     id: 74,
@@ -3906,15 +3762,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg`,
     priceValue: 865,
     name: `Wood and stone place`,
     type: `house`,
     coords: [50.862556999999995, 4.375697],
     bedrooms: 3,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Air conditioning`,
       `Breakfast`,
@@ -3950,7 +3804,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 8,
-    rating: 4,
+    raiting: 4,
   },
   {
     id: 75,
@@ -3958,15 +3812,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg`,
     priceValue: 726,
     name: `Nice, cozy, warm big bed apartment`,
     type: `house`,
     coords: [48.837610000000005, 2.364499],
     bedrooms: 2,
-    description:
-      `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
+    description: `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
     goods: [
       `Baby seat`,
       `Towels`,
@@ -4005,7 +3857,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 6,
-    rating: 3.2,
+    raiting: 3.2,
   },
   {
     id: 76,
@@ -4013,15 +3865,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [48.85661, 2.351499],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/18.jpg`,
     priceValue: 121,
     name: `Wood and stone place`,
     type: `room`,
     coords: [48.862610000000004, 2.369499],
     bedrooms: 1,
-    description:
-      `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
+    description: `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
     goods: [
       `Laptop friendly workspace`,
       `Fridge`,
@@ -4062,7 +3912,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 1,
-    rating: 3.8,
+    raiting: 3.8,
   },
   {
     id: 77,
@@ -4070,15 +3920,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/13.jpg`,
     priceValue: 118,
     name: `Nice, cozy, warm big bed apartment`,
     type: `hotel`,
     coords: [50.867557, 4.371696999999999],
     bedrooms: 5,
-    description:
-      `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
+    description: `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
     goods: [
       `Laptop friendly workspace`,
       `Air conditioning`,
@@ -4114,7 +3962,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 8,
-    rating: 3,
+    raiting: 3,
   },
   {
     id: 78,
@@ -4122,15 +3970,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/7.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/7.jpg`,
     priceValue: 252,
     name: `Wood and stone place`,
     type: `hotel`,
     coords: [50.833557, 4.374696999999999],
     bedrooms: 2,
-    description:
-      `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
+    description: `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
     goods: [
       `Breakfast`,
       `Baby seat`,
@@ -4169,7 +4015,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 4,
-    rating: 4.3,
+    raiting: 4.3,
   },
   {
     id: 79,
@@ -4177,15 +4023,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg`,
     priceValue: 197,
     name: `The Pondhouse - A Magical Place`,
     type: `apartment`,
     coords: [51.210402, 6.798314],
     bedrooms: 1,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [`Washer`, `Laptop friendly workspace`, `Breakfast`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -4216,7 +4060,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 9,
-    rating: 2.9,
+    raiting: 2.9,
   },
   {
     id: 80,
@@ -4224,15 +4068,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/19.jpg`,
     priceValue: 253,
     name: `The Joshua Tree House`,
     type: `room`,
     coords: [50.916361, 6.944974],
     bedrooms: 1,
-    description:
-      `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
+    description: `Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.`,
     goods: [
       `Breakfast`,
       `Washer`,
@@ -4271,7 +4113,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 1,
-    rating: 4.2,
+    raiting: 4.2,
   },
   {
     id: 81,
@@ -4279,15 +4121,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/16.jpg`,
     priceValue: 458,
     name: `Wood and stone place`,
     type: `house`,
     coords: [50.842557, 4.363696999999999],
     bedrooms: 3,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [
       `Washer`,
       `Fridge`,
@@ -4329,7 +4169,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 5,
-    rating: 3.5,
+    raiting: 3.5,
   },
   {
     id: 82,
@@ -4337,15 +4177,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/8.jpg`,
     priceValue: 880,
     name: `The house among olive `,
     type: `house`,
     coords: [50.867557, 4.357697],
     bedrooms: 2,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Breakfast`,
       `Washer`,
@@ -4384,7 +4222,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 5,
-    rating: 4.4,
+    raiting: 4.4,
   },
   {
     id: 83,
@@ -4392,15 +4230,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [53.550341, 10.000654],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/5.jpg`,
     priceValue: 174,
     name: `The house among olive `,
     type: `room`,
     coords: [53.573341000000006, 10.009654000000001],
     bedrooms: 1,
-    description:
-      `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
+    description: `I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!`,
     goods: [
       `Laptop friendly workspace`,
       `Baby seat`,
@@ -4437,7 +4273,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 1,
-    rating: 4.8,
+    raiting: 4.8,
   },
   {
     id: 84,
@@ -4445,15 +4281,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [50.846557, 4.351697],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg`,
     priceValue: 314,
     name: `Canal View Prinsengracht`,
     type: `house`,
     coords: [50.828556999999996, 4.362697],
     bedrooms: 4,
-    description:
-      `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
+    description: `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
     goods: [
       `Washing machine`,
       `Laptop friendly workspace`,
@@ -4496,7 +4330,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 9,
-    rating: 2.8,
+    raiting: 2.8,
   },
   {
     id: 85,
@@ -4504,15 +4338,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [52.37454, 4.897976],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
     priceValue: 793,
     name: `Tile House`,
     type: `house`,
     coords: [52.37454, 4.881976],
     bedrooms: 2,
-    description:
-      `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
+    description: `Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.`,
     goods: [`Breakfast`, `Laptop friendly workspace`],
     host: {
       avatar_url: `img/avatar-angelina.jpg`,
@@ -4543,7 +4375,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 4,
-    rating: 4.2,
+    raiting: 4.2,
   },
   {
     id: 86,
@@ -4551,15 +4383,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/9.jpg`,
     priceValue: 264,
     name: `Tile House`,
     type: `room`,
     coords: [51.225402, 6.784314],
     bedrooms: 1,
-    description:
-      `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
+    description: `Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.`,
     goods: [
       `Washer`,
       `Coffee machine`,
@@ -4601,7 +4431,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 2,
-    rating: 4.1,
+    raiting: 4.1,
   },
   {
     id: 87,
@@ -4609,15 +4439,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: true,
     cityCoords: [50.938361, 6.959974],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/11.jpg`,
     priceValue: 238,
     name: `Tile House`,
     type: `room`,
     coords: [50.913361, 6.9509739999999995],
     bedrooms: 1,
-    description:
-      `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
+    description: `This is a place for dreamers to reset, reflect, and create. Designed with a 'slow' pace in mind, our hope is that you enjoy every part of your stay; from making local coffee by drip in the morning, choosing the perfect record to put on as the sun sets.`,
     goods: [
       `Breakfast`,
       `Washer`,
@@ -4653,7 +4481,7 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 3,
-    rating: 4.4,
+    raiting: 4.4,
   },
   {
     id: 88,
@@ -4661,15 +4489,13 @@ export const OFFERS = [
     cityZoom: 13,
     isPremium: false,
     cityCoords: [51.225402, 6.776314],
-    image:
-      `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg`,
+    image: `https://htmlacademy-react-3.appspot.com/six-cities/static/hotel/4.jpg`,
     priceValue: 205,
     name: `Nice, cozy, warm big bed apartment`,
     type: `room`,
     coords: [51.237402, 6.779314],
     bedrooms: 1,
-    description:
-      `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
+    description: `A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.`,
     goods: [
       `Fridge`,
       `Washer`,
@@ -4711,6 +4537,6 @@ export const OFFERS = [
       zoom: 16,
     },
     maxAdults: 3,
-    rating: 3.9,
+    raiting: 3.9,
   },
 ];
