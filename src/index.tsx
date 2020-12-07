@@ -4,7 +4,7 @@ import { createStore, applyMiddleware, Store, CombinedState } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import { rootReducer, RootReducer } from './reducer/reducer';
+import { rootReducer } from './reducer/reducer';
 import { Operation as DataOperation } from './reducer/data/data';
 import { Operation as UserOperation, ActionCreator } from './reducer/user/user';
 import { createApi } from './api';

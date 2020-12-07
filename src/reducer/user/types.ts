@@ -42,9 +42,9 @@ export type UserActionTypes =
   | ToggleFavoriteAction
   | UpdateUserFavoritesAction;
 
-export type AppThunk<ReturnType = void> = ThunkAction<
-  ReturnType,
-  UserState,
-  null | undefined,
-  Action<UserActionTypes['type']>
->;
+// export type AppThunk<ReturnType = void> = ThunkAction<
+//   ReturnType,
+//   UserState,
+//   null | undefined,
+//   Action<UserActionTypes['type']>
+// >;

@@ -302,7 +302,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   updateReviews(id) {
-    dispatch(DataOperation.updateCurrentOfferReviews(id));
+    dispatch(DataOperation.getOfferComments(id));
   },
 
   postReview(hotelId, reviewData) {
@@ -310,7 +310,7 @@ const mapDispatchToProps = (dispatch) => ({
   },
 
   updateNearby(id) {
-    dispatch(DataOperation.updateCurrentOfferNearby(id));
+    dispatch(DataOperation.updateOfferNearby(id));
   },
 
   handleCurrentOfferUpdate(id) {
