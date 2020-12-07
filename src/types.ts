@@ -22,7 +22,6 @@ export type OfferInfo = {
   name: string;
   type: string;
   coords: number[];
-  rating: number;
   bedrooms: number;
   description: string;
   goods: string[];

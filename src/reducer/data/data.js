@@ -1,4 +1,4 @@
-import {createOffer} from "../../adapters/offers.js";
+import { createOffer } from '../../adapters/offers';
 
 const initialState = {
   offers: [],
@@ -88,7 +88,7 @@ const reducer = (state = initialState, action) => {
 
     case ActionType.UPDATE_CURRENT_OFFER:
       let currentOffer = state.offers.find(
-          (offer) => offer.id === parseInt(action.payload, 10)
+        (offer) => offer.id === parseInt(action.payload, 10),
       );
 
       return Object.assign({}, state, {
@@ -108,4 +108,4 @@ const reducer = (state = initialState, action) => {
   return state;
 };
 
-export {reducer, Operation, ActionType, ActionCreator};
+export { reducer, Operation, ActionType, ActionCreator };

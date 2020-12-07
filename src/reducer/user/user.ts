@@ -1,36 +1,33 @@
-import { AuthStatus } from '../../const';
 import { createOffer } from '../../adapters/offers';
+import { UserState, ActionTypes, UserActionTypes } from './types';
+import { AuthStatus } from '../../const';
+import { OfferInfo } from '../../components/offer-card/offer-card';
 
-const initialState = {
+const initialState: UserState = {
   authStatus: AuthStatus.NO_AUTH,
   userEmail: ``,
   userFavorites: [],
 };
 
-const ActionType = {
-  UPDATE_AUTH_STATUS: `UPDATE_AUTH_STATUS`,
-  UPDATE_USER_EMAIL: `UPDATE_USER_EMAIL`,
-  TOGGLE_FAVORITE: `TOGGLE_FAVORITE`,
-  UPDATE_USER_FAVORITES: `UPDATE_USER_FAVORITES`,
-};
+const ActionType = ActionTypes;
 
 const ActionCreator = {
-  updateAuthStatus: (status) => ({
+  updateAuthStatus: (status: AuthStatus): UserActionTypes => ({
     type: ActionType.UPDATE_AUTH_STATUS,
     payload: status,
   }),
 
-  updateUserEmail: (email) => ({
+  updateUserEmail: (email: string): UserActionTypes => ({
     type: ActionType.UPDATE_USER_EMAIL,
     payload: email,
   }),
 
-  toggleFavorite: (id, status) => ({
+  toggleFavorite: (id: number, status: boolean): UserActionTypes => ({
     type: ActionType.TOGGLE_FAVORITE,
     payload: { id, status },
   }),
 
-  updateUserFavorites: (favorites) => {
+  updateUserFavorites: (favorites: OfferInfo[]): UserActionTypes => {
     const adaptedOffers = favorites.map((fav) => {
       return createOffer(fav);
     });
@@ -82,7 +79,7 @@ const Operation = {
   },
 };
 
-const reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action: UserActionTypes): UserState => {
   switch (action.type) {
     case ActionType.UPDATE_AUTH_STATUS:
       return Object.assign({}, state, {

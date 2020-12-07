@@ -1,6 +1,6 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
-import Map from './map.jsx';
+import Map from './map.js';
 import { OFFERS } from '../../test/__mocks__/offers.js';
 
 const offers = OFFERS;

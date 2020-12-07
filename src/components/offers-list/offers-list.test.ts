@@ -8,26 +8,21 @@ import history from '../../history.js';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 // data
-import { OfferCard } from './offer-card.jsx';
+import mockedData, { mockedStore } from '../../test/__mocks__/store.js';
+import { OffersList } from './offers-list.js';
 import { OFFERS } from '../../test/__mocks__/offers.js';
-import { mockedStore } from '../../test/__mocks__/store.js';
 
 const mockStore = configureStore([]);
 const store = mockStore(mockedStore);
-const cardData = OFFERS[0];
+const offersDataArray = OFFERS;
 
-describe(`OfferCard component snapshot test`, () => {
-  it(`Should render content card with given data`, () => {
+describe('OffersList component snapshot test', () => {
+  it(`Should render a list offers`, () => {
     const tree = renderer
       .create(
         <Provider store={store}>
           <Router history={history}>
-            <OfferCard
-              cardData={cardData}
-              handleFavoritesUpdate={() => {}}
-              favoritesIds={[]}
-              handleCurrentOfferUpdate={() => {}}
-            />
+            <OffersList filtredOffers={offersDataArray} />
           </Router>
         </Provider>,
       )

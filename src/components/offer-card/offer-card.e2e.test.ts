@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import { mockedStore } from '../../test/__mocks__/store.js';
 // components
-import { OfferCard } from './offer-card.jsx';
+import { OfferCard } from './offer-card.js';
 // data
 const mockStore = configureStore([]);
 const store = mockStore(mockedStore);

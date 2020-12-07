@@ -4,7 +4,7 @@ import { OFFERS } from '../../test/__mocks__/offers.js';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import NameSpace from '../../reducer/name-space.js';
-import { SignIn } from './sign-in.jsx';
+import { SignIn } from './sign-in.js';
 
 const mockStore = configureStore([]);
 

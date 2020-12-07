@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import NameSpace from '../../reducer/name-space.js';
-import withAddFavorites from './with-add-favorites.jsx';
+import withAddFavorites from './with-add-favorites.js';
 
 const MockComponent = () => {
   return <div></div>;

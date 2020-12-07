@@ -9,7 +9,7 @@ import { mockedStore } from '../../test/__mocks__/store.js';
 import { Router } from 'react-router-dom';
 import history from '../../history.js';
 
-import { Room } from './room.jsx';
+import { Room } from './room.js';
 
 const mockStore = configureStore([]);
 const offerInfo = OFFERS[0];

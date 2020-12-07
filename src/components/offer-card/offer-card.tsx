@@ -23,10 +23,10 @@ class OfferCard extends React.PureComponent<Props> {
 
   render() {
     const {
-      cardData: { id, isPremium, image, priceValue, name, type, rating },
+      cardData: { id, isPremium, image, priceValue, name, type, raiting },
       favoritesIds,
     } = this.props;
-    const ratingStars = rating * 2 * 10;
+    const raitingStars = raiting * 2 * 10;
 
     return (
       <article className="cities__place-card place-card">
@@ -74,8 +74,8 @@ class OfferCard extends React.PureComponent<Props> {
           </div>
           <div className="place-card__rating rating">
             <div className="place-card__stars rating__stars">
-              <span style={{ width: `${ratingStars}%` }}></span>
-              <span className="visually-hidden">Rating</span>
+              <span style={{ width: `${raitingStars}%` }}></span>
+              <span className="visually-hidden">Raiting</span>
             </div>
           </div>
           <h2 className="place-card__name">
