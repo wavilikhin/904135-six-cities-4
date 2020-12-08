@@ -1,4 +1,4 @@
-export type SortBy = 'highToLow' | 'lowToHigh' | 'popular' | 'topRated';
+export type SortBy = 'highToLow' | 'lowToHigh' | 'popular' | 'topRatedFirst';
 
 const CHANGE_CITY = `CHANGE_CITY`;
 const CHANGE_SORT_BY = `CHANGE_SORT_BY`;

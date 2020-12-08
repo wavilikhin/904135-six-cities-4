@@ -2,7 +2,7 @@ import { AxiosInstance } from 'axios';
 import { Dispatch } from 'redux';
 import { createOffer } from '../../adapters/offers';
 import { OfferInfo, ReviewItem, Comment } from '../../types';
-
+// TODO: Подумать над тем что должно находиться в редьюсере с Датой а что со Стейтом
 import {
   DataState,
   DataActionTypes,
