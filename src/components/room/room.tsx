@@ -13,28 +13,44 @@ import ReviewsList from '../reviews-list/reviews-list';
 import ReviewForm from '../review-form/review-form';
 import { OfferCard } from '../offer-card/offer-card';
 import Map from '../map/map';
-import withAddFavorites from '../../hocs/with-add-favorites/with-add-favorites';
+import { withAddFavorites } from '../../hocs/with-add-favorites/with-add-favorites';
 const OfferCardWrapped = withAddFavorites(OfferCard);
 import { ReviewItem, OfferInfo, Comment } from '../../types';
+import { AppStateType } from '../../reducer/reducer';
+import { match, RouteComponentProps } from 'react-router-dom';
 
-interface Props {
-  defaultOffer: OfferInfo;
+type StateToPropsTypes = {
   offers: OfferInfo[];
   reviews: ReviewItem[];
   offersNearby: OfferInfo[];
-  favoritesIds: number[];
-  offerId: number;
-  updateReviews: (id: number) => void;
+};
+
+type DispatchToPropsTypes = {
+  updateReviews: (reviewId: number) => void;
+
   postReview: (hotelId: number, reviewData: Comment) => void;
-  updateNearby: (id: number) => void;
-  handleCurrentOfferUpdate: (id: number) => void;
+
+  updateNearby: (offerId: number) => void;
+
+  handleCurrentOfferUpdate: (offerId: number) => void;
+};
+
+type RouteParams = {
+  id: string;
+};
+
+type OwnPropsTypes = {
+  match: match<RouteParams>;
+  favoritesIds: number[];
   handleFavoritesUpdate: (id: number) => void;
-}
+};
+
+type Props = StateToPropsTypes & DispatchToPropsTypes & OwnPropsTypes;
 
 class Room extends React.PureComponent<Props> {
   props: Props;
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
 
     this._updateReviews = this._updateReviews.bind(this);
@@ -72,27 +88,26 @@ class Room extends React.PureComponent<Props> {
   }
 
   componentDidMount() {
-    this.props.handleCurrentOfferUpdate(this.props.offerId);
-    this._updateReviews(this.props.offerId);
-    this._updateNearby(this.props.offerId);
+    this.props.handleCurrentOfferUpdate(Number(this.props.match.params.id));
+    this._updateReviews(Number(this.props.match.params.id));
+    this._updateNearby(Number(this.props.match.params.id));
   }
 
   render() {
+    // TODO: Если оффер не найден по номеру показывать заглушку
     const {
-      defaultOffer,
       offers,
       reviews = [],
       offersNearby,
       favoritesIds,
-      offerId,
+      match,
     } = this.props;
 
-    let currentOffer;
-    offers.length > 0
-      ? (currentOffer = offers.find((offer) => offer.id == offerId))
-      : (currentOffer = defaultOffer);
+    const offerId = Number(match.params.id);
 
-    const ratingStars = currentOffer.rating * 2 * 10;
+    let currentOffer = offers.find((offer) => offer.id == offerId);
+
+    const ratingStars = currentOffer.raiting * 2 * 10;
 
     return (
       <main className="page__main page__main--property">
@@ -146,7 +161,7 @@ class Room extends React.PureComponent<Props> {
                   <span className="visually-hidden">Rating</span>
                 </div>
                 <span className="property__rating-value rating__value">
-                  {currentOffer.rating}
+                  {currentOffer.raiting}
                 </span>
               </div>
               <ul className="property__features">
@@ -212,11 +227,7 @@ class Room extends React.PureComponent<Props> {
             </div>
           </div>
           <section className="property__map map">
-            {/* <Map
-              city={currentOffer.city}
-              zoom={currentOffer.cityZoom}
-              offers={offersNearby}
-            /> */}
+            <Map offers={offersNearby} />
           </section>
         </section>
         <div className="container">
@@ -225,100 +236,60 @@ class Room extends React.PureComponent<Props> {
               Other places in the neighbourhood
             </h2>
             <div className="near-places__list places__list">
-              {offersNearby.map((offer, i) => {
-                return (
-                  <OfferCardWrapped key={`${offer.id}+${i}`} cardData={offer} />
-                );
-              })}
+              {offersNearby.map(
+                (offer: OfferInfo, i: number): React.ReactElement => {
+                  return (
+                    <OfferCardWrapped
+                      key={`${offer.id}+${i}`}
+                      cardData={offer}
+                    />
+                  );
+                },
+              )}
             </div>
           </section>
         </div>
       </main>
     );
   }
-
-  static defaultProps = {
-    defaultOffer: {
-      id: -1,
-      city: '',
-      cityZoom: 0,
-      isPremium: false,
-      cityCoords: [],
-      image: '',
-      priceValue: 0,
-      name: '',
-      type: '',
-      coords: [],
-      bedrooms: 0,
-      description: '',
-      goods: [],
-      host: {
-        isPro: false,
-        avatar_url: '',
-        name: '',
-      },
-      images: [],
-      isFavorite: false,
-      location: {},
-      maxAdults: 0,
-      rating: 0,
-    },
-  };
 }
 
-// Room.defaultProps = {
-//   defaultOffer: {
-//     id: -1,
-//     city: "",
-//     cityZoom: 0,
-//     isPremium: false,
-//     cityCoords: [],
-//     image: "",
-//     priceValue: 0,
-//     name: "",
-//     type: "",
-//     coords: [],
-//     bedrooms: 0,
-//     description: "",
-//     goods: [],
-//     host: {
-//       isPro: false,
-//       avatar_url: "",
-//       name: "",
-//     },
-//     images: [],
-//     isFavorite: false,
-//     location: {},
-//     maxAdults: 0,
-//     rating: 0,
-//   },
-// };
-
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: AppStateType) => ({
   offers: getOffers(state),
   reviews: getCurrentOfferReviews(state),
   offersNearby: getCurrentOfferNearby(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  updateReviews(id) {
+  updateReviews(id: number) {
     dispatch(DataOperation.getOfferComments(id));
   },
 
-  postReview(hotelId, reviewData) {
+  postReview(hotelId: number, reviewData: Comment) {
     dispatch(DataOperation.postReview(hotelId, reviewData));
   },
 
-  updateNearby(id) {
+  updateNearby(id: number) {
     dispatch(DataOperation.updateOfferNearby(id));
   },
 
-  handleCurrentOfferUpdate(id) {
+  handleCurrentOfferUpdate(id: number) {
     dispatch(ActionCreator.updateCurrentOffer(id));
   },
 });
 
 export { Room };
-export default withAddFavorites(
-  connect(mapStateToProps, mapDispatchToProps)(Room),
-);
+
+const connectedRoom = connect<
+  StateToPropsTypes,
+  DispatchToPropsTypes,
+  OwnPropsTypes,
+  AppStateType
+>(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Room);
+
+const wrappedRoom = withAddFavorites(connectedRoom);
+
+export default wrappedRoom;

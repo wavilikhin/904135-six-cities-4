@@ -11,14 +11,16 @@ export type DataStore = {
   currentOfferNearby: OfferInfo[];
 };
 
-export type UserState = {
+export type UserStore = {
   authStatus: AuthStatus;
   userEmail: string;
   userFavorites: OfferInfo[];
 };
 
+export type RootStore = DataStore & UserStore & StateStore;
+
 export type Store = {
   [NameSpace.DATA]: DataStore;
   [NameSpace.STATE]: StateStore;
-  [NameSpace.USER]: UserState;
+  [NameSpace.USER]: UserStore;
 };

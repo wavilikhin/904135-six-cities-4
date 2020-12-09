@@ -3,9 +3,9 @@ import { OfferInfo, ReviewItem } from '../../types';
 import NameSpace from '../name-space';
 import { getCity, getSortByValue } from '../state/selectors';
 import { SortBy } from '../state/types';
-import { DataState } from './types';
+import { AppStateType } from '../reducer';
 
-export const getUniqueCities = (state: DataState): string[] => {
+export const getUniqueCities = (state: AppStateType): string[] => {
   return <Array<string>>(
     [
       ...new Set(
@@ -17,19 +17,19 @@ export const getUniqueCities = (state: DataState): string[] => {
   );
 };
 
-export const getOffers = (state: DataState): OfferInfo[] => {
+export const getOffers = (state: AppStateType): OfferInfo[] => {
   return state[NameSpace.DATA].offers;
 };
 
-export const getCurrentOffer = (state: DataState): OfferInfo => {
+export const getCurrentOffer = (state: AppStateType): OfferInfo | {} => {
   return state[NameSpace.DATA].currentOffer;
 };
 
-export const getCurrentOfferReviews = (state: DataState): ReviewItem[] => {
+export const getCurrentOfferReviews = (state: AppStateType): ReviewItem[] => {
   return state[NameSpace.DATA].currentOfferReviews;
 };
 
-export const getCurrentOfferNearby = (state: DataState): OfferInfo[] => {
+export const getCurrentOfferNearby = (state: AppStateType): OfferInfo[] => {
   return state[NameSpace.DATA].currentOfferNearby;
 };
 

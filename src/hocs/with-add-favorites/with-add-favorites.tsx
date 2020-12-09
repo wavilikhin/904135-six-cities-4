@@ -3,18 +3,43 @@ import { connect } from 'react-redux';
 import { Operation as UserOperation } from '../../reducer/user/user';
 import { getUserFavorites } from '../../reducer/user/selectors';
 import { OfferInfo } from '../../types';
+import { AppStateType } from '../../reducer/reducer';
+import { Diff } from 'utility-types';
+import { string } from 'prop-types';
 
-interface Props {
-  getFavorites: () => void;
+type StateToPropsTypes = {
   userFavorites: OfferInfo[];
-  toggleFavorites: (id: number, status: boolean) => void;
-}
+};
+type DispatchToPropsTypes = {
+  toggleFavorites: (id: number, status: number) => void;
+  getFavorites: () => void;
+};
 
-const withAddFavorites = (Component) => {
-  class WithAddFavorites extends React.PureComponent<Props> {
-    props: Props;
+type InjectedPropsTypes = StateToPropsTypes & DispatchToPropsTypes;
 
-    constructor(props) {
+export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
+  Component: React.ComponentType<BasePropsTypes>,
+) => {
+  const mapStateToProps = (state: AppStateType) => ({
+    userFavorites: getUserFavorites(state),
+  });
+
+  const mapDispathcToProps = (dispatch) => ({
+    toggleFavorites(id: number, status: number): void {
+      dispatch(UserOperation.toggleFavorites(id, status));
+    },
+
+    getFavorites(): void {
+      dispatch(UserOperation.getFavorites());
+    },
+  });
+
+  type HocPropsTypes = ReturnType<typeof mapStateToProps> &
+    ReturnType<typeof mapDispathcToProps>;
+  class Hoc extends React.PureComponent<HocPropsTypes> {
+    props: HocPropsTypes;
+
+    constructor(props: HocPropsTypes) {
       super(props);
 
       this._toggleFavorite = this._toggleFavorite.bind(this);
@@ -26,7 +51,7 @@ const withAddFavorites = (Component) => {
     }
 
     _toggleFavorite(id: number): void {
-      let status;
+      let status: number;
       this.props.userFavorites.some((fav) => fav.id === id)
         ? (status = 0)
         : (status = 1);
@@ -38,37 +63,43 @@ const withAddFavorites = (Component) => {
       this._getFavorites();
     }
 
+    static displayName = `withAddFavorites(${Component.name})`;
+
+    static readonly WrappedComponent = Component;
+
     render() {
+      const {
+        getFavorites,
+        toggleFavorites,
+        userFavorites,
+        ...restProps
+      } = this.props;
+
       const favoritesIds = [
         ...new Set(this.props.userFavorites.map((fav) => fav.id)),
       ];
+
       return (
         <Component
-          {...this.props}
-          handleFavoritesUpdate={(id) => {
+          handleFavoritesUpdate={(id: number): void => {
             this._updateFavorites(id);
           }}
           favoritesIds={favoritesIds}
+          {...(restProps as BasePropsTypes)}
         />
       );
     }
   }
 
-  const mapStateToProps = (state) => ({
-    userFavorites: getUserFavorites(state),
-  });
+  const ConnectedHoc = connect<
+    StateToPropsTypes,
+    DispatchToPropsTypes,
+    Diff<BasePropsTypes, InjectedPropsTypes>,
+    AppStateType
+  >(
+    mapStateToProps,
+    mapDispathcToProps,
+  )(Hoc);
 
-  const mapDispathcToProps = (dispatch) => ({
-    toggleFavorites(id, status) {
-      dispatch(UserOperation.toggleFavorites(id, status));
-    },
-
-    getFavorites() {
-      dispatch(UserOperation.getFavorites());
-    },
-  });
-
-  return connect(mapStateToProps, mapDispathcToProps)(WithAddFavorites);
+  return ConnectedHoc;
 };
-
-export default withAddFavorites;

@@ -1,7 +1,12 @@
 import { createOffer } from '../../adapters/offers';
 import { UserState, ActionTypes, UserActionTypes } from './types';
 import { AuthStatus } from '../../const';
-import { OfferInfo } from '../../components/offer-card/offer-card';
+import { OfferInfo } from '../../types';
+import { Dispatch } from 'redux';
+import { AxiosInstance } from 'axios';
+import { ThunkAction } from 'redux-thunk';
+import { AppStateType } from '../reducer';
+import { Cridetials } from '../../components/sign-in/sign-in';
 
 const initialState: UserState = {
   authStatus: AuthStatus.NO_AUTH,
@@ -40,41 +45,56 @@ const ActionCreator = {
 };
 
 const Operation = {
-  updateAuthStatus: () => (dispatch, getState, api) => {
-    return api
-      .get(`/login`)
-      .then((response) => {
-        dispatch(ActionCreator.updateAuthStatus(AuthStatus.AUTH));
-        dispatch(ActionCreator.updateUserEmail(response.data.email));
-      })
-      .catch((err) => {
-        throw err;
-      });
+  updateAuthStatus: (): ThunkAction<
+    Promise<void>,
+    AppStateType,
+    unknown,
+    UserActionTypes
+  > => async (dispatch, _getState, api: AxiosInstance) => {
+    try {
+      const response = await api.get(`/login`);
+      dispatch(ActionCreator.updateAuthStatus(AuthStatus.AUTH));
+      dispatch(ActionCreator.updateUserEmail(response.data.email));
+    } catch (err) {
+      throw err;
+    }
   },
 
-  logIn: (authData) => (dispatch, getState, api) => {
-    return (
-      api
-        .post(`/login`, {
-          email: authData.email,
-          password: authData.password,
-        })
-        .then((response) => {
-          dispatch(ActionCreator.updateAuthStatus(AuthStatus.AUTH));
-          dispatch(ActionCreator.updateUserEmail(response.data.email));
-        })
-        // eslint-disable-next-line no-console
-        .catch((err) => console.error(`Login error: ${err}`))
-    );
-  },
-
-  getFavorites: () => (dispatch, getState, api) => {
-    return api.get(`/favorite`).then((response) => {
-      dispatch(ActionCreator.updateUserFavorites(response.data));
+  logIn: (
+    authData: Cridetials,
+  ): ThunkAction<
+    Promise<void>,
+    AppStateType,
+    unknown,
+    UserActionTypes
+  > => async (dispatch, _getState, api: AxiosInstance) => {
+    const response = await api.post(`/login`, {
+      email: authData.email,
+      password: authData.password,
     });
+    dispatch(ActionCreator.updateAuthStatus(AuthStatus.AUTH));
+    dispatch(ActionCreator.updateUserEmail(response.data.email));
   },
 
-  toggleFavorites: (id, status) => (dispatch, getState, api) => {
+  getFavorites: (): ThunkAction<
+    Promise<void>,
+    AppStateType,
+    unknown,
+    UserActionTypes
+  > =>
+    async function (dispatch, _getState, api: AxiosInstance) {
+      const response = await api.get(`/favorite`);
+      dispatch(ActionCreator.updateUserFavorites(response.data));
+    },
+
+  toggleFavorites: (
+    id: number,
+    status: number,
+  ): ThunkAction<Promise<void>, AppStateType, unknown, UserActionTypes> => (
+    _dispatch,
+    _getState,
+    api: AxiosInstance,
+  ) => {
     return api.post(`/favorite/${id}/${status}`);
   },
 };

@@ -9,13 +9,21 @@ import { getOffers } from '../../reducer/data/selectors';
 import { getAuthStatus, getUserEmail } from '../../reducer/user/selectors';
 import { AppRoutes } from '../../const';
 import { OfferInfo } from '../../types';
+import { AppStateType } from '../../reducer/reducer';
+import { AuthStatus } from '../../reducer/user/user';
+import { Dispatch } from 'redux';
 
-interface Props {
+type StateToPropsTypes = {
   offersDataArray: OfferInfo[];
-  handleCityChange: (city: string) => void;
-  authStatus: string;
+  authStatus: AuthStatus;
   userEmail: string;
-}
+};
+
+type DispathcToPropsTypes = {
+  handleCityChange: (city: string) => void;
+};
+
+type Props = StateToPropsTypes & DispathcToPropsTypes;
 
 class Main extends React.PureComponent<Props> {
   props: Props;
@@ -92,17 +100,25 @@ class Main extends React.PureComponent<Props> {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: AppStateType) => ({
   offersDataArray: getOffers(state),
   authStatus: getAuthStatus(state),
   userEmail: getUserEmail(state),
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  handleCityChange(city) {
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  handleCityChange(city: string) {
     dispatch(ActionCreator.changeCiy(city));
   },
 });
 
 export { Main };
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect<
+  StateToPropsTypes,
+  DispathcToPropsTypes,
+  {},
+  AppStateType
+>(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Main);

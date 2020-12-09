@@ -1,7 +1,9 @@
 import { AxiosInstance } from 'axios';
 import { Dispatch } from 'redux';
+import { ThunkAction } from 'redux-thunk';
 import { createOffer } from '../../adapters/offers';
 import { OfferInfo, ReviewItem, Comment } from '../../types';
+import { AppStateType } from '../reducer';
 // TODO: Подумать над тем что должно находиться в редьюсере с Датой а что со Стейтом
 import {
   DataState,
@@ -66,40 +68,48 @@ const ActionCreator = {
 };
 
 const Operation = {
-  updateOffers: () => async (
-    dispatch: Dispatch,
-    getState,
-    api: AxiosInstance,
-  ): Promise<any> => {
+  updateOffers: (): ThunkAction<
+    Promise<void>,
+    AppStateType,
+    unknown,
+    DataActions
+  > => async (dispatch, _getState, api: AxiosInstance): Promise<void> => {
     const getOffersRequest = await api.get(`/hotels`);
     dispatch(ActionCreator.updateOffers(getOffersRequest.data));
   },
 
-  getOfferComments: (id: number) => async (
-    dispatch: Dispatch,
-    getState,
+  getOfferComments: (
+    id: number,
+  ): ThunkAction<Promise<void>, AppStateType, unknown, DataActions> => async (
+    dispatch,
+    _getState,
     api: AxiosInstance,
-  ): Promise<any> => {
+  ) => {
     const getOfferCommentsRequest = await api.get(`/comments/${id}`);
     dispatch(
       ActionCreator.updateCurrentOfferReviews(getOfferCommentsRequest.data),
     );
   },
 
-  updateOfferNearby: (id: number) => async (
-    dispatch: Dispatch,
-    getState,
+  updateOfferNearby: (
+    id: number,
+  ): ThunkAction<Promise<void>, AppStateType, unknown, DataActions> => async (
+    dispatch,
+    _getState,
     api: AxiosInstance,
-  ): Promise<any> => {
+  ) => {
     const updateOfferNearbyRequest = await api.get(`/hotels/${id}/nearby`);
     dispatch(
       ActionCreator.updateCurrentOfferNearby(updateOfferNearbyRequest.data),
     );
   },
 
-  postReview: (hotelId: number, reviewData: Comment) => async (
-    dispatch: Dispatch,
-    getState,
+  postReview: (
+    hotelId: number,
+    reviewData: Comment,
+  ): ThunkAction<Promise<void>, AppStateType, unknown, DataActions> => async (
+    dispatch,
+    _getState,
     api: AxiosInstance,
   ) => {
     const postReviewRequest = await api.post(`/comments/${hotelId}`, {

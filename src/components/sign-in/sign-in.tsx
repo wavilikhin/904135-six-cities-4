@@ -3,14 +3,18 @@ import { connect } from 'react-redux';
 import { Operation as UserOperation } from '../../reducer/user/user';
 import history from '../../history';
 import { AppRoutes } from '../../const';
+import { AppStateType } from '../../reducer/reducer';
 
-type Cridetials = {
+export type Cridetials = {
   email: string;
   password: string;
 };
-interface Props {
-  onSubmit(authData: Cridetials): void;
-}
+
+type DispatchToPropsTypes = {
+  onSubmit: (authData: Cridetials) => void;
+};
+
+type Props = DispatchToPropsTypes;
 
 type State = Cridetials;
 class SignIn extends PureComponent<Props, State> {
@@ -149,4 +153,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export { SignIn };
-export default connect(null, mapDispatchToProps)(SignIn);
+export default connect<{}, DispatchToPropsTypes, {}, AppStateType>(
+  null,
+  mapDispatchToProps,
+)(SignIn);

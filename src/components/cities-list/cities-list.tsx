@@ -2,7 +2,10 @@ import * as React from 'react';
 
 import { connect } from 'react-redux';
 import { ActionCreator as StateActionCreator } from '../../reducer/state/state';
-import { getCity, getUniqueCities } from '../../reducer/data/selectors';
+import { getUniqueCities } from '../../reducer/data/selectors';
+import { getCity } from '../../reducer/state/selectors';
+import { Dispatch } from 'redux';
+import { AppStateType } from '../../reducer/reducer';
 
 interface Props {
   currentCity: string;
@@ -39,13 +42,13 @@ const CitiesList: React.FC<Props> = React.memo(
   },
 );
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: AppStateType) => ({
   currentCity: getCity(state),
   uniqueCities: getUniqueCities(state),
 });
 
-const mapDispathcToProps = (dispatch) => ({
-  handleCityChange(city) {
+const mapDispathcToProps = (dispatch: Dispatch) => ({
+  handleCityChange(city: string) {
     dispatch(StateActionCreator.changeCiy(city));
   },
 });

@@ -10,6 +10,7 @@ const rootReducer = combineReducers({
   [NameSpace.USER]: user,
 });
 
-type RootReducer = ReturnType<typeof rootReducer>;
+type RootReducer = typeof rootReducer;
+type AppStateType = ReturnType<RootReducer>;
 
-export { rootReducer, RootReducer };
+export { rootReducer, AppStateType };

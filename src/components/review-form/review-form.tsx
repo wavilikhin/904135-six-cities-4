@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Comment } from '../../types';
 interface Props {
-  hotelId: string;
+  hotelId: number;
   handleSubmit: (hotelId: number, obj: Comment) => void;
 }
 
@@ -48,7 +48,7 @@ class ReviewForm extends React.PureComponent<Props, State> {
     if (this.state.raiting == null) return console.log(`Raiting null`);
 
     // TODO Доделать отчистку формы (использовать рефсы?)
-    this.props.handleSubmit(parseInt(this.props.hotelId, 10), {
+    this.props.handleSubmit(this.props.hotelId, {
       comment: this.state.text,
       raiting: this.state.raiting,
     });

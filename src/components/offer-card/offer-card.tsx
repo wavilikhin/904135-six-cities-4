@@ -90,4 +90,4 @@ class OfferCard extends React.PureComponent<Props> {
   }
 }
 
-export { OfferCard, OfferInfo };
+export { OfferCard };

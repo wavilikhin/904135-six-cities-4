@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { getSortedFiltredOffers } from '../../reducer/data/selectors';
-import withAddFavorites from '../../hocs/with-add-favorites/with-add-favorites';
-import { OfferCard, OfferInfo } from '../offer-card/offer-card';
+import { withAddFavorites } from '../../hocs/with-add-favorites/with-add-favorites';
+import { OfferCard } from '../offer-card/offer-card';
+import { OfferInfo } from '../../types';
 const OfferCardWrapped = withAddFavorites(OfferCard);
 
 interface Props {

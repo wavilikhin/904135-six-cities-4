@@ -1,16 +1,16 @@
 import NameSpace from '../name-space';
 import { AuthStatus } from '../../const';
-import { UserState } from './types';
 import { OfferInfo } from '../../types';
+import { AppStateType } from '../reducer';
 
-export const getAuthStatus = (state: UserState): AuthStatus => {
+export const getAuthStatus = (state: AppStateType): AuthStatus => {
   return state[NameSpace.USER].authStatus;
 };
 
-export const getUserEmail = (state: UserState): string => {
+export const getUserEmail = (state: AppStateType): string => {
   return state[NameSpace.USER].userEmail;
 };
 
-export const getUserFavorites = (state: UserState): OfferInfo[] => {
+export const getUserFavorites = (state: AppStateType): OfferInfo[] => {
   return state[NameSpace.USER].userFavorites;
 };
