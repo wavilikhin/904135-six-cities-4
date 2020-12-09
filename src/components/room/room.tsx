@@ -290,6 +290,7 @@ const connectedRoom = connect<
   mapDispatchToProps,
 )(Room);
 
+// Ненужно коннектить его к сторе, так как стор доступна из хока
 const wrappedRoom = withAddFavorites(connectedRoom);
 
 export default wrappedRoom;
