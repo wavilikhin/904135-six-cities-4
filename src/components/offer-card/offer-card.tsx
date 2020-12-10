@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { OfferInfo } from '../../types';
 
 interface Props {
+  key: string;
   cardData: OfferInfo;
   handleFavoritesUpdate: (id: number) => void;
   favoritesIds: number[];
@@ -11,7 +12,7 @@ interface Props {
 class OfferCard extends React.PureComponent<Props> {
   props: Props;
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
 
     this._handleUpdateFavorites = this._handleUpdateFavorites.bind(this);

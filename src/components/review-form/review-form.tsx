@@ -13,7 +13,7 @@ class ReviewForm extends React.PureComponent<Props, State> {
   props: Props;
   state: State;
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
 
     this.state = {
@@ -26,19 +26,22 @@ class ReviewForm extends React.PureComponent<Props, State> {
     this._handleSubmit = this._handleSubmit.bind(this);
   }
 
-  _handleTextChange(evt): void {
+  // FIXME: Event type
+  _handleTextChange(evt: any): void {
     this.setState({
       text: evt.target.value,
     });
   }
 
-  _handleRaitingChange(evt): void {
+  // FIXME: Event type
+  _handleRaitingChange(evt: any): void {
     this.setState({
       raiting: evt.target.value,
     });
   }
 
-  _handleSubmit(e): void {
+  // FIXME: Event type
+  _handleSubmit(e: any): void {
     e.preventDefault();
     // TODO Доделать оповещение об ошибке
     if (this.state.text.replace(/\s/g, '').length < 50)

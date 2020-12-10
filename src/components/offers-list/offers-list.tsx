@@ -32,4 +32,5 @@ const mapStateToProps = (state) => ({
 
 export { OffersList };
 
+// FIXME: Убрать коннект к стору , переработать HOC
 export default connect(mapStateToProps, null)(OffersList);

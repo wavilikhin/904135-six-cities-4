@@ -6,12 +6,18 @@ import { getUniqueCities } from '../../reducer/data/selectors';
 import { getCity } from '../../reducer/state/selectors';
 import { Dispatch } from 'redux';
 import { AppStateType } from '../../reducer/reducer';
+import { AppActionCreator } from '../../reducer/types';
 
-interface Props {
+type StateToPropsTypes = {
   currentCity: string;
   uniqueCities: string[];
+};
+
+type DispatchToPropsTypes = {
   handleCityChange: (city: string) => void;
-}
+};
+
+type Props = StateToPropsTypes & DispatchToPropsTypes;
 
 const CitiesList: React.FC<Props> = React.memo(
   ({ currentCity, uniqueCities, handleCityChange }) => {
@@ -47,7 +53,8 @@ const mapStateToProps = (state: AppStateType) => ({
   uniqueCities: getUniqueCities(state),
 });
 
-const mapDispathcToProps = (dispatch: Dispatch) => ({
+// FIXME: Dispatch type
+const mapDispathcToProps = (dispatch: Dispatch<AppActionCreator>) => ({
   handleCityChange(city: string) {
     dispatch(StateActionCreator.changeCiy(city));
   },
@@ -55,4 +62,12 @@ const mapDispathcToProps = (dispatch: Dispatch) => ({
 
 export { CitiesList };
 
-export default connect(mapStateToProps, mapDispathcToProps)(CitiesList);
+export default connect<
+  StateToPropsTypes,
+  DispatchToPropsTypes,
+  {},
+  AppStateType
+>(
+  mapStateToProps,
+  mapDispathcToProps,
+)(CitiesList);

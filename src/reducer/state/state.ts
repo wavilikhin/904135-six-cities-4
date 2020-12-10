@@ -1,11 +1,11 @@
 import {
-  StateStore,
   StateActionTypes,
   StateActions,
   ChangeCityActionType,
   UpdateSortByActionType,
-  SortBy,
 } from './types';
+
+import { SortBy, StateStore } from '../types';
 
 const initialState: StateStore = {
   city: ``,

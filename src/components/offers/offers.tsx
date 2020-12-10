@@ -7,11 +7,14 @@ import { getCity } from '../../reducer/state/selectors';
 import MainEmpty from '../main-empty/main-empty';
 import PlaceSorting from '../place-sorting/place-sorting';
 import { OfferInfo } from '../../types';
+import { AppStateType } from '../../reducer/reducer';
 
-interface Props {
-  filtredOffers: OfferInfo[];
+type StateToPropsTypes = {
   city: string;
-}
+  filtredOffers: OfferInfo[];
+};
+
+type Props = StateToPropsTypes;
 
 const Offers: React.FC<Props> = ({ filtredOffers, city }) => {
   return (
@@ -39,10 +42,13 @@ const Offers: React.FC<Props> = ({ filtredOffers, city }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: AppStateType) => ({
   city: getCity(state),
   filtredOffers: getFiltredOffers(state),
 });
 
 export { Offers };
-export default connect(mapStateToProps, null)(Offers);
+export default connect<StateToPropsTypes, {}, {}, AppStateType>(
+  mapStateToProps,
+  null,
+)(Offers);

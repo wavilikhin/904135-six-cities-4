@@ -1,51 +1,45 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import {
-  Operation as DataOperation,
-  ActionCreator,
-} from '../../reducer/data/data';
-import {
-  getCurrentOfferReviews,
-  getCurrentOfferNearby,
-  getOffers,
-} from '../../reducer/data/selectors';
 import ReviewsList from '../reviews-list/reviews-list';
 import ReviewForm from '../review-form/review-form';
 import { OfferCard } from '../offer-card/offer-card';
 import Map from '../map/map';
 import { withAddFavorites } from '../../hocs/with-add-favorites/with-add-favorites';
-const OfferCardWrapped = withAddFavorites(OfferCard);
-import { ReviewItem, OfferInfo, Comment } from '../../types';
+import { OfferInfo, Comment, ReviewItem } from '../../types';
+import { connect } from 'react-redux';
 import { AppStateType } from '../../reducer/reducer';
-import { match, RouteComponentProps } from 'react-router-dom';
+import {
+  getCurrentOfferNearby,
+  getCurrentOfferReviews,
+  getOffers,
+} from '../../reducer/data/selectors';
+import {
+  Operation as DataOperation,
+  ActionCreator,
+} from '../../reducer/data/data';
+
+const OfferCardWrapped = withAddFavorites(OfferCard);
+
+type OwnPropsType = {
+  offerId: number;
+  favoritesIds: number[];
+  handleFavoritesUpdate: (id: number) => void;
+};
 
 type StateToPropsTypes = {
   offers: OfferInfo[];
   reviews: ReviewItem[];
   offersNearby: OfferInfo[];
 };
-
 type DispatchToPropsTypes = {
-  updateReviews: (reviewId: number) => void;
+  updateReviews: (id: number) => void;
 
   postReview: (hotelId: number, reviewData: Comment) => void;
 
-  updateNearby: (offerId: number) => void;
-
-  handleCurrentOfferUpdate: (offerId: number) => void;
+  updateNearby: (id: number) => void;
+  handleCurrentOfferUpdate: (id: number) => void;
 };
 
-type RouteParams = {
-  id: string;
-};
-
-type OwnPropsTypes = {
-  match: match<RouteParams>;
-  favoritesIds: number[];
-  handleFavoritesUpdate: (id: number) => void;
-};
-
-type Props = StateToPropsTypes & DispatchToPropsTypes & OwnPropsTypes;
+type Props = OwnPropsType & StateToPropsTypes & DispatchToPropsTypes;
 
 class Room extends React.PureComponent<Props> {
   props: Props;
@@ -88,9 +82,9 @@ class Room extends React.PureComponent<Props> {
   }
 
   componentDidMount() {
-    this.props.handleCurrentOfferUpdate(Number(this.props.match.params.id));
-    this._updateReviews(Number(this.props.match.params.id));
-    this._updateNearby(Number(this.props.match.params.id));
+    this.props.handleCurrentOfferUpdate(Number(this.props.offerId));
+    this._updateReviews(Number(this.props.offerId));
+    this._updateNearby(Number(this.props.offerId));
   }
 
   render() {
@@ -100,10 +94,8 @@ class Room extends React.PureComponent<Props> {
       reviews = [],
       offersNearby,
       favoritesIds,
-      match,
+      offerId,
     } = this.props;
-
-    const offerId = Number(match.params.id);
 
     let currentOffer = offers.find((offer) => offer.id == offerId);
 
@@ -260,37 +252,25 @@ const mapStateToProps = (state: AppStateType) => ({
   offersNearby: getCurrentOfferNearby(state),
 });
 
+// TODO: Type
 const mapDispatchToProps = (dispatch) => ({
-  updateReviews(id: number) {
-    dispatch(DataOperation.getOfferComments(id));
+  updateReviews(id) {
+    dispatch(ActionCreator.updateCurrentOfferReviews(id));
   },
 
-  postReview(hotelId: number, reviewData: Comment) {
+  postReview(hotelId, reviewData) {
     dispatch(DataOperation.postReview(hotelId, reviewData));
   },
 
-  updateNearby(id: number) {
-    dispatch(DataOperation.updateOfferNearby(id));
+  updateNearby(id) {
+    dispatch(ActionCreator.updateCurrentOfferNearby(id));
   },
 
-  handleCurrentOfferUpdate(id: number) {
+  handleCurrentOfferUpdate(id) {
     dispatch(ActionCreator.updateCurrentOffer(id));
   },
 });
 
 export { Room };
 
-const connectedRoom = connect<
-  StateToPropsTypes,
-  DispatchToPropsTypes,
-  OwnPropsTypes,
-  AppStateType
->(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Room);
-
-// Ненужно коннектить его к сторе, так как стор доступна из хока
-const wrappedRoom = withAddFavorites(connectedRoom);
-
-export default wrappedRoom;
+export default connect(mapStateToProps, mapDispatchToProps)(Room);

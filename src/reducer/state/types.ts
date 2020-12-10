@@ -1,4 +1,4 @@
-export type SortBy = 'highToLow' | 'lowToHigh' | 'popular' | 'topRatedFirst';
+import { SortBy } from '../types';
 
 const CHANGE_CITY = `CHANGE_CITY`;
 const CHANGE_SORT_BY = `CHANGE_SORT_BY`;
@@ -9,7 +9,7 @@ export type StateActionTypes = {
 };
 
 export type ChangeCityActionType = {
-  type: typeof CHANGE_CITY;
+  type: string;
   payload: string;
 };
 
@@ -19,8 +19,3 @@ export type UpdateSortByActionType = {
 };
 
 export type StateActions = ChangeCityActionType | UpdateSortByActionType;
-
-export type StateStore = {
-  city: string;
-  sortBy: SortBy;
-};

@@ -2,20 +2,34 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { Operation as UserOperation } from '../../reducer/user/user';
 import { getUserFavorites } from '../../reducer/user/selectors';
-import { OfferInfo } from '../../types';
+import { OfferInfo, ReviewItem, Comment } from '../../types';
 import { AppStateType } from '../../reducer/reducer';
 import { Diff } from 'utility-types';
-import { string } from 'prop-types';
+import {
+  getCurrentOfferNearby,
+  getCurrentOfferReviews,
+  getOffers,
+} from '../../reducer/data/selectors';
+import {
+  Operation as DataOperation,
+  ActionCreator,
+} from '../../reducer/data/data';
+
+type PassedPropsTypes = any;
 
 type StateToPropsTypes = {
   userFavorites: OfferInfo[];
 };
 type DispatchToPropsTypes = {
   toggleFavorites: (id: number, status: number) => void;
+
   getFavorites: () => void;
 };
 
-type InjectedPropsTypes = StateToPropsTypes & DispatchToPropsTypes;
+type InjectedPropsTypes = {
+  handleFavoritesUpdate: (id: number) => void;
+  favoritesIds: number[];
+};
 
 export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
   Component: React.ComponentType<BasePropsTypes>,
@@ -24,6 +38,7 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
     userFavorites: getUserFavorites(state),
   });
 
+  // TODO: Remove <any>
   const mapDispathcToProps = (dispatch) => ({
     toggleFavorites(id: number, status: number): void {
       dispatch(UserOperation.toggleFavorites(id, status));
@@ -35,7 +50,8 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
   });
 
   type HocPropsTypes = ReturnType<typeof mapStateToProps> &
-    ReturnType<typeof mapDispathcToProps>;
+    ReturnType<typeof mapDispathcToProps> &
+    PassedPropsTypes;
   class Hoc extends React.PureComponent<HocPropsTypes> {
     props: HocPropsTypes;
 
@@ -72,9 +88,10 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
         getFavorites,
         toggleFavorites,
         userFavorites,
-        ...restProps
+        ...propsToPass
       } = this.props;
 
+      // TODO: Type
       const favoritesIds = [
         ...new Set(this.props.userFavorites.map((fav) => fav.id)),
       ];
@@ -85,7 +102,7 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
             this._updateFavorites(id);
           }}
           favoritesIds={favoritesIds}
-          {...(restProps as BasePropsTypes)}
+          {...(propsToPass as BasePropsTypes)}
         />
       );
     }

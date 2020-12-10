@@ -2,7 +2,7 @@ import { createSelector } from 'reselect';
 import { OfferInfo, ReviewItem } from '../../types';
 import NameSpace from '../name-space';
 import { getCity, getSortByValue } from '../state/selectors';
-import { SortBy } from '../state/types';
+import { SortBy } from '../types';
 import { AppStateType } from '../reducer';
 
 export const getUniqueCities = (state: AppStateType): string[] => {

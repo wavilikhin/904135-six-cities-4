@@ -1,4 +1,5 @@
-import React, { PureComponent } from 'react';
+import * as React from 'react';
+import { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { Operation as UserOperation } from '../../reducer/user/user';
 import history from '../../history';

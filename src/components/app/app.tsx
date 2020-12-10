@@ -1,10 +1,13 @@
 import * as React from 'react';
-import { Router, Switch, Route, RouteComponentProps } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import Main from '../main/main';
 import SignIn from '../sign-in/sign-in';
 import Room from '../room/room';
+import { withAddFavorites } from '../../hocs/with-add-favorites/with-add-favorites';
 import { AppRoutes } from '../../const';
 import history from '../../history';
+
+const RoomWrapped = withAddFavorites(Room);
 
 const App: React.FC = () => {
   return (
@@ -27,8 +30,8 @@ const App: React.FC = () => {
         <Route
           path={AppRoutes.ROOM}
           exact
-          render={(): React.ReactNode => {
-            return <Room />;
+          render={(props): React.ReactNode => {
+            return <RoomWrapped offerId={Number(props.match.params.id)} />;
           }}
         />
       </Switch>

@@ -28,7 +28,7 @@ type Props = StateToPropsTypes & DispathcToPropsTypes;
 class Main extends React.PureComponent<Props> {
   props: Props;
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
 
     this._updateCurrentCity = this._updateCurrentCity.bind(this);
@@ -106,6 +106,7 @@ const mapStateToProps = (state: AppStateType) => ({
   userEmail: getUserEmail(state),
 });
 
+// FIXME: Dispatch type
 const mapDispatchToProps = (dispatch: Dispatch) => ({
   handleCityChange(city: string) {
     dispatch(ActionCreator.changeCiy(city));

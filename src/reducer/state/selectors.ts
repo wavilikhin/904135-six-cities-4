@@ -1,5 +1,5 @@
 import NameSpace from '../name-space';
-import { SortBy } from './types';
+import { SortBy } from '../types';
 import { AppStateType } from '../reducer';
 
 export const getCity = (state: AppStateType): string => {

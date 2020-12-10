@@ -1,7 +1,5 @@
 import { AuthStatus } from '../../const';
 import { OfferInfo } from '../../types';
-import { Action } from 'redux';
-import { ThunkAction } from 'redux-thunk';
 
 export interface UserState {
   authStatus: AuthStatus;
@@ -41,10 +39,3 @@ export type UserActionTypes =
   | UpdateUserEmailAction
   | ToggleFavoriteAction
   | UpdateUserFavoritesAction;
-
-// export type AppThunk<ReturnType = void> = ThunkAction<
-//   ReturnType,
-//   UserState,
-//   null | undefined,
-//   Action<UserActionTypes['type']>
-// >;

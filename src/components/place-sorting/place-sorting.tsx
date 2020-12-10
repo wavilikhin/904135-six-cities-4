@@ -1,20 +1,23 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { AppStateType } from '../../reducer/reducer';
 import { ActionCreator } from '../../reducer/state/state';
 
-interface Props {
+type DispatchToPropsTypes = {
   sortBy: (value: string) => void;
-}
+};
 
-interface State {
+type Props = DispatchToPropsTypes;
+
+type State = {
   isSortSecletOpen: boolean;
   sortBy: string;
-}
+};
 class PlaceSorting extends React.PureComponent<Props, State> {
   props: Props;
   state: State;
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
 
     this._handleSort = this._handleSort.bind(this);
@@ -122,6 +125,7 @@ class PlaceSorting extends React.PureComponent<Props, State> {
   }
 }
 
+// FIXME: Dispatch value
 const mapDispatchToProps = (dispatch) => ({
   sortBy(value) {
     dispatch(ActionCreator.updateSortBy(value));
@@ -130,4 +134,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 export { PlaceSorting };
 
-export default connect(null, mapDispatchToProps)(PlaceSorting);
+export default connect<{}, DispatchToPropsTypes, {}, AppStateType>(
+  null,
+  mapDispatchToProps,
+)(PlaceSorting);
