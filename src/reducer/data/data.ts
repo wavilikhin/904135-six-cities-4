@@ -45,7 +45,7 @@ const initialState: DataState = {
         zoom: 0,
       },
       maxAdults: 0,
-      raiting: 0,
+      rating: 0,
       adapted: true,
     },
   ],
@@ -77,7 +77,7 @@ const initialState: DataState = {
       zoom: 0,
     },
     maxAdults: 0,
-    raiting: 0,
+    rating: 0,
     adapted: true,
   },
   currentOfferReviews: [
@@ -85,7 +85,7 @@ const initialState: DataState = {
       comment: '',
       id: 2,
       date: '',
-      raiting: 0,
+      rating: 0,
       user: {
         avatar_url: '',
         id: 0,
@@ -123,7 +123,7 @@ const initialState: DataState = {
         zoom: 0,
       },
       maxAdults: 0,
-      raiting: 0,
+      rating: 0,
       adapted: true,
     },
     {
@@ -154,7 +154,7 @@ const initialState: DataState = {
         zoom: 0,
       },
       maxAdults: 0,
-      raiting: 0,
+      rating: 0,
       adapted: true,
     },
     {
@@ -185,7 +185,7 @@ const initialState: DataState = {
         zoom: 0,
       },
       maxAdults: 0,
-      raiting: 0,
+      rating: 0,
       adapted: true,
     },
   ],
@@ -284,7 +284,7 @@ const Operation = {
   ) => {
     const postReviewRequest = await api.post(`/comments/${hotelId}`, {
       comment: reviewData.comment,
-      rating: reviewData.raiting,
+      rating: reviewData.rating,
     });
     dispatch(ActionCreator.updateCurrentOfferReviews(postReviewRequest.data));
   },

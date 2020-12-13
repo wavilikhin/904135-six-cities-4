@@ -55,7 +55,7 @@ export const getSortedFiltredOffers = createSelector(
         return [...filtredOffers].sort((a, b) => a.priceValue - b.priceValue);
 
       case `topRatedFirst`:
-        return [...filtredOffers].sort((a, b) => b.raiting - a.raiting);
+        return [...filtredOffers].sort((a, b) => b.rating - a.rating);
 
       default:
         return [...filtredOffers].sort(

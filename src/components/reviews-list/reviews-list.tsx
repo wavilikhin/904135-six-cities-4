@@ -22,7 +22,7 @@ const ReviewsList: React.FC<Props> = ({ reviews }) => {
                 comment={review.comment}
                 id={review.id}
                 date={review.date}
-                raiting={review.raiting}
+                rating={review.rating}
                 user={review.user}
               />
             );

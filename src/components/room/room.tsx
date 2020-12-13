@@ -92,15 +92,13 @@ class Room extends React.Component<Props> {
     // TODO: Если оффер не найден по номеру показывать заглушку
     let { offers, reviews, offersNearby, favoritesIds, offerId } = this.props;
 
-    console.log(offersNearby);
-
     let currentOffer = offers.find(
       (offer) => Number(offer.id) === Number(offerId),
     );
 
     let ratingStars: number;
     currentOffer
-      ? (ratingStars = currentOffer.raiting * 2 * 10)
+      ? (ratingStars = currentOffer.rating * 2 * 10)
       : (ratingStars = 0);
 
     return (
@@ -160,7 +158,7 @@ class Room extends React.Component<Props> {
                       <span className="visually-hidden">Rating</span>
                     </div>
                     <span className="property__rating-value rating__value">
-                      {currentOffer.raiting}
+                      {currentOffer.rating}
                     </span>
                   </div>
                   <ul className="property__features">

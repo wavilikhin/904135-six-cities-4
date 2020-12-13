@@ -3,13 +3,13 @@ import { ReviewItem } from '../../types';
 
 type Props = ReviewItem;
 
-const ReviewItem: React.FC<Props> = ({ comment, date, raiting, user }) => {
+const ReviewItem: React.FC<Props> = ({ comment, date, rating, user }) => {
   const formatedDate = `
     ${new Date(date).getUTCFullYear()}-${
     new Date(date).getUTCMonth() + 1
   }-${new Date(date).getUTCDate()}
   `;
-  const ratingStars = raiting * 2 * 10;
+  const ratingStars = rating * 2 * 10;
   return (
     <li className="reviews__item">
       <div className="reviews__user user">

@@ -7,7 +7,7 @@ interface Props {
 
 interface State {
   text: string;
-  raiting: number;
+  rating: number;
 }
 class ReviewForm extends React.PureComponent<Props, State> {
   props: Props;
@@ -18,11 +18,11 @@ class ReviewForm extends React.PureComponent<Props, State> {
 
     this.state = {
       text: '',
-      raiting: null,
+      rating: null,
     };
 
     this._handleTextChange = this._handleTextChange.bind(this);
-    this._handleRaitingChange = this._handleRaitingChange.bind(this);
+    this._handleRatingChange = this._handleRatingChange.bind(this);
     this._handleSubmit = this._handleSubmit.bind(this);
   }
 
@@ -34,9 +34,9 @@ class ReviewForm extends React.PureComponent<Props, State> {
   }
 
   // FIXME: Event type
-  _handleRaitingChange(evt: any): void {
+  _handleRatingChange(evt: any): void {
     this.setState({
-      raiting: evt.target.value,
+      rating: evt.target.value,
     });
   }
 
@@ -48,17 +48,17 @@ class ReviewForm extends React.PureComponent<Props, State> {
       return console.log(`2short`);
 
     // TODO Доделать оповещение об ошибке
-    if (this.state.raiting == null) return console.log(`Raiting null`);
+    if (this.state.rating == null) return console.log(`Rating null`);
 
     // TODO Доделать отчистку формы (использовать рефсы?)
     this.props.handleSubmit(this.props.hotelId, {
       comment: this.state.text,
-      raiting: this.state.raiting,
+      rating: this.state.rating,
     });
 
     this.setState({
       text: '',
-      raiting: null,
+      rating: null,
     });
   }
 
@@ -75,7 +75,7 @@ class ReviewForm extends React.PureComponent<Props, State> {
             defaultValue={5}
             id="5-stars"
             type="radio"
-            onChange={this._handleRaitingChange}
+            onChange={this._handleRatingChange}
           />
           <label
             htmlFor="5-stars"
@@ -92,7 +92,7 @@ class ReviewForm extends React.PureComponent<Props, State> {
             defaultValue={4}
             id="4-stars"
             type="radio"
-            onChange={this._handleRaitingChange}
+            onChange={this._handleRatingChange}
           />
           <label
             htmlFor="4-stars"
@@ -109,7 +109,7 @@ class ReviewForm extends React.PureComponent<Props, State> {
             defaultValue={3}
             id="3-stars"
             type="radio"
-            onChange={this._handleRaitingChange}
+            onChange={this._handleRatingChange}
           />
           <label
             htmlFor="3-stars"
@@ -126,7 +126,7 @@ class ReviewForm extends React.PureComponent<Props, State> {
             defaultValue={2}
             id="2-stars"
             type="radio"
-            onChange={this._handleRaitingChange}
+            onChange={this._handleRatingChange}
           />
           <label
             htmlFor="2-stars"
@@ -143,7 +143,7 @@ class ReviewForm extends React.PureComponent<Props, State> {
             defaultValue={1}
             id="1-star"
             type="radio"
-            onChange={this._handleRaitingChange}
+            onChange={this._handleRatingChange}
           />
           <label
             htmlFor="1-star"

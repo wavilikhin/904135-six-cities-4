@@ -44,7 +44,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 6,
-    raiting: 2.4,
+    rating: 2.4,
     adapted: true,
   },
   {
@@ -90,7 +90,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 7,
-    raiting: 3.1,
+    rating: 3.1,
     adapted: true,
   },
   {
@@ -147,7 +147,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 6,
-    raiting: 4.4,
+    rating: 4.4,
     adapted: true,
   },
   {
@@ -202,7 +202,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 8,
-    raiting: 4.6,
+    rating: 4.6,
     adapted: true,
   },
   {
@@ -259,7 +259,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 2,
-    raiting: 3.5,
+    rating: 3.5,
     adapted: true,
   },
   {
@@ -313,7 +313,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 3,
-    raiting: 2.9,
+    rating: 2.9,
     adapted: true,
   },
   {
@@ -359,7 +359,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 8,
-    raiting: 3.3,
+    rating: 3.3,
     adapted: true,
   },
   {
@@ -410,7 +410,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 7,
-    raiting: 4.3,
+    rating: 4.3,
     adapted: true,
   },
   {
@@ -465,7 +465,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 1,
-    raiting: 2.2,
+    rating: 2.2,
     adapted: true,
   },
   {
@@ -522,7 +522,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 2,
-    raiting: 4.6,
+    rating: 4.6,
     adapted: true,
   },
   {
@@ -574,7 +574,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 7,
-    raiting: 3.5,
+    rating: 3.5,
     adapted: true,
   },
   {
@@ -629,7 +629,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 2,
-    raiting: 2.4,
+    rating: 2.4,
     adapted: true,
   },
   {
@@ -675,7 +675,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 5,
-    raiting: 5,
+    rating: 5,
 
     adapted: true,
   },
@@ -722,7 +722,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 7,
-    raiting: 4.7,
+    rating: 4.7,
     adapted: true,
   },
   {
@@ -774,7 +774,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 6,
-    raiting: 2.9,
+    rating: 2.9,
     adapted: true,
   },
   {
@@ -820,7 +820,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 9,
-    raiting: 3.7,
+    rating: 3.7,
     adapted: true,
   },
   {
@@ -875,7 +875,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 7,
-    raiting: 4.6,
+    rating: 4.6,
     adapted: true,
   },
   {
@@ -926,7 +926,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 3,
-    raiting: 4.4,
+    rating: 4.4,
     adapted: true,
   },
   {
@@ -977,7 +977,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 7,
-    raiting: 2.2,
+    rating: 2.2,
     adapted: true,
   },
   {
@@ -1034,7 +1034,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 3,
-    raiting: 4.3,
+    rating: 4.3,
     adapted: true,
   },
   {
@@ -1087,7 +1087,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 5,
-    raiting: 2.7,
+    rating: 2.7,
     adapted: true,
   },
   {
@@ -1140,7 +1140,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 2,
-    raiting: 3.8,
+    rating: 3.8,
     adapted: true,
   },
   {
@@ -1192,7 +1192,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 8,
-    raiting: 2.7,
+    rating: 2.7,
     adapted: true,
   },
   {
@@ -1249,7 +1249,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 1,
-    raiting: 2.9,
+    rating: 2.9,
     adapted: true,
   },
   {
@@ -1306,7 +1306,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 2,
-    raiting: 4.5,
+    rating: 4.5,
     adapted: true,
   },
   {
@@ -1352,7 +1352,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 10,
-    raiting: 3.6,
+    rating: 3.6,
     adapted: true,
   },
   {
@@ -1405,7 +1405,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 7,
-    raiting: 4.4,
+    rating: 4.4,
     adapted: true,
   },
   {
@@ -1457,7 +1457,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 10,
-    raiting: 3.2,
+    rating: 3.2,
     adapted: true,
   },
   {
@@ -1514,7 +1514,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 5,
-    raiting: 2.4,
+    rating: 2.4,
     adapted: true,
   },
   {
@@ -1566,7 +1566,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 4,
-    raiting: 2.1,
+    rating: 2.1,
     adapted: true,
   },
   {
@@ -1612,7 +1612,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 3,
-    raiting: 2.5,
+    rating: 2.5,
     adapted: true,
   },
   {
@@ -1666,7 +1666,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 2,
-    raiting: 4.1,
+    rating: 4.1,
     adapted: true,
   },
   {
@@ -1712,7 +1712,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 9,
-    raiting: 3.5,
+    rating: 3.5,
     adapted: true,
   },
   {
@@ -1758,7 +1758,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 7,
-    raiting: 2.2,
+    rating: 2.2,
     adapted: true,
   },
   {
@@ -1809,7 +1809,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 6,
-    raiting: 2.3,
+    rating: 2.3,
     adapted: true,
   },
   {
@@ -1860,7 +1860,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 1,
-    raiting: 3.3,
+    rating: 3.3,
     adapted: true,
   },
   {
@@ -1914,7 +1914,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 6,
-    raiting: 3.9,
+    rating: 3.9,
     adapted: true,
   },
   {
@@ -1971,7 +1971,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 8,
-    raiting: 4.1,
+    rating: 4.1,
     adapted: true,
   },
   {
@@ -2022,7 +2022,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 5,
-    raiting: 2.6,
+    rating: 2.6,
     adapted: true,
   },
   {
@@ -2075,7 +2075,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 2,
-    raiting: 5,
+    rating: 5,
 
     adapted: true,
   },
@@ -2122,7 +2122,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 9,
-    raiting: 2.9,
+    rating: 2.9,
     adapted: true,
   },
   {
@@ -2178,7 +2178,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 3,
-    raiting: 4.8,
+    rating: 4.8,
     adapted: true,
   },
   {
@@ -2224,7 +2224,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 6,
-    raiting: 4.3,
+    rating: 4.3,
     adapted: true,
   },
   {
@@ -2275,7 +2275,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 6,
-    raiting: 3.3,
+    rating: 3.3,
     adapted: true,
   },
   {
@@ -2330,7 +2330,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 9,
-    raiting: 3.8,
+    rating: 3.8,
     adapted: true,
   },
   {
@@ -2376,7 +2376,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 5,
-    raiting: 3.5,
+    rating: 3.5,
     adapted: true,
   },
   {
@@ -2428,7 +2428,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 2,
-    raiting: 2.6,
+    rating: 2.6,
     adapted: true,
   },
   {
@@ -2482,7 +2482,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 5,
-    raiting: 2.1,
+    rating: 2.1,
     adapted: true,
   },
   {
@@ -2535,7 +2535,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 2,
-    raiting: 4.3,
+    rating: 4.3,
     adapted: true,
   },
   {
@@ -2588,7 +2588,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 7,
-    raiting: 4.4,
+    rating: 4.4,
     adapted: true,
   },
   {
@@ -2644,7 +2644,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 4,
-    raiting: 2.3,
+    rating: 2.3,
     adapted: true,
   },
   {
@@ -2700,7 +2700,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 9,
-    raiting: 3.7,
+    rating: 3.7,
     adapted: true,
   },
   {
@@ -2756,7 +2756,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 1,
-    raiting: 3.9,
+    rating: 3.9,
     adapted: true,
   },
   {
@@ -2802,7 +2802,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 2,
-    raiting: 3.3,
+    rating: 3.3,
     adapted: true,
   },
   {
@@ -2859,7 +2859,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 1,
-    raiting: 2.1,
+    rating: 2.1,
     adapted: true,
   },
   {
@@ -2916,7 +2916,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 4,
-    raiting: 4.9,
+    rating: 4.9,
     adapted: true,
   },
   {
@@ -2967,7 +2967,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 6,
-    raiting: 4.4,
+    rating: 4.4,
     adapted: true,
   },
   {
@@ -3025,7 +3025,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 10,
-    raiting: 3.1,
+    rating: 3.1,
     adapted: true,
   },
   {
@@ -3080,7 +3080,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 9,
-    raiting: 2.4,
+    rating: 2.4,
     adapted: true,
   },
   {
@@ -3131,7 +3131,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 5,
-    raiting: 2.6,
+    rating: 2.6,
     adapted: true,
   },
   {
@@ -3177,7 +3177,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 6,
-    raiting: 4.7,
+    rating: 4.7,
     adapted: true,
   },
   {
@@ -3235,7 +3235,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 2,
-    raiting: 3.3,
+    rating: 3.3,
     adapted: true,
   },
   {
@@ -3292,7 +3292,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 6,
-    raiting: 3.9,
+    rating: 3.9,
     adapted: true,
   },
   {
@@ -3344,7 +3344,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 9,
-    raiting: 4.2,
+    rating: 4.2,
     adapted: true,
   },
   {
@@ -3398,7 +3398,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 7,
-    raiting: 3.2,
+    rating: 3.2,
     adapted: true,
   },
   {
@@ -3444,7 +3444,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 7,
-    raiting: 4.9,
+    rating: 4.9,
     adapted: true,
   },
   {
@@ -3500,7 +3500,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 10,
-    raiting: 3.2,
+    rating: 3.2,
     adapted: true,
   },
   {
@@ -3558,7 +3558,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 7,
-    raiting: 3.5,
+    rating: 3.5,
     adapted: true,
   },
   {
@@ -3613,7 +3613,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 2,
-    raiting: 2.3,
+    rating: 2.3,
     adapted: true,
   },
   {
@@ -3665,7 +3665,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 1,
-    raiting: 4.8,
+    rating: 4.8,
     adapted: true,
   },
   {
@@ -3716,7 +3716,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 5,
-    raiting: 4.2,
+    rating: 4.2,
     adapted: true,
   },
   {
@@ -3772,7 +3772,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 3,
-    raiting: 4.4,
+    rating: 4.4,
     adapted: true,
   },
   {
@@ -3828,7 +3828,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 7,
-    raiting: 3.2,
+    rating: 3.2,
     adapted: true,
   },
   {
@@ -3879,7 +3879,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 8,
-    raiting: 4,
+    rating: 4,
 
     adapted: true,
   },
@@ -3934,7 +3934,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 6,
-    raiting: 3.2,
+    rating: 3.2,
     adapted: true,
   },
   {
@@ -3990,7 +3990,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 1,
-    raiting: 3.8,
+    rating: 3.8,
     adapted: true,
   },
   {
@@ -4041,7 +4041,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 8,
-    raiting: 3,
+    rating: 3,
 
     adapted: true,
   },
@@ -4096,7 +4096,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 4,
-    raiting: 4.3,
+    rating: 4.3,
     adapted: true,
   },
   {
@@ -4142,7 +4142,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 9,
-    raiting: 2.9,
+    rating: 2.9,
     adapted: true,
   },
   {
@@ -4196,7 +4196,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 1,
-    raiting: 4.2,
+    rating: 4.2,
     adapted: true,
   },
   {
@@ -4253,7 +4253,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 5,
-    raiting: 3.5,
+    rating: 3.5,
     adapted: true,
   },
   {
@@ -4307,7 +4307,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 5,
-    raiting: 4.4,
+    rating: 4.4,
     adapted: true,
   },
   {
@@ -4359,7 +4359,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 1,
-    raiting: 4.8,
+    rating: 4.8,
     adapted: true,
   },
   {
@@ -4417,7 +4417,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 9,
-    raiting: 2.8,
+    rating: 2.8,
     adapted: true,
   },
   {
@@ -4463,7 +4463,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 4,
-    raiting: 4.2,
+    rating: 4.2,
     adapted: true,
   },
   {
@@ -4520,7 +4520,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 2,
-    raiting: 4.1,
+    rating: 4.1,
     adapted: true,
   },
   {
@@ -4571,7 +4571,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 3,
-    raiting: 4.4,
+    rating: 4.4,
     adapted: true,
   },
   {
@@ -4628,7 +4628,7 @@ export const OFFERS: OfferInfo[] = [
       zoom: 16,
     },
     maxAdults: 3,
-    raiting: 3.9,
+    rating: 3.9,
     adapted: true,
   },
 ];

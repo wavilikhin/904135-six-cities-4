@@ -30,7 +30,7 @@ export type OfferInfo = {
   isFavorite: boolean;
   location: Location;
   maxAdults: number;
-  raiting: number;
+  rating: number;
   adapted: boolean;
 };
 
@@ -44,11 +44,11 @@ export type ReviewItem = {
   comment: string;
   id: number;
   date: string;
-  raiting: number;
+  rating: number;
   user: User;
 };
 
 export type Comment = {
   comment: string;
-  raiting: number;
+  rating: number;
 };

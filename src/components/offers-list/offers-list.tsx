@@ -4,6 +4,7 @@ import { getSortedFiltredOffers } from '../../reducer/data/selectors';
 import { withAddFavorites } from '../../hocs/with-add-favorites/with-add-favorites';
 import { OfferCard } from '../offer-card/offer-card';
 import { OfferInfo } from '../../types';
+import { AppStateType } from '../../reducer/reducer';
 const OfferCardWrapped = withAddFavorites(OfferCard);
 
 interface Props {
@@ -26,11 +27,10 @@ const OffersList: React.FC<Props> = React.memo(({ sortedFiltredOffers }) => {
   );
 });
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: AppStateType) => ({
   sortedFiltredOffers: getSortedFiltredOffers(state),
 });
 
 export { OffersList };
 
-// FIXME: Убрать коннект к стору , переработать HOC
 export default connect(mapStateToProps, null)(OffersList);
