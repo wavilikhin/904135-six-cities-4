@@ -53,7 +53,6 @@ const mapStateToProps = (state: AppStateType) => ({
   uniqueCities: getUniqueCities(state),
 });
 
-// FIXME: Dispatch type
 const mapDispathcToProps = (dispatch: Dispatch<AppActionCreator>) => ({
   handleCityChange(city: string) {
     dispatch(StateActionCreator.changeCiy(city));

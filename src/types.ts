@@ -16,12 +16,12 @@ export type OfferInfo = {
   city: string;
   cityZoom: number;
   isPremium: boolean;
-  cityCoords: number[];
+  cityCoords: [number, number];
   image: string;
   priceValue: number;
   name: string;
   type: string;
-  coords: number[];
+  coords: [number, number];
   bedrooms: number;
   description: string;
   goods: string[];
@@ -31,6 +31,7 @@ export type OfferInfo = {
   location: Location;
   maxAdults: number;
   raiting: number;
+  adapted: boolean;
 };
 
 type User = {

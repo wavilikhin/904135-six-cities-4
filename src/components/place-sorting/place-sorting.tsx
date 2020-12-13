@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import { AppStateType } from '../../reducer/reducer';
 import { ActionCreator } from '../../reducer/state/state';
+import { AppActionCreator } from '../../reducer/types';
 
 type DispatchToPropsTypes = {
   sortBy: (value: string) => void;
@@ -125,8 +127,7 @@ class PlaceSorting extends React.PureComponent<Props, State> {
   }
 }
 
-// FIXME: Dispatch value
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch: Dispatch<AppActionCreator>) => ({
   sortBy(value) {
     dispatch(ActionCreator.updateSortBy(value));
   },

@@ -14,25 +14,25 @@ export enum ActionTypes {
   UPDATE_USER_FAVORITES = `UPDATE_USER_FAVORITES`,
 }
 
-interface UpdateAuthStatusAction {
+type UpdateAuthStatusAction = {
   type: ActionTypes;
   payload: AuthStatus;
-}
+};
 
-interface UpdateUserEmailAction {
+type UpdateUserEmailAction = {
   type: ActionTypes;
   payload: string;
-}
+};
 
-interface ToggleFavoriteAction {
+type ToggleFavoriteAction = {
   type: ActionTypes;
   payload: { id: number; status: boolean };
-}
+};
 
-interface UpdateUserFavoritesAction {
+type UpdateUserFavoritesAction = {
   type: ActionTypes;
-  payload: OfferInfo[];
-}
+  payload: OfferInfo[] | [];
+};
 
 export type UserActionTypes =
   | UpdateAuthStatusAction

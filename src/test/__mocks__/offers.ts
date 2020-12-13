@@ -45,6 +45,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 6,
     raiting: 2.4,
+    adapted: true,
   },
   {
     id: 2,
@@ -90,6 +91,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 7,
     raiting: 3.1,
+    adapted: true,
   },
   {
     id: 3,
@@ -146,6 +148,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 6,
     raiting: 4.4,
+    adapted: true,
   },
   {
     id: 4,
@@ -200,6 +203,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 8,
     raiting: 4.6,
+    adapted: true,
   },
   {
     id: 5,
@@ -256,6 +260,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 2,
     raiting: 3.5,
+    adapted: true,
   },
   {
     id: 6,
@@ -309,6 +314,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 3,
     raiting: 2.9,
+    adapted: true,
   },
   {
     id: 7,
@@ -354,6 +360,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 8,
     raiting: 3.3,
+    adapted: true,
   },
   {
     id: 8,
@@ -404,6 +411,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 7,
     raiting: 4.3,
+    adapted: true,
   },
   {
     id: 9,
@@ -458,6 +466,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 1,
     raiting: 2.2,
+    adapted: true,
   },
   {
     id: 10,
@@ -514,6 +523,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 2,
     raiting: 4.6,
+    adapted: true,
   },
   {
     id: 11,
@@ -565,6 +575,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 7,
     raiting: 3.5,
+    adapted: true,
   },
   {
     id: 12,
@@ -619,6 +630,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 2,
     raiting: 2.4,
+    adapted: true,
   },
   {
     id: 13,
@@ -664,6 +676,8 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 5,
     raiting: 5,
+
+    adapted: true,
   },
   {
     id: 14,
@@ -709,6 +723,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 7,
     raiting: 4.7,
+    adapted: true,
   },
   {
     id: 15,
@@ -760,6 +775,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 6,
     raiting: 2.9,
+    adapted: true,
   },
   {
     id: 16,
@@ -805,6 +821,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 9,
     raiting: 3.7,
+    adapted: true,
   },
   {
     id: 17,
@@ -859,6 +876,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 7,
     raiting: 4.6,
+    adapted: true,
   },
   {
     id: 18,
@@ -909,6 +927,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 3,
     raiting: 4.4,
+    adapted: true,
   },
   {
     id: 19,
@@ -959,6 +978,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 7,
     raiting: 2.2,
+    adapted: true,
   },
   {
     id: 20,
@@ -1015,6 +1035,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 3,
     raiting: 4.3,
+    adapted: true,
   },
   {
     id: 21,
@@ -1067,6 +1088,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 5,
     raiting: 2.7,
+    adapted: true,
   },
   {
     id: 22,
@@ -1119,6 +1141,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 2,
     raiting: 3.8,
+    adapted: true,
   },
   {
     id: 23,
@@ -1170,6 +1193,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 8,
     raiting: 2.7,
+    adapted: true,
   },
   {
     id: 24,
@@ -1226,6 +1250,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 1,
     raiting: 2.9,
+    adapted: true,
   },
   {
     id: 25,
@@ -1282,6 +1307,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 2,
     raiting: 4.5,
+    adapted: true,
   },
   {
     id: 26,
@@ -1327,6 +1353,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 10,
     raiting: 3.6,
+    adapted: true,
   },
   {
     id: 27,
@@ -1379,6 +1406,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 7,
     raiting: 4.4,
+    adapted: true,
   },
   {
     id: 28,
@@ -1430,6 +1458,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 10,
     raiting: 3.2,
+    adapted: true,
   },
   {
     id: 29,
@@ -1486,6 +1515,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 5,
     raiting: 2.4,
+    adapted: true,
   },
   {
     id: 30,
@@ -1537,6 +1567,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 4,
     raiting: 2.1,
+    adapted: true,
   },
   {
     id: 31,
@@ -1582,6 +1613,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 3,
     raiting: 2.5,
+    adapted: true,
   },
   {
     id: 32,
@@ -1635,6 +1667,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 2,
     raiting: 4.1,
+    adapted: true,
   },
   {
     id: 33,
@@ -1680,6 +1713,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 9,
     raiting: 3.5,
+    adapted: true,
   },
   {
     id: 34,
@@ -1725,6 +1759,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 7,
     raiting: 2.2,
+    adapted: true,
   },
   {
     id: 35,
@@ -1775,6 +1810,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 6,
     raiting: 2.3,
+    adapted: true,
   },
   {
     id: 36,
@@ -1825,6 +1861,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 1,
     raiting: 3.3,
+    adapted: true,
   },
   {
     id: 37,
@@ -1878,6 +1915,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 6,
     raiting: 3.9,
+    adapted: true,
   },
   {
     id: 38,
@@ -1934,6 +1972,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 8,
     raiting: 4.1,
+    adapted: true,
   },
   {
     id: 39,
@@ -1984,6 +2023,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 5,
     raiting: 2.6,
+    adapted: true,
   },
   {
     id: 40,
@@ -2036,6 +2076,8 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 2,
     raiting: 5,
+
+    adapted: true,
   },
   {
     id: 41,
@@ -2081,6 +2123,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 9,
     raiting: 2.9,
+    adapted: true,
   },
   {
     id: 42,
@@ -2136,6 +2179,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 3,
     raiting: 4.8,
+    adapted: true,
   },
   {
     id: 43,
@@ -2181,6 +2225,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 6,
     raiting: 4.3,
+    adapted: true,
   },
   {
     id: 44,
@@ -2231,6 +2276,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 6,
     raiting: 3.3,
+    adapted: true,
   },
   {
     id: 45,
@@ -2285,6 +2331,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 9,
     raiting: 3.8,
+    adapted: true,
   },
   {
     id: 46,
@@ -2330,6 +2377,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 5,
     raiting: 3.5,
+    adapted: true,
   },
   {
     id: 47,
@@ -2381,6 +2429,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 2,
     raiting: 2.6,
+    adapted: true,
   },
   {
     id: 48,
@@ -2434,6 +2483,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 5,
     raiting: 2.1,
+    adapted: true,
   },
   {
     id: 49,
@@ -2486,6 +2536,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 2,
     raiting: 4.3,
+    adapted: true,
   },
   {
     id: 50,
@@ -2538,6 +2589,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 7,
     raiting: 4.4,
+    adapted: true,
   },
   {
     id: 51,
@@ -2593,6 +2645,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 4,
     raiting: 2.3,
+    adapted: true,
   },
   {
     id: 52,
@@ -2648,6 +2701,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 9,
     raiting: 3.7,
+    adapted: true,
   },
   {
     id: 53,
@@ -2703,6 +2757,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 1,
     raiting: 3.9,
+    adapted: true,
   },
   {
     id: 54,
@@ -2748,6 +2803,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 2,
     raiting: 3.3,
+    adapted: true,
   },
   {
     id: 55,
@@ -2804,6 +2860,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 1,
     raiting: 2.1,
+    adapted: true,
   },
   {
     id: 56,
@@ -2860,6 +2917,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 4,
     raiting: 4.9,
+    adapted: true,
   },
   {
     id: 57,
@@ -2910,6 +2968,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 6,
     raiting: 4.4,
+    adapted: true,
   },
   {
     id: 58,
@@ -2967,6 +3026,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 10,
     raiting: 3.1,
+    adapted: true,
   },
   {
     id: 59,
@@ -3021,6 +3081,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 9,
     raiting: 2.4,
+    adapted: true,
   },
   {
     id: 60,
@@ -3071,6 +3132,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 5,
     raiting: 2.6,
+    adapted: true,
   },
   {
     id: 61,
@@ -3116,6 +3178,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 6,
     raiting: 4.7,
+    adapted: true,
   },
   {
     id: 62,
@@ -3173,6 +3236,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 2,
     raiting: 3.3,
+    adapted: true,
   },
   {
     id: 63,
@@ -3229,6 +3293,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 6,
     raiting: 3.9,
+    adapted: true,
   },
   {
     id: 64,
@@ -3280,6 +3345,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 9,
     raiting: 4.2,
+    adapted: true,
   },
   {
     id: 65,
@@ -3333,6 +3399,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 7,
     raiting: 3.2,
+    adapted: true,
   },
   {
     id: 66,
@@ -3378,6 +3445,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 7,
     raiting: 4.9,
+    adapted: true,
   },
   {
     id: 67,
@@ -3433,6 +3501,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 10,
     raiting: 3.2,
+    adapted: true,
   },
   {
     id: 68,
@@ -3490,6 +3559,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 7,
     raiting: 3.5,
+    adapted: true,
   },
   {
     id: 69,
@@ -3544,6 +3614,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 2,
     raiting: 2.3,
+    adapted: true,
   },
   {
     id: 70,
@@ -3595,6 +3666,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 1,
     raiting: 4.8,
+    adapted: true,
   },
   {
     id: 71,
@@ -3645,6 +3717,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 5,
     raiting: 4.2,
+    adapted: true,
   },
   {
     id: 72,
@@ -3700,6 +3773,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 3,
     raiting: 4.4,
+    adapted: true,
   },
   {
     id: 73,
@@ -3755,6 +3829,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 7,
     raiting: 3.2,
+    adapted: true,
   },
   {
     id: 74,
@@ -3805,6 +3880,8 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 8,
     raiting: 4,
+
+    adapted: true,
   },
   {
     id: 75,
@@ -3858,6 +3935,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 6,
     raiting: 3.2,
+    adapted: true,
   },
   {
     id: 76,
@@ -3913,6 +3991,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 1,
     raiting: 3.8,
+    adapted: true,
   },
   {
     id: 77,
@@ -3963,6 +4042,8 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 8,
     raiting: 3,
+
+    adapted: true,
   },
   {
     id: 78,
@@ -4016,6 +4097,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 4,
     raiting: 4.3,
+    adapted: true,
   },
   {
     id: 79,
@@ -4061,6 +4143,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 9,
     raiting: 2.9,
+    adapted: true,
   },
   {
     id: 80,
@@ -4114,6 +4197,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 1,
     raiting: 4.2,
+    adapted: true,
   },
   {
     id: 81,
@@ -4170,6 +4254,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 5,
     raiting: 3.5,
+    adapted: true,
   },
   {
     id: 82,
@@ -4223,6 +4308,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 5,
     raiting: 4.4,
+    adapted: true,
   },
   {
     id: 83,
@@ -4274,6 +4360,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 1,
     raiting: 4.8,
+    adapted: true,
   },
   {
     id: 84,
@@ -4331,6 +4418,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 9,
     raiting: 2.8,
+    adapted: true,
   },
   {
     id: 85,
@@ -4376,6 +4464,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 4,
     raiting: 4.2,
+    adapted: true,
   },
   {
     id: 86,
@@ -4432,6 +4521,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 2,
     raiting: 4.1,
+    adapted: true,
   },
   {
     id: 87,
@@ -4482,6 +4572,7 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 3,
     raiting: 4.4,
+    adapted: true,
   },
   {
     id: 88,
@@ -4538,5 +4629,6 @@ export const OFFERS: OfferInfo[] = [
     },
     maxAdults: 3,
     raiting: 3.9,
+    adapted: true,
   },
 ];

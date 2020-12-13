@@ -3,10 +3,11 @@ import { UserState, ActionTypes, UserActionTypes } from './types';
 import { AuthStatus } from '../../const';
 import { OfferInfo } from '../../types';
 import { Dispatch } from 'redux';
-import { AxiosInstance } from 'axios';
+import { AxiosInstance, AxiosResponse } from 'axios';
 import { ThunkAction } from 'redux-thunk';
 import { AppStateType } from '../reducer';
 import { Cridetials } from '../../components/sign-in/sign-in';
+import { NameSpace } from '../name-space';
 
 const initialState: UserState = {
   authStatus: AuthStatus.NO_AUTH,
@@ -90,12 +91,30 @@ const Operation = {
   toggleFavorites: (
     id: number,
     status: number,
-  ): ThunkAction<Promise<void>, AppStateType, unknown, UserActionTypes> => (
-    _dispatch,
-    _getState,
-    api: AxiosInstance,
-  ) => {
-    return api.post(`/favorite/${id}/${status}`);
+  ): ThunkAction<
+    Promise<void>,
+    AppStateType,
+    unknown,
+    UserActionTypes
+  > => async (dispatch, getState, api: AxiosInstance) => {
+    const toggleFavoriteRequest: AxiosResponse = await api.post(
+      `/favorite/${id}/${status}`,
+    );
+    const currentFavorites: OfferInfo[] = getState()[NameSpace.USER]
+      .userFavorites;
+
+    const isFavorite: boolean = toggleFavoriteRequest.data.is_favorite;
+
+    let userFavorite: OfferInfo[];
+
+    isFavorite
+      ? (userFavorite = [...currentFavorites, toggleFavoriteRequest.data])
+      : (userFavorite = currentFavorites.filter(
+          (favorite) =>
+            Number(favorite.id) !== Number(toggleFavoriteRequest.data.id),
+        ));
+
+    dispatch(ActionCreator.updateUserFavorites(userFavorite));
   },
 };
 

@@ -15,7 +15,7 @@ export type ChangeCityActionType = {
 
 export type UpdateSortByActionType = {
   type: typeof CHANGE_SORT_BY;
-  payload: SortBy;
+  payload: SortBy | '';
 };
 
 export type StateActions = ChangeCityActionType | UpdateSortByActionType;

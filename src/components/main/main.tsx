@@ -12,6 +12,7 @@ import { OfferInfo } from '../../types';
 import { AppStateType } from '../../reducer/reducer';
 import { AuthStatus } from '../../reducer/user/user';
 import { Dispatch } from 'redux';
+import { AppActionCreator } from '../../reducer/types';
 
 type StateToPropsTypes = {
   offersDataArray: OfferInfo[];
@@ -106,8 +107,7 @@ const mapStateToProps = (state: AppStateType) => ({
   userEmail: getUserEmail(state),
 });
 
-// FIXME: Dispatch type
-const mapDispatchToProps = (dispatch: Dispatch) => ({
+const mapDispatchToProps = (dispatch: Dispatch<AppActionCreator>) => ({
   handleCityChange(city: string) {
     dispatch(ActionCreator.changeCiy(city));
   },

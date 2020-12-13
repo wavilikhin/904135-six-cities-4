@@ -1,4 +1,4 @@
-enum NameSpace {
+export enum NameSpace {
   DATA = `DATA`,
   STATE = `STATE`,
   USER = `USER`,

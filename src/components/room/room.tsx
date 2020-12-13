@@ -30,6 +30,7 @@ type StateToPropsTypes = {
   reviews: ReviewItem[];
   offersNearby: OfferInfo[];
 };
+
 type DispatchToPropsTypes = {
   updateReviews: (id: number) => void;
 
@@ -41,10 +42,10 @@ type DispatchToPropsTypes = {
 
 type Props = OwnPropsType & StateToPropsTypes & DispatchToPropsTypes;
 
-class Room extends React.PureComponent<Props> {
+class Room extends React.Component<Props> {
   props: Props;
 
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
 
     this._updateReviews = this._updateReviews.bind(this);
@@ -89,158 +90,173 @@ class Room extends React.PureComponent<Props> {
 
   render() {
     // TODO: Если оффер не найден по номеру показывать заглушку
-    const {
-      offers,
-      reviews = [],
-      offersNearby,
-      favoritesIds,
-      offerId,
-    } = this.props;
+    let { offers, reviews, offersNearby, favoritesIds, offerId } = this.props;
 
-    let currentOffer = offers.find((offer) => offer.id == offerId);
+    console.log(offersNearby);
 
-    const ratingStars = currentOffer.raiting * 2 * 10;
+    let currentOffer = offers.find(
+      (offer) => Number(offer.id) === Number(offerId),
+    );
+
+    let ratingStars: number;
+    currentOffer
+      ? (ratingStars = currentOffer.raiting * 2 * 10)
+      : (ratingStars = 0);
 
     return (
       <main className="page__main page__main--property">
-        <section className="property">
-          <div className="property__gallery-container container">
-            <div className="property__gallery">
-              {currentOffer.images.map((image, i) => (
-                <div className="property__image-wrapper" key={`${image}+${i}`}>
-                  <img
-                    className="property__image"
-                    src={image}
-                    alt="Photo studio"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="property__container container">
-            <div className="property__wrapper">
-              {currentOffer.isPremium && (
-                <div className="property__mark">
-                  <span>Premium</span>
-                </div>
-              )}
-              <div className="property__name-wrapper">
-                <h1 className="property__name">{currentOffer.name}</h1>
-                <button
-                  className={`property__bookmark-button button ${
-                    favoritesIds.some((fav) => fav === currentOffer.id)
-                      ? 'property__bookmark-button--active'
-                      : ''
-                  }`}
-                  type="button"
-                  onClick={() => {
-                    this._updateFavorites(currentOffer.id);
-                  }}
-                >
-                  <svg
-                    className="property__bookmark-icon"
-                    width={31}
-                    height={33}
-                  >
-                    <use xlinkHref="#icon-bookmark" />
-                  </svg>
-                  <span className="visually-hidden">To bookmarks</span>
-                </button>
-              </div>
-              <div className="property__rating rating">
-                <div className="property__stars rating__stars">
-                  <span style={{ width: `${ratingStars}%` }} />
-                  <span className="visually-hidden">Rating</span>
-                </div>
-                <span className="property__rating-value rating__value">
-                  {currentOffer.raiting}
-                </span>
-              </div>
-              <ul className="property__features">
-                <li className="property__feature property__feature--entire">
-                  {currentOffer.type}
-                </li>
-                <li className="property__feature property__feature--bedrooms">
-                  {currentOffer.bedrooms} Bedrooms
-                </li>
-                <li className="property__feature property__feature--adults">
-                  Max {currentOffer.maxAdults} adults
-                </li>
-              </ul>
-              <div className="property__price">
-                <b className="property__price-value">
-                  €{currentOffer.priceValue}
-                </b>
-                <span className="property__price-text">&nbsp;night</span>
-              </div>
-              <div className="property__inside">
-                <h2 className="property__inside-title">What's inside</h2>
-                <ul className="property__inside-list">
-                  {currentOffer.goods.map((good, i) => (
-                    <li className="property__inside-item" key={`${good}+${i}`}>
-                      {good}
-                    </li>
+        {currentOffer ? (
+          <>
+            <section className="property">
+              <div className="property__gallery-container container">
+                <div className="property__gallery">
+                  {currentOffer.images.map((image, i) => (
+                    <div
+                      className="property__image-wrapper"
+                      key={`${image}+${i}`}
+                    >
+                      <img
+                        className="property__image"
+                        src={image}
+                        alt="Photo studio"
+                      />
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
-              <div className="property__host">
-                <h2 className="property__host-title">Meet the host</h2>
-                <div className="property__host-user user">
-                  <div
-                    className={`property__avatar-wrapper user__avatar-wrapper ${
-                      currentOffer.host.isPro
-                        ? 'property__avatar-wrapper--pro'
-                        : ''
-                    }`}
-                  >
-                    <img
-                      className="property__avatar user__avatar"
-                      src={`../${currentOffer.host.avatar_url}`}
-                      width={74}
-                      height={74}
-                      alt="Host avatar"
-                    />
+              <div className="property__container container">
+                <div className="property__wrapper">
+                  {currentOffer.isPremium && (
+                    <div className="property__mark">
+                      <span>Premium</span>
+                    </div>
+                  )}
+                  <div className="property__name-wrapper">
+                    <h1 className="property__name">{currentOffer.name}</h1>
+                    <button
+                      className={`property__bookmark-button button ${
+                        favoritesIds.some((fav) => fav === currentOffer.id)
+                          ? 'property__bookmark-button--active'
+                          : ''
+                      }`}
+                      type="button"
+                      onClick={() => {
+                        this._updateFavorites(currentOffer.id);
+                      }}
+                    >
+                      <svg
+                        className="property__bookmark-icon"
+                        width={31}
+                        height={33}
+                      >
+                        <use xlinkHref="#icon-bookmark" />
+                      </svg>
+                      <span className="visually-hidden">To bookmarks</span>
+                    </button>
                   </div>
-                  <span className="property__user-name">
-                    {currentOffer.host.name}
-                  </span>
-                </div>
-                <div className="property__description">
-                  <p className="property__text">{currentOffer.description}</p>
+                  <div className="property__rating rating">
+                    <div className="property__stars rating__stars">
+                      <span style={{ width: `${ratingStars}%` }} />
+                      <span className="visually-hidden">Rating</span>
+                    </div>
+                    <span className="property__rating-value rating__value">
+                      {currentOffer.raiting}
+                    </span>
+                  </div>
+                  <ul className="property__features">
+                    <li className="property__feature property__feature--entire">
+                      {currentOffer.type}
+                    </li>
+                    <li className="property__feature property__feature--bedrooms">
+                      {currentOffer.bedrooms} Bedrooms
+                    </li>
+                    <li className="property__feature property__feature--adults">
+                      Max {currentOffer.maxAdults} adults
+                    </li>
+                  </ul>
+                  <div className="property__price">
+                    <b className="property__price-value">
+                      €{currentOffer.priceValue}
+                    </b>
+                    <span className="property__price-text">&nbsp;night</span>
+                  </div>
+                  <div className="property__inside">
+                    <h2 className="property__inside-title">What's inside</h2>
+                    <ul className="property__inside-list">
+                      {currentOffer.goods.map((good, i) => (
+                        <li
+                          className="property__inside-item"
+                          key={`${good}+${i}`}
+                        >
+                          {good}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="property__host">
+                    <h2 className="property__host-title">Meet the host</h2>
+                    <div className="property__host-user user">
+                      <div
+                        className={`property__avatar-wrapper user__avatar-wrapper ${
+                          currentOffer.host.isPro
+                            ? 'property__avatar-wrapper--pro'
+                            : ''
+                        }`}
+                      >
+                        <img
+                          className="property__avatar user__avatar"
+                          src={`../${currentOffer.host.avatar_url}`}
+                          width={74}
+                          height={74}
+                          alt="Host avatar"
+                        />
+                      </div>
+                      <span className="property__user-name">
+                        {currentOffer.host.name}
+                      </span>
+                    </div>
+                    <div className="property__description">
+                      <p className="property__text">
+                        {currentOffer.description}
+                      </p>
+                    </div>
+                  </div>
+                  <section className="property__reviews reviews">
+                    <ReviewsList reviews={reviews} />
+                    <ReviewForm
+                      hotelId={currentOffer.id}
+                      handleSubmit={this._postReview}
+                    />
+                  </section>
                 </div>
               </div>
-              <section className="property__reviews reviews">
-                <ReviewsList reviews={reviews} />
-                <ReviewForm
-                  hotelId={currentOffer.id}
-                  handleSubmit={this._postReview}
-                />
+              <section className="property__map map">
+                <Map offers={offersNearby} />
+              </section>
+            </section>
+            <div className="container">
+              <section className="near-places places">
+                <h2 className="near-places__title">
+                  Other places in the neighbourhood
+                </h2>
+                <div className="near-places__list places__list">
+                  {offersNearby.map(
+                    (offer: OfferInfo, i: number): React.ReactElement => {
+                      return (
+                        <OfferCardWrapped
+                          key={`${offer.id}+${i}`}
+                          cardData={offer}
+                        />
+                      );
+                    },
+                  )}
+                </div>
               </section>
             </div>
-          </div>
-          <section className="property__map map">
-            <Map offers={offersNearby} />
-          </section>
-        </section>
-        <div className="container">
-          <section className="near-places places">
-            <h2 className="near-places__title">
-              Other places in the neighbourhood
-            </h2>
-            <div className="near-places__list places__list">
-              {offersNearby.map(
-                (offer: OfferInfo, i: number): React.ReactElement => {
-                  return (
-                    <OfferCardWrapped
-                      key={`${offer.id}+${i}`}
-                      cardData={offer}
-                    />
-                  );
-                },
-              )}
-            </div>
-          </section>
-        </div>
+          </>
+        ) : (
+          <>'No room'</>
+        )}
       </main>
     );
   }
@@ -252,18 +268,17 @@ const mapStateToProps = (state: AppStateType) => ({
   offersNearby: getCurrentOfferNearby(state),
 });
 
-// TODO: Type
 const mapDispatchToProps = (dispatch) => ({
-  updateReviews(id) {
-    dispatch(ActionCreator.updateCurrentOfferReviews(id));
+  updateReviews(id: number) {
+    dispatch(DataOperation.getOfferComments(id));
   },
 
-  postReview(hotelId, reviewData) {
+  postReview(hotelId: number, reviewData: Comment) {
     dispatch(DataOperation.postReview(hotelId, reviewData));
   },
 
   updateNearby(id) {
-    dispatch(ActionCreator.updateCurrentOfferNearby(id));
+    dispatch(DataOperation.updateOfferNearby(id));
   },
 
   handleCurrentOfferUpdate(id) {

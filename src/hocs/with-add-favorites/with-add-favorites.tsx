@@ -5,15 +5,6 @@ import { getUserFavorites } from '../../reducer/user/selectors';
 import { OfferInfo, ReviewItem, Comment } from '../../types';
 import { AppStateType } from '../../reducer/reducer';
 import { Diff } from 'utility-types';
-import {
-  getCurrentOfferNearby,
-  getCurrentOfferReviews,
-  getOffers,
-} from '../../reducer/data/selectors';
-import {
-  Operation as DataOperation,
-  ActionCreator,
-} from '../../reducer/data/data';
 
 type PassedPropsTypes = any;
 
