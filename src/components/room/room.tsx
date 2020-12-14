@@ -90,7 +90,6 @@ class Room extends React.Component<Props> {
   }
 
   render() {
-    // TODO: Если оффер не найден по номеру показывать заглушку
     let { offers, reviews, offersNearby, favoritesIds, offerId } = this.props;
 
     let currentOffer = offers.find(

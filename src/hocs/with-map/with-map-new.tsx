@@ -1,3 +1,4 @@
+// TODO: Добавить редьюсер с картой , вынести стейт карты
 // TODO: дотипизировать
 import * as React from 'react';
 import * as leaflet from 'leaflet';

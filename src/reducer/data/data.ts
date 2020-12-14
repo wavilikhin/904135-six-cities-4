@@ -216,7 +216,6 @@ const ActionCreator = {
     payload: id,
   }),
 
-  // FIXME:  Какая то параша
   updateCurrentOfferNearby: (
     offers: OfferInfo[],
   ): UpdateCurrentOfferNearbyAction => {
