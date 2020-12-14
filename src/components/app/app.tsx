@@ -8,6 +8,7 @@ import Favorites from '../favorites/favorites';
 import { withAddFavorites } from '../../hocs/with-add-favorites/with-add-favorites';
 import { AppRoutes } from '../../const';
 import history from '../../history';
+import NotFound from '../not-found/not-found';
 
 const RoomWrapped = withAddFavorites(Room);
 
@@ -44,12 +45,14 @@ const App: React.FC = () => {
             return <Favorites />;
           }}
         />
+        <Route
+          render={(): React.ReactNode => {
+            return <NotFound />;
+          }}
+        />
       </Switch>
     </Router>
   );
-  {
-    /* TODO: Добаввить роут для 404 путей */
-  }
 };
 
 export default App;

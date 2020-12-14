@@ -16,6 +16,7 @@ import {
   Operation as DataOperation,
   ActionCreator,
 } from '../../reducer/data/data';
+import NotFound from '../not-found/not-found';
 
 const OfferCardWrapped = withAddFavorites(OfferCard);
 
@@ -253,7 +254,7 @@ class Room extends React.Component<Props> {
             </div>
           </>
         ) : (
-          <>'No room'</>
+          <NotFound />
         )}
       </main>
     );

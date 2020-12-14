@@ -1748,8 +1748,13 @@ img {
 .header__logo-link:not(.header__logo-link--active):hover {
   opacity: 0.5;
 }
-button .property__bookmark-button--active .property__bookmark-icon {
+.property__bookmark-button--active .property__bookmark-icon {
   fill: rgb(83, 129, 190) !important;
   stroke: rgb(83, 129, 190);
+}
+
+.link {
+  color: rgb(83, 129, 190);
+  text-decoration: underline;
 }
 /*# sourceMappingURL=main.css.map */
