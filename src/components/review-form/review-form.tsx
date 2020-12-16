@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { Comment } from '../../types';
+import Swal, { SweetAlertResult } from 'sweetalert2';
+
 interface Props {
   hotelId: number;
   handleSubmit: (hotelId: number, obj: Comment) => void;
@@ -47,30 +49,45 @@ class ReviewForm extends React.PureComponent<Props, State> {
     this._handleSubmit = this._handleSubmit.bind(this);
   }
 
-  // FIXME: Event type
   _handleTextChange(evt: React.ChangeEvent<HTMLTextAreaElement>): void {
     this.setState({
       text: evt.target.value,
     });
   }
 
-  // FIXME: Event type
   _handleRatingChange(evt: React.ChangeEvent<HTMLInputElement>): void {
     this.setState({
       rating: Number(evt.target.value),
     });
   }
 
-  // FIXME: Event type
-  _handleSubmit(e: React.MouseEvent<HTMLElement>): void {
+  _handleSubmit(
+    e: React.MouseEvent<HTMLElement>,
+  ): void | Promise<SweetAlertResult<any>> {
     e.preventDefault();
 
-    // TODO Доделать оповещение об ошибке
     if (this.state.text.replace(/\s/g, '').length < 50)
-      return console.log(`2short`);
+      return Swal.fire({
+        position: 'center',
+        icon: 'error',
+        html: `<span> Review message must be
+         at least <strong>50</strong> characters</span>`,
+        timer: 4000,
+        focusConfirm: false,
+        showCloseButton: true,
+        confirmButtonText: 'Ok , got it!',
+      });
 
-    // TODO Доделать оповещение об ошибке
-    if (this.state.rating == null) return console.log(`Rating null`);
+    if (this.state.rating == null)
+      return Swal.fire({
+        position: 'center',
+        icon: 'error',
+        html: '<span> Please select rating  ⭐️  from 1 to 5 <span>',
+        timer: 4000,
+        focusConfirm: false,
+        showCloseButton: true,
+        confirmButtonText: 'Ok , no problem!',
+      });
 
     this.props.handleSubmit(this.props.hotelId, {
       comment: this.state.text,
@@ -84,6 +101,14 @@ class ReviewForm extends React.PureComponent<Props, State> {
 
     this.textAreaRef.current.value = '';
     this.ratingStars.forEach((star) => (star.current.checked = false));
+
+    return Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: '⭐️ Thanks for your review',
+      showConfirmButton: true,
+      timer: 4000,
+    });
   }
 
   render() {
