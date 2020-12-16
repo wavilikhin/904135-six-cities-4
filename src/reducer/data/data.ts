@@ -317,7 +317,6 @@ const reducer = (state = initialState, action: DataActions) => {
     default:
       return state;
   }
-  // return state;
 };
 
 export { reducer, Operation, ActionType, ActionCreator };

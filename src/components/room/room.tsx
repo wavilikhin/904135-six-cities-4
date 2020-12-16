@@ -17,6 +17,9 @@ import {
   ActionCreator,
 } from '../../reducer/data/data';
 import NotFound from '../not-found/not-found';
+import { Dispatch } from 'redux';
+import { ThunkDispatch } from 'redux-thunk';
+import { AppActionCreator } from '../../reducer/types';
 
 const OfferCardWrapped = withAddFavorites(OfferCard);
 
@@ -266,7 +269,9 @@ const mapStateToProps = (state: AppStateType) => ({
   offersNearby: getCurrentOfferNearby(state),
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (
+  dispatch: ThunkDispatch<AppStateType, null, AppActionCreator>,
+) => ({
   updateReviews(id: number) {
     dispatch(DataOperation.getOfferComments(id));
   },
@@ -275,11 +280,11 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(DataOperation.postReview(hotelId, reviewData));
   },
 
-  updateNearby(id) {
+  updateNearby(id: number) {
     dispatch(DataOperation.updateOfferNearby(id));
   },
 
-  handleCurrentOfferUpdate(id) {
+  handleCurrentOfferUpdate(id: number) {
     dispatch(ActionCreator.updateCurrentOffer(id));
   },
 });

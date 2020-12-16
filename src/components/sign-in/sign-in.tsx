@@ -5,6 +5,8 @@ import { Operation as UserOperation } from '../../reducer/user/user';
 import history from '../../history';
 import { AppRoutes } from '../../const';
 import { AppStateType } from '../../reducer/reducer';
+import { ThunkDispatch } from 'redux-thunk';
+import { AppActionCreator } from '../../reducer/types';
 
 export type Cridetials = {
   email: string;
@@ -22,7 +24,7 @@ class SignIn extends PureComponent<Props, State> {
   props: Props;
   state: State;
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
 
     this.state = {
@@ -35,15 +37,15 @@ class SignIn extends PureComponent<Props, State> {
     this._handleSubmit = this._handleSubmit.bind(this);
   }
 
-  _handleEmailChange(evt): void {
+  _handleEmailChange(evt: React.ChangeEvent<HTMLInputElement>): void {
     this.setState({ email: evt.target.value });
   }
 
-  _handlePasswordChange(evt): void {
+  _handlePasswordChange(evt: React.ChangeEvent<HTMLInputElement>): void {
     this.setState({ password: evt.target.value });
   }
 
-  _handleSubmit(evt): void {
+  _handleSubmit(evt: React.MouseEvent<HTMLElement>): void {
     evt.preventDefault();
     this.props.onSubmit({
       email: this.state.email,
@@ -147,8 +149,10 @@ class SignIn extends PureComponent<Props, State> {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  onSubmit(authData) {
+const mapDispatchToProps = (
+  dispatch: ThunkDispatch<AppStateType, null, AppActionCreator>,
+) => ({
+  onSubmit(authData: Cridetials) {
     dispatch(UserOperation.logIn(authData));
   },
 });

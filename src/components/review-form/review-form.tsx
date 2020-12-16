@@ -12,9 +12,30 @@ interface State {
 class ReviewForm extends React.PureComponent<Props, State> {
   props: Props;
   state: State;
+  textAreaRef: React.RefObject<HTMLTextAreaElement>;
+  oneStarRating: React.RefObject<HTMLInputElement>;
+  twoStarRating: React.RefObject<HTMLInputElement>;
+  threeStarRating: React.RefObject<HTMLInputElement>;
+  fourStarRating: React.RefObject<HTMLInputElement>;
+  fiveStarRating: React.RefObject<HTMLInputElement>;
+  ratingStars: React.RefObject<HTMLInputElement>[];
 
   constructor(props: Props) {
     super(props);
+
+    this.textAreaRef = React.createRef();
+    this.oneStarRating = React.createRef();
+    this.twoStarRating = React.createRef();
+    this.threeStarRating = React.createRef();
+    this.fourStarRating = React.createRef();
+    this.fiveStarRating = React.createRef();
+    this.ratingStars = [
+      this.oneStarRating,
+      this.twoStarRating,
+      this.threeStarRating,
+      this.fourStarRating,
+      this.fiveStarRating,
+    ];
 
     this.state = {
       text: '',
@@ -27,22 +48,23 @@ class ReviewForm extends React.PureComponent<Props, State> {
   }
 
   // FIXME: Event type
-  _handleTextChange(evt: any): void {
+  _handleTextChange(evt: React.ChangeEvent<HTMLTextAreaElement>): void {
     this.setState({
       text: evt.target.value,
     });
   }
 
   // FIXME: Event type
-  _handleRatingChange(evt: any): void {
+  _handleRatingChange(evt: React.ChangeEvent<HTMLInputElement>): void {
     this.setState({
-      rating: evt.target.value,
+      rating: Number(evt.target.value),
     });
   }
 
   // FIXME: Event type
-  _handleSubmit(e: any): void {
+  _handleSubmit(e: React.MouseEvent<HTMLElement>): void {
     e.preventDefault();
+
     // TODO Доделать оповещение об ошибке
     if (this.state.text.replace(/\s/g, '').length < 50)
       return console.log(`2short`);
@@ -50,7 +72,6 @@ class ReviewForm extends React.PureComponent<Props, State> {
     // TODO Доделать оповещение об ошибке
     if (this.state.rating == null) return console.log(`Rating null`);
 
-    // TODO Доделать отчистку формы (использовать рефсы?)
     this.props.handleSubmit(this.props.hotelId, {
       comment: this.state.text,
       rating: this.state.rating,
@@ -60,6 +81,9 @@ class ReviewForm extends React.PureComponent<Props, State> {
       text: '',
       rating: null,
     });
+
+    this.textAreaRef.current.value = '';
+    this.ratingStars.forEach((star) => (star.current.checked = false));
   }
 
   render() {
@@ -75,6 +99,7 @@ class ReviewForm extends React.PureComponent<Props, State> {
             defaultValue={5}
             id="5-stars"
             type="radio"
+            ref={this.fiveStarRating}
             onChange={this._handleRatingChange}
           />
           <label
@@ -92,6 +117,7 @@ class ReviewForm extends React.PureComponent<Props, State> {
             defaultValue={4}
             id="4-stars"
             type="radio"
+            ref={this.fourStarRating}
             onChange={this._handleRatingChange}
           />
           <label
@@ -109,6 +135,7 @@ class ReviewForm extends React.PureComponent<Props, State> {
             defaultValue={3}
             id="3-stars"
             type="radio"
+            ref={this.threeStarRating}
             onChange={this._handleRatingChange}
           />
           <label
@@ -126,6 +153,7 @@ class ReviewForm extends React.PureComponent<Props, State> {
             defaultValue={2}
             id="2-stars"
             type="radio"
+            ref={this.twoStarRating}
             onChange={this._handleRatingChange}
           />
           <label
@@ -143,6 +171,7 @@ class ReviewForm extends React.PureComponent<Props, State> {
             defaultValue={1}
             id="1-star"
             type="radio"
+            ref={this.oneStarRating}
             onChange={this._handleRatingChange}
           />
           <label
@@ -161,6 +190,7 @@ class ReviewForm extends React.PureComponent<Props, State> {
           name="review"
           placeholder="Tell how was your stay, what you like and what can be improved"
           defaultValue={''}
+          ref={this.textAreaRef}
           onChange={this._handleTextChange}
         />
         <div className="reviews__button-wrapper">
