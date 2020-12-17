@@ -5,8 +5,8 @@ import { getUserFavorites } from '../../reducer/user/selectors';
 import { OfferInfo, ReviewItem, Comment } from '../../types';
 import { AppStateType } from '../../reducer/reducer';
 import { Diff } from 'utility-types';
-
-type PassedPropsTypes = any;
+import { ThunkDispatch } from 'redux-thunk';
+import { AppActionCreator } from '../../reducer/types';
 
 type StateToPropsTypes = {
   userFavorites: OfferInfo[];
@@ -25,12 +25,13 @@ type InjectedPropsTypes = {
 export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
   Component: React.ComponentType<BasePropsTypes>,
 ) => {
-  const mapStateToProps = (state: AppStateType) => ({
+  const mapStateToProps = (state: AppStateType): StateToPropsTypes => ({
     userFavorites: getUserFavorites(state),
   });
 
-  // TODO: Remove <any>
-  const mapDispathcToProps = (dispatch) => ({
+  const mapDispathcToProps = (
+    dispatch: ThunkDispatch<AppStateType, null, AppActionCreator>,
+  ): DispatchToPropsTypes => ({
     toggleFavorites(id: number, status: number): void {
       dispatch(UserOperation.toggleFavorites(id, status));
     },
@@ -41,8 +42,8 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
   });
 
   type HocPropsTypes = ReturnType<typeof mapStateToProps> &
-    ReturnType<typeof mapDispathcToProps> &
-    PassedPropsTypes;
+    ReturnType<typeof mapDispathcToProps>;
+
   class Hoc extends React.PureComponent<HocPropsTypes> {
     props: HocPropsTypes;
 
@@ -82,9 +83,8 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
         ...propsToPass
       } = this.props;
 
-      // TODO: Type
-      const favoritesIds = [
-        ...new Set(this.props.userFavorites.map((fav) => fav.id)),
+      const favoritesIds: number[] = [
+        ...new Set(userFavorites.map((fav) => fav.id)),
       ];
 
       return (

@@ -4,7 +4,7 @@ import { ThunkAction } from 'redux-thunk';
 import { createOffer } from '../../adapters/offers';
 import { OfferInfo, ReviewItem, Comment } from '../../types';
 import { AppStateType } from '../reducer';
-// TODO: Подумать над тем что должно находиться в редьюсере с Датой а что со Стейтом
+
 import {
   DataState,
   DataActionTypes,

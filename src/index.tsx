@@ -25,7 +25,6 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(thunk.withExtraArgument(api))),
 );
 
-// TODO: Посмотреть createAction   https://github.com/piotrwitek/typesafe-actions#1-basic-actions
 store.dispatch(UserOperation.updateAuthStatus());
 store.dispatch(DataOperation.updateOffers());
 store.dispatch(UserOperation.getFavorites());
