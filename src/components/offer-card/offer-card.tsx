@@ -1,15 +1,16 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, match } from 'react-router-dom';
 import { OfferInfo } from '../../types';
 
 interface Props {
   key: string;
   cardData: OfferInfo;
+
   handleFavoritesUpdate: (id: number) => void;
   favoritesIds: number[];
 }
 
-class OfferCard extends React.PureComponent<Props> {
+class OfferCard extends React.Component<Props> {
   props: Props;
 
   constructor(props: Props) {
@@ -38,7 +39,7 @@ class OfferCard extends React.PureComponent<Props> {
           </div>
         )}
         <div className="cities__image-wrapper place-card__image-wrapper">
-          <a href="#">
+          <Link to={`/offer/${id}`}>
             <img
               className="place-card__image"
               src={image}
@@ -46,7 +47,7 @@ class OfferCard extends React.PureComponent<Props> {
               height="200"
               alt="Place image"
             />
-          </a>
+          </Link>
         </div>
         <div className="place-card__info">
           <div className="place-card__price-wrapper">
@@ -81,7 +82,7 @@ class OfferCard extends React.PureComponent<Props> {
             </div>
           </div>
           <h2 className="place-card__name">
-            <Link id="linkToOffer" to={`/offer/${id}`}>
+            <Link id="linkToOffer" to={`../offer/${id}`}>
               {name}
             </Link>
           </h2>

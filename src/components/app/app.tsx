@@ -35,7 +35,12 @@ const App: React.FC = () => {
           path={AppRoutes.ROOM}
           exact
           render={(props): React.ReactNode => {
-            return <RoomWrapped offerId={Number(props.match.params.id)} />;
+            return (
+              <RoomWrapped
+                offerId={Number(props.match.params.id)}
+                match={props.match}
+              />
+            );
           }}
         />
         <Route

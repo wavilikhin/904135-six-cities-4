@@ -44,7 +44,7 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
   type HocPropsTypes = ReturnType<typeof mapStateToProps> &
     ReturnType<typeof mapDispathcToProps>;
 
-  class Hoc extends React.PureComponent<HocPropsTypes> {
+  class Hoc extends React.Component<HocPropsTypes> {
     props: HocPropsTypes;
 
     constructor(props: HocPropsTypes) {

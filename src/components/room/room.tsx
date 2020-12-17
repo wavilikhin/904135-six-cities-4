@@ -17,14 +17,15 @@ import {
   ActionCreator,
 } from '../../reducer/data/data';
 import NotFound from '../not-found/not-found';
-import { Dispatch } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
 import { AppActionCreator } from '../../reducer/types';
+import { match } from 'react-router-dom';
 
 const OfferCardWrapped = withAddFavorites(OfferCard);
 
 type OwnPropsType = {
   offerId: number;
+  match?: match<{ id: string }>;
   favoritesIds: number[];
   handleFavoritesUpdate: (id: number) => void;
 };
@@ -92,8 +93,23 @@ class Room extends React.Component<Props> {
     this._updateNearby(Number(this.props.offerId));
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.id !== this.props.match.params.id) {
+      this.props.handleCurrentOfferUpdate(Number(this.props.match.params.id));
+      this._updateReviews(Number(this.props.match.params.id));
+      this._updateNearby(Number(this.props.match.params.id));
+    }
+  }
+
   render() {
-    let { offers, reviews, offersNearby, favoritesIds, offerId } = this.props;
+    let {
+      offers,
+      reviews,
+      offersNearby,
+      favoritesIds,
+      offerId,
+      match,
+    } = this.props;
 
     let currentOffer = offers.find(
       (offer) => Number(offer.id) === Number(offerId),
