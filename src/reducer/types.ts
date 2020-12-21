@@ -10,6 +10,7 @@ export type SortBy = 'highToLow' | 'lowToHigh' | 'popular' | 'topRatedFirst';
 export type StateStore = {
   city: string;
   sortBy: SortBy;
+  focusedOfferId: number;
 };
 
 export type DataStore = {

@@ -8,6 +8,7 @@ interface Props {
 
   handleFavoritesUpdate: (id: number) => void;
   favoritesIds: number[];
+  handleOfferFocus: (id: number) => void;
 }
 
 class OfferCard extends React.Component<Props> {
@@ -17,10 +18,15 @@ class OfferCard extends React.Component<Props> {
     super(props);
 
     this._handleUpdateFavorites = this._handleUpdateFavorites.bind(this);
+    this._handleOfferFocus = this._handleOfferFocus.bind(this);
   }
 
   _handleUpdateFavorites(id: number): void {
     this.props.handleFavoritesUpdate(id);
+  }
+
+  _handleOfferFocus(evt): void {
+    console.log(evt);
   }
 
   render() {
@@ -32,7 +38,12 @@ class OfferCard extends React.Component<Props> {
     const ratingStars = rating * 2 * 10;
 
     return (
-      <article className="cities__place-card place-card">
+      // Dobavit eshe i focus
+      <article
+        className="cities__place-card place-card"
+        onMouseOver={this._handleOfferFocus}
+        onMouseOut={this._handleOfferFocus}
+      >
         {isPremium && (
           <div className="place-card__mark">
             <span>Premium</span>

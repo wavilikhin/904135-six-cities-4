@@ -3,6 +3,7 @@ import {
   StateActions,
   ChangeCityActionType,
   UpdateSortByActionType,
+  ChangeFocusedOfferType,
 } from './types';
 
 import { SortBy, StateStore } from '../types';
@@ -10,11 +11,13 @@ import { SortBy, StateStore } from '../types';
 const initialState: StateStore = {
   city: ``,
   sortBy: `popular`,
+  focusedOfferId: -1,
 };
 
 const ActionType: StateActionTypes = {
   CHANGE_CITY: `CHANGE_CITY`,
   CHANGE_SORT_BY: `CHANGE_SORT_BY`,
+  CHANGE_FOCUSED_OFFER: 'CHANGE_FOCUSED_OFFER',
 };
 
 const ActionCreator = {
@@ -25,6 +28,11 @@ const ActionCreator = {
   updateSortBy: (newValue: SortBy): UpdateSortByActionType => ({
     type: ActionType.CHANGE_SORT_BY,
     payload: newValue,
+  }),
+
+  changeFocusedOffer: (id: number): ChangeFocusedOfferType => ({
+    type: ActionType.CHANGE_FOCUSED_OFFER,
+    payload: id,
   }),
 };
 
@@ -42,10 +50,14 @@ const reducer = (
         sortBy: action.payload,
       });
 
+    case ActionType.CHANGE_FOCUSED_OFFER:
+      return Object.assign({}, state, {
+        focusedOfferId: action.payload,
+      });
+
     default:
       return state;
   }
-  // return state;
 };
 
 export { reducer, ActionType, ActionCreator };

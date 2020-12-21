@@ -28,6 +28,7 @@ type OwnPropsType = {
   match?: match<{ id: string }>;
   favoritesIds: number[];
   handleFavoritesUpdate: (id: number) => void;
+  handleOfferFocus: (id: number) => void;
 };
 
 type StateToPropsTypes = {

@@ -3,9 +3,9 @@ import { OfferInfo } from '../types';
 import { Link } from 'react-router-dom';
 
 type OwnPropsTypes = {
-  offer: OfferInfo;
+  offer?: OfferInfo;
   favoritesIds: number[];
-  handleFavoritesUpdate: (id: number) => void;
+  handleFavoritesUpdate?: (id: number) => void;
 };
 
 type Props = OwnPropsTypes;

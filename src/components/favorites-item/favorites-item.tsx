@@ -8,6 +8,7 @@ const FavoriteCardWrapped = withAddFavorites(FavoriteCard);
 type OwnPropsTypes = {
   city: string;
   offers: OfferInfo[];
+  handleOfferFocus: (id: number) => void;
 };
 
 type Props = OwnPropsTypes;

@@ -7,15 +7,21 @@ import { AppStateType } from '../../reducer/reducer';
 import { Diff } from 'utility-types';
 import { ThunkDispatch } from 'redux-thunk';
 import { AppActionCreator } from '../../reducer/types';
+import { ActionCreator } from '../../reducer/state/state';
 
 type StateToPropsTypes = {
   userFavorites: OfferInfo[];
 };
+
 type DispatchToPropsTypes = {
   toggleFavorites: (id: number, status: number) => void;
 
   getFavorites: () => void;
+
+  changeFocusedOffer: (id: number) => void;
 };
+
+type PropsToPass = any;
 
 type InjectedPropsTypes = {
   handleFavoritesUpdate: (id: number) => void;
@@ -39,10 +45,15 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
     getFavorites(): void {
       dispatch(UserOperation.getFavorites());
     },
+
+    changeFocusedOffer(id: number) {
+      dispatch(ActionCreator.changeFocusedOffer(id));
+    },
   });
 
   type HocPropsTypes = ReturnType<typeof mapStateToProps> &
-    ReturnType<typeof mapDispathcToProps>;
+    ReturnType<typeof mapDispathcToProps> &
+    PropsToPass;
 
   class Hoc extends React.Component<HocPropsTypes> {
     props: HocPropsTypes;
@@ -53,6 +64,7 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
       this._toggleFavorite = this._toggleFavorite.bind(this);
       this._getFavorites = this._getFavorites.bind(this);
       this._updateFavorites = this._updateFavorites.bind(this);
+      this._changeFocusedOffer = this._changeFocusedOffer.bind(this);
     }
     _getFavorites(): void {
       this.props.getFavorites();
@@ -71,6 +83,10 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
       this._getFavorites();
     }
 
+    _changeFocusedOffer(id: number): void {
+      this.props.changeFocusedOffer(id);
+    }
+
     static displayName = `withAddFavorites(${Component.name})`;
 
     static readonly WrappedComponent = Component;
@@ -79,13 +95,12 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
       const {
         getFavorites,
         toggleFavorites,
+        changeFocusedOffer,
         userFavorites,
         ...propsToPass
       } = this.props;
 
-      const favoritesIds: number[] = [
-        ...new Set(userFavorites.map((fav) => fav.id)),
-      ];
+      const favoritesIds = [...new Set(userFavorites.map((fav) => fav.id))];
 
       return (
         <Component

@@ -59,11 +59,19 @@ export const withMap = (Component) => {
 
         .addTo(map);
 
-      let markersLayer = [];
+      let markersLayer: leaflet.Marker[] = [];
 
       offers.forEach((offer) => {
+        const icon: leaflet.Icon = leaflet.icon({
+          iconUrl: `/img/pin.svg`,
+          iconSize: [30, 30],
+          className: `offer-${offer.id}`,
+        });
+
         markersLayer.push(
-          leaflet.marker([offer.location.latitude, offer.location.longitude]),
+          leaflet.marker([offer.location.latitude, offer.location.longitude], {
+            icon,
+          }),
         );
       });
 
@@ -117,13 +125,22 @@ export const withMap = (Component) => {
       let markersLayer = [];
 
       offers.forEach((offer) => {
+        const icon: leaflet.Icon = leaflet.icon({
+          iconUrl: `/img/pin.svg`,
+          iconSize: [30, 30],
+          className: `offer-${offer.id}`,
+        });
         markersLayer.push(
-          leaflet.marker([offer.location.latitude, offer.location.longitude]),
+          leaflet.marker([offer.location.latitude, offer.location.longitude], {
+            icon,
+          }),
         );
       });
 
       let offersLayer = leaflet.layerGroup(markersLayer);
+      console.log(markersLayer);
 
+      console.log(offersLayer);
       offersLayer.addTo(map);
     }
 
