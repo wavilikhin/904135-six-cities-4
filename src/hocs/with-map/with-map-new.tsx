@@ -1,19 +1,37 @@
 import * as React from 'react';
 import * as leaflet from 'leaflet';
+import { connect } from 'react-redux';
 import { OfferInfo } from '../../types';
+import { AppStateType } from '../../reducer/reducer';
+import { getHoveredOffer } from '../../reducer/state/selectors';
+import { Diff } from 'utility-types';
 
-interface Props {
+type StateToPropsTypes = {
+  hoveredOffer: OfferInfo;
+};
+
+type OwnProps = {
   offers: OfferInfo[];
-}
+};
 
-interface State {
+type InjectedPropsTypes = {};
+
+type HocProps = StateToPropsTypes & OwnProps;
+
+type State = {
   map: {};
   mapLayer: leaflet.LayerGroup | '';
-}
+};
 
-export const withMap = (Component) => {
-  class WithMap extends React.PureComponent<Props, State> {
-    props: Props;
+export const withMap = <BasePropsTypes extends InjectedPropsTypes>(
+  Component: React.ComponentType<BasePropsTypes>,
+) => {
+  const mapStateToProps = (state: AppStateType): StateToPropsTypes => ({
+    hoveredOffer: getHoveredOffer(state),
+  });
+
+  class WithMap extends React.PureComponent<HocProps, State> {
+    props: HocProps;
     state: State;
 
     constructor(props) {
@@ -59,11 +77,19 @@ export const withMap = (Component) => {
 
         .addTo(map);
 
-      let markersLayer = [];
+      let markersLayer: leaflet.Marker[] = [];
 
       offers.forEach((offer) => {
+        const icon: leaflet.Icon = leaflet.icon({
+          iconUrl: `/img/pin.svg`,
+          iconSize: [30, 30],
+          className: `offer-${offer.id}`,
+        });
+
         markersLayer.push(
-          leaflet.marker([offer.location.latitude, offer.location.longitude]),
+          leaflet.marker([offer.location.latitude, offer.location.longitude], {
+            icon,
+          }),
         );
       });
 
@@ -73,7 +99,9 @@ export const withMap = (Component) => {
     }
 
     componentDidUpdate() {
-      const { offers } = this.props;
+      const { offers, hoveredOffer } = this.props;
+
+      const hoveredOfferId = hoveredOffer?.id;
 
       if (offers.length === 0) return;
 
@@ -117,20 +145,46 @@ export const withMap = (Component) => {
       let markersLayer = [];
 
       offers.forEach((offer) => {
+        let icon: leaflet.Icon;
+
+        offer.id === hoveredOfferId
+          ? (icon = leaflet.icon({
+              iconUrl: `/img/pin-active.svg`,
+              iconSize: [30, 30],
+              className: `offer-${offer.id}`,
+            }))
+          : (icon = leaflet.icon({
+              iconUrl: `/img/pin.svg`,
+              iconSize: [30, 30],
+              className: `offer-${offer.id}`,
+            }));
+
         markersLayer.push(
-          leaflet.marker([offer.location.latitude, offer.location.longitude]),
+          leaflet.marker([offer.location.latitude, offer.location.longitude], {
+            icon,
+          }),
         );
       });
 
       let offersLayer = leaflet.layerGroup(markersLayer);
-
       offersLayer.addTo(map);
     }
 
     render() {
-      return <Component />;
+      const { hoveredOffer, offers, ...propsToPass } = this.props;
+      return <Component {...(propsToPass as BasePropsTypes)} />;
     }
   }
 
-  return WithMap;
+  const ConnectedHoc = connect<
+    StateToPropsTypes,
+    {},
+    Diff<BasePropsTypes, InjectedPropsTypes>,
+    AppStateType
+  >(
+    mapStateToProps,
+    null,
+  )(WithMap);
+
+  return ConnectedHoc;
 };
