@@ -7,6 +7,7 @@ interface Props {
   cardData: OfferInfo;
 
   handleFavoritesUpdate: (id: number) => void;
+  handleOfferHover?: (offer: OfferInfo) => void;
   favoritesIds: number[];
 }
 
@@ -17,14 +18,20 @@ class OfferCard extends React.Component<Props> {
     super(props);
 
     this._handleUpdateFavorites = this._handleUpdateFavorites.bind(this);
+    this._handleOfferHover = this._handleOfferHover.bind(this);
   }
 
   _handleUpdateFavorites(id: number): void {
     this.props.handleFavoritesUpdate(id);
   }
 
+  _handleOfferHover(offer: OfferInfo): void {
+    this.props.handleOfferHover(offer);
+  }
+
   render() {
     const {
+      cardData,
       cardData: { id, isPremium, image, priceValue, name, type, rating },
       favoritesIds,
     } = this.props;
@@ -32,7 +39,11 @@ class OfferCard extends React.Component<Props> {
     const ratingStars = rating * 2 * 10;
 
     return (
-      <article className="cities__place-card place-card">
+      <article
+        className="cities__place-card place-card"
+        onMouseOver={() => this._handleOfferHover(cardData)}
+        onMouseLeave={() => this._handleOfferHover(null)}
+      >
         {isPremium && (
           <div className="place-card__mark">
             <span>Premium</span>

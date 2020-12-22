@@ -16,6 +16,7 @@ export const testStore: Store = {
   [NameSpace.STATE]: {
     city: ``,
     sortBy: 'popular',
+    hoveredOffer: null,
   },
   [NameSpace.USER]: {
     authStatus: `NO_AUTH`,

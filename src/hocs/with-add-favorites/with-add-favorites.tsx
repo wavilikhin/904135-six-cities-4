@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { Operation as UserOperation } from '../../reducer/user/user';
+import { ActionCreator as StateActions } from '../../reducer/state/state';
 import { getUserFavorites } from '../../reducer/user/selectors';
-import { OfferInfo, ReviewItem, Comment } from '../../types';
+import { OfferInfo } from '../../types';
 import { AppStateType } from '../../reducer/reducer';
 import { Diff } from 'utility-types';
 import { ThunkDispatch } from 'redux-thunk';
@@ -15,6 +16,8 @@ type DispatchToPropsTypes = {
   toggleFavorites: (id: number, status: number) => void;
 
   getFavorites: () => void;
+
+  handleOfferHover: (offer: OfferInfo) => void;
 };
 
 type InjectedPropsTypes = {
@@ -39,6 +42,10 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
     getFavorites(): void {
       dispatch(UserOperation.getFavorites());
     },
+
+    handleOfferHover(offer): void {
+      dispatch(StateActions.changeHoveredOffer(offer));
+    },
   });
 
   type HocPropsTypes = ReturnType<typeof mapStateToProps> &
@@ -53,6 +60,7 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
       this._toggleFavorite = this._toggleFavorite.bind(this);
       this._getFavorites = this._getFavorites.bind(this);
       this._updateFavorites = this._updateFavorites.bind(this);
+      this._handleOfferHover = this._handleOfferHover.bind(this);
     }
     _getFavorites(): void {
       this.props.getFavorites();
@@ -71,6 +79,10 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
       this._getFavorites();
     }
 
+    _handleOfferHover(offer: OfferInfo): void {
+      this.props.handleOfferHover(offer);
+    }
+
     static displayName = `withAddFavorites(${Component.name})`;
 
     static readonly WrappedComponent = Component;
@@ -80,6 +92,7 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
         getFavorites,
         toggleFavorites,
         userFavorites,
+        handleOfferHover,
         ...propsToPass
       } = this.props;
 
@@ -93,6 +106,7 @@ export const withAddFavorites = <BasePropsTypes extends InjectedPropsTypes>(
             this._updateFavorites(id);
           }}
           favoritesIds={favoritesIds}
+          handleOfferHover={handleOfferHover}
           {...(propsToPass as BasePropsTypes)}
         />
       );
