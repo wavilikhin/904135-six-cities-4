@@ -17,10 +17,12 @@ type OwnProps = {
 type InjectedPropsTypes = {};
 
 type HocProps = StateToPropsTypes & OwnProps;
-
+// TODO: Добавить маркерс лейр, и через сет айкон как то менять иконку
 type State = {
-  map: {};
-  mapLayer: leaflet.LayerGroup | '';
+  offers: OfferInfo[] | null;
+  map: leaflet.Map | null;
+  mapLayer: leaflet.Layer | null;
+  markersLayer: leaflet.Marker[] | null;
 };
 
 export const withMap = <BasePropsTypes extends InjectedPropsTypes>(
@@ -38,34 +40,23 @@ export const withMap = <BasePropsTypes extends InjectedPropsTypes>(
       super(props);
 
       this.state = {
-        map: {},
-        mapLayer: '',
+        map: null,
+        mapLayer: null,
+        offers: null,
+        markersLayer: null,
       };
     }
 
     componentDidMount() {
       const { offers } = this.props;
-
-      if (offers.length === 0) return;
-
-      const cityLat: number = offers[0].cityCoords[0];
-      const cityLon: number = offers[0].cityCoords[1];
-      const cityCoordinates: leaflet.LatLngTuple = [cityLat, cityLon];
-
-      const zoom: number = offers[0].cityZoom;
-
+      // TODO: vinesti v consts
+      // Creating base map
       let map = leaflet.map(`map`, {
-        center: [cityLat, cityLon],
-        zoom,
+        center: [51.22172, 6.1],
+        zoom: 12,
         zoomControl: false,
       });
-
-      map.setView(cityCoordinates, zoom);
-
-      this.setState({
-        map,
-      });
-
+      // Setting base map layer
       const mapLayer = leaflet
         .tileLayer(
           `https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`,
@@ -76,6 +67,24 @@ export const withMap = <BasePropsTypes extends InjectedPropsTypes>(
         )
 
         .addTo(map);
+      // If the only provided offer === mocked offer returning base map
+      if (offers.length === 1 && offers[0].city === '') {
+        map.setView([51.22172, 6.77616], 12);
+
+        this.setState({
+          map,
+          mapLayer,
+        });
+        return;
+      }
+      // If offers are provided setting up markers layer
+      const cityLat: number = offers[0].cityCoords[0];
+      const cityLon: number = offers[0].cityCoords[1];
+      const cityCoordinates: leaflet.LatLngTuple = [cityLat, cityLon];
+
+      const zoom: number = offers[0].cityZoom;
+
+      map.setView(cityCoordinates, zoom);
 
       let markersLayer: leaflet.Marker[] = [];
 
@@ -96,12 +105,57 @@ export const withMap = <BasePropsTypes extends InjectedPropsTypes>(
       let offersLayer = leaflet.layerGroup(markersLayer);
 
       offersLayer.addTo(map);
+
+      this.setState({
+        map,
+        mapLayer,
+        offers,
+      });
     }
 
     componentDidUpdate() {
+      console.count('updated');
       const { offers, hoveredOffer } = this.props;
 
+      // Handling pin change for hovered offer
       const hoveredOfferId = hoveredOffer?.id;
+
+      // If hoveredOffer = undefined making all pins basic color
+      if (!hoveredOfferId && this.state.markersLayer) {
+        let currentMarkers = this.state.markersLayer;
+        currentMarkers.forEach((marker) =>
+          marker.setIcon(
+            leaflet.icon({
+              iconUrl: `/img/pin.svg`,
+              iconSize: [30, 30],
+              className: `offer-${
+                marker.options.icon.options.className.split('-')[1]
+              }`,
+            }),
+          ),
+        );
+        // If hoveredOffer != undefined making it's pin active color
+      } else if (hoveredOffer && this.state.markersLayer) {
+        let currentMarkers = this.state.markersLayer;
+        if (currentMarkers !== null) {
+          currentMarkers.forEach((marker) => {
+            if (
+              Number(marker.options.icon.options.className.split('-')[1]) ===
+              Number(hoveredOfferId)
+            ) {
+              marker.setIcon(
+                leaflet.icon({
+                  iconUrl: `/img/pin-active.svg`,
+                  iconSize: [30, 30],
+                  className: `offer-${
+                    marker.options.icon.options.className.split('-')[1]
+                  }`,
+                }),
+              );
+            }
+          });
+        }
+      }
 
       if (offers.length === 0) return;
 
@@ -111,63 +165,52 @@ export const withMap = <BasePropsTypes extends InjectedPropsTypes>(
 
       const zoom: number = offers[0].cityZoom;
 
-      let map;
-
-      Object.keys(this.state.map).length === 0
-        ? (map = leaflet.map(`map`, {
-            center: [cityLat, cityLon],
-            zoom,
-            zoomControl: false,
-          }))
-        : (map = this.state.map);
+      let map = this.state.map;
+      let mapLayer = this.state.mapLayer;
+      const currentOffers = this.state.offers;
 
       map.setView(cityCoordinates, zoom);
 
-      map.eachLayer(function (layer: leaflet.LayerGroup): void {
-        map.removeLayer(layer);
-      });
+      // If offers array changed updating pins layer
+      if (currentOffers !== offers) {
+        map.eachLayer(function (layer: leaflet.LayerGroup): void {
+          if (layer !== mapLayer) {
+            map.removeLayer(layer);
+          }
+        });
+
+        let markersLayer: leaflet.Marker[] = [];
+
+        offers.forEach((offer) => {
+          let icon = leaflet.icon({
+            iconUrl: `/img/pin.svg`,
+            iconSize: [30, 30],
+            className: `offer-${offer.id}`,
+          });
+
+          markersLayer.push(
+            leaflet.marker(
+              [offer.location.latitude, offer.location.longitude],
+              {
+                icon,
+              },
+            ),
+          );
+        });
+
+        let offersLayer = leaflet.layerGroup(markersLayer);
+        offersLayer.addTo(map);
+
+        this.setState({
+          map,
+          offers,
+          markersLayer,
+        });
+      }
 
       this.setState({
         map,
       });
-
-      const mapLayer = leaflet
-        .tileLayer(
-          `https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`,
-          {
-            attribution:
-              '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-          },
-        )
-
-        .addTo(map);
-
-      let markersLayer = [];
-
-      offers.forEach((offer) => {
-        let icon: leaflet.Icon;
-
-        offer.id === hoveredOfferId
-          ? (icon = leaflet.icon({
-              iconUrl: `/img/pin-active.svg`,
-              iconSize: [30, 30],
-              className: `offer-${offer.id}`,
-            }))
-          : (icon = leaflet.icon({
-              iconUrl: `/img/pin.svg`,
-              iconSize: [30, 30],
-              className: `offer-${offer.id}`,
-            }));
-
-        markersLayer.push(
-          leaflet.marker([offer.location.latitude, offer.location.longitude], {
-            icon,
-          }),
-        );
-      });
-
-      let offersLayer = leaflet.layerGroup(markersLayer);
-      offersLayer.addTo(map);
     }
 
     render() {
