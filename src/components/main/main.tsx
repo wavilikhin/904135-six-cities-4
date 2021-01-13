@@ -50,8 +50,6 @@ class Main extends React.PureComponent<Props> {
   }
 
   render() {
-    const { authStatus, userEmail } = this.props;
-
     return (
       <div className="page page--gray page--main">
         <main className="page__main page__main--index">

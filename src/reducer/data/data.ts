@@ -26,7 +26,7 @@ const initialState: DataState = {
       image: '',
       priceValue: 0,
       name: '',
-      type: '',
+      type: 'mock',
       coords: [0, 0],
       bedrooms: 0,
       description: '',

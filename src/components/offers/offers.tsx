@@ -23,10 +23,12 @@ const Offers: React.FC<Props> = ({ filtredOffers, city }) => {
         <section className="cities__places places">
           <h2 className="visually-hidden">Places</h2>
           <b className="places__found">
-            {filtredOffers.length} places to stay in {city}
+            {filtredOffers.length <= 1 && filtredOffers[0].type === 'mock'
+              ? 'Oops, no places to stay avalible'
+              : `${filtredOffers.length} places to stay in ${city}`}
           </b>
           <PlaceSorting />
-          {filtredOffers.length === 0 ? (
+          {filtredOffers.length <= 1 && filtredOffers[0].type === 'mock' ? (
             <MainEmpty city={city} />
           ) : (
             <OffersList />

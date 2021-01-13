@@ -188,13 +188,14 @@ export const withMap = <BasePropsTypes extends InjectedPropsTypes>(
             className: `offer-${offer.id}`,
           });
 
+          // TODO: Сделать красивые попапы, ведущие на страницу предложения
           markersLayer.push(
-            leaflet.marker(
-              [offer.location.latitude, offer.location.longitude],
-              {
+            leaflet
+              .marker([offer.location.latitude, offer.location.longitude], {
                 icon,
-              },
-            ),
+              })
+              .bindPopup('Pop up')
+              .openPopup(),
           );
         });
 
