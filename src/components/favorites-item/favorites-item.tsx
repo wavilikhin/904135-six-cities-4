@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { OfferInfo } from '../../types';
-import FavoriteCard from '../favorite-card';
+import FavoriteCard from '../favorite-card/favorite-card';
 import { withAddFavorites } from '../../hocs/with-add-favorites/with-add-favorites';
 
 const FavoriteCardWrapped = withAddFavorites(FavoriteCard);

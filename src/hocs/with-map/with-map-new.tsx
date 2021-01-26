@@ -17,7 +17,7 @@ type OwnProps = {
 type InjectedPropsTypes = {};
 
 type HocProps = StateToPropsTypes & OwnProps;
-// TODO: Добавить маркерс лейр, и через сет айкон как то менять иконку
+
 type State = {
   offers: OfferInfo[] | null;
   map: leaflet.Map | null;
@@ -49,7 +49,6 @@ export const withMap = <BasePropsTypes extends InjectedPropsTypes>(
 
     componentDidMount() {
       const { offers } = this.props;
-      // TODO: vinesti v consts
       // Creating base map
       let map = leaflet.map(`map`, {
         center: [51.22172, 6.1],
@@ -187,15 +186,13 @@ export const withMap = <BasePropsTypes extends InjectedPropsTypes>(
             iconSize: [30, 30],
             className: `offer-${offer.id}`,
           });
-
-          // TODO: Сделать красивые попапы, ведущие на страницу предложения
           markersLayer.push(
-            leaflet
-              .marker([offer.location.latitude, offer.location.longitude], {
+            leaflet.marker(
+              [offer.location.latitude, offer.location.longitude],
+              {
                 icon,
-              })
-              .bindPopup('Pop up')
-              .openPopup(),
+              },
+            ),
           );
         });
 

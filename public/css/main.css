@@ -277,7 +277,7 @@ img {
   background-image: linear-gradient(to right, #f5f5f5 509px, transparent 509px),
     url(../img/amsterdam.jpg);
   background-position: top left, right top;
-  height: 100vh;
+  height: 92vh;
   background-size: auto, auto 100%;
   background-repeat: no-repeat, no-repeat;
   overflow: hidden;
@@ -307,7 +307,7 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100vh;
+  height: 92vh;
 }
 .page--main {
   display: -webkit-box;
@@ -317,7 +317,7 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100vh;
+  height: 92vh;
 }
 .page--gray {
   background-color: #f5f5f5;
@@ -1756,5 +1756,9 @@ img {
 .link {
   color: rgb(83, 129, 190);
   text-decoration: underline;
+}
+.custom-popup div,
+.custom-popup div p {
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */

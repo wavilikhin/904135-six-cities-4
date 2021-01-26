@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { OfferInfo } from '../types';
 import { Link } from 'react-router-dom';
+import { OfferInfo } from '../../types';
 
 type OwnPropsTypes = {
   offer: OfferInfo;
